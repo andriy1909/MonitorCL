@@ -20,6 +20,8 @@ namespace MonitorCLClassLibrary
         TcpClient client;
         NetworkStream stream;
 
+        public int status { get; private set; } = -1;
+
         Thread thread;
 
         public void Connect()
@@ -30,6 +32,7 @@ namespace MonitorCLClassLibrary
 
         private void ConnectThread()
         {
+            status = 
             client = new TcpClient();
             try
             {
@@ -70,6 +73,7 @@ namespace MonitorCLClassLibrary
             {
             }
         }
+
 
 
 

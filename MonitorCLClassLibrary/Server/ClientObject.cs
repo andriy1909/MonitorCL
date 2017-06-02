@@ -34,11 +34,11 @@ namespace MonitorCLClassLibrary
             //serverObject.AddConnection(this);
         }
 
-        public StateUser TryLogin()
+        public ResultCode TryLogin()
         {
             JsonPack jsPack = GetMessage();
           //  if (jsPack == null)
-                return StateUser.Error;
+                return ResultCode.Error;
 
         /*    switch (jsPack.header.metod)
             {

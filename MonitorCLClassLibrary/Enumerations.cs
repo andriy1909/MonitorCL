@@ -9,14 +9,17 @@ namespace MonitorCLClassLibrary
     {
         Regisration,
         Login,
-        Query
+        Query,
+        SendMessage
     }
 
-    public enum StateUser
+    public enum ResultCode
     {
+        Ok,
+        NotAuthorizate,
         NotRegister,
         Login,
-        Block,
+        Blocked,
         NotValidPassw,
         NotValidLogin,
         LoginExist,

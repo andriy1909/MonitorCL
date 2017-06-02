@@ -30,17 +30,6 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            if(f.ShowDialog()==DialogResult.Abort)
-            {
-
-            }
-
-            if (Settings.Default.isBlocked)
-            {
-                Exit();
-            }
-
             #region автозапуск программы при старте Windows
             try
             {
@@ -66,29 +55,29 @@ namespace MonitorCLClient
             }
 
             //TryConnect
-            int result = Connect();
+            ResultCode result = Connect();
             switch (result)
             {
-                case 0:// OK
+                case ResultCode.Ok:// OK
 
                     break;
-                case 1:// not auth
+                case ResultCode.NotAuthorizate:// not auth
 
                     LoginForm form = new LoginForm(client);
                     form.ShowDialog();
 
                     break;
-                case 2:// not found user
+                case ResultCode.NotRegister:// not found user
                     RegistrationForm rForm = new RegistrationForm(client);
                     if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
                     {
                         Exit();
                     }
                     break;
-                case 3:// block
+                case ResultCode.Blocked:// block
                     Exit();
                     break;
-                case 4:// error
+                case ResultCode.Error:// error
                     //tryConnect
                     result = Connect(true);
                     if (result != 0)
@@ -109,11 +98,13 @@ namespace MonitorCLClient
 
         /// <summary>
         /// Соединение с сервером
-        /// 0-OK,1-not auth,2-not found user, 3-block, 4-error
         /// </summary>
         /// <returns>Статус</returns>
-        private int Connect(bool tryConnect = false)
+        private ResultCode Connect(bool tryConnect = false)
         {
+            client.Connect();
+            Thread.Sleep(5000);
+            
             //try
 
             // client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.login,Settings.Default.password);

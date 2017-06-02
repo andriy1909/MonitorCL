@@ -39,7 +39,7 @@ namespace MonitorCLClassLibrary
                     TcpClient tcpClient = tcpListener.AcceptTcpClient();
 
                     ClientObject clientObject = new ClientObject(tcpClient, this);
-                    if (clientObject.TryLogin()==StateUser.Login)
+                    if (clientObject.TryLogin()==ResultCode.Login)
                     {
                         Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
                         clientThread.Start();
