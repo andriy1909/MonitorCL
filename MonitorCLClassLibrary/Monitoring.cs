@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MonitorCLClassLibrary
 {
-    public class Monitoring
+    [Serializable]
+    public abstract class Monitoring
     {
+        public abstract string GetFields();
+
+        public abstract string GetDescriptionFields();
     }
 }
