@@ -115,5 +115,22 @@ namespace MonitorCLServer
             listenThread = new Thread(new ThreadStart(server.Listen));
             listenThread.Start();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel1Collapsed = true;
+            toolStripButton4.Visible = true;
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            toolStripButton4.Visible = false;
+            splitContainer1.Panel1Collapsed = false;
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }
