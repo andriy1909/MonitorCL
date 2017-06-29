@@ -58,7 +58,7 @@ namespace MonitorCLServer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("login")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public string login {
             get {
                 return ((string)(this["login"]));
@@ -70,7 +70,7 @@ namespace MonitorCLServer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("password")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public string password {
             get {
                 return ((string)(this["password"]));
