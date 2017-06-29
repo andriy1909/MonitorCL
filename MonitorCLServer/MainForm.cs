@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MonitorCLClassLibrary;
 
 namespace MonitorCLServer
 {
@@ -72,7 +73,7 @@ namespace MonitorCLServer
             try
             {
                 server.Disconnect();
-            }
+            }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
@@ -81,11 +82,11 @@ namespace MonitorCLServer
 
         private void button1_Click(object sender, EventArgs e)
         {
-           }
+        }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.RowCount>0)
+            if (dataGridView1.RowCount > 0)
             {
                 server.BroadcastMessage(textBox1.Text, dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
             }
@@ -102,7 +103,7 @@ namespace MonitorCLServer
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             server.Disconnect();
+            server.Disconnect();
         }
 
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,9 +129,42 @@ namespace MonitorCLServer
             splitContainer1.Panel1Collapsed = false;
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserAccount userAccount = new UserAccount();
+            List<UserAccount> list = userAccount.GetData();
+        }
+
+        private void treeView1_Click(object sender, EventArgs e)
+        {
+            if (treeView1.SelectedNode != null)
+                switch (treeView1.SelectedNode.Name)
+                {
+                    case "tnUsers":
+                        UserAccount userAccount = new UserAccount();
+                        List<UserAccount> list = userAccount.GetData();
+
+                        string[] fields = userAccount.GetFields().Split(';');
+                        //string[] desc
+                        for (int i = 0; i < userAccount.GetFields().Length; i++)
+                        {
+                            dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
+                            {
+                                DataPropertyName = "A",
+                                HeaderText = "Заголовок 1"
+                            });
+                        }
+
+                        dataGridView2.DataSource = list;
+                        break;
+                    default:
+                        break;
+                }
         }
     }
 }
