@@ -1,0 +1,11 @@
+E:\Sockets\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.exe.config
+E:\Sockets\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.exe
+E:\Sockets\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.pdb
+E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.MainForm.resources
+E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.Properties.Resources.resources
+E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
+E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
+E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
+E:\Sockets\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.dll
+E:\Sockets\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.pdb
