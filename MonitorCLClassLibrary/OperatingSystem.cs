@@ -313,5 +313,15 @@ PRODUCT_STANDARD_WS_SERVER_CORE (148)
         {
             //Win32_OperatingSystem
         }
+
+        public override string GetFields()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string GetDescriptionFields()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

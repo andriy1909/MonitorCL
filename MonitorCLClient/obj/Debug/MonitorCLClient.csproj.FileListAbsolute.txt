@@ -9,3 +9,14 @@ E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
 E:\Sockets\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
 E:\Sockets\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.dll
 E:\Sockets\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.pdb
+E:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.exe.config
+E:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.exe
+E:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.dll
+E:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.pdb
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.MainForm.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.Properties.Resources.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
