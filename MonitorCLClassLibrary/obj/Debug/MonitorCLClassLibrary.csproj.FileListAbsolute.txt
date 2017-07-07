@@ -5,6 +5,6 @@ E:\Sockets\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.dll
 E:\Sockets\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.pdb
 E:\MonitorCL\MonitorCLClassLibrary\bin\Debug\MonitorCLClassLibrary.dll
 E:\MonitorCL\MonitorCLClassLibrary\bin\Debug\MonitorCLClassLibrary.pdb
-E:\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.csprojResolveAssemblyReference.cache
 E:\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.dll
 E:\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.pdb
+E:\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.csprojResolveAssemblyReference.cache

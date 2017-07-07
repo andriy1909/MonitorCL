@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,9 +9,9 @@ namespace MonitorCLClassLibrary
 {
     class OperatingSystem : Monitoring
     {
-        /// <summary>
-        /// Имя диска, с которого запускается операционная система Windows.
-        /// </summary>
+     /// <summary>
+     /// Имя диска, с которого запускается операционная система Windows.
+     /// </summary>
         string BootDevice;
         /// <summary>
         /// Номер сборки операционной системы.
@@ -293,35 +294,180 @@ PRODUCT_STANDARD_WS_SERVER_CORE (148)
 Сервер (3)
         */
         uint ProductType;
+        /// <summary>
+        /// Имя зарегистрированного пользователя операционной системы.
+        /// </summary>
         string RegisteredUser;
+        /// <summary>
+        /// Серийный идентификационный номер продукта операционной системы.
+        /// </summary>
         string SerialNumber;
+        /// <summary>
+        /// Номер основной версии пакета обновления, установленного в компьютерной системе. Если пакет обновления не установлен, значение равно 0 (ноль).
+        /// </summary>
         ushort ServicePackMajorVersion;
+        /// <summary>
+        /// Незначительный номер версии пакета обновления, установленного в компьютерной системе. Если пакет обновления не установлен, значение равно 0 (ноль).
+        /// </summary>
         ushort ServicePackMinorVersion;
+        /// <summary>
+        /// Общее количество килобайт, которые могут быть сохранены в файлах подкачки операционной системы - 0 (ноль), указывает на отсутствие файлов подкачки. Имейте в виду, что это число не отражает фактический физический размер файла подкачки на диске.
+        /// </summary>
         ulong SizeStoredInPagingFiles;
+        /// <summary>
+        /// Текущее состояние объекта. 
+        /// </summary>
+        /*
+        OK («ОК»)
+Ошибка(«Ошибка»)
+Деградированные(«деградированные»)
+Неизвестно(«Неизвестно»)
+Pred Fail(«Pred Fail»)
+Запуск(«Запуск»)
+Остановка(«Остановка»)
+Сервис(«Сервис»)
+Подчеркнутый(«Подчеркнутый»)
+NonRecover(«NonRecover»)
+Нет контакта(«Без контакта»)
+Lost Comm(«Потерянная связь»)*/
         string Status;
+        /// <summary>
+        /// Бит-флаги, которые идентифицируют набор продуктов, доступных в системе.
+        /// </summary>
+        /*1
+Малый бизнес
+2
+предприятие
+4
+Бэк-офис
+8
+связи
+16
+Услуги терминалов
+32
+Малый бизнес ограничен
+64
+Встраиваемая версия
+128
+Datacenter Edition
+256
+Один пользователь
+512
+Домашняя версия
+1024
+Web Server Edition*/
         uint SuiteMask;
+        /// <summary>
+        /// Раздел физического диска, на котором установлена ​​операционная система.
+        /// </summary>
         string SystemDevice;
+        /// <summary>
+        /// Системный каталог операционной системы.
+        /// Пример: «C: \ WINDOWS \ SYSTEM32»
+        /// </summary>
         string SystemDirectory;
+        /// <summary>
+        /// Буква диска, на котором находится операционная система. Пример: "C:"
+        /// </summary>
         string SystemDrive;
+        /// <summary>
+        /// Общее пространство подкачки в килобайтах. 
+        /// </summary>
         ulong TotalSwapSpaceSize;
+        /// <summary>
+        /// Число в килобайтах виртуальной памяти. 
+        /// </summary>
         ulong TotalVirtualMemorySize;
+        /// <summary>
+        /// Общее количество в килобайтах физической памяти, доступной операционной системе.
+        /// </summary>
         ulong TotalVisibleMemorySize;
+        /// <summary>
+        /// Номер версии операционной системы.
+        /// </summary>
         string Version;
+        /// <summary>
+        /// Каталог ОС операционной системы Windows.
+        /// Пример: «C: \ WINDOWS»
+        /// </summary>
         string WindowsDirectory;
-
-        public OperatingSystem()
+        //
+        //        
+        public List<OperatingSystem> GetData()
         {
-            //Win32_OperatingSystem
+            List<string[]> os = new List<string[]>();
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
+
+            foreach (ManagementObject item in searcher.Get())
+            {
+                os.Add("""")
+
+                os.Add(new UserAccount()
+                {
+                    AccountType = (uint)item["AccountType"],
+                    Caption = (string)item["Caption"],
+                    Description = (string)item["Description"],
+                    Disabled = (bool)item["Disabled"],
+                    Domain = (string)item["Domain"],
+                    FullName = (string)item["FullName"],
+                    InstallDate = (item["InstallDate"] == null) ? DateTime.MinValue : Convert.ToDateTime(item["InstallDate"]),
+                    LocalAccount = (bool)item["LocalAccount"],
+                    Lockout = (bool)item["Lockout"],
+                    Name = (string)item["Name"],
+                    PasswordChangeable = (bool)item["PasswordChangeable"],
+                    PasswordExpires = (bool)item["PasswordExpires"],
+                    PasswordRequired = (bool)item["PasswordRequired"],
+                    SID = (string)item["SID"],
+                    SIDType = (byte)item["SIDType"],
+                    Status = (string)item["Status"]
+                });
+            }
+            return os;
         }
+
+        public object this[string id]
+        {
+            get
+            {
+                return "";
+            }
+            set
+            {
+                value = "";
+            }
+        }
+            public object this[int id]
+        {
+            get
+            {
+                switch ()
+            }
+                set
+            {
+                    value =
+            }
+            }
 
         public override string GetFields()
         {
-            throw new NotImplementedException();
+            return "BootDevice;BuildNumber;BuildType;Caption;CodeSet;CountryCode;CSDVersion;CSName;CurrentTimeZone;DataExecutionPrevention_Available;"+
+                "DataExecutionPrevention_32BitApplications;DataExecutionPrevention_Drivers;DataExecutionPrevention_Drivers;Debug;Description;"+
+                "Distributed;EncryptionLevel;FreePhysicalMemory;FreeSpaceInPagingFiles;FreeVirtualMemory;InstallDate;LastBootUpTime;LocalDateTime;"+
+                "Locale;Manufacturer;MaxNumberOfProcesses;MaxProcessMemorySize;MUILanguages;Name;NumberOfLicensedUsers;NumberOfProcesses;NumberOfUsers;"+
+                "OperatingSystemSKU;Organization;OSArchitecture;OSLanguage;OtherTypeDescription;PortableOperatingSystem;Primary;ProductType;RegisteredUser;"+
+                "SerialNumber;ServicePackMajorVersion;SizeStoredInPagingFiles;Status;SuiteMask;SystemDevice;SystemDirectory;SystemDrive;TotalSwapSpaceSize;"+
+                "TotalVirtualMemorySize;TotalVisibleMemorySize;Version;WindowsDirectory";
         }
 
         public override string GetDescriptionFields()
         {
-            throw new NotImplementedException();
+            return "BootDevice;BuildNumber;BuildType;Caption;CodeSet;CountryCode;CSDVersion;CSName;CurrentTimeZone;DataExecutionPrevention_Available;" +
+                "DataExecutionPrevention_32BitApplications;DataExecutionPrevention_Drivers;DataExecutionPrevention_Drivers;Debug;Description;" +
+                "Distributed;EncryptionLevel;FreePhysicalMemory;FreeSpaceInPagingFiles;FreeVirtualMemory;InstallDate;LastBootUpTime;LocalDateTime;" +
+                "Locale;Manufacturer;MaxNumberOfProcesses;MaxProcessMemorySize;MUILanguages;Name;NumberOfLicensedUsers;NumberOfProcesses;NumberOfUsers;" +
+                "OperatingSystemSKU;Organization;OSArchitecture;OSLanguage;OtherTypeDescription;PortableOperatingSystem;Primary;ProductType;RegisteredUser;" +
+                "SerialNumber;ServicePackMajorVersion;SizeStoredInPagingFiles;Status;SuiteMask;SystemDevice;SystemDirectory;SystemDrive;TotalSwapSpaceSize;" +
+                "TotalVirtualMemorySize;TotalVisibleMemorySize;Version;WindowsDirectory";
         }
     }
 }

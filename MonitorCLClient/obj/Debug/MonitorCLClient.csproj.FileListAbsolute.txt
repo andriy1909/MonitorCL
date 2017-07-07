@@ -20,3 +20,4 @@ E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.Properties.Resources.reso
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
