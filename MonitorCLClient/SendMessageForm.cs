@@ -8,7 +8,7 @@ namespace MonitorCLClient
     public partial class SendMessageForm : Form
     {
         private ClientWork client;
-        private Bitmap BM = null;
+        private Image BM = null;
 
         public SendMessageForm(ClientWork client)
         {

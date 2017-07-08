@@ -148,46 +148,74 @@ namespace MonitorCLServer
             if (treeView1.SelectedNode != null)
                 switch (treeView1.SelectedNode.Name)
                 {
-                    case "tnUsers":
-                        UserAccount userAccount = new UserAccount();
-                        List<UserAccount> list = userAccount.GetData();
-                        var bindingList = new BindingList<UserAccount>(list);
-                        var source = new BindingSource(bindingList, null);
+                    /* case "tnUsers":
+                         UserAccount userAccount = new UserAccount();
+                         List<UserAccount> list = userAccount.GetData();
+                         var bindingList = new BindingList<UserAccount>(list);
+                         var source = new BindingSource(bindingList, null);
 
-                        string[] fields = userAccount.GetFields().Split(';');
-                        string[] desc = userAccount.GetDescriptionFields().Split(';');
-                        for (int i = 0; i < fields.Length; i++)
+                         string[] fields = userAccount.GetFields().Split(';');
+                         string[] desc = userAccount.GetDescriptionFields().Split(';');
+                         for (int i = 0; i < fields.Length; i++)
+                         {
+                             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
+                             {
+                                 DataPropertyName = fields[i],
+                                 HeaderText = desc[i]
+                             });
+                         }
+                         foreach (var item in list)
+                         {
+                             dataGridView2.Rows.Add(new object[]
+                             {
+                                       item.AccountType,
+                                       item.Caption,
+                                       item.Description,
+                                       item.Disabled,
+                                       item.Domain,
+                                       item.FullName,
+                                       item.InstallDate,
+                                       item.LocalAccount,
+                                       item.Lockout,
+                                       item.Name,
+                                       item.PasswordChangeable,
+                                       item.PasswordExpires,
+                                       item.PasswordRequired,
+                                       item.SID,
+                                       item.SIDType,
+                                       item.Status
+                             });
+                         }
+
+                         //  dataGridView2.DataSource = list;
+                         break;*/
+                    case "tnOS":
+                        OperatingSystemScan os = new OperatingSystemScan();
+                        List<object[]> list2 = os.GetData();
+
+                        string[] fields = os.GetFields().Split(';');
+                        string[] desc = os.GetDescriptionFields().Split(';');
+
+                        dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
                         {
-                            dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
-                            {
-                                DataPropertyName = fields[i],
-                                HeaderText = desc[i]
-                            });
-                        }
-                        foreach (var item in list)
+                            DataPropertyName = "fname",
+                            HeaderText = "name"
+                        });
+
+                        dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
+                        {
+                            DataPropertyName = "fvalue",
+                            HeaderText = "value"
+                        });
+
+                        foreach (var item in list2)
                         {
                             dataGridView2.Rows.Add(new object[]
                             {
-                                      item.AccountType,
-                                      item.Caption,
-                                      item.Description,
-                                      item.Disabled,
-                                      item.Domain,
-                                      item.FullName,
-                                      item.InstallDate,
-                                      item.LocalAccount,
-                                      item.Lockout,
-                                      item.Name,
-                                      item.PasswordChangeable,
-                                      item.PasswordExpires,
-                                      item.PasswordRequired,
-                                      item.SID,
-                                      item.SIDType,
-                                      item.Status
+                                      item[0],
+                                      item[1]
                             });
                         }
-
-                        //  dataGridView2.DataSource = list;
                         break;
                     default:
                         break;

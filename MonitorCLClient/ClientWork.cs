@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Drawing;
+using MonitorCLClassLibrary;
+using System.IO;
 
 namespace MonitorCLClient
 {
@@ -21,8 +23,11 @@ namespace MonitorCLClient
         TcpClient client;
         NetworkStream stream;
         public delegate void ReceiveDelegate(string message);
+        public delegate void IsConnected(bool check);
         ReceiveDelegate receiveOut;
+        IsConnected isConnectedOut;
         private Thread receiveThread;
+        private Thread connectedThread;
         private int countEmpty = 0;
         private bool isConnect = false;
 
@@ -36,20 +41,31 @@ namespace MonitorCLClient
             receiveOut = receive;
         }
 
+        public void setIsConnectOut(IsConnected isConnected)
+        {
+            isConnectedOut = isConnected;
+        }
+
         public void Connect(string ip, int port, Guid id, string login, string password)
         {
             this.login = login;
             this.password = password;
             host = ip;
             this.port = port;
+            connectedThread = new Thread(new ThreadStart(Connect));
+            connectedThread.Start();
+        }
+
+        public void Connect()
+        {
             client = new TcpClient();
             try
             {
                 client.Connect(host, port); //подключение клиента
                 stream = client.GetStream(); // получаем поток
 
-                byte[] data = Encoding.Unicode.GetBytes(id.ToString());
-                stream.Write(data, 0, data.Length);
+           //     byte[] data = Encoding.Unicode.GetBytes(id.ToString());
+           //     stream.Write(data, 0, data.Length);
 
                 // запускаем новый поток для получения данных
                 receiveThread = new Thread(new ThreadStart(ReceiveMessage));
@@ -62,7 +78,7 @@ namespace MonitorCLClient
                 Debug.WriteLine(ex.Message);
                 Debug.WriteLine("reconnect");
                 Thread.Sleep(1000);
-                Connect(ip, port, id, login, password);
+                Connect();
             }
             finally
             {
@@ -70,11 +86,32 @@ namespace MonitorCLClient
         }
 
 
-
-        public void SendSupport(string subject, string body, Bitmap screen)
+        Image img;
+        public void SendSupport(string subject, string body, Image screen)
         {
-            //
+            JsonPack jp = new JsonPack();
+            jp.login = "1";
+            jp.password = "2";
+
+            ImageConverter converter = new ImageConverter();
+            var bytes = (byte[])converter.ConvertTo(screen, typeof(byte[]));
+            List<byte[]> list = new List<byte[]>();
+            list.Add(bytes);
+            jp.images = list;
+
+            string str = jp.getJsonStr();
+
+            var ms = new MemoryStream(jp.getJson(str).images[0]);
+            Image image = Image.FromStream(ms);
+
+            img = image;
+            //throw new NotImplementedException();
         }
+        public Image getImg()
+        {
+            return img;
+        }
+
 
         // отправка сообщений
         public void SendMessage(string message)
@@ -138,3 +175,4 @@ namespace MonitorCLClient
         }
     }
 }
+   

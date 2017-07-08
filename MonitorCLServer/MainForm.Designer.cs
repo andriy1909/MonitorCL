@@ -443,7 +443,7 @@
             treeNode7.Text = "BIOS";
             treeNode8.Name = "Узел1";
             treeNode8.Text = "Системная плата";
-            treeNode9.Name = "Узел18";
+            treeNode9.Name = "tnOS";
             treeNode9.Text = "Операционная система";
             treeNode10.Name = "Узел19";
             treeNode10.Text = "Процессы";

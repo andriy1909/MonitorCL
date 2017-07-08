@@ -28,6 +28,18 @@ namespace MonitorCLClient
 
         }
 
+        public void IsConnected(bool check)
+        {
+            if (check)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             tbPassword.UseSystemPasswordChar = true;
@@ -35,8 +47,9 @@ namespace MonitorCLClient
             tbPort.Text = Settings.Default.port.ToString();
             tbLogin.Text = Settings.Default.login;
             tbPassword.Text = Settings.Default.password;
-
+            
             client.setReceiveOut(Receive);
+            client.setIsConnectOut(IsConnected);
             client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id, Settings.Default.login, Settings.Default.password);
 
             /*  var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
@@ -49,7 +62,6 @@ namespace MonitorCLClient
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //
         }
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,13 +99,17 @@ namespace MonitorCLClient
                 this.WindowState = FormWindowState.Minimized;
                 this.ShowInTaskbar = false;
             }
+            else
+            {
+                notifyIcon.Visible = false;
+            }
             e.Cancel = !canClose;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             canClose = true;
-            Close();
+            Application.Exit();
         }
 
         private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -153,8 +169,7 @@ namespace MonitorCLClient
 
 
         /*
-
-
+        
 
 
 private void MainForm_Load(object sender, EventArgs e)
