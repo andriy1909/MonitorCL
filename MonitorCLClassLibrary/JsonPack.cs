@@ -16,6 +16,7 @@ namespace MonitorCLClassLibrary
         public string password;
         public List<Monitoring> monitoring;
         public List<byte[]> images;
+        public DateTime time;
 
         public string getJsonStr()
         {

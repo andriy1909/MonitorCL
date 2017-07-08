@@ -9,8 +9,23 @@ namespace MonitorCLClassLibrary
     [Serializable]
     public abstract class Monitoring
     {
-        public abstract string GetFields();
+        public abstract string Fields { get; }
 
-        public abstract string GetDescriptionFields();
+        public abstract string GetSign();
+
+        protected DateTime ConvertDate(string value)
+        {
+            if (value == "" || value == null || value.Length < 14)
+                return DateTime.MinValue;
+            value = value.Remove(14);
+            value = value.Insert(12, ":");
+            value = value.Insert(10, ":");
+            value = value.Insert(8, " ");
+            value = value.Insert(6, ".");
+            value = value.Insert(4, ".");
+
+            DateTime date = DateTime.Parse(value);
+            return date;
+        }
     }
 }

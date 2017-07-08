@@ -88,7 +88,7 @@ namespace MonitorCLServer
         {
             if (dataGridView1.RowCount > 0)
             {
-                server.BroadcastMessage(textBox1.Text, dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                //   server.BroadcastMessage(textBox1.Text, dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
             }
         }
 
@@ -191,10 +191,8 @@ namespace MonitorCLServer
                          break;*/
                     case "tnOS":
                         OperatingSystemScan os = new OperatingSystemScan();
-                        List<object[]> list2 = os.GetData();
-
-                        string[] fields = os.GetFields().Split(';');
-                        string[] desc = os.GetDescriptionFields().Split(';');
+                        os.GetData();
+                        string[] fields = os.Fields.Split(';');
 
                         dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
                         {
@@ -208,18 +206,18 @@ namespace MonitorCLServer
                             HeaderText = "value"
                         });
 
-                        foreach (var item in list2)
+                        foreach (var item in fields)
                         {
                             dataGridView2.Rows.Add(new object[]
                             {
-                                      item[0],
-                                      item[1]
+                                      item,
+                                      os[item]
                             });
                         }
                         break;
                     default:
                         break;
                 }
-        }
+        }        
     }
 }

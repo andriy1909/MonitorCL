@@ -85,6 +85,14 @@ SidTypeComputer(9)*/
         /// </summary>
         public string Status;
 
+        public override string Fields
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public List<UserAccount> GetData()
         {
             List<UserAccount> users = new List<UserAccount>();
@@ -115,17 +123,22 @@ SidTypeComputer(9)*/
             return users;
         }
 
-        public override string GetFields()
+        public string GetFields()
         {
             return "AccountType;Caption;Description;Disabled;Domain;FullName;InstallDate;LocalAccount;Lockout;Name;"+
                 "PasswordChangeable;PasswordExpires;PasswordRequired;SID;SIDType;Status";
         }
 
-        public override string GetDescriptionFields()
+        public string GetDescriptionFields()
         {
             return "Тип записи;Домен и имя;Описание;Отключена;Имя домена;Полное имя;Дата установки;"+
                 "Локальная уч.запись;Заблокирован;Имя учетной записи;Пароль можно изменить;Пароль истекает;"+
                 "Требуется пароль;Идентификатор безопасности;тип SID;Состояние";
+        }
+
+        public override string GetSign()
+        {
+            throw new NotImplementedException();
         }
     }
 }
