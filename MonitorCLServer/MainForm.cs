@@ -11,6 +11,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MonitorCLClassLibrary;
+using System.IO;
+using System.Security.Cryptography;
 
 namespace MonitorCLServer
 {
@@ -26,7 +28,16 @@ namespace MonitorCLServer
 
         public void Receive(string message)
         {
-            richTextBox1.BeginInvoke((MethodInvoker)(() => this.richTextBox1.AppendText(message + "\n")));
+            //richTextBox1.BeginInvoke((MethodInvoker)(() => this.richTextBox1.AppendText(message + "\n")));
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            server = new ServerObject();
+            server.setReceiveOut(Receive);
+            server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
+            listenThread = new Thread(new ThreadStart(server.Listen));
+            listenThread.Start();
         }
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,7 +56,7 @@ namespace MonitorCLServer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (ServerObject.tcpListener == null)
+           /* if (ServerObject.tcpListener == null)
             {
                 pictureBox1.Image = imgsStatus.Images[2];
                 return;
@@ -65,7 +76,7 @@ namespace MonitorCLServer
                 {
                     dataGridView1.Rows.Add(new object[] { imgsStatus.Images[1], item.Id });
                 }
-            }
+            }*/
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -86,19 +97,10 @@ namespace MonitorCLServer
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.RowCount > 0)
+          //  if (dataGridView1.RowCount > 0)
             {
                 //   server.BroadcastMessage(textBox1.Text, dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
             }
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            server = new ServerObject();
-            server.setReceiveOut(Receive);
-            server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
-            listenThread = new Thread(new ThreadStart(server.Listen));
-            listenThread.Start();
         }
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,6 +148,8 @@ namespace MonitorCLServer
             dataGridView2.Rows.Clear();
             dataGridView2.Columns.Clear();
             if (treeView1.SelectedNode != null)
+            {
+                string[] fields;
                 switch (treeView1.SelectedNode.Name)
                 {
                     /* case "tnUsers":
@@ -192,7 +196,7 @@ namespace MonitorCLServer
                     case "tnOS":
                         OperatingSystemScan os = new OperatingSystemScan();
                         os.GetData();
-                        string[] fields = os.Fields.Split(';');
+                        fields = os.Fields.Split(';');
 
                         dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
                         {
@@ -215,9 +219,86 @@ namespace MonitorCLServer
                             });
                         }
                         break;
+                    case "tnPrograms":
+                        Product product = new Product();
+                        List<Product> list = product.GetData();
+
+                        fields = product.Fields.Split(';');
+                        string[] desc = product.Fields.Split(';');
+                        for (int i = 0; i < fields.Length; i++)
+                        {
+                            dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
+                            {
+                                DataPropertyName = fields[i],
+                                HeaderText = desc[i]
+                            });
+                        }
+                        foreach (var item in list)
+                        {
+                            dataGridView2.Rows.Add(new object[]
+                            {
+                                       item.Name,
+                                       item.IdentifyingNumber,
+                                       (item.InstallDate.TimeOfDay==DateTime.MinValue.TimeOfDay)?item.InstallDate.ToShortDateString():item.InstallDate.ToString(),//.ToShortDateString()+ " " +item.InstallDate.ToShortTimeString(),
+                                       item.InstallLocation,
+                                       item.Vendor,
+                                       item.Version
+                            });
+                        }
+                        break;
                     default:
                         break;
                 }
-        }        
+            }
+        }
+
+        private void tvClients_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                DoDragDrop(e.Item, DragDropEffects.Move);
+            }
+        }
+        
+        private void tvClients_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = e.AllowedEffect;
+        }
+        
+        private void tvClients_DragOver(object sender, DragEventArgs e)
+        {
+            Point targetPoint = tvClients.PointToClient(new Point(e.X, e.Y));
+            
+            tvClients.SelectedNode = tvClients.GetNodeAt(targetPoint);
+        }
+
+        private void tvClients_DragDrop(object sender, DragEventArgs e)
+        {
+            Point targetPoint = tvClients.PointToClient(new Point(e.X, e.Y));
+            
+            TreeNode targetNode = tvClients.GetNodeAt(targetPoint);
+            
+            TreeNode draggedNode = (TreeNode)e.Data.GetData(typeof(TreeNode));
+            
+            if (!draggedNode.Equals(targetNode) && !ContainsNode(draggedNode, targetNode))
+            {
+                if (e.Effect == DragDropEffects.Move)
+                {
+                    draggedNode.Remove();
+                    targetNode.Nodes.Add(draggedNode);
+                }
+
+                targetNode.Expand();
+            }
+        }
+        
+        private bool ContainsNode(TreeNode node1, TreeNode node2)
+        {
+            if (node2.Parent == null) return false;
+            if (node2.Parent.Equals(node1)) return true;
+            
+            return ContainsNode(node1, node2.Parent);
+        }
+
     }
 }

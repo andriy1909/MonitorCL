@@ -243,7 +243,6 @@ namespace MonitorCLClassLibrary
                     case "TotalVisibleMemorySize": TotalVisibleMemorySize = (ulong)value; break;
                     case "Version": Version = (string)value; break;
                     default:
-                        value = null;
                         break;
                 }
             }

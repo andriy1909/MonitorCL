@@ -89,7 +89,7 @@ namespace MonitorCLClient
         Image img;
         public void SendSupport(string subject, string body, Image screen)
         {
-            JsonPack jp = new JsonPack();
+          /*  JsonPack jp = new JsonPack();
             jp.login = "1";
             jp.password = "2";
 
@@ -104,7 +104,7 @@ namespace MonitorCLClient
             var ms = new MemoryStream(jp.getJson(str).images[0]);
             Image image = Image.FromStream(ms);
 
-            img = image;
+            img = image;*/
             //throw new NotImplementedException();
         }
         public Image getImg()

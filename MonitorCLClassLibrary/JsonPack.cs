@@ -12,11 +12,18 @@ namespace MonitorCLClassLibrary
 {
     public class JsonPack
     {
-        public string login;
+        JsonHeader header;
+        JsonData data;
+        string signature;
+
+
+        /*public string login;
         public string password;
+        public DateTime time;
+        public string signature;
+
         public List<Monitoring> monitoring;
         public List<byte[]> images;
-        public DateTime time;
 
         public string getJsonStr()
         {
@@ -37,6 +44,6 @@ namespace MonitorCLClassLibrary
             deserializedJsonPack = ser.ReadObject(ms) as JsonPack;
             ms.Close();
             return deserializedJsonPack;
-        }
+        }*/
     }
 }

@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MonitorCLServer
 {
@@ -25,12 +29,12 @@ namespace MonitorCLServer
         public List<ClientObject> clients = new List<ClientObject>();
 
         public delegate void ReceiveDelegate(string message);
-        
+
         public ReceiveDelegate receiveOut;
-        
+
         public ServerObject()
         {
-            
+
         }
 
         public void AddConnection(ClientObject clientObject)
@@ -81,10 +85,10 @@ namespace MonitorCLServer
                 Debug.WriteLine(ex.Message);
                 Disconnect();
             }
-        }        
-        
+        }
+
         // отключение всех клиентов
-        public void Disconnect()
+        public void Disconnect()
         {
             tcpListener.Stop(); //остановка сервера
 
@@ -92,8 +96,8 @@ namespace MonitorCLServer
             {
                 clients[i].Close(); //отключение клиента
             }
-       //     Environment.Exit(0); //завершение процесса
-        }
+            //     Environment.Exit(0); //завершение процесса
+        }
 
         // трансляция сообщения подключенным клиентам
         public void BroadcastMessage(string message, string id)
@@ -122,5 +126,122 @@ namespace MonitorCLServer
             }
         }
 
+        public void SaveUserList()
+        {
+            string pathToFile = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
+            if (!Directory.Exists(pathToFile))
+                Directory.CreateDirectory(pathToFile);
+
+            FileStream stream = new FileStream(pathToFile+ "\\Users.data", FileMode.OpenOrCreate, FileAccess.Write);
+
+            TripleDESCryptoServiceProvider cryptic = new TripleDESCryptoServiceProvider();
+
+            cryptic.Key = ASCIIEncoding.ASCII.GetBytes("a6200ebd6482c34649dce491");
+            cryptic.IV = ASCIIEncoding.ASCII.GetBytes("a54e8d95");
+
+            CryptoStream crStream = new CryptoStream(stream,
+               cryptic.CreateEncryptor(), CryptoStreamMode.Write);
+
+
+            byte[] data = ASCIIEncoding.ASCII.GetBytes("Hello World!");
+            
+            crStream.Write(data, 0, data.Length);
+
+            crStream.Close();
+            stream.Close();
+        }
+
+        public void LoadUserList()
+        {
+            string pathToFile = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
+            if (!Directory.Exists(pathToFile))
+                Directory.CreateDirectory(pathToFile);
+
+            if (File.Exists(pathToFile + "\\Users.data"))
+            {
+                FileStream stream = new FileStream(pathToFile + "\\Users.data", FileMode.Open, FileAccess.Read);
+
+                TripleDESCryptoServiceProvider cryptic = new TripleDESCryptoServiceProvider();
+
+                cryptic.Key = ASCIIEncoding.ASCII.GetBytes("a6200ebd6482c34649dce491");
+                cryptic.IV = ASCIIEncoding.ASCII.GetBytes("a54e8d95");
+
+                CryptoStream crStream = new CryptoStream(stream,
+                    cryptic.CreateDecryptor(), CryptoStreamMode.Read);
+
+                StreamReader reader = new StreamReader(crStream);
+
+                string data = reader.ReadToEnd();
+                Console.WriteLine(data);
+                Console.ReadKey();
+
+                reader.Close();
+                stream.Close();
+            }
+        }
+
+        /// <summary>
+        /// Криптование и запись объекта в бинарный файл.
+        /// </summary>
+        /// <param name="obj">Объект для сериализации, криптования и записи.</param>
+        /// <param name="fileName">Целевой файл.</param>
+        public void EncryptBinarySave(object obj, string fileName)
+        {
+            FileStream fs = new FileStream(fileName, FileMode.Create);
+
+            try
+            {
+                byte[] key = Encoding.ASCII.GetBytes("4c80926c217b8ccd");
+                RijndaelManaged RMCrypto = new RijndaelManaged();
+                CryptoStream cryptStream = new CryptoStream(fs, RMCrypto.CreateEncryptor(key, null), CryptoStreamMode.Write);
+
+                BinaryFormatter ft = new BinaryFormatter();
+                ft.Serialize(cryptStream, clients);
+                cryptStream.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Failed to encrypt. Reason: " + e.Message);
+            }
+            finally
+            {
+                fs.Close();
+            }
+        }
+
+        /// <summary>
+        /// Загрузка и декриптование из бинарного файла.
+        /// </summary>
+        /// <param name="fileName">Исходный файл.</param>
+        public void DecryptBinaryLoad(string fileName)
+        {
+            string pathToFile = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
+            if (!Directory.Exists(pathToFile))
+                Directory.CreateDirectory(pathToFile);
+
+            if (File.Exists(pathToFile + "\\Users.data"))
+            {
+                FileStream fs = new FileStream(fileName, FileMode.Open);
+
+                try
+                {
+                    byte[] key = Encoding.ASCII.GetBytes("4c80926c217b8ccd");
+                    RijndaelManaged RMCrypto = new RijndaelManaged();
+                    CryptoStream cryptStream = new CryptoStream(fs, RMCrypto.CreateDecryptor(key, null), CryptoStreamMode.Read);
+
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    clients = (List<ClientObject>)formatter.Deserialize(cryptStream);
+                    cryptStream.Close();
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine("Failed to decrypt. Reason: " + e.Message);
+                }
+                finally
+                {
+                    fs.Close();
+                }
+            }
+        }
     }
 }

@@ -55,6 +55,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserList.cs" />
     <Compile Include="ClientObject.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
