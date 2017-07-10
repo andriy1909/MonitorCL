@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MonitorCLClassLibrary;
+using MonitorCLServer.Properties;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -39,7 +41,13 @@ namespace MonitorCLServer
 
         public void AddConnection(ClientObject clientObject)
         {
-            clients.Add(clientObject);
+            string message = clientObject.GetMessage();
+            JsonPack jsPack = new JsonPack();
+            jsPack.GetJson(message);
+            if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey) && jsPack.header.getLoginPassword()=="login:password")
+                clients.Add(clientObject);
+            else
+                clientObject.Close();
         }
         public void RemoveConnection(string id)
         {

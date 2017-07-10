@@ -5,11 +5,16 @@ using System.Text;
 
 namespace MonitorCLClassLibrary
 {
-    class JsonData
+    public class JsonData
     {
-
         public List<Monitoring> monitoring;
+        public string text;
 
-        DateTime time;
+        public DateTime time;
+
+        public JsonData()
+        {
+            time = DateTime.UtcNow;
+        }
     }
 }

@@ -21,3 +21,16 @@ E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.C
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
+D:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.exe.config
+D:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.exe
+D:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClient.pdb
+D:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.dll
+D:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.pdb
+D:\MonitorCL\MonitorCLClient\bin\Debug\MonitorCLClassLibrary.dll.config
+D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.MainForm.resources
+D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.Properties.Resources.resources
+D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
+D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
+D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
+D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb

@@ -8,19 +8,23 @@ namespace MonitorCLClassLibrary
 {
     public class JsonHeader
     {
-        string basic;
-        string bearer;//token
+        public string basic;
+        public string bearer;//token
+        public string mac;
 
+        public void setToken(string token)
+        {
+            bearer = token;
+        }
 
-        public void setLodinPassword(string login, string password)
+        public void setLoginPassword(string login, string password)
         {
             basic = Convert.ToBase64String(Encoding.ASCII.GetBytes(login + ":" + password));
-            new HMACSHA256().
         }
 
         public string getLoginPassword()
         {
-            return Encoding.ASCII.GetString(Convert.FromBase64String(bearer));
+            return Encoding.ASCII.GetString(Convert.FromBase64String(basic));
         }
 
         public static string Base64Encode(string plainText)

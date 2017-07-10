@@ -47,8 +47,13 @@ namespace MonitorCLServer
             {
                 bytes = Stream.Read(data, 0, data.Length);
                 builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                if (builder.ToString() == "")
+                {
+                    continue;
+                }
             }
             while (Stream.DataAvailable);
+
             
             return builder.ToString();
         }
@@ -82,15 +87,6 @@ namespace MonitorCLServer
                     try
                     {
                         string message = GetMessage();
-                        if (message == "")
-                        {
-                            countEmpty++;
-                            if (countEmpty >= 50)
-                                throw new NotImplementedException();
-                                continue;
-                        }
-                        else
-                            countEmpty = 0;
                         receiveOut(Id + ":" + message);
                     }
                     catch

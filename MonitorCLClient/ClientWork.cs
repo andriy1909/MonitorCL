@@ -64,8 +64,22 @@ namespace MonitorCLClient
                 client.Connect(host, port); //подключение клиента
                 stream = client.GetStream(); // получаем поток
 
-           //     byte[] data = Encoding.Unicode.GetBytes(id.ToString());
-           //     stream.Write(data, 0, data.Length);
+
+                JsonPack jsPack = new JsonPack();
+                JsonHeader jsHeader = new JsonHeader();
+                jsHeader.setLoginPassword("login", "password");
+                jsHeader.setToken("12345");
+                JsonData jsData = new JsonData();
+                jsData.text = "Hello";
+                jsPack.data = jsData;
+                jsPack.header = jsHeader;
+                jsPack.SetSignature(Settings.Default.privateKey);
+                //SendMessage(jsPack.GetJsonStr());
+                     byte[] data = Encoding.Unicode.GetBytes(jsPack.GetJsonStr());
+                     stream.Write(data, 0, data.Length);
+
+                if (!client.Connected)
+                    throw new NotImplementedException();
 
                 // запускаем новый поток для получения данных
                 receiveThread = new Thread(new ThreadStart(ReceiveMessage));
