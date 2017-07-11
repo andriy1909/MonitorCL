@@ -11,5 +11,11 @@
     <Setting Name="privateKey" Type="System.String" Scope="Application">
       <Value Profile="(Default)">685dfbbdc4ef05c54ffb3f4cd574e23b4f50435f10d9595497c9cceee0933139</Value>
     </Setting>
+    <Setting Name="login" Type="System.String" Scope="User">
+      <Value Profile="(Default)">login</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">password</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

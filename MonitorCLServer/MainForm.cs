@@ -18,18 +18,25 @@ namespace MonitorCLServer
 {
     public partial class MainForm : Form
     {
+        bool isDedug = false;
+        bool canClose = false;
+
         static ServerObject server;
         static Thread listenThread;
 
         public MainForm()
         {
             InitializeComponent();
+
+            menuStrip1.Visible = false;
+            splitContainer1.Visible = false;
+            timer1.Stop();
         }
 
         public void Receive(string message)
         {
             //richTextBox1.BeginInvoke((MethodInvoker)(() => this.richTextBox1.AppendText(message + "\n")));
-            if (MessageBox.Show("Разрешить пользователю " + message + " зарегистрироватся?","Попытка подключения", MessageBoxButtons.YesNo)!=DialogResult.Yes)
+            if (MessageBox.Show("Разрешить пользователю " + message + " зарегистрироватся?", "Попытка подключения", MessageBoxButtons.YesNo) != DialogResult.Yes)
             {
                 server.RemoveConnection(message);
             }
@@ -37,6 +44,18 @@ namespace MonitorCLServer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Show();
+            if (isDedug || new LoginForm().ShowDialog() == DialogResult.OK)
+            {
+                menuStrip1.Visible = true;
+                splitContainer1.Visible = true;
+                this.ContextMenuStrip = null;
+            }
+            else
+            {
+                return;
+            }
+
             server = new ServerObject();
             server.setReceiveOut(Receive);
             server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
@@ -82,13 +101,30 @@ namespace MonitorCLServer
             }
         }
 
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (canClose)
+                if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+                {
+                    if (MessageBox.Show("Завершить работу сервера?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                    {
+                        canClose = false;
+                    }
+                }
+            e.Cancel = !canClose;
+            
+            //    this.ShowInTaskbar = false;
+            //this.notifyIcon1.Visible = true;
+            
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-          //  if (dataGridView1.RowCount > 0)
+            //  if (dataGridView1.RowCount > 0)
             {
                 //   server.BroadcastMessage(textBox1.Text, dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
             }
@@ -250,27 +286,27 @@ namespace MonitorCLServer
                 DoDragDrop(e.Item, DragDropEffects.Move);
             }
         }
-        
+
         private void tvClients_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = e.AllowedEffect;
         }
-        
+
         private void tvClients_DragOver(object sender, DragEventArgs e)
         {
             Point targetPoint = tvClients.PointToClient(new Point(e.X, e.Y));
-            
+
             tvClients.SelectedNode = tvClients.GetNodeAt(targetPoint);
         }
 
         private void tvClients_DragDrop(object sender, DragEventArgs e)
         {
             Point targetPoint = tvClients.PointToClient(new Point(e.X, e.Y));
-            
+
             TreeNode targetNode = tvClients.GetNodeAt(targetPoint);
-            
+
             TreeNode draggedNode = (TreeNode)e.Data.GetData(typeof(TreeNode));
-            
+
             if (!draggedNode.Equals(targetNode) && !ContainsNode(draggedNode, targetNode))
             {
                 if (e.Effect == DragDropEffects.Move)
@@ -282,13 +318,39 @@ namespace MonitorCLServer
                 targetNode.Expand();
             }
         }
-        
+
         private bool ContainsNode(TreeNode node1, TreeNode node2)
         {
             if (node2.Parent == null) return false;
             if (node2.Parent.Equals(node1)) return true;
-            
+
             return ContainsNode(node1, node2.Parent);
+        }
+
+        private void tvClients_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            panel1.Visible = e.Node != null;
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (new LoginForm().ShowDialog() == DialogResult.OK)
+            {
+                menuStrip1.Visible = true;
+                splitContainer1.Visible = true;
+                this.ContextMenuStrip = null;
+            }
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            canClose = true;
+            Application.Exit();
         }
 
     }

@@ -104,6 +104,8 @@ namespace MonitorCLServer
         // отключение всех клиентов
         public void Disconnect()
         {
+            //***остановка сервера только после закрития всех подключений**
+
             tcpListener.Stop(); //остановка сервера
 
             for (int i = 0; i < clients.Count; i++)

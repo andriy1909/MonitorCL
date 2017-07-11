@@ -109,6 +109,8 @@ namespace MonitorCLClient
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             canClose = true;
+            notifyIcon.Visible = false;
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
             Application.Exit();
         }
 
