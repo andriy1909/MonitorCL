@@ -3,14 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.Net.NetworkInformation;
 
 namespace MonitorCLClassLibrary
 {
+    [DataContract]
     public class JsonHeader
     {
+        [DataMember]
+        public string metod;
+        [DataMember]
         public string basic;
+        [DataMember]
         public string bearer;//token
+        [DataMember]
         public string mac;
+
+        public JsonHeader(string metod = "")
+        {
+            this.metod = metod;
+        }
 
         public void setToken(string token)
         {

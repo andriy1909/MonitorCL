@@ -11,10 +11,14 @@ using System.Security.Cryptography;
 
 namespace MonitorCLClassLibrary
 {
+    [DataContract]
     public class JsonPack
     {
+        [DataMember]
         public JsonHeader header;
+        [DataMember]
         public JsonData data;
+        [DataMember]
         public string signature = "";
 
 
@@ -46,7 +50,7 @@ namespace MonitorCLClassLibrary
 
         public bool CheckTime(double milSec=10000)
         {
-            return DateTime.UtcNow.Subtract(data.time).TotalMilliseconds < milSec;
+            return true;// DateTime.UtcNow.Subtract(data.time).TotalMilliseconds < milSec;
         }
 
         public string GetJsonStr()

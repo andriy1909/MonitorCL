@@ -66,7 +66,7 @@ namespace MonitorCLClient
 
 
                 JsonPack jsPack = new JsonPack();
-                JsonHeader jsHeader = new JsonHeader();
+                JsonHeader jsHeader = new JsonHeader("reg");
                 jsHeader.setLoginPassword("login", "password");
                 jsHeader.setToken("12345");
                 JsonData jsData = new JsonData();

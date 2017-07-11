@@ -15,7 +15,7 @@ namespace MonitorCLServer
         public TcpClient client;
         ServerObject server; // объект сервера
         ReceiveDelegate receiveOut;
-        private int countEmpty=0;
+        public string login = "";
 
         public string Id { get; protected set; }
 
@@ -40,7 +40,7 @@ namespace MonitorCLServer
         // чтение входящего сообщения и преобразование в строку
         public string GetMessage()
         {
-            byte[] data = new byte[64]; // буфер для получаемых данных
+            byte[] data = new byte[256]; // буфер для получаемых данных
             StringBuilder builder = new StringBuilder();
             int bytes = 0;
             do

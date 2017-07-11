@@ -44,15 +44,21 @@ namespace MonitorCLServer
             string message = clientObject.GetMessage();
             JsonPack jsPack = new JsonPack();
             jsPack.GetJson(message);
-            if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey) && jsPack.header.getLoginPassword()=="login:password")
-                clients.Add(clientObject);
-            else
-                clientObject.Close();
+            if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey) && jsPack.header.getLoginPassword() == "login:password")
+                if (jsPack.header.metod == "reg")
+                {
+                    clients.Add(clientObject);
+                    clients.Last().login = jsPack.header.getLoginPassword().Split(':').First();
+                    receiveOut(clients.Last().login);
+                }
+                else
+                    clientObject.Close();
         }
-        public void RemoveConnection(string id)
+
+        public void RemoveConnection(string login)
         {
             // получаем по id закрытое подключение
-            ClientObject client = clients.FirstOrDefault(c => c.Id == id);
+            ClientObject client = clients.FirstOrDefault(c => c.login == login);
             // и удаляем его из списка подключений
             if (client != null)
                 clients.Remove(client);

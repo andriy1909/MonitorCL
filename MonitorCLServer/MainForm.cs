@@ -29,6 +29,10 @@ namespace MonitorCLServer
         public void Receive(string message)
         {
             //richTextBox1.BeginInvoke((MethodInvoker)(() => this.richTextBox1.AppendText(message + "\n")));
+            if (MessageBox.Show("Разрешить пользователю " + message + " зарегистрироватся?","Попытка подключения", MessageBoxButtons.YesNo)!=DialogResult.Yes)
+            {
+                server.RemoveConnection(message);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -56,27 +60,14 @@ namespace MonitorCLServer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           /* if (ServerObject.tcpListener == null)
+            if (tvClients.Nodes.Count != server.clients.Count)
             {
-                pictureBox1.Image = imgsStatus.Images[2];
-                return;
-            }
-            if (ServerObject.tcpListener.Active)
-            {
-                pictureBox1.Image = imgsStatus.Images[1];
-            }
-            else
-            {
-                pictureBox1.Image = imgsStatus.Images[2];
-            }
-            if (dataGridView1.RowCount != server.clients.Count)
-            {
-                dataGridView1.Rows.Clear();
+                tvClients.Nodes.Clear();
                 foreach (var item in server.clients)
                 {
-                    dataGridView1.Rows.Add(new object[] { imgsStatus.Images[1], item.Id });
+                    tvClients.Nodes.Add(item.login);
                 }
-            }*/
+            }
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

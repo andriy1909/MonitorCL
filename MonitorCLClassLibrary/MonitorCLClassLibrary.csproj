@@ -50,6 +50,7 @@
     <Compile Include="JsonHeader.cs" />
     <Compile Include="JsonPack.cs" />
     <Compile Include="Monitoring.cs" />
+    <Compile Include="NetworkAdapter.cs" />
     <Compile Include="OperatingSystemScan.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
