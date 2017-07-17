@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Management;
 using System.Text;
@@ -9,29 +10,33 @@ namespace MonitorCLClassLibrary
     public class Product : Monitoring
     {
         /// <summary>
+        /// Ключ в базе данных
+        /// </summary>
+        public int ProductId { get; set; }
+        /// <summary>
         /// Название программы.
         /// </summary>
-        public string Name;
+        public string Name { get; protected set; }
         /// <summary>
         /// Идентификация продукта, такая как серийный номер программного обеспечения, или номер штампа на аппаратном чипе.
         /// </summary>
-        public string IdentifyingNumber;
+        public string IdentifyingNumber { get; protected set; }
         /// <summary>
         /// Дата, когда этот продукт был установлен в системе.
         /// </summary>
-        public DateTime InstallDate;
+        public DateTime InstallDate { get; protected set; }
         /// <summary>
         /// Расположение установленного продукта.
         /// </summary>
-        public string InstallLocation;
+        public string InstallLocation { get; protected set; }
         /// <summary>
         /// Название поставщика продукта. 
         /// </summary>
-        public string Vendor;
+        public string Vendor { get; protected set; }
         /// <summary>
         /// Версия
         /// </summary>
-        public string Version;
+        public string Version { get; protected set; }
 
         public override string Fields
         {

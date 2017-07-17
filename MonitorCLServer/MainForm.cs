@@ -18,8 +18,10 @@ namespace MonitorCLServer
 {
     public partial class MainForm : Form
     {
-        bool isDedug = false;
+        bool isDedug = true;
+
         bool canClose = false;
+        DataContext db = new DataContext();
 
         static ServerObject server;
         static Thread listenThread;
@@ -27,6 +29,9 @@ namespace MonitorCLServer
         public MainForm()
         {
             InitializeComponent();
+
+            db.Database.Delete();
+            db.Database.Create();
 
             menuStrip1.Visible = false;
             splitContainer1.Visible = false;

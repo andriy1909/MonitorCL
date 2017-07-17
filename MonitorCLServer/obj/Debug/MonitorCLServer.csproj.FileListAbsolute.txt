@@ -37,3 +37,7 @@ D:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.pdb
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.ClientSettingForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.LoginForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.SettingForm.resources
+E:\MonitorCL\MonitorCLServer\bin\Debug\EntityFramework.dll
+E:\MonitorCL\MonitorCLServer\bin\Debug\EntityFramework.SqlServer.dll
+E:\MonitorCL\MonitorCLServer\bin\Debug\EntityFramework.xml
+E:\MonitorCL\MonitorCLServer\bin\Debug\EntityFramework.SqlServer.xml
