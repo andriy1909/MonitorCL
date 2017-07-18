@@ -14,6 +14,8 @@ namespace MonitorCLClassLibrary
         public List<Monitoring> monitoring;
         [DataMember]
         public string text;
+        [DataMember]
+        public List<byte[]> images;
 
         public DateTime time;
 

@@ -30,8 +30,8 @@ namespace MonitorCLServer
         {
             InitializeComponent();
 
-            db.Database.Delete();
-            db.Database.Create();
+            //db.Database.Delete();
+            //db.Database.Create();
 
             menuStrip1.Visible = false;
             splitContainer1.Visible = false;
@@ -41,9 +41,25 @@ namespace MonitorCLServer
         public void Receive(string message)
         {
             //richTextBox1.BeginInvoke((MethodInvoker)(() => this.richTextBox1.AppendText(message + "\n")));
-            if (MessageBox.Show("Разрешить пользователю " + message + " зарегистрироватся?", "Попытка подключения", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            if (message == "login")
             {
-                server.RemoveConnection(message);
+                if (MessageBox.Show("Разрешить пользователю " + message + " зарегистрироватся?", "Попытка подключения", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                {
+                    server.RemoveConnection(message);
+                }
+            }
+            else
+            {
+                JsonPack jsPack = new JsonPack();
+                jsPack.GetJson(message);
+                //if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey) && jsPack.header.getLoginPassword() == "login:password")
+                if (jsPack.header.metod == "cmd" && jsPack.data.text == "img")
+                {
+                    var ms = new MemoryStream(jsPack.data.images[0]);
+                    Image image = Image.FromStream(ms);
+                    image.Save("D:\\tmimg.jpg");
+                    Process.Start("D:\\tmimg.jpg");
+                }
             }
         }
 
@@ -104,6 +120,10 @@ namespace MonitorCLServer
             {
                 Debug.WriteLine(ex.Message);
             }
+            finally
+            {
+                this.notifyIcon1.Visible = false;
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -117,10 +137,11 @@ namespace MonitorCLServer
                     }
                 }
             e.Cancel = !canClose;
-            
-            //    this.ShowInTaskbar = false;
-            //this.notifyIcon1.Visible = true;
-            
+
+            this.Visible = false;
+            //this.ShowInTaskbar = false;
+            this.notifyIcon1.Visible = true;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -233,13 +254,13 @@ namespace MonitorCLServer
                         dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
                         {
                             DataPropertyName = "fname",
-                            HeaderText = "name"
+                            HeaderText = "Свойство"
                         });
 
                         dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
                         {
                             DataPropertyName = "fvalue",
-                            HeaderText = "value"
+                            HeaderText = "Значение"
                         });
 
                         foreach (var item in fields)
@@ -256,7 +277,7 @@ namespace MonitorCLServer
                         List<Product> list = product.GetData();
 
                         fields = product.Fields.Split(';');
-                        string[] desc = product.Fields.Split(';');
+                        string[] desc = product.getDesc().Split(';');
                         for (int i = 0; i < fields.Length; i++)
                         {
                             dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
@@ -358,5 +379,126 @@ namespace MonitorCLServer
             Application.Exit();
         }
 
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Visible = true;
+            //this.ShowInTaskbar = true;
+            this.notifyIcon1.Visible = false;
+        }
+
+        private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void treeView2_MouseClick(object sender, MouseEventArgs e)
+        {
+            dataGridView2.DataSource = null;
+            dataGridView2.Rows.Clear();
+            dataGridView2.Columns.Clear();
+            if (treeView2.SelectedNode != null)
+            {
+                string[] fields;
+                switch (treeView2.SelectedNode.Name)
+                {
+                    case "tnOS":
+                        OperatingSystemScan os = new OperatingSystemScan();
+                        os.GetData();
+                        fields = os.Fields.Split(';');
+
+                        dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
+                        {
+                            DataPropertyName = "fname",
+                            HeaderText = "Свойство"
+                        });
+
+                        dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
+                        {
+                            DataPropertyName = "fvalue",
+                            HeaderText = "Значение"
+                        });
+
+                        foreach (var item in fields)
+                        {
+                            dataGridView2.Rows.Add(new object[]
+                            {
+                                      item,
+                                      os[item]
+                            });
+                        }
+                        break;
+                    case "tnPrograms":
+                        Product product = new Product();
+
+                        toolStripStatusLabel1.Text = "Подготовка списка";
+                        toolStripProgressBar1.Value = 50;
+                        toolStripProgressBar1.Select();
+
+                        List<Product> list = product.GetData();
+
+                        toolStripProgressBar1.Value = 80;
+
+                        fields = product.Fields.Split(';');
+                        string[] desc = product.getDesc().Split(';');
+                        for (int i = 0; i < fields.Length; i++)
+                        {
+                            dataGridView2.Columns.Add(new DataGridViewTextBoxColumn
+                            {
+                                DataPropertyName = fields[i],
+                                HeaderText = desc[i]
+                            });
+                        }
+                        toolStripProgressBar1.Value = 120;
+                        foreach (var item in list)
+                        {
+                            dataGridView2.Rows.Add(new object[]
+                            {
+                                       item.Name,
+                                       item.IdentifyingNumber,
+                                       (item.InstallDate.TimeOfDay==DateTime.MinValue.TimeOfDay)?item.InstallDate.ToShortDateString():item.InstallDate.ToString(),//.ToShortDateString()+ " " +item.InstallDate.ToShortTimeString(),
+                                       item.InstallLocation,
+                                       item.Vendor,
+                                       item.Version
+                            });
+                        }
+
+                        toolStripProgressBar1.Value = 150;
+                        toolStripStatusLabel1.Text = "   ";
+                        toolStripProgressBar1.Value = 0;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void выключитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(this, "Выключить компьютер клиента?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                server.SendCommad("shutdown");
+            }
+        }
+
+        private void перезапуститьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(this, "Перезапустить компьютер клиента?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                server.SendCommad("reboot");
+            }
+        }
+
+        private void выйтиИзСистемыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(this, "Выйти из системы на клиенте?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                server.SendCommad("logoff");
+            }
+        }
+
+        private void подключитсяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            server.SendCommad("teamviewer");
+        }
     }
 }

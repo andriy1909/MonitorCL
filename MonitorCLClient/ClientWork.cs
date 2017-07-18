@@ -163,7 +163,17 @@ namespace MonitorCLClient
                     else
                         countEmpty = 0;
 
-                    receiveOut(builder.ToString());
+
+                    string message = builder.ToString();
+                    JsonPack jsPack = new JsonPack();
+                    jsPack.GetJson(message);
+                    if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey))
+                        if (jsPack.header.metod == "cmd")
+                        {
+                            message = jsPack.data.text;
+                        }
+
+                    receiveOut(message);
                 }
                 catch
                 {

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static MonitorCLServer.ServerObject;
 using System.Diagnostics;
+using MonitorCLClassLibrary;
 
 namespace MonitorCLServer
 {
@@ -53,8 +54,20 @@ namespace MonitorCLServer
                 }
             }
             while (Stream.DataAvailable);
-
             
+/*
+            string message = builder.ToString();
+            JsonPack jsPack = new JsonPack();
+            jsPack.GetJson(message);
+            if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Properties.Settings.Default.privateKey) && jsPack.header.getLoginPassword() == "login:password" && jsPack.header.metod == "")
+                switch (jsPack.header.metod)
+                {
+                    case "cmd":
+
+                        break;
+                    default:
+                        break;
+                }*/
             return builder.ToString();
         }
 
@@ -71,7 +84,7 @@ namespace MonitorCLServer
         {
             try
             {
-                if (Id == "" || Id == "-1" || Id == null)
+               /* if (Id == "" || Id == "-1" || Id == null)
                 {
                     Id = Guid.NewGuid().ToString();
                     server.BroadcastMessage("<id=" + Id + ">", this);
@@ -80,14 +93,14 @@ namespace MonitorCLServer
                 {
                     server.BroadcastMessage("<id=OK>", this);
                 }
-
+                */
                 // в бесконечном цикле получаем сообщения от клиента
                 while (true)
                 {
                     try
                     {
                         string message = GetMessage();
-                        receiveOut(Id + ":" + message);
+                        receiveOut(message);
                     }
                     catch
                     {

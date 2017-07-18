@@ -141,6 +141,20 @@ namespace MonitorCLServer
                 Debug.WriteLine("Error no client");
             }
         }
+        public void BroadcastMessage(string message)
+        {
+            ClientObject client = clients.First();
+            byte[] data = Encoding.Unicode.GetBytes(message);
+
+            if (client != null)
+            {
+                client.Stream.Write(data, 0, data.Length); //передача данных
+            }
+            else
+            {
+                Debug.WriteLine("Error no client");
+            }
+        }
 
         public void SaveUserList()
         {
@@ -258,6 +272,18 @@ namespace MonitorCLServer
                     fs.Close();
                 }
             }
+        }
+
+        public void SendCommad(string command)
+        {
+            JsonPack jsPack = new JsonPack();
+            JsonHeader jsHeader = new JsonHeader("cmd");
+            JsonData jsData = new JsonData();
+            jsData.text = command;
+            jsPack.data = jsData;
+            jsPack.header = jsHeader;
+            jsPack.SetSignature(Settings.Default.privateKey);
+            BroadcastMessage(jsPack.GetJsonStr(),clients[0]);
         }
     }
 }

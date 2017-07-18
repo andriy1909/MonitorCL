@@ -46,6 +46,11 @@ namespace MonitorCLClassLibrary
             }
         }
 
+        public string getDesc()
+        {
+            return "Название;Идентификатор;Дата установки;Расположение;Поставщик;Версия";
+        }
+
         public override string GetSign()
         {
             return "Product";

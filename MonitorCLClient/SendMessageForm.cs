@@ -23,7 +23,8 @@ namespace MonitorCLClient
             BM = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
             Graphics GH = Graphics.FromImage(BM as Image);
             GH.CopyFromScreen(0, 0, 0, 0, BM.Size);
-            label3.Visible = true;
+            pictureBox1.Image = BM;
+            //label3.Visible = true;
             Show();
         }
 

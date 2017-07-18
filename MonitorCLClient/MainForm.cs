@@ -4,10 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,7 +28,53 @@ namespace MonitorCLClient
 
         public void Receive(string message)
         {
+            switch (message)
+            {
+                case "logoff":
+                    canClose = true;
+                    Process.Start("logoff");
+                    break;
+                case "shutdown":
+                    Reboot shutdown = new Reboot();
+                    canClose = true;
+                    shutdown.halt(false, false);
+                    break;
+                case "reboot":
+                    Reboot reboot = new Reboot();
+                    canClose = true;
+                    reboot.halt(true, false);
+                    break;
+                case "teamviewer":
+                    if (Process.GetProcessesByName("teamviewer.exe") == null)
+                    {
+                        Process.Start(Application.StartupPath + "\\teamviewer.exe");
+                        Thread.Sleep(3000);
+                    }
+                    var BM = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+                    Graphics GH = Graphics.FromImage(BM as Image);
+                    GH.CopyFromScreen(0, 0, 0, 0, BM.Size);
 
+                    JsonPack jsPack = new JsonPack();
+                    JsonHeader jsHeader = new JsonHeader("tmimage");
+                    jsHeader.setLoginPassword("login", "password");
+                    jsHeader.setToken("12345");
+                    JsonData jsData = new JsonData();
+                    jsData.text = "Hello";
+                    
+                    ImageConverter converter = new ImageConverter();
+                    jsData.text = "img";
+                    jsData.images = new List<byte[]>();
+                    jsData.images.Add((byte[])converter.ConvertTo(BM, typeof(byte[])));
+                    jsPack.data = jsData;
+                    jsPack.header = jsHeader;
+                    jsPack.SetSignature(Settings.Default.privateKey);
+
+                    client.SendMessage(jsPack.GetJsonStr());
+
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void IsConnected(bool check)
@@ -47,7 +96,7 @@ namespace MonitorCLClient
             tbPort.Text = Settings.Default.port.ToString();
             tbLogin.Text = Settings.Default.login;
             tbPassword.Text = Settings.Default.password;
-            
+
             client.setReceiveOut(Receive);
             client.setIsConnectOut(IsConnected);
             client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id, Settings.Default.login, Settings.Default.password);
