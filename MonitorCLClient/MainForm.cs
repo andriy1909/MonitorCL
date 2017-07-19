@@ -45,10 +45,10 @@ namespace MonitorCLClient
                     reboot.halt(true, false);
                     break;
                 case "teamviewer":
-                    if (Process.GetProcessesByName("teamviewer.exe") == null)
+                    if (Process.GetProcessesByName("teamviewer").Count() == 0)
                     {
                         Process.Start(Application.StartupPath + "\\teamviewer.exe");
-                        Thread.Sleep(3000);
+                        Thread.Sleep(7000);
                     }
                     var BM = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
                     Graphics GH = Graphics.FromImage(BM as Image);
@@ -159,7 +159,7 @@ namespace MonitorCLClient
         {
             canClose = true;
             notifyIcon.Visible = false;
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Process.GetCurrentProcess().Kill();
             Application.Exit();
         }
 

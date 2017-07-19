@@ -33,3 +33,4 @@ E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache

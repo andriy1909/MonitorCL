@@ -102,9 +102,9 @@ namespace MonitorCLServer
                         string message = GetMessage();
                         receiveOut(message);
                     }
-                    catch
+                    catch(Exception err)
                     {
-                        Debug.WriteLine("Error process");
+                        Debug.WriteLine("Error process : {0}", err.Message);
                         break;
                     }
                 }

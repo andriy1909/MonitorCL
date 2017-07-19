@@ -53,7 +53,7 @@ namespace MonitorCLServer
                 JsonPack jsPack = new JsonPack();
                 jsPack.GetJson(message);
                 //if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey) && jsPack.header.getLoginPassword() == "login:password")
-                if (jsPack.header.metod == "cmd" && jsPack.data.text == "img")
+                if (jsPack.header.metod == "cmd" || jsPack.header.metod == "tmimage")
                 {
                     var ms = new MemoryStream(jsPack.data.images[0]);
                     Image image = Image.FromStream(ms);
