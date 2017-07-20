@@ -19,6 +19,7 @@ namespace MonitorCLClient
     {
         ClientWork client = new ClientWork();
         bool canClose = false;
+        bool isConnected = false;
 
         public MainForm()
         {
@@ -27,18 +28,72 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            tbPassword.UseSystemPasswordChar = true;
+            if(Settings.Default.isBlocked)
+            {
+                Exit();
+            }
+            //автозапуск программы при старте Windows
+
+            //TryConnect
+            int result = Connect();
+            switch (result)
+            {
+                case 0:// OK
+
+                    break;
+                case 1:// not auth
+                    
+                    break;
+                case 2:// not found user
+                    RegistrationForm rForm = new RegistrationForm();
+                    if(rForm.ShowDialog()!=DialogResult.OK||!rForm.isConnect)
+                    {
+                        Exit();
+                    }
+                    break;
+                case 3:// block
+                    Exit();
+                    break;
+                case 4:// error
+                    //tryConnect
+                    if (result != 0)
+                        Exit();
+                    break;
+                default:
+                    //tryConnect
+                    if (result != 0)
+                        Exit();
+                    break;
+            }
+
+
             tbIP.Text = Settings.Default.ip;
             tbPort.Text = Settings.Default.port.ToString();
-            tbLogin.Text = Settings.Default.login;
-            tbPassword.Text = Settings.Default.password;
             
-            /*  var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-              if (key.GetValue(Application.ProductName).ToString() == Application.ExecutablePath)
-              {
-                  //автозапуск программы при старте Windows
-                  key.SetValue(Application.ProductName, Application.ExecutablePath);
-              }*/
+        }
+
+        /// <summary>
+        /// Соединение с сервером
+        /// 0-OK,1-not auth,2-not found user, 3-block, 4-error
+        /// </summary>
+        /// <returns>Статус</returns>
+        private int Connect()
+        {
+            //try
+            return -1;
+        }
+
+        /// <summary>
+        /// Выход с программы
+        /// </summary>
+        private void Exit()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ErrorToSupport()
+        {
+
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

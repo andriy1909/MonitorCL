@@ -103,5 +103,17 @@ namespace MonitorCLClient.Properties {
                 return ((string)(this["privateKey"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isBlocked {
+            get {
+                return ((bool)(this["isBlocked"]));
+            }
+            set {
+                this["isBlocked"] = value;
+            }
+        }
     }
 }
