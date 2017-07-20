@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MonitorCLServer
+namespace MonitorCLClient
 {
     public partial class LoginForm : Form
     {
@@ -25,6 +25,7 @@ namespace MonitorCLServer
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+            Close();
             /*if (tbLogin.Text == MonitorCLClient.Properties.Settings.Default.login && tbPassword.Text == MonitorCLClient.Properties.Settings.Default.password)
             {
                 DialogResult = DialogResult.OK;

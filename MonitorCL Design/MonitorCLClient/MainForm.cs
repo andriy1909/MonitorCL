@@ -17,9 +17,13 @@ namespace MonitorCLClient
 {
     public partial class MainForm : Form
     {
+        bool isRegister = false;
+        bool isLogin = false;
+
         ClientWork client = new ClientWork();
         bool canClose = false;
-        bool isConnected = false;
+      //  bool isConnected = false;
+        SendMessageForm sendMessage = null;
 
         public MainForm()
         {
@@ -28,7 +32,23 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if(Settings.Default.isBlocked)
+            if(!isRegister)
+            {
+                RegistrationForm form = new RegistrationForm();
+                form.ShowDialog();
+            }
+            else
+            {
+                if (!isLogin)
+                {
+                    LoginForm form = new LoginForm();
+                    form.ShowDialog();
+                }
+            }
+
+
+
+            if (Settings.Default.isBlocked)
             {
                 Exit();
             }
@@ -42,11 +62,11 @@ namespace MonitorCLClient
 
                     break;
                 case 1:// not auth
-                    
+
                     break;
                 case 2:// not found user
                     RegistrationForm rForm = new RegistrationForm();
-                    if(rForm.ShowDialog()!=DialogResult.OK||!rForm.isConnect)
+                    if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
                     {
                         Exit();
                     }
@@ -69,7 +89,7 @@ namespace MonitorCLClient
 
             tbIP.Text = Settings.Default.ip;
             tbPort.Text = Settings.Default.port.ToString();
-            
+
         }
 
         /// <summary>
@@ -80,7 +100,7 @@ namespace MonitorCLClient
         private int Connect()
         {
             //try
-            return -1;
+            return 0;
         }
 
         /// <summary>
@@ -88,7 +108,7 @@ namespace MonitorCLClient
         /// </summary>
         private void Exit()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void ErrorToSupport()
@@ -117,8 +137,6 @@ namespace MonitorCLClient
 
                 tbIP.Text = Settings.Default.ip;
                 tbPort.Text = Settings.Default.port.ToString();
-                tbLogin.Text = Settings.Default.login;
-                tbPassword.Text = Settings.Default.password;
             }
         }
 
@@ -153,19 +171,18 @@ namespace MonitorCLClient
         private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-                if (this.WindowState == FormWindowState.Minimized)
-                {
-                    this.WindowState = FormWindowState.Normal;
-                    this.ShowInTaskbar = true;
-                }
+            {
+                sendMessage = new SendMessageForm();
+                sendMessage.Show();
+                sendMessage.WindowState = FormWindowState.Normal;
+                sendMessage.ShowInTaskbar = true;
+            }
         }
 
         private void btCancel_Click(object sender, EventArgs e)
         {
             tbIP.Text = Settings.Default.ip;
             tbPort.Text = Settings.Default.port.ToString();
-            tbLogin.Text = Settings.Default.login;
-            tbPassword.Text = Settings.Default.password;
             Close();
         }
 
@@ -182,23 +199,17 @@ namespace MonitorCLClient
                 MessageBox.Show("Введите номер порта!");
             }
             else
-            if (tbLogin.Text == "")
-            {
-                MessageBox.Show("Введите логин!");
-            }
-            else
-            if (tbPassword.Text == "")
-            {
-                MessageBox.Show("Введите пароль!");
-            }
-            else
             {
                 Settings.Default.ip = tbIP.Text;
                 Settings.Default.port = int.Parse(tbPort.Text);
-                Settings.Default.login = tbLogin.Text;
-                Settings.Default.password = tbPassword.Text;
                 Close();
             }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 form = new AboutBox1();
+            form.Show();
         }
     }
 }

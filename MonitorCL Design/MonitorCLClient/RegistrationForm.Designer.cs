@@ -51,6 +51,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Зарегистироватся";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -60,6 +61,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -159,6 +161,7 @@
             this.button3.TabIndex = 17;
             this.button3.Text = "Войти";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // RegistrationForm
             // 
@@ -182,6 +185,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistrationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationForm";
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.ResumeLayout(false);

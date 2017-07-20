@@ -17,12 +17,29 @@ namespace MonitorCLClient
         {
             InitializeComponent();
             textBox1.UseSystemPasswordChar = true;
-            textBox1.UseSystemPasswordChar = true;
+            textBox3.UseSystemPasswordChar = true;
         }
 
         private void RegistrationForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            LoginForm form = new LoginForm();
+            form.ShowDialog(Parent);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ожидайте подтверждения!");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

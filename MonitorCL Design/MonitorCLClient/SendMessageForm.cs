@@ -13,7 +13,7 @@ namespace MonitorCLClient
         private ClientWork client;
         private Image BM = null;
 
-        public SendMessageForm(ClientWork client)
+        public SendMessageForm(ClientWork client=null)
         {
             InitializeComponent();
             this.client = client;

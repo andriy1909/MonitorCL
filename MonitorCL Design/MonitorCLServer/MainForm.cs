@@ -276,18 +276,20 @@ namespace MonitorCLServer
         private void подключитсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //server.SendCommad("teamviewer");
+            TeamViewerForm form = new TeamViewerForm();
+            form.Show();
         }
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SettingForm form = new SettingForm();
-            form.ShowDialog();
+            form.Show();
         }
 
         private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ClientSettingForm form = new ClientSettingForm();
-            form.ShowDialog();
+            ClientInfoForm form = new ClientInfoForm();
+            form.Show();
         }
 
         private void productsForm1_Load(object sender, EventArgs e)
@@ -311,11 +313,31 @@ namespace MonitorCLServer
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-
+            Debug.Write("+");
         }
 
         private void operationSystemControl1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void видалитиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void налаштуванняToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
+            ClientSettingForm form = new ClientSettingForm();
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
+            form.ShowDialog();
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            OpenViewForm form = new OpenViewForm();
+            form.Show();
 
         }
     }

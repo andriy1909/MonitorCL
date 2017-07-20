@@ -1,4 +1,4 @@
-﻿namespace MonitorCLServer
+﻿namespace MonitorCLClient
 {
     partial class LoginForm
     {
