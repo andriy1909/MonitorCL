@@ -21,6 +21,12 @@ namespace MonitorCLServer
             Dock = DockStyle.Fill;
         }
 
+        public void setColor(int row, Color color)
+        {
+            dataGridView1.Rows[row].DefaultCellStyle.BackColor = color;
+        }
+
+
         public ProductsControl(string types)
         {
             InitializeComponent();

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Узел18", 1, 1);
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Компютер 1", 1, 1);
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Узел24", 1, 1);
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Узел25", 1, 1);
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Узел26", 2, 2);
@@ -579,7 +579,7 @@
             treeNode1.ImageIndex = 1;
             treeNode1.Name = "Узел18";
             treeNode1.SelectedImageIndex = 1;
-            treeNode1.Text = "Узел18";
+            treeNode1.Text = "Компютер 1";
             treeNode1.ToolTipText = "Лена тел. (097)88-66-111";
             treeNode2.ImageIndex = 1;
             treeNode2.Name = "Узел24";
