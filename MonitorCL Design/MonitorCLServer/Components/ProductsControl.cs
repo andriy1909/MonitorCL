@@ -12,6 +12,8 @@ namespace MonitorCLServer
 {
     public partial class ProductsControl : UserControl
     {
+        string type = "os";
+
         public ProductsControl()
         {
             InitializeComponent();
@@ -19,21 +21,32 @@ namespace MonitorCLServer
             Dock = DockStyle.Fill;
         }
 
+        public ProductsControl(string types)
+        {
+            InitializeComponent();
+
+            Dock = DockStyle.Fill;
+            type = types;
+        }
+
         string[] fields = "Назва;Ідентифікатор;Дата установки;Розміщення;Постачальний;Версія".Split(';');
 
         private void ProductsControl_Load(object sender, EventArgs e)
         {
-            Product product = new Product();
-            var list = product.GetData();
-
-            foreach (var item in fields)
+            switch (type)
             {
-                dataGridView1.Columns.Add("cl" + new Random().Next(100000).ToString(), item);
-            }
+                case "os":
+                    Product product = new Product();
+                    var list = product.GetData();
 
-            foreach (var item in list)
-            {
-                dataGridView1.Rows.Add(new object[] {
+                    foreach (var item in fields)
+                    {
+                        dataGridView1.Columns.Add("cl" + new Random().Next(100000).ToString(), item);
+                    }
+
+                    foreach (var item in list)
+                    {
+                        dataGridView1.Rows.Add(new object[] {
                     imageList1.Images[new Random().Next(25)],
                     item.Name,
                 item.IdentifyingNumber,
@@ -42,7 +55,33 @@ namespace MonitorCLServer
                 item.Vendor,
                 item.Version
                 });
+                    }
+                    break;
+                case "au":
+                    dataGridView1.Columns.Add("Caption", "Назва");
+                    dataGridView1.Columns.Add("Command", "Команда");
+                    dataGridView1.Columns.Add("Description", "Опис");
+                    dataGridView1.Columns.Add("Location", "Розміщення");
+                    dataGridView1.Columns.Add("User", "Користувач");
+
+                    SelectQuery query = new SelectQuery("SELECT * FROM Win32_StartupCommand");
+                    ManagementObjectSearcher items = new ManagementObjectSearcher(query);
+                    foreach (ManagementObject item in items.Get())
+                    {
+                        dataGridView1.Rows.Add(new object[] {
+                            imageList1.Images[new Random().Next(25)],
+                    item["Caption"],
+                    item["Command"],
+                    item["Description"],
+                    item["Location"],
+                    item["User"]
+                });
+                    }
+                    break;
+                default:
+                    break;
             }
+
         }
 
 
@@ -100,7 +139,7 @@ namespace MonitorCLServer
             {
                 List<Product> list = new List<Product>();
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT " + "Caption,IdentifyingNumber,InstallDate,InstallLocation,Vendor,Version,InstallDate2" + " FROM Win32_Product");
-
+                int i = 0;
                 foreach (ManagementObject item in searcher.Get())
                 {
                     list.Add(new Product()
@@ -112,6 +151,9 @@ namespace MonitorCLServer
                         Vendor = (string)item["Vendor"],
                         Version = (string)item["Version"]
                     });
+                    i++;
+                    if (i >= 20)
+                        break;
                 }
                 return list;
             }

@@ -21,7 +21,7 @@ namespace MonitorCLServer
 
         bool canClose = false;
         
-        static Thread listenThread;
+        //static Thread listenThread;
 
         public MainForm()
         {
@@ -38,7 +38,9 @@ namespace MonitorCLServer
         private void MainForm2_Load(object sender, EventArgs e)
         {
             this.Show();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             if (isDedug || new LoginForm().ShowDialog() == DialogResult.OK)
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             {
                 menuStrip1.Visible = true;
                 splitContainer1.Visible = true;
@@ -213,7 +215,9 @@ namespace MonitorCLServer
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             if (new LoginForm().ShowDialog() == DialogResult.OK)
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             {
                 menuStrip1.Visible = true;
                 splitContainer1.Visible = true;
@@ -241,7 +245,29 @@ namespace MonitorCLServer
 
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
-
+            switch (e.Node.Name)
+            {
+                case "tnOS":
+                    pnContents.Controls.Clear();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
+                    pnContents.Controls.Add(new OperationSystemControl());
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
+                    break;
+                case "tnPrograms":
+                    pnContents.Controls.Clear();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
+                    pnContents.Controls.Add(new ProductsControl());
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
+                    break;
+                case "tnau":
+                    pnContents.Controls.Clear();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
+                    pnContents.Controls.Add(new ProductsControl("au"));
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void treeView2_MouseClick(object sender, MouseEventArgs e)
@@ -276,19 +302,25 @@ namespace MonitorCLServer
         private void подключитсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //server.SendCommad("teamviewer");
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             TeamViewerForm form = new TeamViewerForm();
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
         }
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             SettingForm form = new SettingForm();
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
         }
 
         private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
         {
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             ClientInfoForm form = new ClientInfoForm();
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
         }
 
@@ -313,7 +345,29 @@ namespace MonitorCLServer
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            Debug.Write("+");
+            switch (treeView1.SelectedNode.Name)
+            {
+                case "tnOS":
+                    pnContents.Controls.Clear();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
+                    pnContents.Controls.Add(new OperationSystemControl());
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
+                    break;
+                case "tnPrograms":
+                    pnContents.Controls.Clear();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
+                    pnContents.Controls.Add(new ProductsControl());
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
+                    break;
+                case "tnau":
+                    pnContents.Controls.Clear();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
+                    pnContents.Controls.Add(new ProductsControl("au"));
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void operationSystemControl1_Load(object sender, EventArgs e)
@@ -328,17 +382,40 @@ namespace MonitorCLServer
 
         private void налаштуванняToolStripMenuItem_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
-            ClientSettingForm form = new ClientSettingForm();
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
-            form.ShowDialog();
         }
 
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             OpenViewForm form = new OpenViewForm();
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
+        }
 
+        private void tvClients_AfterExpand(object sender, TreeViewEventArgs e)
+        {
+            e.Node.ExpandAll();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void treeView2_AfterSelect_1(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void treeView2_Layout(object sender, LayoutEventArgs e)
+        {
+            treeView2.ExpandAll();
+        }
+
+        private void переназватиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tvClients.SelectedNode != null)
+                tvClients.SelectedNode.BeginEdit();
         }
     }
 }

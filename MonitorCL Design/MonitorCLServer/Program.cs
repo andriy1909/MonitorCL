@@ -16,7 +16,9 @@ namespace MonitorCLServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             Application.Run(new MainForm());
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
         }
     }
 }

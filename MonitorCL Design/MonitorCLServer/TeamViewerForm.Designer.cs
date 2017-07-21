@@ -76,6 +76,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Зробити повторний знімок";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TeamViewerForm
             // 
@@ -87,6 +88,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "TeamViewerForm";
             this.Text = "TeamViewer";
+            this.Load += new System.EventHandler(this.TeamViewerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

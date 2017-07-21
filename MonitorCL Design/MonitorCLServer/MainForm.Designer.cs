@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Узел18");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Узел18", 1, 1);
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Узел24", 1, 1);
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Узел25", 1, 1);
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Узел26", 2, 2);
@@ -75,60 +75,100 @@
             System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Узел11");
             System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Узел12");
             System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Узел13");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Общая информация");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Пользователи");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Компьютер", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Пользователи");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Операционная система");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Процессы");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Системные драйвера");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Время работы");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Автозагрузка");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Установленные программы");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Програмное обеспичение", new System.Windows.Forms.TreeNode[] {
             treeNode27,
-            treeNode28});
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Процессор");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Системная плата");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Память");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("BIOS");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Системная плата", new System.Windows.Forms.TreeNode[] {
+            treeNode28,
+            treeNode29,
             treeNode30,
             treeNode31,
             treeNode32,
             treeNode33});
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Операционная система");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Процессы");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Системные драйвера");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Время работы");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Операционная система", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Процессор");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Системная плата");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Память");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("BIOS");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Логические диски");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Физические диски");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("SMART");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
+            treeNode39,
+            treeNode40,
+            treeNode41});
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Графический процессор");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Сеть Windows");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Устройства Windows");
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Принтеры");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Системные устройства", new System.Windows.Forms.TreeNode[] {
             treeNode35,
             treeNode36,
             treeNode37,
-            treeNode38});
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Монитор");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Графический процессор");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Отображение", new System.Windows.Forms.TreeNode[] {
-            treeNode40,
-            treeNode41});
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Логические диски");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Физические диски");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("SMART");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
+            treeNode38,
+            treeNode42,
             treeNode43,
             treeNode44,
-            treeNode45});
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Сеть Windows");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Интернет");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Сеть", new System.Windows.Forms.TreeNode[] {
-            treeNode47,
-            treeNode48});
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Устройства Windows");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Ввод");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Принтеры");
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Устройства", new System.Windows.Forms.TreeNode[] {
-            treeNode50,
+            treeNode45,
+            treeNode46});
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Общая информация");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Пользователи");
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Компьютер", new System.Windows.Forms.TreeNode[] {
+            treeNode48,
+            treeNode49});
+            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Процессор");
+            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Системная плата");
+            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Память");
+            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("BIOS");
+            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Системная плата", new System.Windows.Forms.TreeNode[] {
             treeNode51,
-            treeNode52});
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("Автозагрузка");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Запланированые");
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Установленные программы");
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Программы", new System.Windows.Forms.TreeNode[] {
-            treeNode54,
-            treeNode55,
-            treeNode56});
+            treeNode52,
+            treeNode53,
+            treeNode54});
+            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Операционная система");
+            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Процессы");
+            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("Системные драйвера");
+            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("Время работы");
+            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("Операционная система", new System.Windows.Forms.TreeNode[] {
+            treeNode56,
+            treeNode57,
+            treeNode58,
+            treeNode59});
+            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("Монитор");
+            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("Графический процессор");
+            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("Отображение", new System.Windows.Forms.TreeNode[] {
+            treeNode61,
+            treeNode62});
+            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("Логические диски");
+            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Физические диски");
+            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("SMART");
+            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
+            treeNode64,
+            treeNode65,
+            treeNode66});
+            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Сеть Windows");
+            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Интернет");
+            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Сеть", new System.Windows.Forms.TreeNode[] {
+            treeNode68,
+            treeNode69});
+            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Устройства Windows");
+            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Ввод");
+            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Принтеры");
+            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Устройства", new System.Windows.Forms.TreeNode[] {
+            treeNode71,
+            treeNode72,
+            treeNode73});
+            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Автозагрузка");
+            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Запланированые");
+            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Установленные программы");
+            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Программы", new System.Windows.Forms.TreeNode[] {
+            treeNode75,
+            treeNode76,
+            treeNode77});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.serverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -140,12 +180,14 @@
             this.imgsStatus = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.показатьПодробнуюИнформациюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.налаштуванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.подключитсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.питаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиИзСистемыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выключитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.перезапуститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.показатьПодробнуюИнформациюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.переназватиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видалитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -169,21 +211,21 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tvClients = new System.Windows.Forms.TreeView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.toolStrip4 = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.налаштуванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnContents = new System.Windows.Forms.Panel();
+            this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.treeView2 = new System.Windows.Forms.TreeView();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -214,6 +256,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1029, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // serverToolStripMenuItem
             // 
@@ -228,42 +271,42 @@
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.startToolStripMenuItem.Text = "Запустити";
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.startToolStripMenuItem.Text = "Запустить";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
             // stopToolStripMenuItem
             // 
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.stopToolStripMenuItem.Text = "Зупинити";
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.stopToolStripMenuItem.Text = "Остановить";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // restartToolStripMenuItem
             // 
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.restartToolStripMenuItem.Text = "Перезапустити";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.restartToolStripMenuItem.Text = "Перезапустить";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
-            this.settingToolStripMenuItem.Text = "Налаштування";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.settingToolStripMenuItem.Text = "Настройки";
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.aboutToolStripMenuItem.Text = "Про програму";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.aboutToolStripMenuItem.Text = "О программе";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.exitToolStripMenuItem.Text = "Вихід";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.exitToolStripMenuItem.Text = "Выход";
             // 
             // imgsStatus
             // 
@@ -293,12 +336,31 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(157, 148);
             // 
+            // показатьПодробнуюИнформациюToolStripMenuItem
+            // 
+            this.показатьПодробнуюИнформациюToolStripMenuItem.Name = "показатьПодробнуюИнформациюToolStripMenuItem";
+            this.показатьПодробнуюИнформациюToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.показатьПодробнуюИнформациюToolStripMenuItem.Text = "Інформація";
+            this.показатьПодробнуюИнформациюToolStripMenuItem.Click += new System.EventHandler(this.показатьПодробнуюИнформациюToolStripMenuItem_Click);
+            // 
+            // налаштуванняToolStripMenuItem
+            // 
+            this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
+            this.налаштуванняToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.налаштуванняToolStripMenuItem.Text = "Налаштування";
+            this.налаштуванняToolStripMenuItem.Click += new System.EventHandler(this.налаштуванняToolStripMenuItem_Click);
+            // 
             // подключитсяToolStripMenuItem
             // 
             this.подключитсяToolStripMenuItem.Name = "подключитсяToolStripMenuItem";
             this.подключитсяToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.подключитсяToolStripMenuItem.Text = "Підключитись";
             this.подключитсяToolStripMenuItem.Click += new System.EventHandler(this.подключитсяToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(153, 6);
             // 
             // питаниеToolStripMenuItem
             // 
@@ -331,13 +393,6 @@
             this.перезапуститьToolStripMenuItem.Text = "Перезавантажити";
             this.перезапуститьToolStripMenuItem.Click += new System.EventHandler(this.перезапуститьToolStripMenuItem_Click);
             // 
-            // показатьПодробнуюИнформациюToolStripMenuItem
-            // 
-            this.показатьПодробнуюИнформациюToolStripMenuItem.Name = "показатьПодробнуюИнформациюToolStripMenuItem";
-            this.показатьПодробнуюИнформациюToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.показатьПодробнуюИнформациюToolStripMenuItem.Text = "Інформація";
-            this.показатьПодробнуюИнформациюToolStripMenuItem.Click += new System.EventHandler(this.показатьПодробнуюИнформациюToolStripMenuItem_Click);
-            // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
@@ -348,6 +403,7 @@
             this.переназватиToolStripMenuItem.Name = "переназватиToolStripMenuItem";
             this.переназватиToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.переназватиToolStripMenuItem.Text = "Переназвати";
+            this.переназватиToolStripMenuItem.Click += new System.EventHandler(this.переназватиToolStripMenuItem_Click);
             // 
             // видалитиToolStripMenuItem
             // 
@@ -364,6 +420,7 @@
             this.imageList1.Images.SetKeyName(1, "computer-tower-and-monitor_icon-icons.com_56305.png");
             this.imageList1.Images.SetKeyName(2, "Notebook.png");
             this.imageList1.Images.SetKeyName(3, "Без названия.jpg");
+            this.imageList1.Images.SetKeyName(4, "setting_5376.ico");
             // 
             // toolStripProgressBar1
             // 
@@ -512,23 +569,28 @@
             this.tvClients.AllowDrop = true;
             this.tvClients.ContextMenuStrip = this.contextMenuStrip1;
             this.tvClients.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvClients.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tvClients.ImageIndex = 0;
             this.tvClients.ImageList = this.imageList1;
             this.tvClients.ItemHeight = 16;
+            this.tvClients.LabelEdit = true;
             this.tvClients.Location = new System.Drawing.Point(0, 25);
             this.tvClients.Name = "tvClients";
             treeNode1.ImageIndex = 1;
             treeNode1.Name = "Узел18";
-            treeNode1.SelectedImageKey = "computer-tower-and-monitor_icon-icons.com_56305.png";
+            treeNode1.SelectedImageIndex = 1;
             treeNode1.Text = "Узел18";
+            treeNode1.ToolTipText = "Лена тел. (097)88-66-111";
             treeNode2.ImageIndex = 1;
             treeNode2.Name = "Узел24";
             treeNode2.SelectedImageIndex = 1;
             treeNode2.Text = "Узел24";
+            treeNode2.ToolTipText = "Лена";
             treeNode3.ImageIndex = 1;
             treeNode3.Name = "Узел25";
             treeNode3.SelectedImageIndex = 1;
             treeNode3.Text = "Узел25";
+            treeNode3.ToolTipText = "Лена (Описание описание описание описание описание описание описание )";
             treeNode4.ImageIndex = 2;
             treeNode4.Name = "Узел26";
             treeNode4.SelectedImageIndex = 2;
@@ -596,8 +658,10 @@
             treeNode25,
             treeNode26});
             this.tvClients.SelectedImageIndex = 0;
+            this.tvClients.ShowNodeToolTips = true;
             this.tvClients.Size = new System.Drawing.Size(161, 586);
             this.tvClients.TabIndex = 8;
+            this.tvClients.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.tvClients_AfterExpand);
             this.tvClients.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.tvClients_ItemDrag);
             this.tvClients.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvClients_AfterSelect);
             this.tvClients.DragDrop += new System.Windows.Forms.DragEventHandler(this.tvClients_DragDrop);
@@ -620,150 +684,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(161, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.toolStrip4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(172, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(693, 611);
-            this.panel2.TabIndex = 1;
-            // 
-            // toolStrip4
-            // 
-            this.toolStrip4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
-            this.toolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton7,
-            this.toolStripButton8,
-            this.toolStripButton9});
-            this.toolStrip4.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip4.Size = new System.Drawing.Size(693, 25);
-            this.toolStrip4.TabIndex = 2;
-            this.toolStrip4.Text = "toolStrip4";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.treeView1);
-            this.panel1.Controls.Add(this.toolStrip2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(172, 611);
-            this.panel1.TabIndex = 0;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Indent = 18;
-            this.treeView1.ItemHeight = 20;
-            this.treeView1.Location = new System.Drawing.Point(0, 25);
-            this.treeView1.Name = "treeView1";
-            treeNode27.Name = "Узел9";
-            treeNode27.Text = "Общая информация";
-            treeNode28.Name = "tnUsers";
-            treeNode28.Text = "Пользователи";
-            treeNode29.Name = "Узел0";
-            treeNode29.Text = "Компьютер";
-            treeNode30.Name = "Узел13";
-            treeNode30.Text = "Процессор";
-            treeNode31.Name = "Узел14";
-            treeNode31.Text = "Системная плата";
-            treeNode32.Name = "Узел15";
-            treeNode32.Text = "Память";
-            treeNode33.Name = "Узел16";
-            treeNode33.Text = "BIOS";
-            treeNode34.Name = "Узел1";
-            treeNode34.Text = "Системная плата";
-            treeNode35.Name = "tnOS";
-            treeNode35.Text = "Операционная система";
-            treeNode36.Name = "Узел19";
-            treeNode36.Text = "Процессы";
-            treeNode37.Name = "Узел20";
-            treeNode37.Text = "Системные драйвера";
-            treeNode38.Name = "Узел21";
-            treeNode38.Text = "Время работы";
-            treeNode39.Name = "Узел2";
-            treeNode39.Text = "Операционная система";
-            treeNode40.Name = "Узел22";
-            treeNode40.Text = "Монитор";
-            treeNode41.Name = "Узел24";
-            treeNode41.Text = "Графический процессор";
-            treeNode42.Name = "Узел3";
-            treeNode42.Text = "Отображение";
-            treeNode43.Name = "Узел26";
-            treeNode43.Text = "Логические диски";
-            treeNode44.Name = "Узел27";
-            treeNode44.Text = "Физические диски";
-            treeNode45.Name = "Узел30";
-            treeNode45.Text = "SMART";
-            treeNode46.Name = "Узел5";
-            treeNode46.Text = "Хранение данных";
-            treeNode47.Name = "Узел32";
-            treeNode47.Text = "Сеть Windows";
-            treeNode48.Name = "Узел33";
-            treeNode48.Text = "Интернет";
-            treeNode49.Name = "Узел6";
-            treeNode49.Text = "Сеть";
-            treeNode50.Name = "Узел37";
-            treeNode50.Text = "Устройства Windows";
-            treeNode51.Name = "Узел38";
-            treeNode51.Text = "Ввод";
-            treeNode52.Name = "Узел39";
-            treeNode52.Text = "Принтеры";
-            treeNode53.Name = "Узел7";
-            treeNode53.Text = "Устройства";
-            treeNode54.Name = "Узел41";
-            treeNode54.Text = "Автозагрузка";
-            treeNode55.Name = "Узел42";
-            treeNode55.Text = "Запланированые";
-            treeNode56.Name = "tnPrograms";
-            treeNode56.Text = "Установленные программы";
-            treeNode57.Name = "Узел8";
-            treeNode57.Text = "Программы";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode29,
-            treeNode34,
-            treeNode39,
-            treeNode42,
-            treeNode46,
-            treeNode49,
-            treeNode53,
-            treeNode57});
-            this.treeView1.ShowLines = false;
-            this.treeView1.Size = new System.Drawing.Size(172, 586);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
-            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(172, 25);
-            this.toolStrip2.TabIndex = 0;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // налаштуванняToolStripMenuItem
-            // 
-            this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
-            this.налаштуванняToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.налаштуванняToolStripMenuItem.Text = "Налаштування";
-            this.налаштуванняToolStripMenuItem.Click += new System.EventHandler(this.налаштуванняToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(153, 6);
             // 
             // toolStripButton3
             // 
@@ -794,6 +714,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "Інформація";
+            this.toolStripButton2.Click += new System.EventHandler(this.показатьПодробнуюИнформациюToolStripMenuItem_Click);
             // 
             // toolStripButton5
             // 
@@ -812,6 +733,40 @@
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton6.Text = "Обновити";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.pnContents);
+            this.panel2.Controls.Add(this.toolStrip4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(213, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(652, 611);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnContents
+            // 
+            this.pnContents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContents.Location = new System.Drawing.Point(0, 25);
+            this.pnContents.Name = "pnContents";
+            this.pnContents.Size = new System.Drawing.Size(652, 586);
+            this.pnContents.TabIndex = 3;
+            // 
+            // toolStrip4
+            // 
+            this.toolStrip4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
+            this.toolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton7,
+            this.toolStripButton8,
+            this.toolStripButton9});
+            this.toolStrip4.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip4.Name = "toolStrip4";
+            this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip4.Size = new System.Drawing.Size(652, 25);
+            this.toolStrip4.TabIndex = 2;
+            this.toolStrip4.Text = "toolStrip4";
             // 
             // toolStripButton7
             // 
@@ -840,6 +795,180 @@
             this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton9.Text = "toolStripButton9";
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.treeView2);
+            this.panel1.Controls.Add(this.treeView1);
+            this.panel1.Controls.Add(this.toolStrip2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(213, 611);
+            this.panel1.TabIndex = 0;
+            // 
+            // treeView2
+            // 
+            this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeView2.FullRowSelect = true;
+            this.treeView2.ImageIndex = 4;
+            this.treeView2.ImageList = this.imageList1;
+            this.treeView2.Indent = 18;
+            this.treeView2.ItemHeight = 20;
+            this.treeView2.Location = new System.Drawing.Point(0, 25);
+            this.treeView2.Name = "treeView2";
+            treeNode27.Name = "tnUsers";
+            treeNode27.Text = "Пользователи";
+            treeNode28.Name = "tnOS";
+            treeNode28.Text = "Операционная система";
+            treeNode29.Name = "Узел19";
+            treeNode29.Text = "Процессы";
+            treeNode30.Name = "Узел20";
+            treeNode30.Text = "Системные драйвера";
+            treeNode31.Name = "Узел21";
+            treeNode31.Text = "Время работы";
+            treeNode32.Name = "tnau";
+            treeNode32.Text = "Автозагрузка";
+            treeNode33.Name = "tnPrograms";
+            treeNode33.Text = "Установленные программы";
+            treeNode34.Name = "Узел0";
+            treeNode34.Text = "Програмное обеспичение";
+            treeNode35.Name = "Узел13";
+            treeNode35.Text = "Процессор";
+            treeNode36.Name = "Узел14";
+            treeNode36.Text = "Системная плата";
+            treeNode37.Name = "Узел15";
+            treeNode37.Text = "Память";
+            treeNode38.Name = "Узел16";
+            treeNode38.Text = "BIOS";
+            treeNode39.Name = "Узел26";
+            treeNode39.Text = "Логические диски";
+            treeNode40.Name = "Узел27";
+            treeNode40.Text = "Физические диски";
+            treeNode41.Name = "Узел30";
+            treeNode41.Text = "SMART";
+            treeNode42.Name = "Узел5";
+            treeNode42.Text = "Хранение данных";
+            treeNode43.Name = "Узел24";
+            treeNode43.Text = "Графический процессор";
+            treeNode44.Name = "Узел32";
+            treeNode44.Text = "Сеть Windows";
+            treeNode45.Name = "Узел37";
+            treeNode45.Text = "Устройства Windows";
+            treeNode46.Name = "Узел39";
+            treeNode46.Text = "Принтеры";
+            treeNode47.Name = "Узел1";
+            treeNode47.Text = "Системные устройства";
+            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode34,
+            treeNode47});
+            this.treeView2.SelectedImageIndex = 4;
+            this.treeView2.ShowLines = false;
+            this.treeView2.ShowPlusMinus = false;
+            this.treeView2.ShowRootLines = false;
+            this.treeView2.Size = new System.Drawing.Size(213, 586);
+            this.treeView2.TabIndex = 2;
+            this.treeView2.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView2_AfterSelect);
+            this.treeView2.Layout += new System.Windows.Forms.LayoutEventHandler(this.treeView2_Layout);
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Indent = 18;
+            this.treeView1.ItemHeight = 20;
+            this.treeView1.Location = new System.Drawing.Point(0, 25);
+            this.treeView1.Name = "treeView1";
+            treeNode48.Name = "Узел9";
+            treeNode48.Text = "Общая информация";
+            treeNode49.Name = "tnUsers";
+            treeNode49.Text = "Пользователи";
+            treeNode50.Name = "Узел0";
+            treeNode50.Text = "Компьютер";
+            treeNode51.Name = "Узел13";
+            treeNode51.Text = "Процессор";
+            treeNode52.Name = "Узел14";
+            treeNode52.Text = "Системная плата";
+            treeNode53.Name = "Узел15";
+            treeNode53.Text = "Память";
+            treeNode54.Name = "Узел16";
+            treeNode54.Text = "BIOS";
+            treeNode55.Name = "Узел1";
+            treeNode55.Text = "Системная плата";
+            treeNode56.Name = "tnOS";
+            treeNode56.Text = "Операционная система";
+            treeNode57.Name = "Узел19";
+            treeNode57.Text = "Процессы";
+            treeNode58.Name = "Узел20";
+            treeNode58.Text = "Системные драйвера";
+            treeNode59.Name = "Узел21";
+            treeNode59.Text = "Время работы";
+            treeNode60.Name = "Узел2";
+            treeNode60.Text = "Операционная система";
+            treeNode61.Name = "Узел22";
+            treeNode61.Text = "Монитор";
+            treeNode62.Name = "Узел24";
+            treeNode62.Text = "Графический процессор";
+            treeNode63.Name = "Узел3";
+            treeNode63.Text = "Отображение";
+            treeNode64.Name = "Узел26";
+            treeNode64.Text = "Логические диски";
+            treeNode65.Name = "Узел27";
+            treeNode65.Text = "Физические диски";
+            treeNode66.Name = "Узел30";
+            treeNode66.Text = "SMART";
+            treeNode67.Name = "Узел5";
+            treeNode67.Text = "Хранение данных";
+            treeNode68.Name = "Узел32";
+            treeNode68.Text = "Сеть Windows";
+            treeNode69.Name = "Узел33";
+            treeNode69.Text = "Интернет";
+            treeNode70.Name = "Узел6";
+            treeNode70.Text = "Сеть";
+            treeNode71.Name = "Узел37";
+            treeNode71.Text = "Устройства Windows";
+            treeNode72.Name = "Узел38";
+            treeNode72.Text = "Ввод";
+            treeNode73.Name = "Узел39";
+            treeNode73.Text = "Принтеры";
+            treeNode74.Name = "Узел7";
+            treeNode74.Text = "Устройства";
+            treeNode75.Name = "tnau";
+            treeNode75.Text = "Автозагрузка";
+            treeNode76.Name = "Узел42";
+            treeNode76.Text = "Запланированые";
+            treeNode77.Name = "tnPrograms";
+            treeNode77.Text = "Установленные программы";
+            treeNode78.Name = "Узел8";
+            treeNode78.Text = "Программы";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode50,
+            treeNode55,
+            treeNode60,
+            treeNode63,
+            treeNode67,
+            treeNode70,
+            treeNode74,
+            treeNode78});
+            this.treeView1.ShowLines = false;
+            this.treeView1.Size = new System.Drawing.Size(213, 586);
+            this.treeView1.TabIndex = 1;
+            this.treeView1.Visible = false;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton4});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip2.Size = new System.Drawing.Size(213, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripButton4
             // 
@@ -954,6 +1083,8 @@
         private System.Windows.Forms.ToolStripMenuItem налаштуванняToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.Panel pnContents;
+        private System.Windows.Forms.TreeView treeView2;
     }
 }
 
