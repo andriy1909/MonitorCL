@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Компютер 1", 1, 1);
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Узел24", 1, 1);
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Узел25", 1, 1);

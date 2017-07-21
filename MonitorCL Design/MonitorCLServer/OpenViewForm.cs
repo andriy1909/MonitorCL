@@ -22,13 +22,13 @@ namespace MonitorCLServer
 
         private void OpenViewForm_Load(object sender, EventArgs e)
         {
-            splitContainer1.Panel2.Controls.Add(productsControl1);
+          //  splitContainer1.Panel2.Controls.Add(productsControl1);
             for (int i = 0; i < 15; i++)
             {
                 dataGridView1.Rows.Add(new object[]
                 {
                 null,
-                DateTime.Now.AddDays(-new Random().Next(DateTime.Now.Day)).AddMonths(-new Random().Next(3)),
+                DateTime.Now.AddDays(-new Random(i).Next(DateTime.Now.Day)).AddMonths(-new Random(i).Next(3)),
                 "Установленые программы"
                 });
             }

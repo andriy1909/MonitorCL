@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsControl));
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             this.dataGridView0 = new System.Windows.Forms.DataGridView();
             this.NameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdentifyingNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();

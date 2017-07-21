@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientInfoForm));
+#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
