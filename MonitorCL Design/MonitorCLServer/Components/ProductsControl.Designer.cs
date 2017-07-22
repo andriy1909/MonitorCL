@@ -1,6 +1,7 @@
 ﻿namespace MonitorCLServer
 {
-    partial class ProductsControl
+    
+partial class ProductsControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

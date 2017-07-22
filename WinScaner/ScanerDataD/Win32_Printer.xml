@@ -1,0 +1,272 @@
+<NewDataSet>
+  <Table1>
+    <Attributes xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2624</Attributes>
+    <AvailableJobSheets_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AveragePagesPerMinute xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</AveragePagesPerMinute>
+    <Capabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 4 | 2</Capabilities_x005B__x005D_>
+    <CapabilityDescriptions_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Copies | Color</CapabilityDescriptions_x005B__x005D_>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ZDesigner LP 2824 Plus (EPL)</Caption>
+    <CharSetsSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <CreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_Printer</CreationClassName>
+    <CurrentCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Default xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Default>
+    <DefaultCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <DefaultPriority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DefaultPriority>
+    <DetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DetectedErrorState>
+    <DeviceID xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ZDesigner LP 2824 Plus (EPL)</DeviceID>
+    <Direct xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Direct>
+    <DoCompleteFirst xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</DoCompleteFirst>
+    <DriverName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ZDesigner LP 2824 Plus (EPL)</DriverName>
+    <EnableBIDI xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</EnableBIDI>
+    <EnableDevQueryPrint xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableDevQueryPrint>
+    <ErrorInformation_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ExtendedDetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</ExtendedDetectedErrorState>
+    <ExtendedPrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ExtendedPrinterStatus>
+    <Hidden xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Hidden>
+    <HorizontalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">203</HorizontalResolution>
+    <JobCountSinceLastReset xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</JobCountSinceLastReset>
+    <KeepPrintedJobs xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</KeepPrintedJobs>
+    <LanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Local xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</Local>
+    <MimeTypesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ZDesigner LP 2824 Plus (EPL)</Name>
+    <NaturalLanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Network xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Network>
+    <PaperSizesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 1</PaperSizesSupported_x005B__x005D_>
+    <PaperTypesAvailable_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PortName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">COM3:</PortName>
+    <PowerManagementCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PrinterPaperNames_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | User defined</PrinterPaperNames_x005B__x005D_>
+    <PrinterState xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</PrinterState>
+    <PrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</PrinterStatus>
+    <PrintJobDataType xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">RAW</PrintJobDataType>
+    <PrintProcessor xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">winprint</PrintProcessor>
+    <Priority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</Priority>
+    <Published xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Published>
+    <Queued xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Queued>
+    <RawOnly xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</RawOnly>
+    <Shared xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Shared>
+    <SpoolEnabled xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</SpoolEnabled>
+    <Status xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Unknown</Status>
+    <SystemCreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_ComputerSystem</SystemCreationClassName>
+    <SystemName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">USER-THINK</SystemName>
+    <VerticalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">203</VerticalResolution>
+    <WorkOffline xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</WorkOffline>
+  </Table1>
+  <Table1>
+    <Attributes xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">576</Attributes>
+    <AvailableJobSheets_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AveragePagesPerMinute xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</AveragePagesPerMinute>
+    <Capabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 4 | 2 | 3 | 5</Capabilities_x005B__x005D_>
+    <CapabilityDescriptions_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Copies | Color | Duplex | Collate</CapabilityDescriptions_x005B__x005D_>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Microsoft XPS Document Writer</Caption>
+    <CharSetsSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <CreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_Printer</CreationClassName>
+    <CurrentCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Default xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Default>
+    <DefaultCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <DefaultPriority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DefaultPriority>
+    <DetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DetectedErrorState>
+    <DeviceID xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Microsoft XPS Document Writer</DeviceID>
+    <Direct xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Direct>
+    <DoCompleteFirst xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</DoCompleteFirst>
+    <DriverName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Microsoft XPS Document Writer</DriverName>
+    <EnableBIDI xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableBIDI>
+    <EnableDevQueryPrint xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableDevQueryPrint>
+    <ErrorInformation_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ExtendedDetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</ExtendedDetectedErrorState>
+    <ExtendedPrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ExtendedPrinterStatus>
+    <Hidden xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Hidden>
+    <HorizontalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">600</HorizontalResolution>
+    <JobCountSinceLastReset xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</JobCountSinceLastReset>
+    <KeepPrintedJobs xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</KeepPrintedJobs>
+    <LanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Local xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</Local>
+    <MimeTypesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Microsoft XPS Document Writer</Name>
+    <NaturalLanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Network xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Network>
+    <PaperSizesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 7 | 7 | 1 | 1 | 8 | 1 | 1 | 21 | 22 | 1 | 23 | 54 | 55 | 1 | 1 | 1 | 1 | 7 | 15 | 11 | 1 | 1 | 1 | 4 | 5 | 6 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 49 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1</PaperSizesSupported_x005B__x005D_>
+    <PaperTypesAvailable_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PortName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">XPSPort:</PortName>
+    <PowerManagementCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PrinterPaperNames_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Letter | Letter Small | Таблоид | Ledger | Legal | Statement | Executive | A3 | A4 | Малый A4 | A5 | B4 (JIS) | B5 (JIS) | Фолио | Quarto | 10x14 | 11x17 | Бумага для заметок | Конверт №9 | Конверт №10 | Конверт №11 | Конверт №12 | Конверт №14 | Лист формата C | Лист формата D | Лист формата E | Конверт DL | Конверт C5 | Конверт C3 | Конверт C4 | Конверт C6 | Конверт C65 | Конверт B4 | Конверт B5 | Конверт B6 | Конверт | Конверт Монарх | Конверт 6 3/4 | Фальцованная стандартная (США) | Фальцованная стандартная (Герма | Фальцованная Legal (Германия) | B4 (ISO) | Японская открытка | 9x11 | 10x11 | 15x11 | Конверт Invite | Letter Extra | Legal Extra | A4 Extra | Letter с поворотом | A4 с поворотом | Letter Extra с поворотом | Super A | Super B | Letter Plus | A4 Plus | A5 с поворотом | B5 (JIS) с поворотом | A3 Extra | A5 Extra | B5 (ISO) Extra | A2 | A3 с поворотом | A3 Extra с поворотом | Японская двойная открытка | A6 | Японский конверт Каку №2 | Японский конверт Каку №3 | Японский конверт Чоу №3 | Японский конверт Чоу №4 | Letter (повернуто) | A3 (повернуто) | A4 (повернуто) | A5 (повернуто) | B4 (JIS) (повернуто) | B5 (JIS) (повернуто) | Японская открытка (повернуто) | Япон. дв. открытка (повернуто) | A6 (повернуто) | Япон. конверт Каку №2, повернут | Япон. конверт Каку №3, повернут | Япон. конверт Чоу №3, повернут | Япон. конверт Чоу №4, повернут | B6 (JIS) | B6 (JIS) (повернуто) | 12x11 | Япон. конверт Ю №4 | Япон. конверт Ю №4, повернут | Конверт PRC №1 | Конверт PRC №3 | Конверт PRC №4 | Конверт PRC №5 | Конверт PRC №6 | Конверт PRC №7 | Конверт PRC №8 | Конверт PRC №9 | Конверт PRC №10 | Конверт PRC №1 (повернуто) | Конверт PRC №3 (повернуто) | Конверт PRC №4 (повернуто) | Конверт PRC №5 (повернуто) | Конверт PRC №6 (повернуто) | Конверт PRC №7 (повернуто) | Конверт PRC №8 (повернуто) | Конверт PRC №9 (повернуто)</PrinterPaperNames_x005B__x005D_>
+    <PrinterState xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</PrinterState>
+    <PrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</PrinterStatus>
+    <PrintJobDataType xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">RAW</PrintJobDataType>
+    <PrintProcessor xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">winprint</PrintProcessor>
+    <Priority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</Priority>
+    <Published xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Published>
+    <Queued xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Queued>
+    <RawOnly xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</RawOnly>
+    <Shared xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Shared>
+    <SpoolEnabled xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</SpoolEnabled>
+    <Status xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Unknown</Status>
+    <SystemCreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_ComputerSystem</SystemCreationClassName>
+    <SystemName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">USER-THINK</SystemName>
+    <VerticalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">600</VerticalResolution>
+    <WorkOffline xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</WorkOffline>
+  </Table1>
+  <Table1>
+    <Attributes xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">16448</Attributes>
+    <AvailableJobSheets_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AveragePagesPerMinute xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</AveragePagesPerMinute>
+    <Capabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 2 | 3</Capabilities_x005B__x005D_>
+    <CapabilityDescriptions_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Color | Duplex</CapabilityDescriptions_x005B__x005D_>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Fax</Caption>
+    <CharSetsSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <CreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_Printer</CreationClassName>
+    <CurrentCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Default xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Default>
+    <DefaultCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <DefaultPriority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DefaultPriority>
+    <DetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DetectedErrorState>
+    <DeviceID xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Fax</DeviceID>
+    <Direct xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Direct>
+    <DoCompleteFirst xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</DoCompleteFirst>
+    <DriverName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Microsoft Shared Fax Driver</DriverName>
+    <EnableBIDI xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableBIDI>
+    <EnableDevQueryPrint xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableDevQueryPrint>
+    <ErrorInformation_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ExtendedDetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</ExtendedDetectedErrorState>
+    <ExtendedPrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ExtendedPrinterStatus>
+    <Hidden xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Hidden>
+    <HorizontalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">200</HorizontalResolution>
+    <JobCountSinceLastReset xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</JobCountSinceLastReset>
+    <KeepPrintedJobs xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</KeepPrintedJobs>
+    <LanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Local xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</Local>
+    <MimeTypesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Fax</Name>
+    <NaturalLanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Network xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Network>
+    <PaperSizesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 7 | 7 | 8 | 1 | 1 | 22 | 1 | 23 | 55 | 1 | 1 | 7 | 15 | 11 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1</PaperSizesSupported_x005B__x005D_>
+    <PaperTypesAvailable_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PortName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">SHRFAX:</PortName>
+    <PowerManagementCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PrinterPaperNames_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Letter | Letter Small | Legal | Statement | Executive | A4 | Малый A4 | A5 | B5 (JIS) | Фолио | Quarto | Бумага для заметок | Конверт №9 | Конверт №10 | Конверт №11 | Конверт №12 | Конверт №14 | Конверт DL | Конверт C5 | Конверт C6 | Конверт C65 | Конверт B5 | Конверт B6 | Конверт | Конверт Монарх | Конверт 6 3/4 | Фальцованная стандартная (Герма | Фальцованная Legal (Германия) | Японская открытка | Зарезервировано 48 | Зарезервировано 49 | Letter с поворотом | A4 с поворотом | Letter Plus | A4 Plus | A5 с поворотом | B5 (JIS) с поворотом | A5 Extra | B5 (ISO) Extra | Японская двойная открытка | A6 | Японский конверт Каку №3 | Японский конверт Чоу №3 | Японский конверт Чоу №4 | A5 (повернуто) | Японская открытка (повернуто) | Япон. дв. открытка (повернуто) | A6 (повернуто) | Япон. конверт Чоу №4, повернут | B6 (JIS) | B6 (JIS) (повернуто) | Япон. конверт Ю №4 | PRC 16K | PRC 32K | PRC 32K (большой) | Конверт PRC №1 | Конверт PRC №2 | Конверт PRC №3 | Конверт PRC №4 | Конверт PRC №5 | Конверт PRC №6 | Конверт PRC №7 | Конверт PRC №8 | PRC 32K (повернуто) | PRC 32K (большой, повернуто) | Конверт PRC №1 (повернуто) | Конверт PRC №2 (повернуто) | Конверт PRC №3 (повернуто) | Конверт PRC №4 (повернуто) | A4 210 x 297 mm | LT 8.5 x 11 in | Postcard 100 x 148 mm | Roll Paper 58 x 297 mm | Roll Paper 80 x 297 mm | Executive (JIS) | Oficio 8.5x13 | 3 x 5 | 4 x 6 | 5 x 7 | 5 x 8 | RA4 | L 9x13 cm | 10 на 15 см | Oficio 216x340 mm | Oficio 216x343 mm | Oficio 216x347 mm | 16K 195 x 270 мм | 16K 184 x 260 мм | 16K 197 x 273 мм | Японский конверт Chou №3 | Японский конверт Chou №4 | Screen | ISO B5 | C5 | Slide 7.5 x 10</PrinterPaperNames_x005B__x005D_>
+    <PrinterState xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</PrinterState>
+    <PrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</PrinterStatus>
+    <PrintJobDataType xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">RAW</PrintJobDataType>
+    <PrintProcessor xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">winprint</PrintProcessor>
+    <Priority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</Priority>
+    <Published xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Published>
+    <Queued xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Queued>
+    <RawOnly xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</RawOnly>
+    <Shared xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Shared>
+    <SpoolEnabled xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</SpoolEnabled>
+    <Status xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Unknown</Status>
+    <SystemCreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_ComputerSystem</SystemCreationClassName>
+    <SystemName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">USER-THINK</SystemName>
+    <VerticalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">200</VerticalResolution>
+    <WorkOffline xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</WorkOffline>
+  </Table1>
+  <Table1>
+    <Attributes xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2624</Attributes>
+    <AvailableJobSheets_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AveragePagesPerMinute xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</AveragePagesPerMinute>
+    <Capabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 4 | 2 | 5</Capabilities_x005B__x005D_>
+    <CapabilityDescriptions_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Copies | Color | Collate</CapabilityDescriptions_x005B__x005D_>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">EPSON TM-T90 Receipt</Caption>
+    <CharSetsSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <CreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_Printer</CreationClassName>
+    <CurrentCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Default xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Default>
+    <DefaultCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <DefaultPriority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DefaultPriority>
+    <DetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DetectedErrorState>
+    <DeviceID xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">EPSON TM-T90 Receipt</DeviceID>
+    <Direct xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Direct>
+    <DoCompleteFirst xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</DoCompleteFirst>
+    <DriverName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">EPSON TM-T90 ReceiptE4</DriverName>
+    <EnableBIDI xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</EnableBIDI>
+    <EnableDevQueryPrint xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableDevQueryPrint>
+    <ErrorInformation_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ExtendedDetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ExtendedDetectedErrorState>
+    <ExtendedPrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">11</ExtendedPrinterStatus>
+    <Hidden xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Hidden>
+    <HorizontalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">180</HorizontalResolution>
+    <JobCountSinceLastReset xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</JobCountSinceLastReset>
+    <KeepPrintedJobs xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</KeepPrintedJobs>
+    <LanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 2</LanguagesSupported_x005B__x005D_>
+    <Local xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</Local>
+    <MimeTypesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">EPSON TM-T90 Receipt</Name>
+    <NaturalLanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Network xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Network>
+    <PaperSizesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 22 | 7 | 1 | 1 | 1 | 1 | 1</PaperSizesSupported_x005B__x005D_>
+    <PaperTypesAvailable_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PortName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ESDPRT001</PortName>
+    <PowerManagementCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PrinterPaperNames_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | A4 210 x 297 mm | LT 8.5 x 11 in | Postcard 100 x 148 mm | Roll Paper 80 x 297 mm | Roll Paper 60 x 297 mm | Roll Paper 58 x 297 mm | 1</PrinterPaperNames_x005B__x005D_>
+    <PrinterState xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4096</PrinterState>
+    <PrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</PrinterStatus>
+    <PrintJobDataType xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">RAW</PrintJobDataType>
+    <PrintProcessor xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">winprint</PrintProcessor>
+    <Priority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</Priority>
+    <Published xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Published>
+    <Queued xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Queued>
+    <RawOnly xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</RawOnly>
+    <Shared xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Shared>
+    <SpoolEnabled xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</SpoolEnabled>
+    <Status xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Unknown</Status>
+    <SystemCreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_ComputerSystem</SystemCreationClassName>
+    <SystemName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">USER-THINK</SystemName>
+    <VerticalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">180</VerticalResolution>
+    <WorkOffline xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</WorkOffline>
+  </Table1>
+  <Table1>
+    <Attributes xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4676</Attributes>
+    <AvailableJobSheets_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AveragePagesPerMinute xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</AveragePagesPerMinute>
+    <Capabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 4 | 2 | 5</Capabilities_x005B__x005D_>
+    <CapabilityDescriptions_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Copies | Color | Collate</CapabilityDescriptions_x005B__x005D_>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Adobe PDF</Caption>
+    <CharSetsSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <CreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_Printer</CreationClassName>
+    <CurrentCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Default xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</Default>
+    <DefaultCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <DefaultPriority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DefaultPriority>
+    <DetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</DetectedErrorState>
+    <DeviceID xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Adobe PDF</DeviceID>
+    <Direct xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Direct>
+    <DoCompleteFirst xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</DoCompleteFirst>
+    <DriverName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Adobe PDF Converter</DriverName>
+    <EnableBIDI xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableBIDI>
+    <EnableDevQueryPrint xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</EnableDevQueryPrint>
+    <ErrorInformation_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ExtendedDetectedErrorState xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</ExtendedDetectedErrorState>
+    <ExtendedPrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ExtendedPrinterStatus>
+    <Hidden xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Hidden>
+    <HorizontalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1200</HorizontalResolution>
+    <JobCountSinceLastReset xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</JobCountSinceLastReset>
+    <KeepPrintedJobs xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</KeepPrintedJobs>
+    <LanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 6</LanguagesSupported_x005B__x005D_>
+    <Local xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</Local>
+    <MimeTypesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Adobe PDF</Name>
+    <NaturalLanguagesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <Network xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Network>
+    <PaperSizesSupported_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | 7 | 1 | 8 | 1 | 21 | 22 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1</PaperSizesSupported_x005B__x005D_>
+    <PaperTypesAvailable_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PortName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Documents\*.pdf</PortName>
+    <PowerManagementCapabilities_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <PrinterPaperNames_x005B__x005D_ xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> | Letter | Ledger | Legal | Executive | A3 | A4 | A2 | 11 x 17 | Screen | ANSI C | ANSI D | ANSI E | ANSI F | ARCH A | ARCH B | ARCH C | ARCH D | ARCH E | ARCH E1 | ARCH E2 | ARCH E3 | A1 | A0 | Oversize A2 | Oversize A1 | Oversize A0 | ISO B5 | ISO B4 | ISO B2 | ISO B1 | C5 | JIS B4 | JIS B3 | JIS B2 | JIS B1 | JIS B0 | 92 x 92 | Slide 7.5 x 10 | Особый размер страницы PostScript</PrinterPaperNames_x005B__x005D_>
+    <PrinterState xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</PrinterState>
+    <PrinterStatus xsi:type="xs:unsignedShort" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</PrinterStatus>
+    <PrintJobDataType xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">RAW</PrintJobDataType>
+    <PrintProcessor xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">winprint</PrintProcessor>
+    <Priority xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</Priority>
+    <Published xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Published>
+    <Queued xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Queued>
+    <RawOnly xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</RawOnly>
+    <Shared xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</Shared>
+    <SpoolEnabled xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</SpoolEnabled>
+    <Status xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Unknown</Status>
+    <SystemCreationClassName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Win32_ComputerSystem</SystemCreationClassName>
+    <SystemName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">USER-THINK</SystemName>
+    <VerticalResolution xsi:type="xs:unsignedInt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1200</VerticalResolution>
+    <WorkOffline xsi:type="xs:boolean" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</WorkOffline>
+  </Table1>
+</NewDataSet>

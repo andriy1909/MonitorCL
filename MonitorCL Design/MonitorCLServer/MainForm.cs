@@ -20,7 +20,7 @@ namespace MonitorCLServer
         bool isDedug = true;
 
         bool canClose = false;
-        
+
         //static Thread listenThread;
 
         public MainForm()
@@ -34,7 +34,7 @@ namespace MonitorCLServer
             splitContainer1.Visible = false;
             timer1.Stop();
         }
-        
+
         private void MainForm2_Load(object sender, EventArgs e)
         {
             this.Show();
@@ -50,20 +50,37 @@ namespace MonitorCLServer
             {
                 return;
             }
+
+            for (int i = 0; i < 4; i++)
+            {
+                Bitmap bm = new Bitmap(32, 16);
+                Bitmap bm1;
+                if (i == 2)
+                    bm1 = new Bitmap(imageList1.Images[6]);
+                else
+                    bm1 = new Bitmap(imageList1.Images[5]);
+                Bitmap bm2 = new Bitmap(imageList1.Images[i]);
+
+                Graphics g = Graphics.FromImage(bm);
+                g.DrawImage(bm1, 0, 0, 16, 16);
+                g.DrawImage(bm2, 16, 0, 16, 16);
+                g.Dispose();
+                imageList2.Images[i] = bm;
+            }
         }
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          /*  if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
-            {
-                MessageBox.Show("Сервер уже запущен!");
-                return;
-            }
-            server = new ServerObject();
-            server.setReceiveOut(Receive);
-            server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
-            listenThread = new Thread(new ThreadStart(server.Listen));
-            listenThread.Start();*/
+            /*  if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+              {
+                  MessageBox.Show("Сервер уже запущен!");
+                  return;
+              }
+              server = new ServerObject();
+              server.setReceiveOut(Receive);
+              server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
+              listenThread = new Thread(new ThreadStart(server.Listen));
+              listenThread.Start();*/
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -74,7 +91,7 @@ namespace MonitorCLServer
         {
             try
             {
-               // server.Disconnect();
+                // server.Disconnect();
             }
             catch (Exception ex)
             {
@@ -89,13 +106,13 @@ namespace MonitorCLServer
         private void MainForm2_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (canClose)
-                //if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+            //if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+            {
+                if (MessageBox.Show("Завершить работу сервера?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
                 {
-                    if (MessageBox.Show("Завершить работу сервера?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
-                    {
-                        canClose = false;
-                    }
+                    canClose = false;
                 }
+            }
             e.Cancel = !canClose;
 
             this.Visible = false;
@@ -123,13 +140,13 @@ namespace MonitorCLServer
 
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
-                server.Disconnect();
-            server = new ServerObject();
-            server.setReceiveOut(Receive);
-            server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
-            listenThread = new Thread(new ThreadStart(server.Listen));
-            listenThread.Start();*/
+            /* if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+                 server.Disconnect();
+             server = new ServerObject();
+             server.setReceiveOut(Receive);
+             server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
+             listenThread = new Thread(new ThreadStart(server.Listen));
+             listenThread.Start();*/
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -152,12 +169,12 @@ namespace MonitorCLServer
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //UserAccount userAccount = new UserAccount();
-           // List<UserAccount> list = userAccount.GetData();
+            // List<UserAccount> list = userAccount.GetData();
         }
 
         private void treeView1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void tvClients_ItemDrag(object sender, ItemDragEventArgs e)
@@ -272,7 +289,7 @@ namespace MonitorCLServer
 
         private void treeView2_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void выключитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -418,4 +435,448 @@ namespace MonitorCLServer
                 tvClients.SelectedNode.BeginEdit();
         }
     }
+    class Win32_BIOS
+    {
+        /// <summary>
+        /// Виробник.
+        /// </summary>
+        string Manufacturer;
+        /// <summary>
+        /// Назва, використовується для ідентифікації цього елемента програмного забезпечення.
+        /// </summary>
+        string Name;
+        /// <summary>
+        /// Дата випуску BIOS Windows у форматі координатного універсального часу (UTC)
+        /// </summary>
+        DateTime ReleaseDate;
+        /// <summary>
+        /// Призначений серійний номер елемента програмного забезпечення.
+        /// </summary>
+        string SerialNumber;
+        /// <summary>
+        /// Поточний стан.
+        /// </summary>
+        /*
+OK ("OK")
+Error ("Error")
+Degraded ("Degraded")
+Unknown ("Unknown")
+Pred Fail ("Pred Fail")
+Starting ("Starting")
+Stopping ("Stopping")
+Service ("Service")
+Stressed ("Stressed")
+NonRecover ("NonRecover")
+No Contact ("No Contact")
+Lost Comm ("Lost Comm")*/
+        /*
+         ОК ("ОК")
+        Помилка ("Помилка")
+        Деградований ("деградований")
+        Невідомо ("Невідомо")
+        Pred Fail ("Pred Fail")
+        Початок ("Початок")
+        Зупинка ("Зупинка")
+        Сервіс ("Сервіс")
+        Підкреслений ("підкреслив")
+        NonRecover ("NonRecover")
+        Немає контактів ("Немає контактів")
+        Lost Comm ("Lost Comm")*/
+        string Status;
+        /// <summary>
+        /// Версія BIOS. Цей рядок створено виробником BIOS.
+        /// </summary>
+        string Version;
+    }
+
+    class Win32_BootConfiguration
+    {
+        /// <summary>
+        /// Короткий текстовий опис поточного об'єкта.
+        /// </summary>
+        string Caption;
+        /// <summary>
+        /// Текстовий опис поточного об'єкта.
+        /// </summary>
+        string Description;
+        /// <summary>
+        /// Шлях до системних файлів, необхідних для завантаження системи.
+        /// </summary>
+        string BootDirectory;
+        /// <summary>
+        /// Шлях до файлів конфігурації. 
+        /// </summary>
+        string ConfigurationPath;
+        /// <summary>
+        /// Останній символ диска, до якого присвоєно фізичний диск.
+        /// Приклад: "E:"
+        /// </summary>
+        string LastDrive;
+        /// <summary>
+        /// Ім'я конфігурації завантаження. Це ідентифікатор для конфігурації завантаження.
+        /// </summary>
+        string Name;
+        /// <summary>
+        /// Каталог, де можна зберігати тимчасові файли під час завантаження.
+        /// </summary>
+        string ScratchDirectory;
+        /// <summary>
+        /// Каталог, де зберігаються тимчасові файли.
+        /// Приклад: "C:\TEMP"
+        /// </summary>
+        string TempDirectory;
+    }
+
+    /// <summary>
+    ///  класс WMI представляет собой общие устройства адаптера , встроенные в материнскую плату (системной плате).
+    /// </summary>
+    class Win32_OnBoardDevice
+    {
+        /// <summary>
+        /// Описание объекта.
+        /// </summary>
+        string Description;
+        /// <summary>
+        /// Тип представляемого устройства.
+        /// 
+        /// Другое (1)
+        /// Неизвестно(2)
+        /// Видео(3)
+        /// Контроллер SCSI(4)
+        /// Ethernet(5)
+        /// Кольцо Token(6)
+        /// Звук(7)
+        /// </summary>
+        ushort DeviceType;
+        /// <summary>
+        /// Если TRUE , встроенное устройство доступно для использования.
+        /// </summary>
+        bool Enabled;
+        /// <summary>
+        /// Уникальный идентификатор встроенного устройства, подключенного к системе.
+        /// </summary>
+        string Tag;
+    }
+
+    class OS
+    {
+        /// <summary>
+        /// Номер сборки операционной системы.
+        /// </summary>
+        public string BuildNumber;
+        /// <summary>
+        /// Краткое описание объекта - однострочная строка. Строка содержит версию операционной системы. Например, «Microsoft Windows 7 Enterprise». Это свойство может быть локализовано.
+        /// </summary>
+        public string Caption;
+        /// <summary>
+        /// NULL - завершена строка, которая указывает последний пакет обновления, установленный на компьютере. 
+        /// Если пакет обновления не установлен, строка будет NULL .
+        /// Пример: «Service Pack 3»
+        /// </summary>
+        public string CSDVersion;
+        /// <summary>
+        /// Название компьютерной системы обзора.
+        /// </summary>
+        public string CSName;
+        /// <summary>
+        /// Число, в минутах, операционная система смещена от среднего времени по Гринвичу (GMT). Число положительное, отрицательное или ноль.
+        /// </summary>
+        public short CurrentTimeZone;
+        /// <summary>
+        /// Предотвращение выполнения данных - это аппаратная функция, предотвращающая атаки переполнения буфера, прекращая выполнение кода на страницах памяти типа данных. Если True , то эта функция доступна. На 64-битных компьютерах функция предотвращения выполнения данных настроена в хранилище BCD, и соответственно устанавливаются свойства в Win32_OperatingSystem .
+        /// </summary>
+        public bool DataExecutionPrevention_Available;
+        /// <summary>
+        /// Когда доступна аппаратная функция предотвращения выполнения данных, это свойство указывает, что функция настроена на работу для 32-разрядных приложений, если True . На 64-битных компьютерах функция предотвращения выполнения данных настроена в хранилище данных конфигурации загрузки (BCD), а свойства в Win32_OperatingSystem установлены соответственно.
+        /// </summary>
+        public bool DataExecutionPrevention_32BitApplications;
+        /// <summary>
+        /// Когда доступна аппаратная функция предотвращения выполнения данных, это свойство указывает, что функция настроена на работу драйверов, если True . На 64-битных компьютерах функция предотвращения выполнения данных настроена в хранилище BCD, и соответственно устанавливаются свойства в Win32_OperatingSystem .
+        /// </summary>
+        public bool DataExecutionPrevention_Drivers;
+        /// <summary>
+        /// Уровень шифрования для защищенных транзакций: 40-разрядный, 128-разрядный или n -бит .
+        /// 
+        /// 40-бит (0)
+        /// 128-бит(1)
+        /// N-бит(2)
+        /// </summary>
+        public uint EncryptionLevel;
+        /// <summary>
+        /// Число в килобайтах физической памяти в настоящее время не используется и доступно.
+        /// </summary>
+        public ulong FreePhysicalMemory;
+        /// <summary>
+        /// Число в килобайтах, которое может быть отображено в файлы подкачки операционной системы, не вызывая замены других страниц.
+        /// </summary>
+        public ulong FreeSpaceInPagingFiles;
+        /// <summary>
+        /// Число в килобайтах виртуальной памяти в настоящее время не используется и доступно.
+        /// </summary>
+        public ulong FreeVirtualMemory;
+        /// <summary>
+        /// Дата установки.
+        /// </summary>
+        public DateTime InstallDate;
+        /// <summary>
+        /// Дата и время последней загрузки операционной системы.
+        /// </summary>
+        public DateTime LastBootUpTime;
+        /// <summary>
+        /// Версия операционной системы локальной даты и времени суток.
+        /// </summary>
+        public DateTime LocalDateTime;
+        /// <summary>
+        /// Максимальное количество в килобайтах памяти, которое может быть выделено процессу.
+        /// </summary>
+        public ulong MaxProcessMemorySize;
+        /// <summary>
+        /// Количество сеансов пользователя, для которых операционная система хранит информацию о состоянии в настоящее время.
+        /// </summary>
+        public uint NumberOfUsers;
+        /// <summary>
+        /// Архитектура операционной системы, в отличие от процессора.
+        /// </summary>
+        public string OSArchitecture;
+        /// <summary>
+        /// Дополнительная системная информация.
+        /// </summary>
+        /*
+        Рабочая станция (1)
+        Контроллер домена (2)
+        Сервер (3)
+        */
+        public uint ProductType;
+        /// <summary>
+        /// Имя зарегистрированного пользователя операционной системы.
+        /// </summary>
+        public string RegisteredUser;
+        /// <summary>
+        /// Серийный идентификационный номер продукта операционной системы.
+        /// </summary>
+        public string SerialNumber;
+        /// <summary>
+        /// Общее количество килобайт, которые могут быть сохранены в файлах подкачки операционной системы - 0 (ноль), указывает на отсутствие файлов подкачки. Имейте в виду, что это число не отражает фактический физический размер файла подкачки на диске.
+        /// </summary>
+        public ulong SizeStoredInPagingFiles;
+        /// <summary>
+        /// Текущее состояние объекта. 
+        /// </summary>
+        /*
+        OK («OK»)
+        Ошибка(«Error»)
+        Деградированные(«Degraded»)
+        Неизвестно(«Unknown»)
+        Pred Fail(«Pred Fail»)
+        Запуск(«Starting»)
+        Остановка(«Stopping»)
+        Сервис(«Service»)
+        Подчеркнутый(«Stressed»)
+        NonRecover(«NonRecover»)
+        Нет контакта(«No Contact»)
+        Lost Comm(«Lost Comm»)
+        */
+        public string Status;
+        /// <summary>
+        /// Буква диска, на котором находится операционная система. Пример: "C:"
+        /// </summary>
+        public string SystemDrive;
+        /// <summary>
+        /// Число в килобайтах виртуальной памяти. 
+        /// </summary>
+        public ulong TotalVirtualMemorySize;
+        /// <summary>
+        /// Общее количество в килобайтах физической памяти, доступной операционной системе.
+        /// </summary>
+        public ulong TotalVisibleMemorySize;
+        /// <summary>
+        /// Номер версии операционной системы.
+        /// </summary>
+        public string Version;
+    }
+
+    class Process
+    {
+        /// <summary>
+        /// Краткое описание объекта - однострочная строка.
+        /// </summary>
+        string Caption;
+        /// <summary>
+        /// Командная строка, используемая для запуска определенного процесса, если это применимо.
+        /// </summary>
+        string CommandLine;
+        /// <summary>
+        /// Дата начала процесса.
+        /// </summary>
+        DateTime CreationDate;
+        /// <summary>
+        /// Название компьютерной системы обзора.
+        /// </summary>
+        string CSName;
+        /// <summary>
+        /// Путь к исполняемому файлу процесса.
+        /// </summary>
+        string ExecutablePath;
+        /// <summary>
+        /// Идентификатор процесса.
+        /// </summary>
+        string Handle;
+        /// <summary>
+        /// Общее количество открытых ручек, принадлежащих процессу. HandleCount - это сумма ручек, открытых в данный момент каждым потоком в этом процессе. Ручка используется для проверки или изменения системных ресурсов. Каждый дескриптор имеет запись в таблице, которая поддерживается внутри. Записи содержат адреса ресурсов и данных для идентификации типа ресурса.
+        /// </summary>
+        uint HandleCount;
+        /// <summary>
+        /// Уникальный идентификатор процесса, который создает процесс. Номера идентификаторов процессов повторно используются, поэтому они идентифицируют процесс для всего жизненного цикла этого процесса. Возможно, процесс, идентифицированный ParentProcessId , завершен, поэтому ParentProcessId может не ссылаться на текущий процесс. Также возможно, что ParentProcessId неправильно ссылается на процесс, который повторно использует идентификатор процесса. Вы можете использовать свойство CreationDate, чтобы определить, был ли указан указанный родитель, после создания процесса, представленного этим экземпляром Win32_Process .
+        /// </summary>
+        uint ParentProcessId;
+        /// <summary>
+        /// Планирование приоритета процесса в операционной системе. Чем выше значение, тем выше приоритет получает процесс. Значения приоритета могут варьироваться от 0 (ноль), что является самым низким приоритетом до 31, что является наивысшим приоритетом.
+        /// </summary>
+        uint Priority;
+        /// <summary>
+        /// Числовой идентификатор, используемый для отличия одного процесса от другого. Идентификаторы процессов действительны с момента создания процесса до завершения процесса. По завершении этот же числовой идентификатор может быть применен к новому процессу.
+        /// </summary>
+        uint ProcessId;
+        /// <summary>
+        /// Количество активных потоков в процессе. Инструкция является базовой единицей выполнения в процессоре, а поток - это объект, который выполняет инструкцию. В каждом запущенном процессе имеется по крайней мере один поток.
+        /// </summary>
+        uint ThreadCount;
+    }
+
+    class Win32_DiskDrive
+    {
+        /// <summary>
+        /// Краткое описание объекта.
+        /// </summary>
+        string Caption;
+        /// <summary>
+        /// Код ошибки Configuration Manager.
+        /// 
+        /// Это устройство работает правильно. (0)
+///        Устройство работает правильно.
+///        Это устройство настроено неправильно. (1)
+///Устройство настроено неправильно.
+///Windows не может загрузить драйвер для этого устройства. (2)
+///Драйвер для этого устройства может быть поврежден, или ваша система может работать с низким объемом памяти или другими ресурсами. (3)
+///Драйвер для этого устройства может быть поврежден или система может быть низкой в ​​памяти или других ресурсах.
+///Это устройство работает неправильно.Один из его драйверов или ваш реестр может быть поврежден. (4)
+///Устройство работает неправильно.Один из его драйверов или реестра может быть поврежден.
+///Драйверу для этого устройства нужен ресурс, который Windows не может управлять. (5)
+///Драйверу для устройства требуется ресурс, который Windows не может управлять.
+///Конфигурация загрузки для этого устройства конфликтует с другими устройствами. (6)
+///Конфигурация загрузки для устройства конфликтует с другими устройствами.
+///Невозможно фильтровать. (7)
+///Загрузчик драйвера для устройства отсутствует. (8)
+///Загрузчик драйвера для устройства отсутствует.
+///Это устройство работает неправильно, потому что управляющая микропрограмма неправильно сообщает ресурсы для устройства. (9)
+///Устройство работает неправильно.Контрольная микропрограмма неправильно сообщает ресурсы для устройства.
+///Это устройство не может запускаться. (10)
+///Устройство не может запускаться.
+///Это устройство не удалось. (11)
+///Ошибка устройства.
+///Это устройство не может найти достаточно свободных ресурсов, которые он может использовать. (12)
+///Устройство не может найти достаточно свободных ресурсов для использования.
+///Windows не может проверить ресурсы этого устройства. (13)
+///Windows не может проверить ресурсы устройства.
+///Это устройство не может работать должным образом, пока вы не перезагрузите компьютер. (14)
+///Устройство не может работать должным образом, пока компьютер не перезагрузится.
+///Это устройство работает неправильно, потому что, вероятно, существует проблема повторного перечисления. (15)
+///Устройство не работает должным образом из-за возможной проблемы повторного перечисления.
+///Windows не может определить все ресурсы, используемые этим устройством. (16)
+///Windows не может идентифицировать все ресурсы, которые использует устройство.
+///Это устройство запрашивает неизвестный тип ресурса. (17)
+///Устройство запрашивает неизвестный тип ресурса.
+///Переустановите драйверы для этого устройства. (18)
+///Драйверы устройств необходимо переустановить.
+///Ошибка при использовании погрузчика VxD. (19)
+///Возможно, ваш реестр поврежден. (20)
+///Реестр может быть поврежден.
+///Сбой системы: попробуйте изменить драйвер для этого устройства. Если это не сработает, см.Документацию по оборудованию.Windows удаляет это устройство. (21)
+///Системная ошибка.Если изменение драйвера устройства неэффективно, см.Документацию по оборудованию.Windows удаляет устройство.
+///Это устройство отключено. (22)
+///Устройство отключено.
+///Сбой системы: попробуйте изменить драйвер для этого устройства. Если это не сработает, см.Документацию по оборудованию. (23)
+///Системная ошибка.Если изменение драйвера устройства неэффективно, см.Документацию по оборудованию.
+///Это устройство отсутствует, не работает должным образом или не установлено все его драйверы. (24)
+///Устройство отсутствует, не работает должным образом или не установлено все его драйверы.
+///Windows все еще настраивает это устройство. (25)
+///Windows все еще настраивает устройство.
+///Windows все еще настраивает это устройство. (26)
+///Windows все еще настраивает устройство.
+///Это устройство не имеет правильной конфигурации журнала. (27)
+///У устройства нет правильной конфигурации журнала.
+///Драйверы для этого устройства не установлены. (28)
+///Драйверы устройств не установлены.
+///Это устройство отключено, потому что прошивка устройства не давала ему необходимых ресурсов. (29)
+///Устройство отключено.Прошивка устройства не обеспечивала требуемые ресурсы.
+///Это устройство использует ресурс запроса прерывания (IRQ), который использует другое устройство. (30)
+///Устройство использует ресурс IRQ, который использует другое устройство.
+///Это устройство работает неправильно, потому что Windows не может загрузить драйверы, необходимые для этого устройства. (31)*/
+        /// </summary>
+        uint ConfigManagerErrorCode;
+        /// <summary>
+        /// Уникальный идентификатор диска с другими устройствами в системе.
+        /// </summary>
+        string DeviceID;
+        /// <summary>
+        /// Версия для прошивки на диске, назначенная производителем.
+        /// </summary>
+        string FirmwareRevision;
+        /// <summary>
+        /// Номер физического диска данного диска. Значение 0xffffffff указывает, что данный диск не отображается на физический диск.
+        /// </summary>
+        uint Index;
+        /// <summary>
+        /// Тип интерфейса физического диска.
+        /// </summary>
+        string InterfaceType;
+        /// <summary>
+        /// Последний код ошибки, сообщенный логическим устройством.
+        /// </summary>
+        uint LastErrorCode;
+        /// <summary>
+        /// Тип носителя, используемого или доступного данным устройством.
+        ///
+        ///Возможные значения:
+        ///External hard disk media(«Внешний носитель на жестком диске»)
+        ///Removable media(«Сменные носители, кроме дискет»)
+        ///Fixed hard disk («Исправлены жесткие диски»)
+        ///Unknown(«Формат неизвестен»)
+        /// </summary>
+        string MediaType;
+        /// <summary>
+        /// Количество разделов на этом физическом диске, которые распознаются операционной системой.
+        /// </summary>
+        uint Partitions;
+        /// <summary>
+        /// Идентификатор устройства Windows Plug and Play логического устройства.
+        /// </summary>
+        string PNPDeviceID;
+        /// <summary>
+        /// Номер, выделенный изготовителем для идентификации физических носителей.
+        /// </summary>
+        string SerialNumber;
+        /// <summary>
+        /// Размер диска. Он рассчитывается путем умножения общего количества цилиндров, дорожек в каждом цилиндре, секторов на каждой дорожке и байтов в каждом секторе.
+        /// </summary>
+        ulong Size;
+        /// <summary>
+        /// Текущее состояние объекта. 
+        ///
+        /// OK («ОК»)
+        /// Ошибка(«Ошибка»)
+        /// Деградированные(«деградированные»)
+        /// Неизвестно(«Неизвестно»)
+        /// Pred Fail(«Pred Fail»)
+        /// Запуск(«Запуск»)
+        /// Остановка(«Остановка»)
+        /// Сервис(«Сервис»)
+        /// Подчеркнутый(«Подчеркнутый»)
+        /// NonRecover("NonRecover")
+        /// Нет контакта(«Без контакта»)
+        /// Lost Comm(«Lost Comm»)
+        /// </summary>
+        string Status;
+    }
 }
+

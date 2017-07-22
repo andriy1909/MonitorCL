@@ -39,7 +39,7 @@ namespace MonitorCLServer
 
         private void ProductsControl_Load(object sender, EventArgs e)
         {
-          /*  switch (type)
+            switch (type)
             {
                 case "os":
                     Product product = new Product();
@@ -87,12 +87,12 @@ namespace MonitorCLServer
                 default:
                     break;
             }
-            */
+            
         }
 
 
 
-        public class Product
+        private class Product
         {
             /// <summary>
             /// Ключ в базе данных

@@ -1,0 +1,818 @@
+<NewDataSet>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.867414+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default:Start Menu</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.867414+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default:Start Menu\Programs</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Accessories"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Accessories"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.867414+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default:Start Menu\Programs\Accessories</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Accessories\Accessibility"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Accessories\Accessibility"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\Accessibility</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.883013+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default:Start Menu\Programs\Accessories\Accessibility</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Accessories\System Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Accessories\System Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\System Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.883013+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default:Start Menu\Programs\Accessories\System Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Maintenance"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Default:Start Menu\Programs\Maintenance"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Maintenance</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.883013+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default:Start Menu\Programs\Maintenance</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Default</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.836215+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.836215+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\7-Zip"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\7-Zip"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\7-Zip</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20151113151645.279478+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\7-Zip</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.836215+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Accessories</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\Accessibility"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\Accessibility"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\Accessibility</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.836215+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Accessories\Accessibility</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\System Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\System Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\System Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.836215+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Accessories\System Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\Tablet PC"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\Tablet PC"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\Tablet PC</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714104438.379877+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Accessories\Tablet PC</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\Windows PowerShell"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Accessories\Windows PowerShell"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\Windows PowerShell</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714083238.538552+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Accessories\Windows PowerShell</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Administrative Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Administrative Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Administrative Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714083238.522952+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Administrative Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Android Studio"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Android Studio"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Android Studio</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150717141209.824450+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Android Studio</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\ASUS Utility"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\ASUS Utility"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\ASUS Utility</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160210150716.766285+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\ASUS Utility</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\ASUS Utility\Wireless Router"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\ASUS Utility\Wireless Router"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\ASUS Utility\Wireless Router</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160210150716.766285+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\ASUS Utility\Wireless Router</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\ASUS Utility\Wireless Router\Device Discovery"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\ASUS Utility\Wireless Router\Device Discovery"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\ASUS Utility\Wireless Router\Device Discovery</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160210150716.766285+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\ASUS Utility\Wireless Router\Device Discovery</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\AVAST Software"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\AVAST Software"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\AVAST Software</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170123174235.234940+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\AVAST Software</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Borland Delphi 7"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Borland Delphi 7"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Borland Delphi 7</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170307133140.486422+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Borland Delphi 7</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Borland Delphi 7\Help"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Borland Delphi 7\Help"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Borland Delphi 7\Help</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170307133140.816422+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Borland Delphi 7\Help</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Borland Delphi 7\Help\MS SDK Help Files"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Borland Delphi 7\Help\MS SDK Help Files"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Borland Delphi 7\Help\MS SDK Help Files</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170307133140.816422+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Borland Delphi 7\Help\MS SDK Help Files</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\EPSON"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\EPSON"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\EPSON</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150319164942.701866+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\EPSON</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\EPSON\EPSON Advanced Printer Driver 4"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\EPSON\EPSON Advanced Printer Driver 4"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\EPSON\EPSON Advanced Printer Driver 4</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150319164942.702866+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\EPSON\EPSON Advanced Printer Driver 4</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Far Manager 3"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Far Manager 3"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Far Manager 3</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920151124.568477+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Far Manager 3</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Games"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Games"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Games</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714083238.538552+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Games</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\HCWPWebComponents"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\HCWPWebComponents"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\HCWPWebComponents</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150321111420.777766+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\HCWPWebComponents</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Help &amp; Manual 6"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Help &amp; Manual 6"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Help &amp; Manual 6</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170121102407.503161+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Help &amp; Manual 6</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\HTML Help Workshop"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\HTML Help Workshop"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\HTML Help Workshop</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170121105846.080720+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\HTML Help Workshop</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Integrated Camera"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Integrated Camera"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Integrated Camera</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20100507141533.839022+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Integrated Camera</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Intel PROSet Wireless"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Intel PROSet Wireless"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Intel PROSet Wireless</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20100507141415.448884+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Intel PROSet Wireless</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\InterVideo WinDVD"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\InterVideo WinDVD"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\InterVideo WinDVD</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20100507142829.067623+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\InterVideo WinDVD</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\IrfanView"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\IrfanView"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\IrfanView</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150916201218.729999+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\IrfanView</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Java"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Java"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Java</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170407150157.075960+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Java</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\K-Lite Codec Pack</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210730.435256+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\K-Lite Codec Pack</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Configuration"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Configuration"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\K-Lite Codec Pack\Configuration</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210730.513256+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\K-Lite Codec Pack\Configuration</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Help"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Help"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\K-Lite Codec Pack\Help</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210730.887657+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\K-Lite Codec Pack\Help</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\K-Lite Codec Pack\Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210730.747257+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\K-Lite Codec Pack\Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Uninstall"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\K-Lite Codec Pack\Uninstall"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\K-Lite Codec Pack\Uninstall</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210730.903257+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\K-Lite Codec Pack\Uninstall</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Lenovo ThinkVantage Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Lenovo ThinkVantage Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Lenovo ThinkVantage Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20100507142332.869903+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Lenovo ThinkVantage Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Lexmark 3300 Series"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Lexmark 3300 Series"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Lexmark 3300 Series</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150916194606.862638+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Lexmark 3300 Series</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\LibreOffice 5.0"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\LibreOffice 5.0"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\LibreOffice 5.0</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20151029101015.975059+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\LibreOffice 5.0</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Light Alloy"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Light Alloy"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Light Alloy</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150728203759.111349+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Light Alloy</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Logitech"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Logitech"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Logitech</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150416175139.963029+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Logitech</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Logitech\Unifying"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Logitech\Unifying"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Logitech\Unifying</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150416175208.341079+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Logitech\Unifying</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Logitech\Мышь и клавиатура"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Logitech\Мышь и клавиатура"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Logitech\Мышь и клавиатура</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150416175139.963029+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Logitech\Мышь и клавиатура</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\LogMeIn Hamachi"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\LogMeIn Hamachi"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\LogMeIn Hamachi</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170711154852.173935+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\LogMeIn Hamachi</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Maintenance"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Maintenance"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Maintenance</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.836215+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Maintenance</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft Office"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft Office"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft Office</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20100507150034.065210+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft Office</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft Office\Средства Microsoft Office"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft Office\Средства Microsoft Office"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft Office\Средства Microsoft Office</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160319160705.388821+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft Office\Средства Microsoft Office</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft Research AutoCollage Touch 2009"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft Research AutoCollage Touch 2009"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft Research AutoCollage Touch 2009</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20100507142632.239018+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft Research AutoCollage Touch 2009</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SOAP Toolkit Version 3"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SOAP Toolkit Version 3"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft SOAP Toolkit Version 3</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150805193741.989484+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft SOAP Toolkit Version 3</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft SQL Server</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20161123145839.411834+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft SQL Server</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server - Switch"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server - Switch"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft SQL Server - Switch</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20161123145839.692635+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft SQL Server - Switch</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server 2005"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server 2005"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft SQL Server 2005</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160311144837.558978+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft SQL Server 2005</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server 2005\Configuration Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Microsoft SQL Server 2005\Configuration Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Microsoft SQL Server 2005\Configuration Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160311144837.558978+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Microsoft SQL Server 2005\Configuration Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\MySQL"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\MySQL"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\MySQL</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150919105104.332070+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\MySQL</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\MySQL\MySQL Server 5.1"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\MySQL\MySQL Server 5.1"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\MySQL\MySQL Server 5.1</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150919105104.332070+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\MySQL\MySQL Server 5.1</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\NeoFiscalPrinterDriver"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\NeoFiscalPrinterDriver"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\NeoFiscalPrinterDriver</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160910201934.983075+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\NeoFiscalPrinterDriver</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Nero 8"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Nero 8"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Nero 8</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160926090313.653916+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Nero 8</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Nero 8\Nero Manuals"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Nero 8\Nero Manuals"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Nero 8\Nero Manuals</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160926090313.733916+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Nero 8\Nero Manuals</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Nero 8\Nero Toolkit"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Nero 8\Nero Toolkit"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Nero 8\Nero Toolkit</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160926090313.713916+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Nero 8\Nero Toolkit</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\PhoenixSuit"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\PhoenixSuit"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\PhoenixSuit</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170610182746.103175+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\PhoenixSuit</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Picexa"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Picexa"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Picexa</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20151124085027.738063+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Picexa</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\PremiumSoft"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\PremiumSoft"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\PremiumSoft</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150902092508.856443+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\PremiumSoft</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\PremiumSoft\Navicat Premium 8.2"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\PremiumSoft\Navicat Premium 8.2"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\PremiumSoft\Navicat Premium 8.2</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150902092508.866443+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\PremiumSoft\Navicat Premium 8.2</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Samsung"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Samsung"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Samsung</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150731184646.716226+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Samsung</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Samsung\Kies"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Samsung\Kies"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Samsung\Kies</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150731184646.716226+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Samsung\Kies</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Service manager 3.2"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Service manager 3.2"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Service manager 3.2</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160911162555.435038+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Service manager 3.2</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Skype"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Skype"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Skype</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170309090233.756571+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Skype</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Startup"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Startup"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Startup</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714062008.836215+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Startup</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Tablet PC"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Tablet PC"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Tablet PC</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20090714104438.379877+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Tablet PC</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Total Commander"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Total Commander"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Total Commander</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210502.488996+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Total Commander</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Total Commander\Полезные утилиты"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Total Commander\Полезные утилиты"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Total Commander\Полезные утилиты</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210504.673000+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Total Commander\Полезные утилиты</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Winamp"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Winamp"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Winamp</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210536.715456+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Winamp</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\WinRAR"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\WinRAR"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\WinRAR</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150415210548.618277+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\WinRAR</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\WinZipper"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\WinZipper"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\WinZipper</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20151110091707.052005+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\WinZipper</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\АБ ОФИС 2000 версия 3.0"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\АБ ОФИС 2000 версия 3.0"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\АБ ОФИС 2000 версия 3.0</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160119140213.637636+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\АБ ОФИС 2000 версия 3.0</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\АБ ОФИС версия 4.0"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\АБ ОФИС версия 4.0"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\АБ ОФИС версия 4.0</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150321113911.995247+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\АБ ОФИС версия 4.0</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Обнови Софт"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "Public:Start Menu\Programs\Обнови Софт"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Обнови Софт</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170107135318.186910+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public:Start Menu\Programs\Обнови Софт</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Public</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150238.425143+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150238.425143+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Accessories"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Accessories"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150238.425143+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\Accessories</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Accessories\Accessibility"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Accessories\Accessibility"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\Accessibility</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150238.425143+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\Accessories\Accessibility</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Accessories\System Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Accessories\System Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\System Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150238.425143+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\Accessories\System Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Administrative Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Administrative Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Administrative Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150413.235259+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\Administrative Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\HTML Help Workshop"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\HTML Help Workshop"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\HTML Help Workshop</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170121105846.055719+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\HTML Help Workshop</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Maintenance"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Maintenance"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Maintenance</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150238.425143+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\Maintenance</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Startup"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\Startup"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Startup</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920150413.235259+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\Startup</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\UltraISO"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\UltraISO"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\UltraISO</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170307132727.716068+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\UltraISO</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\АБ ОФИС 2000 версия 3.0"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\АБ ОФИС 2000 версия 3.0"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\АБ ОФИС 2000 версия 3.0</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20160119140213.627636+120</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\АБ ОФИС 2000 версия 3.0</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\АБ ОФИС версия 4.0"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\User:Start Menu\Programs\АБ ОФИС версия 4.0"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\АБ ОФИС версия 4.0</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20170616095444.992486+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User:Start Menu\Programs\АБ ОФИС версия 4.0</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\User</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145934.195458+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145934.195458+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Programs</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Accessories"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Accessories"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145934.195458+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Programs\Accessories</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Accessories\Accessibility"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Accessories\Accessibility"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\Accessibility</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145934.195458+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Programs\Accessories\Accessibility</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Accessories\System Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Accessories\System Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Accessories\System Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145934.195458+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Programs\Accessories\System Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Administrative Tools"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Administrative Tools"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Administrative Tools</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145945.395473+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Programs\Administrative Tools</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Maintenance"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Maintenance"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Maintenance</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145934.195458+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Programs\Maintenance</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Startup"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Programs\Startup"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Programs\Startup</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145945.385473+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Programs\Startup</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+  <Table1>
+    <Caption xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Программы"</Caption>
+    <Description xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Logical program group "User-THINK\Administrator:Start Menu\Программы"</Description>
+    <GroupName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Start Menu\Программы</GroupName>
+    <InstallDate xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20150920145934.365458+180</InstallDate>
+    <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator:Start Menu\Программы</Name>
+    <UserName xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">User-THINK\Administrator</UserName>
+  </Table1>
+</NewDataSet>

@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Компютер 1", 1, 1);
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Узел24", 1, 1);
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Узел25", 1, 1);
@@ -229,6 +227,7 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -350,6 +349,7 @@
             this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
             this.налаштуванняToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.налаштуванняToolStripMenuItem.Text = "Налаштування";
+            this.налаштуванняToolStripMenuItem.Visible = false;
             this.налаштуванняToolStripMenuItem.Click += new System.EventHandler(this.налаштуванняToolStripMenuItem_Click);
             // 
             // подключитсяToolStripMenuItem
@@ -405,6 +405,7 @@
             this.переназватиToolStripMenuItem.Name = "переназватиToolStripMenuItem";
             this.переназватиToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.переназватиToolStripMenuItem.Text = "Переназвати";
+            this.переназватиToolStripMenuItem.Visible = false;
             this.переназватиToolStripMenuItem.Click += new System.EventHandler(this.переназватиToolStripMenuItem_Click);
             // 
             // видалитиToolStripMenuItem
@@ -423,6 +424,8 @@
             this.imageList1.Images.SetKeyName(2, "Notebook.png");
             this.imageList1.Images.SetKeyName(3, "Без названия.jpg");
             this.imageList1.Images.SetKeyName(4, "setting_5376.ico");
+            this.imageList1.Images.SetKeyName(5, "orangeball_8491.png");
+            this.imageList1.Images.SetKeyName(6, "greenball_5520.png");
             // 
             // toolStripProgressBar1
             // 
@@ -573,7 +576,7 @@
             this.tvClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvClients.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tvClients.ImageIndex = 0;
-            this.tvClients.ImageList = this.imageList1;
+            this.tvClients.ImageList = this.imageList2;
             this.tvClients.ItemHeight = 16;
             this.tvClients.LabelEdit = true;
             this.tvClients.Location = new System.Drawing.Point(0, 25);
@@ -983,6 +986,15 @@
             this.toolStripButton4.Visible = false;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "orangeball_8491.png");
+            this.imageList2.Images.SetKeyName(1, "orangeball_8491.png");
+            this.imageList2.Images.SetKeyName(2, "greenball_5520.png");
+            this.imageList2.Images.SetKeyName(3, "greenball_5520.png");
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1087,6 +1099,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.Panel pnContents;
         private System.Windows.Forms.TreeView treeView2;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }
 
