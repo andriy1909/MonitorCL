@@ -45,9 +45,10 @@ namespace MonitorCLServer
                     Product product = new Product();
                     var list = product.GetData();
 
-                    foreach (var item in fields)
+
+                    for (int i = 0; i < fields.Count(); i++)
                     {
-                        dataGridView1.Columns.Add("cl" + new Random().Next(100000).ToString(), item);
+                        dataGridView1.Columns.Add("col" + i.ToString(), fields[i]);
                     }
 
                     foreach (var item in list)
@@ -87,7 +88,6 @@ namespace MonitorCLServer
                 default:
                     break;
             }
-            
         }
 
 

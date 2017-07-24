@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Security.Cryptography;
+using System.Management;
 
 namespace MonitorCLServer
 {
@@ -37,7 +38,7 @@ namespace MonitorCLServer
 
         private void MainForm2_Load(object sender, EventArgs e)
         {
-            this.Show();
+           /* this.Show();
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             if (isDedug || new LoginForm().ShowDialog() == DialogResult.OK)
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
@@ -49,7 +50,42 @@ namespace MonitorCLServer
             else
             {
                 return;
+            }                   //Номер зборки;Часова зона;Рівень шифрування;Файл підкачки;Локальний час;Макс. памяті може бути виділено процесу;Кількість користувачів;Тип системи;Серійний номер;Версія ОС
+                                //7601;UTC+3;256;1754,33МБ(1796444КБ);20.07.2017 12:28:50;7,99ТБ(8589934464КБ);1;Рабочая станция;00371-OEM-9306127-90311;6.1.7601
+            string[] descOS = "Операційна система;Пакет оновлень;Назва комп'ютера;Розмір оперативної пам'яті;Макс. розмір файла підкачки;Дата встановлення;Останій запуск ОС;Архітектура ОС;Головний користувач;Статус;Диск на якому встановлена ОС".Split(';');
+            string[] fieldOS = "Microsoft Windows 7 Профессиональная;Service Pack 1;DELL-CORE2-01;3931,60МБ(4025968КБ);3072МБ(3145728КБ);23.01.2017 10:16:42;20.07.2017 9:02:14;64-bit;Dell;OK;C:".Split(';');
+
+            for (int i = 0; i < fieldOS.Length; i++)
+            {
+                dataGridView1.Rows.Add(new object[] { imageList3.Images[i], descOS[i], fieldOS[i] });
             }
+
+            Win32_DiskDrive disk = new Win32_DiskDrive();
+            var list = disk.GetData();
+
+            var fields = disk.Fields.Split(';');
+            var desc = disk.getDesc().Split(';');
+
+            for (int i = 0; i < desc.Count(); i++)
+            {
+                dataGridView2.Columns.Add(fields[i], desc[i]);
+            }
+            foreach (var item in list)
+            {
+                dataGridView2.Rows.Add(new object[] {
+                    imageList3.Images[new Random().Next(25)],
+                    item.Caption,
+                    item.Index,
+                    item.InterfaceType,
+                    item.MediaType,
+                    item.Partitions,
+                    item.Size,
+                    item.Status
+                });
+            }
+
+
+
 
             for (int i = 0; i < 4; i++)
             {
@@ -66,7 +102,7 @@ namespace MonitorCLServer
                 g.DrawImage(bm2, 16, 0, 16, 16);
                 g.Dispose();
                 imageList2.Images[i] = bm;
-            }
+            }*/
         }
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
@@ -434,6 +470,100 @@ namespace MonitorCLServer
             if (tvClients.SelectedNode != null)
                 tvClients.SelectedNode.BeginEdit();
         }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            if (int.Parse(panel3.Tag.ToString()) == 0)
+            {
+                panel3.Tag = panel3.Height;
+                panel3.Height = panel4.Height;
+            }
+            else
+            {
+                panel3.Height = (int)panel3.Tag;
+                panel3.Tag = 0;
+            }
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+        }
+
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            /*
+            dataGridView4.Rows.Add(new object[] { "Компьютер", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Операционная система", "Microsoft Windows 7 Professional" });
+            dataGridView4.Rows.Add(new object[] { "", "Пакет обновления ОС", "Service Pack 1" });
+            dataGridView4.Rows.Add(new object[] { "", "Имя компьютера", "DELL-CORE2-01" });
+            dataGridView4.Rows.Add(new object[] { "", "Имя пользователя", "Dell" });
+            dataGridView4.Rows.Add(new object[] { "", "Домен", "WORKGROUP" });
+            dataGridView4.Rows.Add(new object[] { "", "Дата / Время", "24.07.17 13:20" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Системная плата", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Тип ЦП", "DualCore Intel Core 2 Duo E8400, 3000 MHz(9 x 333)" });
+            dataGridView4.Rows.Add(new object[] { "", "Системная плата", "Dell OptiPlex 780" });
+            dataGridView4.Rows.Add(new object[] { "", "Чипсет системной платы", "Intel Eaglelake Q45" });
+            dataGridView4.Rows.Add(new object[] { "", "Системная память", "" });
+            dataGridView4.Rows.Add(new object[] { "", "DIMM1: Nanya NT2GC64B8HC0NF-CG", "2 ГБ DDR3-1333 DDR3 SDRAM" });
+            dataGridView4.Rows.Add(new object[] { "", "Тип BIOS", "Phoenix(02/13/10)" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Отображение", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Видеоадаптер", "Intel(R) Q45/Q43 Express Chipset(1783608 КБ)" });
+            dataGridView4.Rows.Add(new object[] { "", "Монитор", "Samsung SyncMaster 177N/710N/MagicSyncMaster CX701N/CX711N[17" LCD]  (HVGY910361)"});
+dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Мультимедиа", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Звуковой адаптер", "Analog Devices AD1984A @ Intel 82801JB ICH10 - High Definition Audio Controller[B - 0]" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Хранение данных", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "IDE-контроллер", "Intel(R) ICH10D / DO SATA AHCI Controller" });
+            dataGridView4.Rows.Add(new object[] { "", "IDE-контроллер", "Стандартный двухканальный контроллер PCI IDE" });
+            dataGridView4.Rows.Add(new object[] { "", "Дисковый накопитель", "ADATA USB Flash Drive USB Device(14 ГБ, USB)" });
+            dataGridView4.Rows.Add(new object[] { "", "Дисковый накопитель", "ATA Hitachi HTS72501 SCSI Disk Device(149 ГБ)" });
+            dataGridView4.Rows.Add(new object[] { "", "Дисковый накопитель", "ATA KINGSTON SKC300F SCSI Disk Device(55 ГБ)" });
+            dataGridView4.Rows.Add(new object[] { "", "SMART-статус жёстких дисков", "OK" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Разделы", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "C: (NTFS)", "49.0 ГБ(12.8 ГБ свободно)" });
+            dataGridView4.Rows.Add(new object[] { "", "D: (NTFS)", "25, 6 ГБ(2437 МБ свободно)" });
+            dataGridView4.Rows.Add(new object[] { "", "E: (NTFS)", "149.0 ГБ(42.8 ГБ свободно)" });
+            dataGridView4.Rows.Add(new object[] { "", "Общий объём", "225.0 ГБ(68, 4 ГБ свободно)" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Ввод", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Клавиатура", "Клавиатура HID" });
+            dataGridView4.Rows.Add(new object[] { "", "Мышь", "HID - совместимая мышь" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Сеть", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Первичный адрес IP", "192.168.1.118" });
+            dataGridView4.Rows.Add(new object[] { "", "Первичный МАС-адрес", " 255.255.255.0" });
+            dataGridView4.Rows.Add(new object[] { "", "Первичный адрес MAC", "B8 - AC - 6F - A0 - 2A - E4" });
+            dataGridView4.Rows.Add(new object[] { "", "Сетевой адаптер", "Intel(R) 82567LM - 3 Gigabit Network Connection(192. [TRIAL VERSION])" });
+            dataGridView4.Rows.Add(new object[] { "", "Сетевой адаптер", "VirtualBox Host - Only Ethernet Adapter(192. [TRIAL VERSION])" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Периферийные устройства", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Принтер", "Fax" });
+            dataGridView4.Rows.Add(new object[] { "", "Принтер", "Microsoft XPS Document Writer" });
+            dataGridView4.Rows.Add(new object[] { "", "USB-устройство", "Запоминающее устройство для USB" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "Проблемы и советы", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "Проблема", "На диске C: свободно лишь 3 %." });
+            dataGridView4.Rows.Add(new object[] { "", "Проблема", "На диске D: свободно лишь 10 %." });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });
+            dataGridView4.Rows.Add(new object[] { "", "", "" });*/
+        }
     }
     class Win32_BIOS
     {
@@ -695,7 +825,7 @@ Lost Comm ("Lost Comm")*/
         public string Version;
     }
 
-    class Process
+    class Win32_Process
     {
         /// <summary>
         /// Краткое описание объекта - однострочная строка.
@@ -748,92 +878,92 @@ Lost Comm ("Lost Comm")*/
         /// <summary>
         /// Краткое описание объекта.
         /// </summary>
-        string Caption;
+        public string Caption;
         /// <summary>
         /// Код ошибки Configuration Manager.
         /// 
         /// Это устройство работает правильно. (0)
-///        Устройство работает правильно.
-///        Это устройство настроено неправильно. (1)
-///Устройство настроено неправильно.
-///Windows не может загрузить драйвер для этого устройства. (2)
-///Драйвер для этого устройства может быть поврежден, или ваша система может работать с низким объемом памяти или другими ресурсами. (3)
-///Драйвер для этого устройства может быть поврежден или система может быть низкой в ​​памяти или других ресурсах.
-///Это устройство работает неправильно.Один из его драйверов или ваш реестр может быть поврежден. (4)
-///Устройство работает неправильно.Один из его драйверов или реестра может быть поврежден.
-///Драйверу для этого устройства нужен ресурс, который Windows не может управлять. (5)
-///Драйверу для устройства требуется ресурс, который Windows не может управлять.
-///Конфигурация загрузки для этого устройства конфликтует с другими устройствами. (6)
-///Конфигурация загрузки для устройства конфликтует с другими устройствами.
-///Невозможно фильтровать. (7)
-///Загрузчик драйвера для устройства отсутствует. (8)
-///Загрузчик драйвера для устройства отсутствует.
-///Это устройство работает неправильно, потому что управляющая микропрограмма неправильно сообщает ресурсы для устройства. (9)
-///Устройство работает неправильно.Контрольная микропрограмма неправильно сообщает ресурсы для устройства.
-///Это устройство не может запускаться. (10)
-///Устройство не может запускаться.
-///Это устройство не удалось. (11)
-///Ошибка устройства.
-///Это устройство не может найти достаточно свободных ресурсов, которые он может использовать. (12)
-///Устройство не может найти достаточно свободных ресурсов для использования.
-///Windows не может проверить ресурсы этого устройства. (13)
-///Windows не может проверить ресурсы устройства.
-///Это устройство не может работать должным образом, пока вы не перезагрузите компьютер. (14)
-///Устройство не может работать должным образом, пока компьютер не перезагрузится.
-///Это устройство работает неправильно, потому что, вероятно, существует проблема повторного перечисления. (15)
-///Устройство не работает должным образом из-за возможной проблемы повторного перечисления.
-///Windows не может определить все ресурсы, используемые этим устройством. (16)
-///Windows не может идентифицировать все ресурсы, которые использует устройство.
-///Это устройство запрашивает неизвестный тип ресурса. (17)
-///Устройство запрашивает неизвестный тип ресурса.
-///Переустановите драйверы для этого устройства. (18)
-///Драйверы устройств необходимо переустановить.
-///Ошибка при использовании погрузчика VxD. (19)
-///Возможно, ваш реестр поврежден. (20)
-///Реестр может быть поврежден.
-///Сбой системы: попробуйте изменить драйвер для этого устройства. Если это не сработает, см.Документацию по оборудованию.Windows удаляет это устройство. (21)
-///Системная ошибка.Если изменение драйвера устройства неэффективно, см.Документацию по оборудованию.Windows удаляет устройство.
-///Это устройство отключено. (22)
-///Устройство отключено.
-///Сбой системы: попробуйте изменить драйвер для этого устройства. Если это не сработает, см.Документацию по оборудованию. (23)
-///Системная ошибка.Если изменение драйвера устройства неэффективно, см.Документацию по оборудованию.
-///Это устройство отсутствует, не работает должным образом или не установлено все его драйверы. (24)
-///Устройство отсутствует, не работает должным образом или не установлено все его драйверы.
-///Windows все еще настраивает это устройство. (25)
-///Windows все еще настраивает устройство.
-///Windows все еще настраивает это устройство. (26)
-///Windows все еще настраивает устройство.
-///Это устройство не имеет правильной конфигурации журнала. (27)
-///У устройства нет правильной конфигурации журнала.
-///Драйверы для этого устройства не установлены. (28)
-///Драйверы устройств не установлены.
-///Это устройство отключено, потому что прошивка устройства не давала ему необходимых ресурсов. (29)
-///Устройство отключено.Прошивка устройства не обеспечивала требуемые ресурсы.
-///Это устройство использует ресурс запроса прерывания (IRQ), который использует другое устройство. (30)
-///Устройство использует ресурс IRQ, который использует другое устройство.
-///Это устройство работает неправильно, потому что Windows не может загрузить драйверы, необходимые для этого устройства. (31)*/
+        ///        Устройство работает правильно.
+        ///        Это устройство настроено неправильно. (1)
+        ///Устройство настроено неправильно.
+        ///Windows не может загрузить драйвер для этого устройства. (2)
+        ///Драйвер для этого устройства может быть поврежден, или ваша система может работать с низким объемом памяти или другими ресурсами. (3)
+        ///Драйвер для этого устройства может быть поврежден или система может быть низкой в ​​памяти или других ресурсах.
+        ///Это устройство работает неправильно.Один из его драйверов или ваш реестр может быть поврежден. (4)
+        ///Устройство работает неправильно.Один из его драйверов или реестра может быть поврежден.
+        ///Драйверу для этого устройства нужен ресурс, который Windows не может управлять. (5)
+        ///Драйверу для устройства требуется ресурс, который Windows не может управлять.
+        ///Конфигурация загрузки для этого устройства конфликтует с другими устройствами. (6)
+        ///Конфигурация загрузки для устройства конфликтует с другими устройствами.
+        ///Невозможно фильтровать. (7)
+        ///Загрузчик драйвера для устройства отсутствует. (8)
+        ///Загрузчик драйвера для устройства отсутствует.
+        ///Это устройство работает неправильно, потому что управляющая микропрограмма неправильно сообщает ресурсы для устройства. (9)
+        ///Устройство работает неправильно.Контрольная микропрограмма неправильно сообщает ресурсы для устройства.
+        ///Это устройство не может запускаться. (10)
+        ///Устройство не может запускаться.
+        ///Это устройство не удалось. (11)
+        ///Ошибка устройства.
+        ///Это устройство не может найти достаточно свободных ресурсов, которые он может использовать. (12)
+        ///Устройство не может найти достаточно свободных ресурсов для использования.
+        ///Windows не может проверить ресурсы этого устройства. (13)
+        ///Windows не может проверить ресурсы устройства.
+        ///Это устройство не может работать должным образом, пока вы не перезагрузите компьютер. (14)
+        ///Устройство не может работать должным образом, пока компьютер не перезагрузится.
+        ///Это устройство работает неправильно, потому что, вероятно, существует проблема повторного перечисления. (15)
+        ///Устройство не работает должным образом из-за возможной проблемы повторного перечисления.
+        ///Windows не может определить все ресурсы, используемые этим устройством. (16)
+        ///Windows не может идентифицировать все ресурсы, которые использует устройство.
+        ///Это устройство запрашивает неизвестный тип ресурса. (17)
+        ///Устройство запрашивает неизвестный тип ресурса.
+        ///Переустановите драйверы для этого устройства. (18)
+        ///Драйверы устройств необходимо переустановить.
+        ///Ошибка при использовании погрузчика VxD. (19)
+        ///Возможно, ваш реестр поврежден. (20)
+        ///Реестр может быть поврежден.
+        ///Сбой системы: попробуйте изменить драйвер для этого устройства. Если это не сработает, см.Документацию по оборудованию.Windows удаляет это устройство. (21)
+        ///Системная ошибка.Если изменение драйвера устройства неэффективно, см.Документацию по оборудованию.Windows удаляет устройство.
+        ///Это устройство отключено. (22)
+        ///Устройство отключено.
+        ///Сбой системы: попробуйте изменить драйвер для этого устройства. Если это не сработает, см.Документацию по оборудованию. (23)
+        ///Системная ошибка.Если изменение драйвера устройства неэффективно, см.Документацию по оборудованию.
+        ///Это устройство отсутствует, не работает должным образом или не установлено все его драйверы. (24)
+        ///Устройство отсутствует, не работает должным образом или не установлено все его драйверы.
+        ///Windows все еще настраивает это устройство. (25)
+        ///Windows все еще настраивает устройство.
+        ///Windows все еще настраивает это устройство. (26)
+        ///Windows все еще настраивает устройство.
+        ///Это устройство не имеет правильной конфигурации журнала. (27)
+        ///У устройства нет правильной конфигурации журнала.
+        ///Драйверы для этого устройства не установлены. (28)
+        ///Драйверы устройств не установлены.
+        ///Это устройство отключено, потому что прошивка устройства не давала ему необходимых ресурсов. (29)
+        ///Устройство отключено.Прошивка устройства не обеспечивала требуемые ресурсы.
+        ///Это устройство использует ресурс запроса прерывания (IRQ), который использует другое устройство. (30)
+        ///Устройство использует ресурс IRQ, который использует другое устройство.
+        ///Это устройство работает неправильно, потому что Windows не может загрузить драйверы, необходимые для этого устройства. (31)*/
         /// </summary>
-        uint ConfigManagerErrorCode;
+        public uint ConfigManagerErrorCode;
         /// <summary>
         /// Уникальный идентификатор диска с другими устройствами в системе.
         /// </summary>
-        string DeviceID;
+        public string DeviceID;
         /// <summary>
         /// Версия для прошивки на диске, назначенная производителем.
         /// </summary>
-        string FirmwareRevision;
+        public string FirmwareRevision;
         /// <summary>
         /// Номер физического диска данного диска. Значение 0xffffffff указывает, что данный диск не отображается на физический диск.
         /// </summary>
-        uint Index;
+        public uint Index;
         /// <summary>
         /// Тип интерфейса физического диска.
         /// </summary>
-        string InterfaceType;
+        public string InterfaceType;
         /// <summary>
         /// Последний код ошибки, сообщенный логическим устройством.
         /// </summary>
-        uint LastErrorCode;
+        public uint LastErrorCode;
         /// <summary>
         /// Тип носителя, используемого или доступного данным устройством.
         ///
@@ -843,23 +973,23 @@ Lost Comm ("Lost Comm")*/
         ///Fixed hard disk («Исправлены жесткие диски»)
         ///Unknown(«Формат неизвестен»)
         /// </summary>
-        string MediaType;
+        public string MediaType;
         /// <summary>
         /// Количество разделов на этом физическом диске, которые распознаются операционной системой.
         /// </summary>
-        uint Partitions;
+        public uint Partitions;
         /// <summary>
         /// Идентификатор устройства Windows Plug and Play логического устройства.
         /// </summary>
-        string PNPDeviceID;
+        public string PNPDeviceID;
         /// <summary>
         /// Номер, выделенный изготовителем для идентификации физических носителей.
         /// </summary>
-        string SerialNumber;
+        public string SerialNumber;
         /// <summary>
         /// Размер диска. Он рассчитывается путем умножения общего количества цилиндров, дорожек в каждом цилиндре, секторов на каждой дорожке и байтов в каждом секторе.
         /// </summary>
-        ulong Size;
+        public ulong Size;
         /// <summary>
         /// Текущее состояние объекта. 
         ///
@@ -876,7 +1006,204 @@ Lost Comm ("Lost Comm")*/
         /// Нет контакта(«Без контакта»)
         /// Lost Comm(«Lost Comm»)
         /// </summary>
-        string Status;
+        public string Status;
+
+        public string Fields
+        {
+            get
+            {   
+                return "Caption;Index;InterfaceType;MediaType;Partitions;Size;Status";
+                //return "Caption;ConfigManagerErrorCode;DeviceID;FirmwareRevision;Index;InterfaceType;LastErrorCode;MediaType;Partitions;PNPDeviceID;SerialNumber;Size;Status";
+            }
+        }
+
+        public List<Win32_DiskDrive> GetData()
+        {
+            List<Win32_DiskDrive> list = new List<Win32_DiskDrive>();
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT " + Fields.Replace(';',',')+ " FROM Win32_DiskDrive");
+            int i = 0;
+            foreach (ManagementObject item in searcher.Get())
+            {
+                list.Add(new Win32_DiskDrive()
+                {
+                    Caption = (string)item["Caption"],
+                    Index = (uint)item["Index"],
+                    InterfaceType = (string)item["InterfaceType"],
+                    MediaType = (string)item["MediaType"],
+                    Partitions = (uint)item["Partitions"],
+                    Size = (ulong)item["Size"],
+                    Status = (string)item["Status"]
+                });
+                i++;
+                if (i >= 20)
+                    break;
+            }
+            return list;
+        }        
     }
 }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
