@@ -26,87 +26,14 @@ namespace MonitorCLClient
             InitializeComponent();
         }
 
-        public void Receive(string message)
-        {
-            switch (message)
-            {
-                case "logoff":
-                    canClose = true;
-                    Process.Start("logoff");
-                    break;
-                case "shutdown":
-                    Reboot shutdown = new Reboot();
-                    canClose = true;
-                    shutdown.halt(false, false);
-                    break;
-                case "reboot":
-                    Reboot reboot = new Reboot();
-                    canClose = true;
-                    reboot.halt(true, false);
-                    break;
-                case "teamviewer":
-                    if (Process.GetProcessesByName("teamviewer").Count() == 0)
-                    {
-                        Process.Start(Application.StartupPath + "\\teamviewer.exe");
-                        Thread.Sleep(7000);
-                    }
-                    var BM = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-                    Graphics GH = Graphics.FromImage(BM as Image);
-                    GH.CopyFromScreen(0, 0, 0, 0, BM.Size);
-
-                    JsonPack jsPack = new JsonPack();
-                    JsonHeader jsHeader = new JsonHeader("tmimage");
-                    jsHeader.setLoginPassword("login", "password");
-                    jsHeader.setToken("12345");
-                    JsonData jsData = new JsonData();
-                    jsData.text = "Hello";
-                    
-                    ImageConverter converter = new ImageConverter();
-                    jsData.text = "img";
-                    jsData.images = new List<byte[]>();
-                    jsData.images.Add((byte[])converter.ConvertTo(BM, typeof(byte[])));
-                    jsPack.data = jsData;
-                    jsPack.header = jsHeader;
-                    jsPack.SetSignature(Settings.Default.privateKey);
-
-                    client.SendMessage(jsPack.GetJsonStr());
-
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        public void IsConnected(bool check)
-        {
-            if (check)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
-            tbPassword.UseSystemPasswordChar = true;
-            tbIP.Text = Settings.Default.ip;
-            tbPort.Text = Settings.Default.port.ToString();
-            tbLogin.Text = Settings.Default.login;
-            tbPassword.Text = Settings.Default.password;
-
-            client.setReceiveOut(Receive);
-            client.setIsConnectOut(IsConnected);
-            client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id, Settings.Default.login, Settings.Default.password);
-
-            /*  var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-              if (key.GetValue(Application.ProductName).ToString() == Application.ExecutablePath)
-              {
-                  //автозапуск программы при старте Windows
-                  key.SetValue(Application.ProductName, Application.ExecutablePath);
-              }*/
+            var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
+            if (key.GetValue(Application.ProductName).ToString() == Application.ExecutablePath)
+            {
+                //автозапуск программы при старте Windows
+                key.SetValue(Application.ProductName, Application.ExecutablePath);
+            }
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -115,16 +42,16 @@ namespace MonitorCLClient
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.ShowInTaskbar = true;
-            }
+            /* if (this.WindowState == FormWindowState.Minimized)
+             {
+                 this.WindowState = FormWindowState.Normal;
+                 this.ShowInTaskbar = true;
+             }*/
         }
 
         private void MainForm_Deactivate(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized)
+            /*if (this.WindowState == FormWindowState.Minimized)
             {
                 this.ShowInTaskbar = false;
 
@@ -132,7 +59,7 @@ namespace MonitorCLClient
                 tbPort.Text = Settings.Default.port.ToString();
                 tbLogin.Text = Settings.Default.login;
                 tbPassword.Text = Settings.Default.password;
-            }
+            }*/
         }
 
         private void sendMessageToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,7 +70,7 @@ namespace MonitorCLClient
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!canClose)
+            /*if (!canClose)
             {
                 this.WindowState = FormWindowState.Minimized;
                 this.ShowInTaskbar = false;
@@ -152,7 +79,7 @@ namespace MonitorCLClient
             {
                 notifyIcon.Visible = false;
             }
-            e.Cancel = !canClose;
+            e.Cancel = !canClose;*/
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
