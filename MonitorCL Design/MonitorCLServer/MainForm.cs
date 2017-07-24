@@ -31,8 +31,8 @@ namespace MonitorCLServer
             //db.Database.Delete();
             //db.Database.Create();
 
-            menuStrip1.Visible = false;
-            splitContainer1.Visible = false;
+            //menuStrip1.Visible = false;
+            //splitContainer1.Visible = false;
             timer1.Stop();
         }
 
@@ -268,6 +268,7 @@ namespace MonitorCLServer
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             if (new LoginForm().ShowDialog() == DialogResult.OK)
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
@@ -275,7 +276,7 @@ namespace MonitorCLServer
                 menuStrip1.Visible = true;
                 splitContainer1.Visible = true;
                 this.ContextMenuStrip = null;
-            }
+            }*/
         }
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -298,6 +299,7 @@ namespace MonitorCLServer
 
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            /*
             switch (e.Node.Name)
             {
                 case "tnOS":
@@ -321,6 +323,7 @@ namespace MonitorCLServer
                 default:
                     break;
             }
+            */
         }
 
         private void treeView2_MouseClick(object sender, MouseEventArgs e)
@@ -354,27 +357,33 @@ namespace MonitorCLServer
 
         private void подключитсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
             //server.SendCommad("teamviewer");
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             TeamViewerForm form = new TeamViewerForm();
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
+            */
         }
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             SettingForm form = new SettingForm();
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
+            */
         }
 
         private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             ClientInfoForm form = new ClientInfoForm();
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
+            */
         }
 
         private void productsForm1_Load(object sender, EventArgs e)
@@ -398,6 +407,7 @@ namespace MonitorCLServer
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            /*
             switch (treeView1.SelectedNode.Name)
             {
                 case "tnOS":
@@ -420,7 +430,7 @@ namespace MonitorCLServer
                     break;
                 default:
                     break;
-            }
+            }*/
         }
 
         private void operationSystemControl1_Load(object sender, EventArgs e)
@@ -439,10 +449,11 @@ namespace MonitorCLServer
 
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
+            /*
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             OpenViewForm form = new OpenViewForm();
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
-            form.Show();
+            form.Show();*/
         }
 
         private void tvClients_AfterExpand(object sender, TreeViewEventArgs e)
@@ -565,6 +576,8 @@ dataGridView4.Rows.Add(new object[] { "", "", "" });
             dataGridView4.Rows.Add(new object[] { "", "", "" });*/
         }
     }
+
+/*
     class Win32_BIOS
     {
         /// <summary>
@@ -586,32 +599,32 @@ dataGridView4.Rows.Add(new object[] { "", "", "" });
         /// <summary>
         /// Поточний стан.
         /// </summary>
-        /*
-OK ("OK")
-Error ("Error")
-Degraded ("Degraded")
-Unknown ("Unknown")
-Pred Fail ("Pred Fail")
-Starting ("Starting")
-Stopping ("Stopping")
-Service ("Service")
-Stressed ("Stressed")
-NonRecover ("NonRecover")
-No Contact ("No Contact")
-Lost Comm ("Lost Comm")*/
-        /*
-         ОК ("ОК")
-        Помилка ("Помилка")
-        Деградований ("деградований")
-        Невідомо ("Невідомо")
-        Pred Fail ("Pred Fail")
-        Початок ("Початок")
-        Зупинка ("Зупинка")
-        Сервіс ("Сервіс")
-        Підкреслений ("підкреслив")
-        NonRecover ("NonRecover")
-        Немає контактів ("Немає контактів")
-        Lost Comm ("Lost Comm")*/
+        ///
+        ///OK ("OK")
+        ///Error ("Error")
+        ///Degraded ("Degraded")
+        ///Unknown ("Unknown")
+        ///Pred Fail ("Pred Fail")
+        ///Starting ("Starting")
+        ///Stopping ("Stopping")
+        ///Service ("Service")
+        ///Stressed ("Stressed")
+        ///NonRecover ("NonRecover")
+        ///No Contact ("No Contact")
+        ///Lost Comm ("Lost Comm")
+        ///
+        /// ОК ("ОК")
+        ///Помилка ("Помилка")
+        ///Деградований ("деградований")
+        ///Невідомо ("Невідомо")
+        ///Pred Fail ("Pred Fail")
+        ///Початок ("Початок")
+        ///Зупинка ("Зупинка")
+        ///Сервіс ("Сервіс")
+        ///Підкреслений ("підкреслив")
+        ///NonRecover ("NonRecover")
+        ///Немає контактів ("Немає контактів")
+        ///Lost Comm ("Lost Comm")
         string Status;
         /// <summary>
         /// Версія BIOS. Цей рядок створено виробником BIOS.
@@ -771,11 +784,11 @@ Lost Comm ("Lost Comm")*/
         /// <summary>
         /// Дополнительная системная информация.
         /// </summary>
-        /*
-        Рабочая станция (1)
-        Контроллер домена (2)
-        Сервер (3)
-        */
+        ///
+        ///Рабочая станция (1)
+        ///Контроллер домена (2)
+        ///Сервер (3)
+        ///
         public uint ProductType;
         /// <summary>
         /// Имя зарегистрированного пользователя операционной системы.
@@ -792,20 +805,20 @@ Lost Comm ("Lost Comm")*/
         /// <summary>
         /// Текущее состояние объекта. 
         /// </summary>
-        /*
-        OK («OK»)
-        Ошибка(«Error»)
-        Деградированные(«Degraded»)
-        Неизвестно(«Unknown»)
-        Pred Fail(«Pred Fail»)
-        Запуск(«Starting»)
-        Остановка(«Stopping»)
-        Сервис(«Service»)
-        Подчеркнутый(«Stressed»)
-        NonRecover(«NonRecover»)
-        Нет контакта(«No Contact»)
-        Lost Comm(«Lost Comm»)
-        */
+        ///
+        ///OK («OK»)
+        ///Ошибка(«Error»)
+        ///Деградированные(«Degraded»)
+        ///Неизвестно(«Unknown»)
+        ///Pred Fail(«Pred Fail»)
+        ///Запуск(«Starting»)
+        ///Остановка(«Stopping»)
+        ///Сервис(«Service»)
+        ///Подчеркнутый(«Stressed»)
+        ///NonRecover(«NonRecover»)
+        ///Нет контакта(«No Contact»)
+        ///Lost Comm(«Lost Comm»)
+        ///
         public string Status;
         /// <summary>
         /// Буква диска, на котором находится операционная система. Пример: "C:"
@@ -941,7 +954,7 @@ Lost Comm ("Lost Comm")*/
         ///Устройство отключено.Прошивка устройства не обеспечивала требуемые ресурсы.
         ///Это устройство использует ресурс запроса прерывания (IRQ), который использует другое устройство. (30)
         ///Устройство использует ресурс IRQ, который использует другое устройство.
-        ///Это устройство работает неправильно, потому что Windows не может загрузить драйверы, необходимые для этого устройства. (31)*/
+        ///Это устройство работает неправильно, потому что Windows не может загрузить драйверы, необходимые для этого устройства. (31)
         /// </summary>
         public uint ConfigManagerErrorCode;
         /// <summary>
@@ -1041,6 +1054,7 @@ Lost Comm ("Lost Comm")*/
             return list;
         }        
     }
+    */
 }
 
     
