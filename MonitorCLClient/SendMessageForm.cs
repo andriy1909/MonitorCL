@@ -7,13 +7,17 @@ namespace MonitorCLClient
 {
     public partial class SendMessageForm : Form
     {
+        const int minHeight = 385;
+        const int maxHeight = 615;
+
         private ClientWork client;
         private Image BM = null;
 
-        public SendMessageForm(ClientWork client)
+        public SendMessageForm(ClientWork client=null)
         {
             InitializeComponent();
             this.client = client;
+            this.Height = minHeight;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -26,6 +30,7 @@ namespace MonitorCLClient
             pictureBox1.Image = BM;
             //label3.Visible = true;
             Show();
+            this.Height = maxHeight;
         }
 
         private void btCancel_Click(object sender, EventArgs e)
@@ -46,6 +51,14 @@ namespace MonitorCLClient
                 MessageBox.Show("Письмо отправленое!" + Environment.NewLine + "Ожидайте специалист с вами свяжется.");
                 Close();
             }
+        }
+    }
+
+    public class ClientWork
+    {
+        internal void SendSupport(string text1, string text2, Image bM)
+        {
+           // throw new NotImplementedException();
         }
     }
 }

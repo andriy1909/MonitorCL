@@ -33,4 +33,43 @@ E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.exe
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
-E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+E:\MonitorCL Design\MonitorCLClient\bin\Debug\MonitorCLClient.exe.config
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+E:\MonitorCL Design\MonitorCLClient\bin\deb2\MonitorCLClient.exe.config
+E:\MonitorCL Design\MonitorCLClient\bin\Debug\MonitorCLClient.exe
+E:\MonitorCL Design\MonitorCLClient\bin\Debug\MonitorCLClient.pdb
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.AboutBox1.resources
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.LoginForm.resources
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.MainForm.resources
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.Properties.Resources.resources
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.RegistrationForm.resources
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.exe
+E:\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\bin\Debug\MonitorCLClient.exe.config
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\bin\Debug\MonitorCLClient.exe
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\bin\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.AboutBox1.resources
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.LoginForm.resources
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.MainForm.resources
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.Properties.Resources.resources
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.RegistrationForm.resources
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.exe
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCL Design\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\bin\Debug\MonitorCLClient.exe.config
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.exe
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\bin\Debug\MonitorCLClient.exe
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\bin\Debug\MonitorCLClient.pdb
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.AboutBox1.resources
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.LoginForm.resources
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.MainForm.resources
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.Properties.Resources.resources
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.RegistrationForm.resources
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.SendMessageForm.resources
+E:\MonitorCL\MonitorCL Merge\MonitorCLClient\obj\Debug\MonitorCLClient.csproj.GenerateResource.Cache

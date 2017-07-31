@@ -19,13 +19,13 @@ namespace MonitorCLServer
             InitializeComponent();
         }
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
-     //   ProductsControl productsControl1 = new ProductsControl();
+        ProductsControl productsControl1 = new ProductsControl();
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
 
 
         private void OpenViewForm_Load(object sender, EventArgs e)
         {
-          //  splitContainer1.Panel2.Controls.Add(productsControl1);
+            splitContainer1.Panel2.Controls.Add(productsControl1);
             for (int i = 0; i < 15; i++)
             {
                 dataGridView1.Rows.Add(new object[]
@@ -41,14 +41,14 @@ namespace MonitorCLServer
         {
             for (int i = 0; i < 20; i++)
             {
-          //      productsControl1.setColor(i, Color.White);
+                productsControl1.setColor(i, Color.White);
             }
             for (int i = 0; i < 3; i++)
             {
-           //     productsControl1.setColor(new Random().Next(20), Color.LightGreen);
+                productsControl1.setColor(new Random().Next(20), Color.LightGreen);
                 Thread.Sleep(100);
             }
-          //  productsControl1.setColor(new Random().Next(20), Color.IndianRed);
+            productsControl1.setColor(new Random().Next(20), Color.IndianRed);
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)

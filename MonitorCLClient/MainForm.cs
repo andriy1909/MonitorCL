@@ -1,5 +1,4 @@
-﻿using MonitorCLClassLibrary;
-using MonitorCLClient.Properties;
+﻿using MonitorCLClient.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace MonitorCLClient
 {
@@ -20,93 +20,101 @@ namespace MonitorCLClient
     {
         ClientWork client = new ClientWork();
         bool canClose = false;
+        SendMessageForm sendMessage = null;
 
         public MainForm()
         {
             InitializeComponent();
         }
 
-        public void Receive(string message)
-        {
-            switch (message)
-            {
-                case "logoff":
-                    canClose = true;
-                    Process.Start("logoff");
-                    break;
-                case "shutdown":
-                    Reboot shutdown = new Reboot();
-                    canClose = true;
-                    shutdown.halt(false, false);
-                    break;
-                case "reboot":
-                    Reboot reboot = new Reboot();
-                    canClose = true;
-                    reboot.halt(true, false);
-                    break;
-                case "teamviewer":
-                    if (Process.GetProcessesByName("teamviewer").Count() == 0)
-                    {
-                        Process.Start(Application.StartupPath + "\\teamviewer.exe");
-                        Thread.Sleep(7000);
-                    }
-                    var BM = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-                    Graphics GH = Graphics.FromImage(BM as Image);
-                    GH.CopyFromScreen(0, 0, 0, 0, BM.Size);
-
-                    JsonPack jsPack = new JsonPack();
-                    JsonHeader jsHeader = new JsonHeader("tmimage");
-                    jsHeader.setLoginPassword("login", "password");
-                    jsHeader.setToken("12345");
-                    JsonData jsData = new JsonData();
-                    jsData.text = "Hello";
-                    
-                    ImageConverter converter = new ImageConverter();
-                    jsData.text = "img";
-                    jsData.images = new List<byte[]>();
-                    jsData.images.Add((byte[])converter.ConvertTo(BM, typeof(byte[])));
-                    jsPack.data = jsData;
-                    jsPack.header = jsHeader;
-                    jsPack.SetSignature(Settings.Default.privateKey);
-
-                    client.SendMessage(jsPack.GetJsonStr());
-
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        public void IsConnected(bool check)
-        {
-            if (check)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
-            tbPassword.UseSystemPasswordChar = true;
+            if (Settings.Default.isBlocked)
+            {
+                Exit();
+            }
+
+            #region автозапуск программы при старте Windows
+            try
+            {
+                RegistryKey reg = Registry.LocalMachine.OpenSubKey
+                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+                if (reg.GetValue(Application.ProductName).ToString() != Application.ExecutablePath.ToString())
+                    reg.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
+            }
+            catch (Exception err)
+            {
+                LogList.Add(err.Message);
+            }
+            #endregion
+
+
+            //TryConnect
+            int result = Connect();
+            switch (result)
+            {
+                case 0:// OK
+
+                    break;
+                case 1:// not auth
+
+                    LoginForm form = new LoginForm();
+                    form.ShowDialog();
+
+                    break;
+                case 2:// not found user
+                    RegistrationForm rForm = new RegistrationForm();
+                    if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
+                    {
+                        Exit();
+                    }
+                    break;
+                case 3:// block
+                    Exit();
+                    break;
+                case 4:// error
+                    //tryConnect
+                    result = Connect(true);
+                    if (result != 0)
+                        Exit();
+                    break;
+                default:
+                    //tryConnect
+                    result = Connect(true);
+                    if (result != 0)
+                        Exit();
+                    break;
+            }
+
+
             tbIP.Text = Settings.Default.ip;
             tbPort.Text = Settings.Default.port.ToString();
-            tbLogin.Text = Settings.Default.login;
-            tbPassword.Text = Settings.Default.password;
 
-            client.setReceiveOut(Receive);
-            client.setIsConnectOut(IsConnected);
-            client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id, Settings.Default.login, Settings.Default.password);
+        }
 
-            /*  var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-              if (key.GetValue(Application.ProductName).ToString() == Application.ExecutablePath)
-              {
-                  //автозапуск программы при старте Windows
-                  key.SetValue(Application.ProductName, Application.ExecutablePath);
-              }*/
+        /// <summary>
+        /// Соединение с сервером
+        /// 0-OK,1-not auth,2-not found user, 3-block, 4-error
+        /// </summary>
+        /// <returns>Статус</returns>
+        private int Connect(bool tryConnect=false)
+        {
+            //try
+            return 0;
+        }
+
+        /// <summary>
+        /// Выход с программы
+        /// </summary>
+        private void Exit()
+        {
+            Process.GetCurrentProcess().Kill();
+        }
+
+        private void ErrorToSupport()
+        {
+
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -130,8 +138,6 @@ namespace MonitorCLClient
 
                 tbIP.Text = Settings.Default.ip;
                 tbPort.Text = Settings.Default.port.ToString();
-                tbLogin.Text = Settings.Default.login;
-                tbPassword.Text = Settings.Default.password;
             }
         }
 
@@ -166,19 +172,18 @@ namespace MonitorCLClient
         private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-                if (this.WindowState == FormWindowState.Minimized)
-                {
-                    this.WindowState = FormWindowState.Normal;
-                    this.ShowInTaskbar = true;
-                }
+            {
+                sendMessage = new SendMessageForm();
+                sendMessage.Show();
+                sendMessage.WindowState = FormWindowState.Normal;
+                sendMessage.ShowInTaskbar = true;
+            }
         }
 
         private void btCancel_Click(object sender, EventArgs e)
         {
             tbIP.Text = Settings.Default.ip;
             tbPort.Text = Settings.Default.port.ToString();
-            tbLogin.Text = Settings.Default.login;
-            tbPassword.Text = Settings.Default.password;
             Close();
         }
 
@@ -195,66 +200,17 @@ namespace MonitorCLClient
                 MessageBox.Show("Введите номер порта!");
             }
             else
-            if (tbLogin.Text == "")
-            {
-                MessageBox.Show("Введите логин!");
-            }
-            else
-            if (tbPassword.Text == "")
-            {
-                MessageBox.Show("Введите пароль!");
-            }
-            else
             {
                 Settings.Default.ip = tbIP.Text;
                 Settings.Default.port = int.Parse(tbPort.Text);
-                Settings.Default.login = tbLogin.Text;
-                Settings.Default.password = tbPassword.Text;
-                client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id, Settings.Default.login, Settings.Default.password);
-                if (!client.IsConnect)
-                    if (MessageBox.Show("Не получилось подключится!" + Environment.NewLine + "Изменить параметры подключения?", "Ошибка", MessageBoxButtons.YesNo) == DialogResult.No)
-                        Close();
+                Close();
             }
         }
 
-
-        /*
-        
-
-
-private void MainForm_Load(object sender, EventArgs e)
-{
-client.setReceiveOut(Receive);
-client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id);
-}
-
-private void button2_Click(object sender, EventArgs e)
-{
-client.SendMessage(tbIP.Text);
-}
-
-private void button3_Click(object sender, EventArgs e)
-{
-//   client.Disconnect();
-System.Diagnostics.Process.GetCurrentProcess().Kill();
-}
-
-private void button1_Click(object sender, EventArgs e)
-{
-client.setReceiveOut(Receive);
-client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id);
-}
-
-private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-{
-System.Diagnostics.Process.GetCurrentProcess().Kill();
-}
-
-private void button4_Click(object sender, EventArgs e)
-{
-client.Disconnect();
-}
-*/
-
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 form = new AboutBox1();
+            form.Show();
+        }
     }
 }
