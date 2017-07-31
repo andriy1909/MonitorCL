@@ -80,7 +80,7 @@
             // btSend
             // 
             this.btSend.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btSend.Location = new System.Drawing.Point(260, 401);
+            this.btSend.Location = new System.Drawing.Point(259, 317);
             this.btSend.Name = "btSend";
             this.btSend.Size = new System.Drawing.Size(82, 27);
             this.btSend.TabIndex = 4;
@@ -91,7 +91,7 @@
             // btCancel
             // 
             this.btCancel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btCancel.Location = new System.Drawing.Point(348, 401);
+            this.btCancel.Location = new System.Drawing.Point(347, 317);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 27);
             this.btCancel.TabIndex = 5;
@@ -101,9 +101,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 321);
+            this.button3.Location = new System.Drawing.Point(11, 319);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(177, 25);
+            this.button3.Size = new System.Drawing.Size(172, 25);
             this.button3.TabIndex = 6;
             this.button3.Text = "Прикрепить скриншот екрана";
             this.button3.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 352);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 350);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(410, 225);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -124,7 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(435, 440);
+            this.ClientSize = new System.Drawing.Size(435, 577);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btCancel);

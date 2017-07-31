@@ -1,5 +1,4 @@
-﻿using MonitorCLClassLibrary;
-using MonitorCLClient.Properties;
+﻿using MonitorCLClient.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace MonitorCLClient
 {
@@ -20,6 +20,7 @@ namespace MonitorCLClient
     {
         ClientWork client = new ClientWork();
         bool canClose = false;
+        SendMessageForm sendMessage = null;
 
         public MainForm()
         {
@@ -28,12 +29,92 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-            if (key.GetValue(Application.ProductName).ToString() == Application.ExecutablePath)
+            if (Settings.Default.isBlocked)
             {
-                //автозапуск программы при старте Windows
-                key.SetValue(Application.ProductName, Application.ExecutablePath);
+                Exit();
             }
+
+            #region автозапуск программы при старте Windows
+            try
+            {
+                RegistryKey reg = Registry.LocalMachine.OpenSubKey
+                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+                if (reg.GetValue(Application.ProductName).ToString() != Application.ExecutablePath.ToString())
+                    reg.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
+            }
+            catch (Exception err)
+            {
+                LogList.Add(err.Message);
+            }
+            #endregion
+
+
+            //TryConnect
+            int result = Connect();
+            switch (result)
+            {
+                case 0:// OK
+
+                    break;
+                case 1:// not auth
+
+                    LoginForm form = new LoginForm();
+                    form.ShowDialog();
+
+                    break;
+                case 2:// not found user
+                    RegistrationForm rForm = new RegistrationForm();
+                    if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
+                    {
+                        Exit();
+                    }
+                    break;
+                case 3:// block
+                    Exit();
+                    break;
+                case 4:// error
+                    //tryConnect
+                    result = Connect(true);
+                    if (result != 0)
+                        Exit();
+                    break;
+                default:
+                    //tryConnect
+                    result = Connect(true);
+                    if (result != 0)
+                        Exit();
+                    break;
+            }
+
+
+            tbIP.Text = Settings.Default.ip;
+            tbPort.Text = Settings.Default.port.ToString();
+
+        }
+
+        /// <summary>
+        /// Соединение с сервером
+        /// 0-OK,1-not auth,2-not found user, 3-block, 4-error
+        /// </summary>
+        /// <returns>Статус</returns>
+        private int Connect(bool tryConnect=false)
+        {
+            //try
+            return 0;
+        }
+
+        /// <summary>
+        /// Выход с программы
+        /// </summary>
+        private void Exit()
+        {
+            Process.GetCurrentProcess().Kill();
+        }
+
+        private void ErrorToSupport()
+        {
+
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -42,24 +123,22 @@ namespace MonitorCLClient
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /* if (this.WindowState == FormWindowState.Minimized)
-             {
-                 this.WindowState = FormWindowState.Normal;
-                 this.ShowInTaskbar = true;
-             }*/
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
+            }
         }
 
         private void MainForm_Deactivate(object sender, EventArgs e)
         {
-            /*if (this.WindowState == FormWindowState.Minimized)
+            if (this.WindowState == FormWindowState.Minimized)
             {
                 this.ShowInTaskbar = false;
 
                 tbIP.Text = Settings.Default.ip;
                 tbPort.Text = Settings.Default.port.ToString();
-                tbLogin.Text = Settings.Default.login;
-                tbPassword.Text = Settings.Default.password;
-            }*/
+            }
         }
 
         private void sendMessageToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,7 +149,7 @@ namespace MonitorCLClient
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*if (!canClose)
+            if (!canClose)
             {
                 this.WindowState = FormWindowState.Minimized;
                 this.ShowInTaskbar = false;
@@ -79,7 +158,7 @@ namespace MonitorCLClient
             {
                 notifyIcon.Visible = false;
             }
-            e.Cancel = !canClose;*/
+            e.Cancel = !canClose;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,19 +172,18 @@ namespace MonitorCLClient
         private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-                if (this.WindowState == FormWindowState.Minimized)
-                {
-                    this.WindowState = FormWindowState.Normal;
-                    this.ShowInTaskbar = true;
-                }
+            {
+                sendMessage = new SendMessageForm();
+                sendMessage.Show();
+                sendMessage.WindowState = FormWindowState.Normal;
+                sendMessage.ShowInTaskbar = true;
+            }
         }
 
         private void btCancel_Click(object sender, EventArgs e)
         {
             tbIP.Text = Settings.Default.ip;
             tbPort.Text = Settings.Default.port.ToString();
-            tbLogin.Text = Settings.Default.login;
-            tbPassword.Text = Settings.Default.password;
             Close();
         }
 
@@ -122,66 +200,17 @@ namespace MonitorCLClient
                 MessageBox.Show("Введите номер порта!");
             }
             else
-            if (tbLogin.Text == "")
-            {
-                MessageBox.Show("Введите логин!");
-            }
-            else
-            if (tbPassword.Text == "")
-            {
-                MessageBox.Show("Введите пароль!");
-            }
-            else
             {
                 Settings.Default.ip = tbIP.Text;
                 Settings.Default.port = int.Parse(tbPort.Text);
-                Settings.Default.login = tbLogin.Text;
-                Settings.Default.password = tbPassword.Text;
-                client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id, Settings.Default.login, Settings.Default.password);
-                if (!client.IsConnect)
-                    if (MessageBox.Show("Не получилось подключится!" + Environment.NewLine + "Изменить параметры подключения?", "Ошибка", MessageBoxButtons.YesNo) == DialogResult.No)
-                        Close();
+                Close();
             }
         }
 
-
-        /*
-        
-
-
-private void MainForm_Load(object sender, EventArgs e)
-{
-client.setReceiveOut(Receive);
-client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id);
-}
-
-private void button2_Click(object sender, EventArgs e)
-{
-client.SendMessage(tbIP.Text);
-}
-
-private void button3_Click(object sender, EventArgs e)
-{
-//   client.Disconnect();
-System.Diagnostics.Process.GetCurrentProcess().Kill();
-}
-
-private void button1_Click(object sender, EventArgs e)
-{
-client.setReceiveOut(Receive);
-client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.id);
-}
-
-private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-{
-System.Diagnostics.Process.GetCurrentProcess().Kill();
-}
-
-private void button4_Click(object sender, EventArgs e)
-{
-client.Disconnect();
-}
-*/
-
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 form = new AboutBox1();
+            form.Show();
+        }
     }
 }
