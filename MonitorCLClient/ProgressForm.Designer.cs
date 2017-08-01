@@ -29,56 +29,67 @@
         private void InitializeComponent()
         {
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.btLogin = new System.Windows.Forms.Button();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(22, 87);
+            this.progressBar1.Location = new System.Drawing.Point(18, 78);
+            this.progressBar1.MarqueeAnimationSpeed = 30;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(296, 23);
+            this.progressBar1.Size = new System.Drawing.Size(299, 24);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 0;
             // 
-            // btLogin
+            // btCancel
             // 
-            this.btLogin.BackColor = System.Drawing.SystemColors.Menu;
-            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btLogin.Location = new System.Drawing.Point(222, 121);
-            this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(96, 25);
-            this.btLogin.TabIndex = 18;
-            this.btLogin.Text = "Отмена";
-            this.btLogin.UseVisualStyleBackColor = false;
+            this.btCancel.BackColor = System.Drawing.SystemColors.Menu;
+            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btCancel.Location = new System.Drawing.Point(221, 121);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(96, 25);
+            this.btCancel.TabIndex = 18;
+            this.btCancel.Text = "Отмена";
+            this.btCancel.UseVisualStyleBackColor = false;
             // 
-            // propertyGrid1
+            // label1
             // 
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.propertyGrid1.Location = new System.Drawing.Point(517, 0);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(228, 559);
-            this.propertyGrid1.TabIndex = 19;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(19, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Ожидание ответа от сервера...";
             // 
             // ProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(745, 559);
-            this.Controls.Add(this.propertyGrid1);
-            this.Controls.Add(this.btLogin);
+            this.CancelButton = this.btCancel;
+            this.ClientSize = new System.Drawing.Size(334, 159);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btCancel);
             this.Controls.Add(this.progressBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ProgressForm";
-            this.Text = "ProgressForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Подключение";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button btLogin;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.Label label1;
     }
 }

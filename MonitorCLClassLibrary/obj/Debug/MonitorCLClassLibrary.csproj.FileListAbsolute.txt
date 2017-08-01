@@ -15,3 +15,13 @@ E:\MonitorCL\MonitorCLClassLibrary\bin\Debug\MonitorCLClassLibrary.pdb
 E:\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.csprojResolveAssemblyReference.cache
 E:\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.dll
 E:\MonitorCL\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.pdb
+D:\MonitorCL-master\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.csprojResolveAssemblyReference.cache
+D:\MonitorCL-master\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.dll
+D:\MonitorCL-master\MonitorCLClassLibrary\obj\Debug\MonitorCLClassLibrary.pdb
+D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\MonitorCLClassLibrary.dll.config
+D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\MonitorCLClassLibrary.dll
+D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\MonitorCLClassLibrary.pdb
+D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.dll
+D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
+D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.xml
+D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.SqlServer.xml

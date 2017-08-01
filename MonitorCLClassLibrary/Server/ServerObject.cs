@@ -39,7 +39,7 @@ namespace MonitorCLClassLibrary
                     TcpClient tcpClient = tcpListener.AcceptTcpClient();
 
                     ClientObject clientObject = new ClientObject(tcpClient, this);
-                    if (clientObject.TryLogin())
+                    if (clientObject.TryLogin()==StateUser.Login)
                     {
                         Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
                         clientThread.Start();
@@ -58,7 +58,7 @@ namespace MonitorCLClassLibrary
 
         public void AddConnection(ClientObject clientObject)
         {
-            string message = clientObject.GetMessage();
+       /*     string message = clientObject.GetMessage();
             JsonPack jsPack = new JsonPack();
             jsPack.GetJson(message);
             if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey) && jsPack.header.getLoginPassword() == "login:password")
@@ -69,16 +69,16 @@ namespace MonitorCLClassLibrary
                     receiveOut(clients.Last().login);
                 }
                 else
-                    clientObject.Close();
+                    clientObject.Close();*/
         }
 
         public void RemoveConnection(string login)
         {
             // получаем по id закрытое подключение
-            ClientObject client = clients.FirstOrDefault(c => c.login == login);
+          //  ClientObject client = clients.FirstOrDefault(c => c.login == login);
             // и удаляем его из списка подключений
-            if (client != null)
-                clients.Remove(client);
+         //   if (client != null)
+         //       clients.Remove(client);
         }
 
 
@@ -102,7 +102,7 @@ namespace MonitorCLClassLibrary
             Port = port;
         }
 
-        public void Listen()
+        public void Listen(int u)
         {
             try
             {
@@ -115,8 +115,8 @@ namespace MonitorCLClassLibrary
                     TcpClient tcpClient = tcpListener.AcceptTcpClient();
 
                     ClientObject clientObject = new ClientObject(tcpClient, this);
-                    clientObject.setReceiveOut(receiveOut);
-                    clientObject.setId(clientObject.GetMessage());
+                    //clientObject.setReceiveOut(receiveOut);
+                    //clientObject.setId(clientObject.GetMessage());
                     Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
                     clientThread.Start();
                 }
@@ -147,10 +147,10 @@ namespace MonitorCLClassLibrary
         {
             byte[] data = Encoding.Unicode.GetBytes(message);
 
-            ClientObject client = clients.Find(x => x.Id == id);
-            if (client != null)
+         //   ClientObject client = clients.Find(x => x.Id == id);
+         //   if (client != null)
             {
-                client.Stream.Write(data, 0, data.Length); //передача данных
+          //      client.Stream.Write(data, 0, data.Length); //передача данных
             }
         }
 
@@ -185,7 +185,7 @@ namespace MonitorCLClassLibrary
 
         public void SaveUserList()
         {
-            string pathToFile = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
+            string pathToFile = "";// Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
             if (!Directory.Exists(pathToFile))
                 Directory.CreateDirectory(pathToFile);
 
@@ -210,7 +210,7 @@ namespace MonitorCLClassLibrary
 
         public void LoadUserList()
         {
-            string pathToFile = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
+            string pathToFile = "";// Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
             if (!Directory.Exists(pathToFile))
                 Directory.CreateDirectory(pathToFile);
 
@@ -272,7 +272,7 @@ namespace MonitorCLClassLibrary
         /// <param name="fileName">Исходный файл.</param>
         public void DecryptBinaryLoad(string fileName)
         {
-            string pathToFile = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
+            string pathToFile = "";// Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\" + Application.CompanyName + "\\" + Application.ProductName;
             if (!Directory.Exists(pathToFile))
                 Directory.CreateDirectory(pathToFile);
 
@@ -303,14 +303,14 @@ namespace MonitorCLClassLibrary
 
         public void SendCommad(string command)
         {
-            JsonPack jsPack = new JsonPack();
+        /*    JsonPack jsPack = new JsonPack();
             JsonHeader jsHeader = new JsonHeader("cmd");
             JsonData jsData = new JsonData();
             jsData.text = command;
             jsPack.data = jsData;
             jsPack.header = jsHeader;
             jsPack.SetSignature(Settings.Default.privateKey);
-            BroadcastMessage(jsPack.GetJsonStr(), clients[0]);
+            BroadcastMessage(jsPack.GetJsonStr(), clients[0]);*/
         }
     }
 }

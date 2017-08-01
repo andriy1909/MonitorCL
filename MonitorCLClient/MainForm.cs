@@ -30,8 +30,8 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ProgressForm form = new ProgressForm();
-            if (form.ShowDialog() != DialogResult.OK)
+            ProgressForm formP = new ProgressForm();
+            if (formP.ShowDialog() != DialogResult.OK)
             {
                 Exit();
             }

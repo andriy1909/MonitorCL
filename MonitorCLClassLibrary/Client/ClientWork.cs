@@ -63,7 +63,7 @@ namespace MonitorCLClassLibrary
                 client.Connect(host, port); //подключение клиента
                 stream = client.GetStream(); // получаем поток
 
-
+/*
                 JsonPack jsPack = new JsonPack();
                 JsonHeader jsHeader = new JsonHeader("reg");
                 jsHeader.setLoginPassword("login", "password");
@@ -76,7 +76,7 @@ namespace MonitorCLClassLibrary
                 //SendMessage(jsPack.GetJsonStr());
                 byte[] data = Encoding.Unicode.GetBytes(jsPack.GetJsonStr());
                 stream.Write(data, 0, data.Length);
-
+                */
                 if (!client.Connected)
                     throw new NotImplementedException();
 
@@ -164,14 +164,14 @@ namespace MonitorCLClassLibrary
 
 
                     string message = builder.ToString();
-                    JsonPack jsPack = new JsonPack();
+              /*      JsonPack jsPack = new JsonPack();
                     jsPack.GetJson(message);
                     if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey))
                         if (jsPack.header.metod == "cmd")
                         {
                             message = jsPack.data.text;
                         }
-
+                        */
                     receiveOut(message);
                 }
                 catch

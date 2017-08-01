@@ -37,7 +37,7 @@ namespace MonitorCLClassLibrary
         public StateUser TryLogin()
         {
             JsonPack jsPack = GetMessage();
-            if (jsPack == null)
+          //  if (jsPack == null)
                 return StateUser.Error;
 
         /*    switch (jsPack.header.metod)
@@ -202,7 +202,7 @@ namespace MonitorCLClassLibrary
             finally
             {
                 // в случае выхода из цикла закрываем ресурсы
-                server.RemoveConnection(this.Id);
+    //            server.RemoveConnection(this.Id);
                 Debug.WriteLine("выход из Process()");
                 Close();
             }

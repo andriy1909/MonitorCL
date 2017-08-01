@@ -25,16 +25,36 @@ namespace MonitorCLClient
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
             Hide();
             LoginForm form = new LoginForm();
             form.ShowDialog(Parent);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btRegister_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ожидайте подтверждения!");
+            ProgressForm form = new ProgressForm();
+            this.Hide();
+            if(form.ShowDialog()==DialogResult.OK)
+            {
+                this.Close();
+            }
+            else
+            {
+                switch (form.errorCode)
+                {
+                    case 1:
+                        lbNotConnection.Visible = true;
+                        break;
+                    case 2:
+                        lbLoginExist.Visible = true;
+                        break;
+                    default:
+                        break;
+                }
+                this.Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

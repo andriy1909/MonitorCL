@@ -14,14 +14,14 @@ namespace MonitorCLClient
         {
             try
             {
-                file = Application.CommonAppDataPath;
+          //      file = Application.CommonAppDataPath;
                 file = file.Remove(file.LastIndexOf('\\')) + "\\Log.txt";
                 if (!File.Exists(file))
                     File.Create(file);
             }
             catch (Exception err)
             {
-                Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message;
+          //      Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message;
             }
         }
 
@@ -33,7 +33,7 @@ namespace MonitorCLClient
             }
             catch (Exception err)
             {
-                Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message + " (error : "+message+")";
+     //           Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message + " (error : "+message+")";
             }
         }
 
@@ -47,7 +47,7 @@ namespace MonitorCLClient
             }
             catch (Exception err)
             {
-                Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message;
+      //          Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message;
             }
         }
     }
