@@ -48,8 +48,7 @@ namespace MonitorCLClient
                 LogList.Add(err.Message);
             }
             #endregion
-
-
+            
             //TryConnect
             int result = Connect();
             switch (result)

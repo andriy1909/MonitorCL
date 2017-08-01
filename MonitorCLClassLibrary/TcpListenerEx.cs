@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace MonitorCLServer
+namespace MonitorCLClassLibrary
 {
     /// <summary>
     /// Wrapper around TcpListener that exposes the Active property

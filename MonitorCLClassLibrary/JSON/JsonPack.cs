@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 using MonitorCLClassLibrary.Properties;
 using System.Diagnostics;
 
-namespace MonitorCLClassLibrary
+namespace JSON
 {
     [DataContract]
     public class JsonPack

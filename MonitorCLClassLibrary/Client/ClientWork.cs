@@ -1,5 +1,4 @@
-﻿using MonitorCLClient.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -11,7 +10,7 @@ using System.Drawing;
 using MonitorCLClassLibrary;
 using System.IO;
 
-namespace MonitorCLClient
+namespace MonitorCLClassLibrary
 {
     public class ClientWork : IDisposable
     {

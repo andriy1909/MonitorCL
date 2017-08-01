@@ -7,8 +7,20 @@ namespace MonitorCLClassLibrary
 {
     public enum Metods
     {
-        reg,
-        login,
-        query
+        Regisration,
+        Login,
+        Query
     }
+
+    public enum StateUser
+    {
+        NotRegister,
+        Login,
+        Block,
+        NotValidPassw,
+        NotValidLogin,
+        LoginExist,
+        Error
+    }
+    
 }

@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
 using System.Net.NetworkInformation;
 
-namespace MonitorCLClassLibrary
+namespace JSON
 {
     [DataContract]
     public class JsonHeader
@@ -15,13 +15,31 @@ namespace MonitorCLClassLibrary
         [DataMember]
         public Metods metod;
         [DataMember]
-        public string basic;
+        public string basic
+        {
+            get
+            {
+                return Encoding.ASCII.GetString(Convert.FromBase64String(basic));                 
+            }
+            set
+            {
+                value = Convert.ToBase64String(Encoding.ASCII.GetBytes(login + ":" + password));
+                if(value.Split(':').Count()==2)
+
+                login = value.Split(':')[0];
+                password = value.Split(':')[1];
+            }
+        }
         [DataMember]
         public string bearer;//token
         [DataMember]
         public string mac;
+        [IgnoreDataMember]
+        public string login { get; private set; }
+        [IgnoreDataMember]
+        public string password { get; private set; }
 
-        public JsonHeader(Metods metod = Metods.query)
+        public JsonHeader(Metods metod = Metods.Query)
         {
             this.metod = metod;
         }
@@ -34,6 +52,8 @@ namespace MonitorCLClassLibrary
         public void setLoginPassword(string login, string password)
         {
             basic = Convert.ToBase64String(Encoding.ASCII.GetBytes(login + ":" + password));
+            this.login = login;
+            this.password = password;
         }
 
         public string getLoginPassword()

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using MonitorCLClassLibrary;
 
-namespace MonitorCLServer
+namespace MonitorCLClassLibrary
 {
-    class MonitoringDB : DbContext
+    public class MonitoringDB : DbContext
     {
         public MonitoringDB():base ("MonitorDB")
         {

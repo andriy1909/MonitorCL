@@ -6,9 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using static MonitorCLServer.ServerObject;
 using System.Diagnostics;
-using MonitorCLClassLibrary;
 
-namespace MonitorCLServer
+namespace MonitorCLClassLibrary
 {
     public class ClientObject
     {
@@ -16,6 +15,10 @@ namespace MonitorCLServer
         public NetworkStream Stream { get; private set; }
         public TcpClient client;
         ServerObject server; // объект сервера
+
+        MonitoringDB db = new MonitoringDB();
+
+
 
         public ClientObject()
         {
@@ -30,15 +33,38 @@ namespace MonitorCLServer
             //serverObject.AddConnection(this);
         }
 
-        public bool IsValidate()
+        public StateUser TryLogin()
         {
             JsonPack jsPack = GetMessage();
-            if (jsPack.header.metod == Metods.reg)
+            if (jsPack == null)
+                return StateUser.Error;
+
+            switch (jsPack.header.metod)
             {
+                case Metods.Regisration:
+                    List<User> users = db.Users.ToList();
+                    User user = users.Find(x => x.Login == jsPack.header.login);
+                    if (user!= null)
+                        return StateUser.LoginExist;
+                    else
+                    {
+                        user = new User()
+                        {
+                            Login = jsPack.header.login,
+                            Password=jsPack.header.password,
+                            Name=
+                        }
 
+                        return StateUser.Login;
+                    }
+                case Metods.Login:
+                    users = db.Users.ToList();
+                    user = users.Find(x => x.Login == jsPack.header.login);
+                    if (user!=null)
+                    return false;
+                default:
+                    return false;
             }
-
-            return false;
         }
         // чтение входящего сообщения и преобразование в строку
         public JsonPack GetMessage()

@@ -1,6 +1,4 @@
-﻿using MonitorCLClassLibrary;
-using MonitorCLServer.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -11,10 +9,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace MonitorCLServer
+namespace MonitorCLClassLibrary
 {
     public class ServerObject
     {
@@ -43,12 +39,12 @@ namespace MonitorCLServer
                     TcpClient tcpClient = tcpListener.AcceptTcpClient();
 
                     ClientObject clientObject = new ClientObject(tcpClient, this);
-                    if(clientObject.IsValidate())
+                    if (clientObject.TryLogin())
                     {
-
+                        Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
+                        clientThread.Start();
                     }
-                    Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
-                    clientThread.Start();
+
                 }
             }
             catch (Exception ex)
@@ -94,7 +90,7 @@ namespace MonitorCLServer
         public delegate void ReceiveDelegate(string message);
 
         public ReceiveDelegate receiveOut;
-        
+
         public void setReceiveOut(ReceiveDelegate receive)
         {
             receiveOut = receive;

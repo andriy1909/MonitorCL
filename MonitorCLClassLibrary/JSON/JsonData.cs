@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
+using MonitorCLClassLibrary;
 
-namespace MonitorCLClassLibrary
+namespace JSON
 {
     [DataContract]
     public class JsonData
@@ -16,11 +17,14 @@ namespace MonitorCLClassLibrary
         public string text;
         [DataMember]
         public List<byte[]> images;
-
+        [DataMember]
         public DateTime time;
+        [DataMember]
+        public User user;
 
         public JsonData()
         {
+
             time = DateTime.UtcNow;
         }
     }
