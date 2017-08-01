@@ -9,22 +9,16 @@ using MonitorCLClassLibrary;
 namespace JSON
 {
     [DataContract]
+    [KnownType(typeof(JSDRegister))]
+    [KnownType(typeof(JSDLogin))]
+    [KnownType(typeof(JSDMonitoring))]
     public class JsonData
     {
         [DataMember]
-        public List<Monitoring> monitoring;
-        [DataMember]
-        public string text;
-        [DataMember]
-        public List<byte[]> images;
-        [DataMember]
-        public DateTime time;
-        [DataMember]
-        public User user;
+        public DateTime time { get; private set; }
 
         public JsonData()
         {
-
             time = DateTime.UtcNow;
         }
     }

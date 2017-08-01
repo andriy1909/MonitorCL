@@ -13,10 +13,8 @@ namespace JSON
     public class JsonHeader
     {
         [DataMember]
-        public Metods metod;
-        [DataMember]
-        public string basic
-        {
+        public string basic;
+        /*{
             get
             {
                 return Encoding.ASCII.GetString(Convert.FromBase64String(basic));                 
@@ -29,7 +27,7 @@ namespace JSON
                 login = value.Split(':')[0];
                 password = value.Split(':')[1];
             }
-        }
+        }*/
         [DataMember]
         public string bearer;//token
         [DataMember]
@@ -38,12 +36,7 @@ namespace JSON
         public string login { get; private set; }
         [IgnoreDataMember]
         public string password { get; private set; }
-
-        public JsonHeader(Metods metod = Metods.Query)
-        {
-            this.metod = metod;
-        }
-
+        
         public void setToken(string token)
         {
             bearer = token;

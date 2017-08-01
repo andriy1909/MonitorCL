@@ -4,8 +4,9 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-using static MonitorCLServer.ServerObject;
+using MonitorCLClassLibrary;
 using System.Diagnostics;
+using JSON;
 
 namespace MonitorCLClassLibrary
 {
@@ -39,7 +40,7 @@ namespace MonitorCLClassLibrary
             if (jsPack == null)
                 return StateUser.Error;
 
-            switch (jsPack.header.metod)
+        /*    switch (jsPack.header.metod)
             {
                 case Metods.Regisration:
                     List<User> users = db.Users.ToList();
@@ -51,8 +52,8 @@ namespace MonitorCLClassLibrary
                         user = new User()
                         {
                             Login = jsPack.header.login,
-                            Password=jsPack.header.password,
-                            Name=
+                            Password=jsPack.header.password
+                            //Name=
                         }
 
                         return StateUser.Login;
@@ -60,11 +61,11 @@ namespace MonitorCLClassLibrary
                 case Metods.Login:
                     users = db.Users.ToList();
                     user = users.Find(x => x.Login == jsPack.header.login);
-                    if (user!=null)
-                    return false;
+                    //if (user!=null)
+                    return 0;
                 default:
-                    return false;
-            }
+                    return 0;
+            }*/
         }
         // чтение входящего сообщения и преобразование в строку
         public JsonPack GetMessage()
@@ -106,7 +107,7 @@ namespace MonitorCLClassLibrary
 
 
 
-        ReceiveDelegate receiveOut;
+     /*   ReceiveDelegate receiveOut;
         public string login = "";
 
         public string Id { get; protected set; }
@@ -120,7 +121,7 @@ namespace MonitorCLClassLibrary
         {
             receiveOut = receive;
         }
-
+        */
 
         // чтение входящего сообщения и преобразование в строку
         public string GetMessage0()
@@ -184,8 +185,8 @@ namespace MonitorCLClassLibrary
                 {
                     try
                     {
-                        string message = GetMessage();
-                        receiveOut(message);
+              //          string message = GetMessage();
+               //         receiveOut(message);
                     }
                     catch (Exception err)
                     {

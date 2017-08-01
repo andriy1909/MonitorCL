@@ -13,11 +13,11 @@ namespace MonitorCLClient
     {
         public bool isConnect = false;
 
-        public RegistrationForm() //форма повина або підключитись, або вийти з програми
+        public RegistrationForm() 
         {
             InitializeComponent();
-            textBox1.UseSystemPasswordChar = true;
-            textBox3.UseSystemPasswordChar = true;
+            tbPassword.UseSystemPasswordChar = true;
+            tbPasswordConfirm.UseSystemPasswordChar = true;
         }
 
         private void RegistrationForm_Load(object sender, EventArgs e)

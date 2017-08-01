@@ -21,6 +21,8 @@ namespace JSON
         [DataMember]
         public JsonData data;
         [DataMember]
+        public string metod = "";
+        [DataMember]
         public string signature = "";
 
 

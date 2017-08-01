@@ -13,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using MonitorCLClassLibrary;
 
 namespace MonitorCLClient
 {
@@ -29,6 +30,12 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            ProgressForm form = new ProgressForm();
+            if (form.ShowDialog() != DialogResult.OK)
+            {
+                Exit();
+            }
+
             if (Settings.Default.isBlocked)
             {
                 Exit();
@@ -48,7 +55,16 @@ namespace MonitorCLClient
                 LogList.Add(err.Message);
             }
             #endregion
-            
+
+            if (Settings.Default.login == "")
+            {
+                RegistrationForm rForm = new RegistrationForm();
+                if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
+                {
+                    Exit();
+                }
+            }
+
             //TryConnect
             int result = Connect();
             switch (result)
@@ -96,11 +112,11 @@ namespace MonitorCLClient
         /// 0-OK,1-not auth,2-not found user, 3-block, 4-error
         /// </summary>
         /// <returns>Статус</returns>
-        private int Connect(bool tryConnect=false)
+        private int Connect(bool tryConnect = false)
         {
             //try
-            
-           // client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.login,Settings.Default.password);
+
+            // client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.login,Settings.Default.password);
 
             return 0;
         }

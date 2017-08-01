@@ -90,4 +90,3 @@ E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.InputForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.ProductsControl.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.OpenViewForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.TeamViewerForm.resources
-E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.exe

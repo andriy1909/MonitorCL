@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\ClientWork.cs" />
-    <Compile Include="JSON\JSRegister.cs" />
+    <Compile Include="JSON\JSDLogin.cs" />
+    <Compile Include="JSON\JSDMonitoring.cs" />
+    <Compile Include="JSON\JSDRegister.cs" />
     <Compile Include="LogList.cs" />
     <Compile Include="Server\ClientObject.cs" />
     <Compile Include="Enumerations.cs" />
