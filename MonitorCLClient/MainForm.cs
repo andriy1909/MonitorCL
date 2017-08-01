@@ -90,7 +90,6 @@ namespace MonitorCLClient
 
             tbIP.Text = Settings.Default.ip;
             tbPort.Text = Settings.Default.port.ToString();
-
         }
 
         /// <summary>
@@ -101,6 +100,9 @@ namespace MonitorCLClient
         private int Connect(bool tryConnect=false)
         {
             //try
+            
+           // client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.login,Settings.Default.password);
+
             return 0;
         }
 

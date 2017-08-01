@@ -25,7 +25,7 @@ namespace MonitorCLClassLibrary.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("685dfbbdc4ef05c54ffb3f4cd574e23b4f50435f10d9595497c9cceee0933139")]
         public string privateKey {
             get {
                 return ((string)(this["privateKey"]));

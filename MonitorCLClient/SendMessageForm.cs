@@ -53,12 +53,4 @@ namespace MonitorCLClient
             }
         }
     }
-
-    public class ClientWork
-    {
-        internal void SendSupport(string text1, string text2, Image bM)
-        {
-           // throw new NotImplementedException();
-        }
-    }
 }

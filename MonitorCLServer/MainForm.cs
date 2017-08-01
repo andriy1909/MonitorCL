@@ -27,6 +27,8 @@ namespace MonitorCLServer
         {
             InitializeComponent();
 
+            //var db = new MonitoringDB();
+
             //db.Database.Delete();
             //db.Database.Create();
 

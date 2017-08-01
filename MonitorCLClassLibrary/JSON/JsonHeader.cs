@@ -13,7 +13,7 @@ namespace MonitorCLClassLibrary
     public class JsonHeader
     {
         [DataMember]
-        public string metod;
+        public Metods metod;
         [DataMember]
         public string basic;
         [DataMember]
@@ -21,7 +21,7 @@ namespace MonitorCLClassLibrary
         [DataMember]
         public string mac;
 
-        public JsonHeader(string metod = "")
+        public JsonHeader(Metods metod = Metods.query)
         {
             this.metod = metod;
         }

@@ -7,6 +7,7 @@ using System.Management;
 
 namespace MonitorCLClassLibrary
 {
+
     [Serializable]
     public class UserAccount : Monitoring
     {

@@ -32,14 +32,11 @@ E:\MonitorCL\MonitorCLServer\bin\Debug\MonitorCLClassLibrary.pdb
 E:\MonitorCL\MonitorCLServer\bin\Debug\EntityFramework.xml
 E:\MonitorCL\MonitorCLServer\bin\Debug\EntityFramework.SqlServer.xml
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.csprojResolveAssemblyReference.cache
-E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.ClientSettingForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.LoginForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.MainForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.Properties.Resources.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.SettingForm.resources
-E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.UserControl1.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.csproj.GenerateResource.Cache
-E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.exe
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.pdb
 E:\MonitorCL Design\MonitorCLServer\bin\Debug\MonitorCLServer.exe.config
 E:\MonitorCL Design\MonitorCLServer\bin\Debug\MonitorCLServer.pdb
@@ -87,3 +84,10 @@ E:\MonitorCL\MonitorCL Design\MonitorCLServer\obj\Debug\MonitorCLServer.exe
 E:\MonitorCL\MonitorCL Merge\MonitorCLServer\bin\Debug\MonitorCLServer.exe.config
 E:\MonitorCL\MonitorCL Merge\MonitorCLServer\obj\Debug\MonitorCLServer.exe
 E:\MonitorCL\MonitorCL Merge\MonitorCLServer\obj\Debug\MonitorCLServer.pdb
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.ClientInfoForm.resources
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.OperationSystemControl.resources
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.InputForm.resources
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.ProductsControl.resources
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.OpenViewForm.resources
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.TeamViewerForm.resources
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.exe

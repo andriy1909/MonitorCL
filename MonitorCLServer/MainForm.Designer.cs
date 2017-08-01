@@ -30,146 +30,146 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Компютер 1", 1, 1);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Узел24", 1, 1);
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Узел25", 1, 1);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Узел26", 2, 2);
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Узел27", 2, 2);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Узел28", 3, 3);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Група компютерів 1", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Компютер 1", 1, 1);
+            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("Узел24", 1, 1);
+            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Узел25", 1, 1);
+            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Узел26", 2, 2);
+            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Узел27", 2, 2);
+            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Узел28", 3, 3);
+            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Група компютерів 1", new System.Windows.Forms.TreeNode[] {
+            treeNode79,
+            treeNode80,
+            treeNode81,
+            treeNode82,
+            treeNode83,
+            treeNode84});
+            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Узел29", 1, 1);
+            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Узел30");
+            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Узел31");
+            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Узел32");
+            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("Узел33");
+            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("Узел8", new System.Windows.Forms.TreeNode[] {
+            treeNode86,
+            treeNode87,
+            treeNode88,
+            treeNode89,
+            treeNode90});
+            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Узел34");
+            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Узел35");
+            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Узел36");
+            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Узел37");
+            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Узел9", new System.Windows.Forms.TreeNode[] {
+            treeNode92,
+            treeNode93,
+            treeNode94,
+            treeNode95});
+            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Узел38");
+            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Узел39");
+            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Узел40");
+            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Узел41");
+            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Узел10", new System.Windows.Forms.TreeNode[] {
+            treeNode97,
+            treeNode98,
+            treeNode99,
+            treeNode100});
+            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Узел11");
+            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("Узел12");
+            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("Узел13");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Пользователи");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Операционная система");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Процессы");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Системные драйвера");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Время работы");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Автозагрузка");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Установленные программы");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Програмное обеспичение", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
             treeNode4,
             treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Узел29", 1, 1);
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Узел30");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Узел31");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Узел32");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Узел33");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Узел8", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Процессор");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Системная плата");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Память");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("BIOS");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Логические диски");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Физические диски");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("SMART");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15});
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Графический процессор");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Сеть Windows");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Устройства Windows");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Принтеры");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Системные устройства", new System.Windows.Forms.TreeNode[] {
             treeNode9,
             treeNode10,
             treeNode11,
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Узел34");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Узел35");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Узел36");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Узел37");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Узел9", new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15,
+            treeNode12,
             treeNode16,
-            treeNode17});
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Узел38");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Узел39");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Узел40");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Узел41");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Узел10", new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18,
             treeNode19,
-            treeNode20,
-            treeNode21,
-            treeNode22});
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Узел11");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Узел12");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Узел13");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Пользователи");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Операционная система");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Процессы");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Системные драйвера");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Время работы");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Автозагрузка");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Установленные программы");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Програмное обеспичение", new System.Windows.Forms.TreeNode[] {
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Общая информация");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Пользователи");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Компьютер", new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode23});
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Процессор");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Системная плата");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Память");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("BIOS");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Системная плата", new System.Windows.Forms.TreeNode[] {
+            treeNode25,
+            treeNode26,
             treeNode27,
-            treeNode28,
-            treeNode29,
+            treeNode28});
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Операционная система");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Процессы");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Системные драйвера");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Время работы");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Операционная система", new System.Windows.Forms.TreeNode[] {
             treeNode30,
             treeNode31,
             treeNode32,
             treeNode33});
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Процессор");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Системная плата");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Память");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("BIOS");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Логические диски");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Физические диски");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("SMART");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40,
-            treeNode41});
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Графический процессор");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Сеть Windows");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Устройства Windows");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Принтеры");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Системные устройства", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Монитор");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Графический процессор");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Отображение", new System.Windows.Forms.TreeNode[] {
             treeNode35,
-            treeNode36,
-            treeNode37,
+            treeNode36});
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Логические диски");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Физические диски");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("SMART");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
             treeNode38,
+            treeNode39,
+            treeNode40});
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Сеть Windows");
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Интернет");
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Сеть", new System.Windows.Forms.TreeNode[] {
             treeNode42,
-            treeNode43,
-            treeNode44,
+            treeNode43});
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Устройства Windows");
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Ввод");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Принтеры");
+            System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("Устройства", new System.Windows.Forms.TreeNode[] {
             treeNode45,
-            treeNode46});
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Общая информация");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Пользователи");
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Компьютер", new System.Windows.Forms.TreeNode[] {
-            treeNode48,
-            treeNode49});
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Процессор");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Системная плата");
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Память");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("BIOS");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Системная плата", new System.Windows.Forms.TreeNode[] {
-            treeNode51,
-            treeNode52,
-            treeNode53,
-            treeNode54});
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Операционная система");
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Процессы");
-            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("Системные драйвера");
-            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("Время работы");
-            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("Операционная система", new System.Windows.Forms.TreeNode[] {
-            treeNode56,
-            treeNode57,
-            treeNode58,
-            treeNode59});
-            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("Монитор");
-            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("Графический процессор");
-            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("Отображение", new System.Windows.Forms.TreeNode[] {
-            treeNode61,
-            treeNode62});
-            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("Логические диски");
-            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Физические диски");
-            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("SMART");
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
-            treeNode64,
-            treeNode65,
-            treeNode66});
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Сеть Windows");
-            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Интернет");
-            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Сеть", new System.Windows.Forms.TreeNode[] {
-            treeNode68,
-            treeNode69});
-            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Устройства Windows");
-            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Ввод");
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Принтеры");
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Устройства", new System.Windows.Forms.TreeNode[] {
-            treeNode71,
-            treeNode72,
-            treeNode73});
-            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Автозагрузка");
-            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Запланированые");
-            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Установленные программы");
-            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Программы", new System.Windows.Forms.TreeNode[] {
-            treeNode75,
-            treeNode76,
-            treeNode77});
+            treeNode46,
+            treeNode47});
+            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Автозагрузка");
+            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Запланированые");
+            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Установленные программы");
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Программы", new System.Windows.Forms.TreeNode[] {
+            treeNode106,
+            treeNode107,
+            treeNode108});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.serverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -222,6 +222,9 @@
             this.pnContents = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
@@ -235,9 +238,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -594,87 +594,87 @@
             this.tvClients.LabelEdit = true;
             this.tvClients.Location = new System.Drawing.Point(0, 25);
             this.tvClients.Name = "tvClients";
-            treeNode1.ImageIndex = 1;
-            treeNode1.Name = "Узел18";
-            treeNode1.SelectedImageIndex = 1;
-            treeNode1.Text = "Компютер 1";
-            treeNode1.ToolTipText = "Лена тел. (097)88-66-111";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "Узел24";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "Узел24";
-            treeNode2.ToolTipText = "Лена";
-            treeNode3.ImageIndex = 1;
-            treeNode3.Name = "Узел25";
-            treeNode3.SelectedImageIndex = 1;
-            treeNode3.Text = "Узел25";
-            treeNode3.ToolTipText = "Лена (Описание описание описание описание описание описание описание )";
-            treeNode4.ImageIndex = 2;
-            treeNode4.Name = "Узел26";
-            treeNode4.SelectedImageIndex = 2;
-            treeNode4.Text = "Узел26";
-            treeNode5.ImageIndex = 2;
-            treeNode5.Name = "Узел27";
-            treeNode5.SelectedImageIndex = 2;
-            treeNode5.Text = "Узел27";
-            treeNode6.ImageIndex = 3;
-            treeNode6.Name = "Узел28";
-            treeNode6.SelectedImageIndex = 3;
-            treeNode6.Text = "Узел28";
-            treeNode7.Name = "Узел7";
-            treeNode7.Text = "Група компютерів 1";
-            treeNode8.ImageIndex = 1;
-            treeNode8.Name = "Узел29";
-            treeNode8.SelectedImageIndex = 1;
-            treeNode8.Text = "Узел29";
-            treeNode9.ImageKey = "Notebook.png";
-            treeNode9.Name = "Узел30";
-            treeNode9.SelectedImageIndex = 1;
-            treeNode9.Text = "Узел30";
-            treeNode10.ImageKey = "computer-tower-and-monitor_icon-icons.com_56305.png";
-            treeNode10.Name = "Узел31";
-            treeNode10.SelectedImageIndex = 1;
-            treeNode10.Text = "Узел31";
-            treeNode11.Name = "Узел32";
-            treeNode11.Text = "Узел32";
-            treeNode12.Name = "Узел33";
-            treeNode12.Text = "Узел33";
-            treeNode13.Name = "Узел8";
-            treeNode13.Text = "Узел8";
-            treeNode14.Name = "Узел34";
-            treeNode14.Text = "Узел34";
-            treeNode15.Name = "Узел35";
-            treeNode15.Text = "Узел35";
-            treeNode16.Name = "Узел36";
-            treeNode16.Text = "Узел36";
-            treeNode17.Name = "Узел37";
-            treeNode17.Text = "Узел37";
-            treeNode18.Name = "Узел9";
-            treeNode18.Text = "Узел9";
-            treeNode19.Name = "Узел38";
-            treeNode19.Text = "Узел38";
-            treeNode20.Name = "Узел39";
-            treeNode20.Text = "Узел39";
-            treeNode21.Name = "Узел40";
-            treeNode21.Text = "Узел40";
-            treeNode22.Name = "Узел41";
-            treeNode22.Text = "Узел41";
-            treeNode23.Name = "Узел10";
-            treeNode23.Text = "Узел10";
-            treeNode24.Name = "Узел11";
-            treeNode24.Text = "Узел11";
-            treeNode25.Name = "Узел12";
-            treeNode25.Text = "Узел12";
-            treeNode26.Name = "Узел13";
-            treeNode26.Text = "Узел13";
+            treeNode79.ImageIndex = 1;
+            treeNode79.Name = "Узел18";
+            treeNode79.SelectedImageIndex = 1;
+            treeNode79.Text = "Компютер 1";
+            treeNode79.ToolTipText = "Лена тел. (097)88-66-111";
+            treeNode80.ImageIndex = 1;
+            treeNode80.Name = "Узел24";
+            treeNode80.SelectedImageIndex = 1;
+            treeNode80.Text = "Узел24";
+            treeNode80.ToolTipText = "Лена";
+            treeNode81.ImageIndex = 1;
+            treeNode81.Name = "Узел25";
+            treeNode81.SelectedImageIndex = 1;
+            treeNode81.Text = "Узел25";
+            treeNode81.ToolTipText = "Лена (Описание описание описание описание описание описание описание )";
+            treeNode82.ImageIndex = 2;
+            treeNode82.Name = "Узел26";
+            treeNode82.SelectedImageIndex = 2;
+            treeNode82.Text = "Узел26";
+            treeNode83.ImageIndex = 2;
+            treeNode83.Name = "Узел27";
+            treeNode83.SelectedImageIndex = 2;
+            treeNode83.Text = "Узел27";
+            treeNode84.ImageIndex = 3;
+            treeNode84.Name = "Узел28";
+            treeNode84.SelectedImageIndex = 3;
+            treeNode84.Text = "Узел28";
+            treeNode85.Name = "Узел7";
+            treeNode85.Text = "Група компютерів 1";
+            treeNode86.ImageIndex = 1;
+            treeNode86.Name = "Узел29";
+            treeNode86.SelectedImageIndex = 1;
+            treeNode86.Text = "Узел29";
+            treeNode87.ImageKey = "Notebook.png";
+            treeNode87.Name = "Узел30";
+            treeNode87.SelectedImageIndex = 1;
+            treeNode87.Text = "Узел30";
+            treeNode88.ImageKey = "computer-tower-and-monitor_icon-icons.com_56305.png";
+            treeNode88.Name = "Узел31";
+            treeNode88.SelectedImageIndex = 1;
+            treeNode88.Text = "Узел31";
+            treeNode89.Name = "Узел32";
+            treeNode89.Text = "Узел32";
+            treeNode90.Name = "Узел33";
+            treeNode90.Text = "Узел33";
+            treeNode91.Name = "Узел8";
+            treeNode91.Text = "Узел8";
+            treeNode92.Name = "Узел34";
+            treeNode92.Text = "Узел34";
+            treeNode93.Name = "Узел35";
+            treeNode93.Text = "Узел35";
+            treeNode94.Name = "Узел36";
+            treeNode94.Text = "Узел36";
+            treeNode95.Name = "Узел37";
+            treeNode95.Text = "Узел37";
+            treeNode96.Name = "Узел9";
+            treeNode96.Text = "Узел9";
+            treeNode97.Name = "Узел38";
+            treeNode97.Text = "Узел38";
+            treeNode98.Name = "Узел39";
+            treeNode98.Text = "Узел39";
+            treeNode99.Name = "Узел40";
+            treeNode99.Text = "Узел40";
+            treeNode100.Name = "Узел41";
+            treeNode100.Text = "Узел41";
+            treeNode101.Name = "Узел10";
+            treeNode101.Text = "Узел10";
+            treeNode102.Name = "Узел11";
+            treeNode102.Text = "Узел11";
+            treeNode103.Name = "Узел12";
+            treeNode103.Text = "Узел12";
+            treeNode104.Name = "Узел13";
+            treeNode104.Text = "Узел13";
             this.tvClients.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode13,
-            treeNode18,
-            treeNode23,
-            treeNode24,
-            treeNode25,
-            treeNode26});
+            treeNode85,
+            treeNode91,
+            treeNode96,
+            treeNode101,
+            treeNode102,
+            treeNode103,
+            treeNode104});
             this.tvClients.SelectedImageIndex = 0;
             this.tvClients.ShowNodeToolTips = true;
             this.tvClients.Size = new System.Drawing.Size(161, 586);
@@ -813,12 +813,36 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(652, 586);
             this.dataGridView1.TabIndex = 5;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "";
+            this.Column3.MinimumWidth = 20;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column3.Width = 20;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Поле";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Значененя";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // toolStrip4
             // 
@@ -896,51 +920,51 @@
             this.treeView2.ItemHeight = 20;
             this.treeView2.Location = new System.Drawing.Point(0, 25);
             this.treeView2.Name = "treeView2";
-            treeNode27.Name = "tnUsers";
-            treeNode27.Text = "Пользователи";
-            treeNode28.Name = "tnOS";
-            treeNode28.Text = "Операционная система";
-            treeNode29.Name = "Узел19";
-            treeNode29.Text = "Процессы";
-            treeNode30.Name = "Узел20";
-            treeNode30.Text = "Системные драйвера";
-            treeNode31.Name = "Узел21";
-            treeNode31.Text = "Время работы";
-            treeNode32.Name = "tnau";
-            treeNode32.Text = "Автозагрузка";
-            treeNode33.Name = "tnPrograms";
-            treeNode33.Text = "Установленные программы";
-            treeNode34.Name = "Узел0";
-            treeNode34.Text = "Програмное обеспичение";
-            treeNode35.Name = "Узел13";
-            treeNode35.Text = "Процессор";
-            treeNode36.Name = "Узел14";
-            treeNode36.Text = "Системная плата";
-            treeNode37.Name = "Узел15";
-            treeNode37.Text = "Память";
-            treeNode38.Name = "Узел16";
-            treeNode38.Text = "BIOS";
-            treeNode39.Name = "Узел26";
-            treeNode39.Text = "Логические диски";
-            treeNode40.Name = "Узел27";
-            treeNode40.Text = "Физические диски";
-            treeNode41.Name = "Узел30";
-            treeNode41.Text = "SMART";
-            treeNode42.Name = "Узел5";
-            treeNode42.Text = "Хранение данных";
-            treeNode43.Name = "Узел24";
-            treeNode43.Text = "Графический процессор";
-            treeNode44.Name = "Узел32";
-            treeNode44.Text = "Сеть Windows";
-            treeNode45.Name = "Узел37";
-            treeNode45.Text = "Устройства Windows";
-            treeNode46.Name = "Узел39";
-            treeNode46.Text = "Принтеры";
-            treeNode47.Name = "Узел1";
-            treeNode47.Text = "Системные устройства";
+            treeNode1.Name = "tnUsers";
+            treeNode1.Text = "Пользователи";
+            treeNode2.Name = "tnOS";
+            treeNode2.Text = "Операционная система";
+            treeNode3.Name = "Узел19";
+            treeNode3.Text = "Процессы";
+            treeNode4.Name = "Узел20";
+            treeNode4.Text = "Системные драйвера";
+            treeNode5.Name = "Узел21";
+            treeNode5.Text = "Время работы";
+            treeNode6.Name = "tnau";
+            treeNode6.Text = "Автозагрузка";
+            treeNode7.Name = "tnPrograms";
+            treeNode7.Text = "Установленные программы";
+            treeNode8.Name = "Узел0";
+            treeNode8.Text = "Програмное обеспичение";
+            treeNode9.Name = "Узел13";
+            treeNode9.Text = "Процессор";
+            treeNode10.Name = "Узел14";
+            treeNode10.Text = "Системная плата";
+            treeNode11.Name = "Узел15";
+            treeNode11.Text = "Память";
+            treeNode12.Name = "Узел16";
+            treeNode12.Text = "BIOS";
+            treeNode13.Name = "Узел26";
+            treeNode13.Text = "Логические диски";
+            treeNode14.Name = "Узел27";
+            treeNode14.Text = "Физические диски";
+            treeNode15.Name = "Узел30";
+            treeNode15.Text = "SMART";
+            treeNode16.Name = "Узел5";
+            treeNode16.Text = "Хранение данных";
+            treeNode17.Name = "Узел24";
+            treeNode17.Text = "Графический процессор";
+            treeNode18.Name = "Узел32";
+            treeNode18.Text = "Сеть Windows";
+            treeNode19.Name = "Узел37";
+            treeNode19.Text = "Устройства Windows";
+            treeNode20.Name = "Узел39";
+            treeNode20.Text = "Принтеры";
+            treeNode21.Name = "Узел1";
+            treeNode21.Text = "Системные устройства";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode34,
-            treeNode47});
+            treeNode8,
+            treeNode21});
             this.treeView2.SelectedImageIndex = 4;
             this.treeView2.ShowLines = false;
             this.treeView2.ShowPlusMinus = false;
@@ -957,77 +981,77 @@
             this.treeView1.ItemHeight = 20;
             this.treeView1.Location = new System.Drawing.Point(0, 25);
             this.treeView1.Name = "treeView1";
-            treeNode48.Name = "Узел9";
-            treeNode48.Text = "Общая информация";
-            treeNode49.Name = "tnUsers";
-            treeNode49.Text = "Пользователи";
-            treeNode50.Name = "Узел0";
-            treeNode50.Text = "Компьютер";
-            treeNode51.Name = "Узел13";
-            treeNode51.Text = "Процессор";
-            treeNode52.Name = "Узел14";
-            treeNode52.Text = "Системная плата";
-            treeNode53.Name = "Узел15";
-            treeNode53.Text = "Память";
-            treeNode54.Name = "Узел16";
-            treeNode54.Text = "BIOS";
-            treeNode55.Name = "Узел1";
-            treeNode55.Text = "Системная плата";
-            treeNode56.Name = "tnOS";
-            treeNode56.Text = "Операционная система";
-            treeNode57.Name = "Узел19";
-            treeNode57.Text = "Процессы";
-            treeNode58.Name = "Узел20";
-            treeNode58.Text = "Системные драйвера";
-            treeNode59.Name = "Узел21";
-            treeNode59.Text = "Время работы";
-            treeNode60.Name = "Узел2";
-            treeNode60.Text = "Операционная система";
-            treeNode61.Name = "Узел22";
-            treeNode61.Text = "Монитор";
-            treeNode62.Name = "Узел24";
-            treeNode62.Text = "Графический процессор";
-            treeNode63.Name = "Узел3";
-            treeNode63.Text = "Отображение";
-            treeNode64.Name = "Узел26";
-            treeNode64.Text = "Логические диски";
-            treeNode65.Name = "Узел27";
-            treeNode65.Text = "Физические диски";
-            treeNode66.Name = "Узел30";
-            treeNode66.Text = "SMART";
-            treeNode67.Name = "Узел5";
-            treeNode67.Text = "Хранение данных";
-            treeNode68.Name = "Узел32";
-            treeNode68.Text = "Сеть Windows";
-            treeNode69.Name = "Узел33";
-            treeNode69.Text = "Интернет";
-            treeNode70.Name = "Узел6";
-            treeNode70.Text = "Сеть";
-            treeNode71.Name = "Узел37";
-            treeNode71.Text = "Устройства Windows";
-            treeNode72.Name = "Узел38";
-            treeNode72.Text = "Ввод";
-            treeNode73.Name = "Узел39";
-            treeNode73.Text = "Принтеры";
-            treeNode74.Name = "Узел7";
-            treeNode74.Text = "Устройства";
-            treeNode75.Name = "tnau";
-            treeNode75.Text = "Автозагрузка";
-            treeNode76.Name = "Узел42";
-            treeNode76.Text = "Запланированые";
-            treeNode77.Name = "tnPrograms";
-            treeNode77.Text = "Установленные программы";
-            treeNode78.Name = "Узел8";
-            treeNode78.Text = "Программы";
+            treeNode22.Name = "Узел9";
+            treeNode22.Text = "Общая информация";
+            treeNode23.Name = "tnUsers";
+            treeNode23.Text = "Пользователи";
+            treeNode24.Name = "Узел0";
+            treeNode24.Text = "Компьютер";
+            treeNode25.Name = "Узел13";
+            treeNode25.Text = "Процессор";
+            treeNode26.Name = "Узел14";
+            treeNode26.Text = "Системная плата";
+            treeNode27.Name = "Узел15";
+            treeNode27.Text = "Память";
+            treeNode28.Name = "Узел16";
+            treeNode28.Text = "BIOS";
+            treeNode29.Name = "Узел1";
+            treeNode29.Text = "Системная плата";
+            treeNode30.Name = "tnOS";
+            treeNode30.Text = "Операционная система";
+            treeNode31.Name = "Узел19";
+            treeNode31.Text = "Процессы";
+            treeNode32.Name = "Узел20";
+            treeNode32.Text = "Системные драйвера";
+            treeNode33.Name = "Узел21";
+            treeNode33.Text = "Время работы";
+            treeNode34.Name = "Узел2";
+            treeNode34.Text = "Операционная система";
+            treeNode35.Name = "Узел22";
+            treeNode35.Text = "Монитор";
+            treeNode36.Name = "Узел24";
+            treeNode36.Text = "Графический процессор";
+            treeNode37.Name = "Узел3";
+            treeNode37.Text = "Отображение";
+            treeNode38.Name = "Узел26";
+            treeNode38.Text = "Логические диски";
+            treeNode39.Name = "Узел27";
+            treeNode39.Text = "Физические диски";
+            treeNode40.Name = "Узел30";
+            treeNode40.Text = "SMART";
+            treeNode41.Name = "Узел5";
+            treeNode41.Text = "Хранение данных";
+            treeNode42.Name = "Узел32";
+            treeNode42.Text = "Сеть Windows";
+            treeNode43.Name = "Узел33";
+            treeNode43.Text = "Интернет";
+            treeNode44.Name = "Узел6";
+            treeNode44.Text = "Сеть";
+            treeNode45.Name = "Узел37";
+            treeNode45.Text = "Устройства Windows";
+            treeNode46.Name = "Узел38";
+            treeNode46.Text = "Ввод";
+            treeNode47.Name = "Узел39";
+            treeNode47.Text = "Принтеры";
+            treeNode105.Name = "Узел7";
+            treeNode105.Text = "Устройства";
+            treeNode106.Name = "tnau";
+            treeNode106.Text = "Автозагрузка";
+            treeNode107.Name = "Узел42";
+            treeNode107.Text = "Запланированые";
+            treeNode108.Name = "tnPrograms";
+            treeNode108.Text = "Установленные программы";
+            treeNode109.Name = "Узел8";
+            treeNode109.Text = "Программы";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode50,
-            treeNode55,
-            treeNode60,
-            treeNode63,
-            treeNode67,
-            treeNode70,
-            treeNode74,
-            treeNode78});
+            treeNode24,
+            treeNode29,
+            treeNode34,
+            treeNode37,
+            treeNode41,
+            treeNode44,
+            treeNode105,
+            treeNode109});
             this.treeView1.ShowLines = false;
             this.treeView1.Size = new System.Drawing.Size(213, 586);
             this.treeView1.TabIndex = 1;
@@ -1081,30 +1105,6 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Значененя";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 420;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.HeaderText = "";
-            this.Column3.MinimumWidth = 20;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column3.Width = 20;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "Поле";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Значененя";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // MainForm
             // 

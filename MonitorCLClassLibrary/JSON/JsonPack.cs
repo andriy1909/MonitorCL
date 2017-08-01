@@ -8,6 +8,8 @@ using System.Runtime.Serialization;
 using System.Drawing;
 using System.IO;
 using System.Security.Cryptography;
+using MonitorCLClassLibrary.Properties;
+using System.Diagnostics;
 
 namespace MonitorCLClassLibrary
 {
@@ -22,33 +24,20 @@ namespace MonitorCLClassLibrary
         public string signature = "";
 
 
-        /*public string login;
-        public string password;
-        public DateTime time;
-        public string signature;
-
-        public List<Monitoring> monitoring;
-        public List<byte[]> images;*/
-
-        public void SetSignature(string privateKey)
+        public void SetSignature()
         {
-            HMACSHA256 sha = new HMACSHA256(Encoding.ASCII.GetBytes(privateKey));
+            HMACSHA256 sha = new HMACSHA256(Encoding.ASCII.GetBytes(Settings.Default.privateKey));
             signature = Encoding.ASCII.GetString(sha.ComputeHash(Encoding.ASCII.GetBytes(GetJsonDataStr())));
         }
 
-        public bool CheckSignature(string privateKey)
+        public bool CheckSignature()
         {
             string oldSignature = signature;
-            SetSignature(privateKey);
+            SetSignature();
             return oldSignature == signature && signature != "";
         }
 
-        public bool Validate(string token, string privateKey)
-        {
-            return CheckSignature(privateKey) && token == header.bearer;
-        }
-
-        public bool CheckTime(double milSec=10000)
+        public bool CheckTime(double milSec = 10000)
         {
             return true;// DateTime.UtcNow.Subtract(data.time).TotalMilliseconds < milSec;
         }
@@ -80,16 +69,28 @@ namespace MonitorCLClassLibrary
             return json;
         }
 
-        public void GetJson(string str)
+        public bool GetJson(string str)
         {
             JsonPack deserializedJsonPack = new JsonPack();
-            MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(str));
-            DataContractJsonSerializer ser = new DataContractJsonSerializer(deserializedJsonPack.GetType());
-            deserializedJsonPack = ser.ReadObject(ms) as JsonPack;
-            ms.Close();
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(str)))
+                {
+                    DataContractJsonSerializer ser = new DataContractJsonSerializer(deserializedJsonPack.GetType());
+                    deserializedJsonPack = ser.ReadObject(ms) as JsonPack;
+                    ms.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err);
+                return false;
+            }
             this.header = deserializedJsonPack.header;
             this.data = deserializedJsonPack.data;
             this.signature = deserializedJsonPack.signature;
+
+            return CheckTime() && CheckSignature();
         }
     }
 }
