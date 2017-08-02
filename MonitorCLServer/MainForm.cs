@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Security.Cryptography;
+using MonitorCLClassLibrary;
+using System.Management;
 
 namespace MonitorCLServer
 {
@@ -264,6 +266,8 @@ namespace MonitorCLServer
 
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            lbText.Text = e.Node.Text;
             switch (e.Node.Name)
             {
                 case "tnOS":
@@ -284,10 +288,179 @@ namespace MonitorCLServer
                     pnContents.Controls.Add(new ProductsControl("au"));
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
                     break;
+                case "tnCPU":
+                    #region MyRegion
+                    pnContents.Controls.Clear();
+                    pnContents.Controls.Add(panel3);
+
+                    dataGridView1.Rows.Add(new object[] { "", "AddressWidth", "64" });
+                    dataGridView1.Rows.Add(new object[] { "", "Architecture", "9" });
+                    dataGridView1.Rows.Add(new object[] { "", "Availability", "3" });
+                    dataGridView1.Rows.Add(new object[] { "", "Caption", "Intel64 Family 6 Model 23 Stepping 10" });
+                    dataGridView1.Rows.Add(new object[] { "", "ConfigManagerErrorCode", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "ConfigManagerUserConfig", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "CpuStatus", "1" });
+                    dataGridView1.Rows.Add(new object[] { "", "CreationClassName", "Win32_Processor" });
+                    dataGridView1.Rows.Add(new object[] { "", "CurrentClockSpeed", "2992" });
+                    dataGridView1.Rows.Add(new object[] { "", "CurrentVoltage", "13" });
+                    dataGridView1.Rows.Add(new object[] { "", "DataWidth", "64" });
+                    dataGridView1.Rows.Add(new object[] { "", "Description", "Intel64 Family 6 Model 23 Stepping 10" });
+                    dataGridView1.Rows.Add(new object[] { "", "DeviceID", "CPU0" });
+                    dataGridView1.Rows.Add(new object[] { "", "ErrorCleared", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "ErrorDescription", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "ExtClock", "1333" });
+                    dataGridView1.Rows.Add(new object[] { "", "Family", "191" });
+                    dataGridView1.Rows.Add(new object[] { "", "InstallDate", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "L2CacheSize", "6144" });
+                    dataGridView1.Rows.Add(new object[] { "", "L2CacheSpeed", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "L3CacheSize", "0" });
+                    dataGridView1.Rows.Add(new object[] { "", "L3CacheSpeed", "0" });
+                    dataGridView1.Rows.Add(new object[] { "", "LastErrorCode", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Level", "6" });
+                    dataGridView1.Rows.Add(new object[] { "", "LoadPercentage", "0" });
+                    dataGridView1.Rows.Add(new object[] { "", "Manufacturer", "GenuineIntel" });
+                    dataGridView1.Rows.Add(new object[] { "", "MaxClockSpeed", "2992" });
+                    dataGridView1.Rows.Add(new object[] { "", "Name", "Intel(R) Core(TM)2 Duo CPU     E8400  @ 3.00GHz" });
+                    dataGridView1.Rows.Add(new object[] { "", "NumberOfCores", "2" });
+                    dataGridView1.Rows.Add(new object[] { "", "NumberOfLogicalProcessors", "2" });
+                    dataGridView1.Rows.Add(new object[] { "", "OtherFamilyDescription", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "PNPDeviceID", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "PowerManagementCapabilities[]", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "PowerManagementSupported", "False" });
+                    dataGridView1.Rows.Add(new object[] { "", "ProcessorId", "BFEBFBFF0001067A" });
+                    dataGridView1.Rows.Add(new object[] { "", "ProcessorType", "3" });
+                    dataGridView1.Rows.Add(new object[] { "", "Revision", "5898" });
+                    dataGridView1.Rows.Add(new object[] { "", "Role", "CPU" });
+                    dataGridView1.Rows.Add(new object[] { "", "SocketDesignation", "CPU" });
+                    dataGridView1.Rows.Add(new object[] { "", "Status", "OK" });
+                    dataGridView1.Rows.Add(new object[] { "", "StatusInfo", "3" });
+                    dataGridView1.Rows.Add(new object[] { "", "Stepping", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "SystemCreationClassName", "Win32_ComputerSystem" });
+                    dataGridView1.Rows.Add(new object[] { "", "SystemName", "DELL-CORE2-01" });
+                    dataGridView1.Rows.Add(new object[] { "", "UniqueId", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "UpgradeMethod", "21" });
+                    dataGridView1.Rows.Add(new object[] { "", "Version", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "VoltageCaps", "" });
+                    #endregion
+                    break;
+                case "tnBattery":
+                    #region MyRegion
+                    pnContents.Controls.Clear();
+                    pnContents.Controls.Add(panel3);
+
+                    dataGridView1.Rows.Add(new object[] { "", "Availability", "2" });
+                    dataGridView1.Rows.Add(new object[] { "", "BatteryRechargeTime", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "BatteryStatus", "2" });
+                    dataGridView1.Rows.Add(new object[] { "", "Caption", "Internal Battery" });
+                    dataGridView1.Rows.Add(new object[] { "", "Chemistry", "6" });
+                    dataGridView1.Rows.Add(new object[] { "", "ConfigManagerErrorCode", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "ConfigManagerUserConfig", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "CreationClassName", "Win32_Battery" });
+                    dataGridView1.Rows.Add(new object[] { "", "Description", "Internal Battery" });
+                    dataGridView1.Rows.Add(new object[] { "", "DesignCapacity", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "DesignVoltage", "12343" });
+                    dataGridView1.Rows.Add(new object[] { "", "DeviceID", "25591LGC42T4850" });
+                    dataGridView1.Rows.Add(new object[] { "", "ErrorCleared", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "ErrorDescription", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "EstimatedChargeRemaining", "100" });
+                    dataGridView1.Rows.Add(new object[] { "", "EstimatedRunTime", "71582788" });
+                    dataGridView1.Rows.Add(new object[] { "", "ExpectedBatteryLife", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "ExpectedLife", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "FullChargeCapacity", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "InstallDate", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "LastErrorCode", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "MaxRechargeTime", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Name", "42T4850" });
+                    dataGridView1.Rows.Add(new object[] { "", "PNPDeviceID", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "PowerManagementCapabilities[]", "| 1" });
+                    dataGridView1.Rows.Add(new object[] { "", "PowerManagementSupported", "false" });
+                    dataGridView1.Rows.Add(new object[] { "", "SmartBatteryVersion", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Status", "OK" });
+                    dataGridView1.Rows.Add(new object[] { "", "StatusInfo", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "SystemCreationClassName", "Win32_ComputerSystem" });
+                    dataGridView1.Rows.Add(new object[] { "", "SystemName", "USER-THINK" });
+                    dataGridView1.Rows.Add(new object[] { "", "TimeOnBattery", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "TimeToFullCharge", "" });
+                    #endregion
+                    break;
+                case "tnMotheboad":
+                    #region MyRegion
+                    pnContents.Controls.Clear();
+                    pnContents.Controls.Add(panel3);
+
+                    dataGridView1.Rows.Add(new object[] { "", "Caption", "Base Board" });
+                    dataGridView1.Rows.Add(new object[] { "","ConfigOptions[]",""});
+                    dataGridView1.Rows.Add(new object[] { "","CreationClassName","Win32_BaseBoard"});
+                    dataGridView1.Rows.Add(new object[] { "","Depth",""});
+                    dataGridView1.Rows.Add(new object[] { "","Description","Base Board"});
+                    dataGridView1.Rows.Add(new object[] { "","Height",""});
+                    dataGridView1.Rows.Add(new object[] { "","HostingBoard","True"});
+                    dataGridView1.Rows.Add(new object[] { "","HotSwappable","False"});
+                    dataGridView1.Rows.Add(new object[] { "","InstallDate",""});
+                    dataGridView1.Rows.Add(new object[] { "","Manufacturer","Dell Inc."});
+                    dataGridView1.Rows.Add(new object[] { "","Model",""});
+                    dataGridView1.Rows.Add(new object[] { "","Name","Base Board"});
+                    dataGridView1.Rows.Add(new object[] { "","OtherIdentifyingInfo",""});
+                    dataGridView1.Rows.Add(new object[] { "","PartNumber",""});
+                    dataGridView1.Rows.Add(new object[] { "","PoweredOn","True"});
+                    dataGridView1.Rows.Add(new object[] { "","Product","0DFRFW"});
+                    dataGridView1.Rows.Add(new object[] { "","Removable","True"});
+                    dataGridView1.Rows.Add(new object[] { "","Replaceable","False"});
+                    dataGridView1.Rows.Add(new object[] { "","RequirementsDescription",""});
+                    dataGridView1.Rows.Add(new object[] { "","RequiresDaughterBoard","False"});
+                    dataGridView1.Rows.Add(new object[] { "","SerialNumber","..CN7360404S00SB."});
+                    dataGridView1.Rows.Add(new object[] { "","SKU",""});
+                    dataGridView1.Rows.Add(new object[] { "","SlotLayout",""});
+                    dataGridView1.Rows.Add(new object[] { "","SpecialRequirements",""});
+                    dataGridView1.Rows.Add(new object[] { "","Status","OK"});
+                    dataGridView1.Rows.Add(new object[] { "","Tag","Base Board"});
+                    dataGridView1.Rows.Add(new object[] { "","Version","A01"});
+                    dataGridView1.Rows.Add(new object[] { "","Weight",""});
+                    dataGridView1.Rows.Add(new object[] { "","Width",""});
+
+                    #endregion
+                    break;
+                case "tnBios":
+                    #region MyRegion
+                    pnContents.Controls.Clear();
+                    pnContents.Controls.Add(panel3);
+                                                            
+                    dataGridView1.Rows.Add(new object[] { "", "BiosCharacteristics[]", "| 7 | 9 | 10 | 11 | 12 | 14 | 15 | 16 | 19 | 21 | 24 | 26 | 27 | 28 | 29 | 32 | 33 | 40 | 41 | 42 | 48 | 49 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79" });
+                    dataGridView1.Rows.Add(new object[] { "", "BIOSVersion[]", "| DELL   - 15 | Phoenix ROM BIOS PLUS Version 1.10 A03"});
+                    dataGridView1.Rows.Add(new object[] { "", "BuildNumber", ""});
+                    dataGridView1.Rows.Add(new object[] { "", "Caption", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
+                    dataGridView1.Rows.Add(new object[] { "", "CodeSet", ""});
+                    dataGridView1.Rows.Add(new object[] { "", "CurrentLanguage", "en|US|iso8859-1"});
+                    dataGridView1.Rows.Add(new object[] { "", "Description", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
+                    dataGridView1.Rows.Add(new object[] { "", "IdentificationCode", ""});
+                    dataGridView1.Rows.Add(new object[] { "", "InstallableLanguages", "1"});
+                    dataGridView1.Rows.Add(new object[] { "", "InstallDate", ""});
+                    dataGridView1.Rows.Add(new object[] { "", "LanguageEdition", ""});
+                    dataGridView1.Rows.Add(new object[] { "", "ListOfLanguages[]", "| en|US|iso8859-1"});
+                    dataGridView1.Rows.Add(new object[] { "", "Manufacturer", "Dell Inc."});
+                    dataGridView1.Rows.Add(new object[] { "", "Name", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
+                    dataGridView1.Rows.Add(new object[] { "", "OtherTargetOS", ""});
+                    dataGridView1.Rows.Add(new object[] { "", "PrimaryBIOS", "True"});
+                    dataGridView1.Rows.Add(new object[] { "", "ReleaseDate", "20100213000000.000000+000"});
+                    dataGridView1.Rows.Add(new object[] { "", "SerialNumber", "8J2PKM1"});
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSBIOSVersion", "A03"});
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSMajorVersion", "2"});
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSMinorVersion", "5"});
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSPresent", "True"});
+                    dataGridView1.Rows.Add(new object[] { "", "SoftwareElementID", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
+                    dataGridView1.Rows.Add(new object[] { "", "SoftwareElementState", "3"});
+                    dataGridView1.Rows.Add(new object[] { "", "Status", "OK"});
+                    dataGridView1.Rows.Add(new object[] { "", "TargetOperatingSystem", "0"});
+                    dataGridView1.Rows.Add(new object[] { "", "Version", "DELL   - 15"});
+
+                    #endregion
+                    break;
                 default:
                     break;
             }
         }
+
+        
 
         private void treeView2_MouseClick(object sender, MouseEventArgs e)
         {
@@ -436,9 +609,12 @@ namespace MonitorCLServer
             if (tvClients.SelectedNode != null)
                 tvClients.SelectedNode.BeginEdit();
         }
-        
+
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
+            pnContents.Controls.Clear();
+            pnContents.Controls.Add(panel3);
+
             dataGridView1.Rows.Add(new object[] { "", "Компьютер", "" });
             dataGridView1.Rows[dataGridView1.RowCount - 1].DefaultCellStyle.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Bold);
             dataGridView1.Rows.Add(new object[] { "", "Операционная система", "Microsoft Windows 7 Professional" });
@@ -950,6 +1126,6 @@ Lost Comm ("Lost Comm")*/
         /// </summary>
         string Status;
     }
-    
+
 }
 

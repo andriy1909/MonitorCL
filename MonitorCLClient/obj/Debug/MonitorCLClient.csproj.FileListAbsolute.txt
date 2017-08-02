@@ -98,3 +98,11 @@ D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.AboutBox1.resources
 D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.LoginForm.resources
 D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.ProgressForm.resources
 D:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.RegistrationForm.resources
+E:\MonitorCL\MonitorCLClient\bin\Debug\EntityFramework.dll
+E:\MonitorCL\MonitorCLClient\bin\Debug\EntityFramework.xml
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.csprojResolveAssemblyReference.cache
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.AboutBox1.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.LoginForm.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.ProgressForm.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.RegistrationForm.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.Form1.resources

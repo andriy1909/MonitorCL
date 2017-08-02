@@ -49,6 +49,8 @@
             this.mtbPhone = new System.Windows.Forms.MaskedTextBox();
             this.lbLoginExist = new System.Windows.Forms.Label();
             this.lbNotConnection = new System.Windows.Forms.Label();
+            this.numPort = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numPort)).BeginInit();
             this.SuspendLayout();
             // 
             // btRegister
@@ -118,6 +120,7 @@
             this.tbIP.Name = "tbIP";
             this.tbIP.Size = new System.Drawing.Size(214, 22);
             this.tbIP.TabIndex = 7;
+            this.tbIP.Text = "127.0.0.1";
             // 
             // label3
             // 
@@ -272,12 +275,37 @@
             this.lbNotConnection.Text = "Ошибка соединения с сервером";
             this.lbNotConnection.Visible = false;
             // 
+            // numPort
+            // 
+            this.numPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numPort.Location = new System.Drawing.Point(190, 63);
+            this.numPort.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numPort.Minimum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.numPort.Name = "numPort";
+            this.numPort.Size = new System.Drawing.Size(211, 18);
+            this.numPort.TabIndex = 27;
+            this.numPort.Value = new decimal(new int[] {
+            11000,
+            0,
+            0,
+            0});
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(451, 351);
+            this.Controls.Add(this.numPort);
             this.Controls.Add(this.lbNotConnection);
             this.Controls.Add(this.lbLoginExist);
             this.Controls.Add(this.mtbPhone);
@@ -306,6 +334,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationForm";
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numPort)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +362,6 @@
         private System.Windows.Forms.MaskedTextBox mtbPhone;
         private System.Windows.Forms.Label lbLoginExist;
         private System.Windows.Forms.Label lbNotConnection;
+        private System.Windows.Forms.NumericUpDown numPort;
     }
 }

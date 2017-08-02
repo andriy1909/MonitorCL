@@ -14,13 +14,67 @@ namespace MonitorCLClassLibrary
 {
     public class ClientWork : IDisposable
     {
-        private string login = "";
-        private string password = "";
-        private string host = "127.0.0.1";
-        private int port = 11000;
-        private Guid idClient = Guid.Empty;
+        public User user = new User();
+        public string Host { get; set; } 
+        public int Port { get; set; } 
         TcpClient client;
         NetworkStream stream;
+
+        Thread thread;
+
+        public void Connect()
+        {
+            thread = new Thread(new ThreadStart(ConnectThread));
+            thread.Start();
+        }
+
+        private void ConnectThread()
+        {
+            client = new TcpClient();
+            try
+            {
+                client.Connect(Host, Port); //подключение клиента
+                stream = client.GetStream(); // получаем поток
+
+                /*
+                                JsonPack jsPack = new JsonPack();
+                                JsonHeader jsHeader = new JsonHeader("reg");
+                                jsHeader.setLoginPassword("login", "password");
+                                jsHeader.setToken("12345");
+                                JsonData jsData = new JsonData();
+                                jsData.text = "Hello";
+                                jsPack.data = jsData;
+                                jsPack.header = jsHeader;
+                                jsPack.SetSignature(Settings.Default.privateKey);
+                                //SendMessage(jsPack.GetJsonStr());
+                                byte[] data = Encoding.Unicode.GetBytes(jsPack.GetJsonStr());
+                                stream.Write(data, 0, data.Length);
+                                */
+                if (!client.Connected)
+                    throw new NotImplementedException();
+
+                // запускаем новый поток для получения данных
+                receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+                receiveThread.Start(); //старт потока
+                isConnect = true;
+            }
+            catch (Exception ex)
+            {
+                isConnect = false;
+                Debug.WriteLine(ex.Message);
+                Debug.WriteLine("reconnect");
+                Thread.Sleep(1000);
+                ConnectThread();
+            }
+            finally
+            {
+            }
+        }
+
+
+
+
+
         public delegate void ReceiveDelegate(string message);
         public delegate void IsConnected(bool check);
         ReceiveDelegate receiveOut;
@@ -29,6 +83,7 @@ namespace MonitorCLClassLibrary
         private Thread connectedThread;
         private int countEmpty = 0;
         private bool isConnect = false;
+
 
         public bool IsConnect
         {
@@ -44,13 +99,13 @@ namespace MonitorCLClassLibrary
         {
             isConnectedOut = isConnected;
         }
-
+/*
         public void Connect(string ip, int port, Guid id, string login, string password)
         {
-            this.login = login;
-            this.password = password;
-            host = ip;
-            this.port = port;
+            user.Login = login;
+            user.Password = password;
+            Host = ip;
+            this.Port = port;
             connectedThread = new Thread(new ThreadStart(Connect));
             connectedThread.Start();
         }
@@ -60,10 +115,10 @@ namespace MonitorCLClassLibrary
             client = new TcpClient();
             try
             {
-                client.Connect(host, port); //подключение клиента
+                client.Connect(Host, Port); //подключение клиента
                 stream = client.GetStream(); // получаем поток
 
-/*
+
                 JsonPack jsPack = new JsonPack();
                 JsonHeader jsHeader = new JsonHeader("reg");
                 jsHeader.setLoginPassword("login", "password");
@@ -76,7 +131,7 @@ namespace MonitorCLClassLibrary
                 //SendMessage(jsPack.GetJsonStr());
                 byte[] data = Encoding.Unicode.GetBytes(jsPack.GetJsonStr());
                 stream.Write(data, 0, data.Length);
-                */
+                
                 if (!client.Connected)
                     throw new NotImplementedException();
 
@@ -97,7 +152,7 @@ namespace MonitorCLClassLibrary
             {
             }
         }
-
+*/
 
         Image img;
         public void SendSupport(string subject, string body, Image screen)
@@ -156,7 +211,7 @@ namespace MonitorCLClassLibrary
                     {
                         countEmpty++;
                         if (countEmpty >= 50)
-                            Connect(host, port, idClient, login, password);
+          //                  Connect(host, port, idClient, login, password);
                         continue;
                     }
                     else
@@ -178,7 +233,7 @@ namespace MonitorCLClassLibrary
                 {
                     Debug.WriteLine("Подключение прервано!"); //соединение было прервано
                     Disconnect();
-                    Connect(host, port, idClient, login, password);
+        //            Connect(host, port, idClient, login, password);
                 }
             }
         }

@@ -37,6 +37,7 @@
             this.btCancel = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             // 
             // tbSubject
             // 
+            this.tbSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSubject.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbSubject.Location = new System.Drawing.Point(12, 29);
             this.tbSubject.Name = "tbSubject";
@@ -70,6 +72,7 @@
             // 
             // rbBody
             // 
+            this.rbBody.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rbBody.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rbBody.Location = new System.Drawing.Point(12, 83);
             this.rbBody.Name = "rbBody";
@@ -79,34 +82,40 @@
             // 
             // btSend
             // 
+            this.btSend.BackColor = System.Drawing.SystemColors.Menu;
+            this.btSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSend.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btSend.Location = new System.Drawing.Point(259, 317);
             this.btSend.Name = "btSend";
             this.btSend.Size = new System.Drawing.Size(82, 27);
             this.btSend.TabIndex = 4;
             this.btSend.Text = "Отравить";
-            this.btSend.UseVisualStyleBackColor = true;
+            this.btSend.UseVisualStyleBackColor = false;
             this.btSend.Click += new System.EventHandler(this.btSend_Click);
             // 
             // btCancel
             // 
+            this.btCancel.BackColor = System.Drawing.SystemColors.Menu;
+            this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btCancel.Location = new System.Drawing.Point(347, 317);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 27);
             this.btCancel.TabIndex = 5;
             this.btCancel.Text = "Отмена";
-            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.UseVisualStyleBackColor = false;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.Menu;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(11, 319);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(172, 25);
             this.button3.TabIndex = 6;
             this.button3.Text = "Прикрепить скриншот екрана";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
@@ -119,11 +128,19 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(11, 82);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(411, 230);
+            this.panel1.TabIndex = 9;
+            // 
             // SendMessageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(435, 577);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -133,6 +150,8 @@
             this.Controls.Add(this.tbSubject);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SendMessageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -153,5 +172,6 @@
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -25,3 +25,7 @@ D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.dll
 D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
 D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.xml
 D:\MonitorCL-master\MonitorCLClassLibrary\bin\Debug\EntityFramework.SqlServer.xml
+E:\MonitorCL\MonitorCLClassLibrary\bin\Debug\EntityFramework.dll
+E:\MonitorCL\MonitorCLClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
+E:\MonitorCL\MonitorCLClassLibrary\bin\Debug\EntityFramework.xml
+E:\MonitorCL\MonitorCLClassLibrary\bin\Debug\EntityFramework.SqlServer.xml

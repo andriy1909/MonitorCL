@@ -39,13 +39,15 @@
             // 
             // btLogin
             // 
+            this.btLogin.BackColor = System.Drawing.SystemColors.Menu;
+            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btLogin.Location = new System.Drawing.Point(89, 131);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(85, 27);
             this.btLogin.TabIndex = 0;
             this.btLogin.Text = "Вход";
-            this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.UseVisualStyleBackColor = false;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // label1
@@ -104,7 +106,7 @@
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(2, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(269, 23);
+            this.label3.Size = new System.Drawing.Size(269, 20);
             this.label3.TabIndex = 6;
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -113,7 +115,7 @@
             this.AcceptButton = this.btLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(271, 170);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.checkBox1);

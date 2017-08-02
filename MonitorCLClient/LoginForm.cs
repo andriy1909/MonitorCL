@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonitorCLClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ namespace MonitorCLClient
 {
     public partial class LoginForm : Form
     {
-        public LoginForm(string error = "")
+        public LoginForm(ClientWork client,string error = "")
         {
             InitializeComponent();
             tbPassword.UseSystemPasswordChar = true;

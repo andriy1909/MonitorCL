@@ -30,10 +30,10 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ProgressForm formP = new ProgressForm();
-            if (formP.ShowDialog() != DialogResult.OK)
+            Form1 f = new Form1();
+            if(f.ShowDialog()==DialogResult.Abort)
             {
-                Exit();
+
             }
 
             if (Settings.Default.isBlocked)
@@ -58,7 +58,7 @@ namespace MonitorCLClient
 
             if (Settings.Default.login == "")
             {
-                RegistrationForm rForm = new RegistrationForm();
+                RegistrationForm rForm = new RegistrationForm(client);
                 if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
                 {
                     Exit();
@@ -74,12 +74,12 @@ namespace MonitorCLClient
                     break;
                 case 1:// not auth
 
-                    LoginForm form = new LoginForm();
+                    LoginForm form = new LoginForm(client);
                     form.ShowDialog();
 
                     break;
                 case 2:// not found user
-                    RegistrationForm rForm = new RegistrationForm();
+                    RegistrationForm rForm = new RegistrationForm(client);
                     if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
                     {
                         Exit();

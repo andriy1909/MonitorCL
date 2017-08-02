@@ -1,9 +1,11 @@
-﻿using System;
+﻿using MonitorCLClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,13 +13,15 @@ namespace MonitorCLClient
 {
     public partial class RegistrationForm : Form
     {
+        ClientWork client;
         public bool isConnect = false;
 
-        public RegistrationForm() 
+        public RegistrationForm(ClientWork client)
         {
             InitializeComponent();
             tbPassword.UseSystemPasswordChar = true;
             tbPasswordConfirm.UseSystemPasswordChar = true;
+            this.client = client;
         }
 
         private void RegistrationForm_Load(object sender, EventArgs e)
@@ -28,15 +32,51 @@ namespace MonitorCLClient
         private void btLogin_Click(object sender, EventArgs e)
         {
             Hide();
-            LoginForm form = new LoginForm();
+            LoginForm form = new LoginForm(client);
             form.ShowDialog(Parent);
         }
 
         private void btRegister_Click(object sender, EventArgs e)
         {
-            ProgressForm form = new ProgressForm();
+            IPAddress tmpIP;
+            if (tbLogin.Text == "")
+            {
+                MessageBox.Show("Введите логин!");
+                return;
+            }
+            else
+                if (tbPassword.Text == "")
+            {
+                MessageBox.Show("Введите пароль!");
+                return;
+            }
+            else
+                if (tbPassword.Text != tbPasswordConfirm.Text)
+            {
+                MessageBox.Show("Пароли не совпадают!");
+                return;
+            }
+            else
+                if (!IPAddress.TryParse(tbIP.Text, out tmpIP))
+            {
+                MessageBox.Show("IP адресс введен неверно!");
+                return;
+            }
+
+            client.user = new User()
+            {
+                Company = tbCompany.Text,
+                DateReg = DateTime.Now,
+                Login = tbLogin.Text,
+                Name = tbName.Text,
+                Password = tbPassword.Text
+            };
+            client.Host = tbIP.Text;
+            client.Port = (int)numPort.Value; 
+
+            ProgressForm form = new ProgressForm(client);
             this.Hide();
-            if(form.ShowDialog()==DialogResult.OK)
+            if (form.ShowDialog() == DialogResult.OK)
             {
                 this.Close();
             }
@@ -45,6 +85,7 @@ namespace MonitorCLClient
                 switch (form.errorCode)
                 {
                     case 1:
+                    case 3:
                         lbNotConnection.Visible = true;
                         break;
                     case 2:
