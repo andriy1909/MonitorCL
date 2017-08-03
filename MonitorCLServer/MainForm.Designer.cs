@@ -443,8 +443,8 @@
             this.imageList1.Images.SetKeyName(2, "Notebook.png");
             this.imageList1.Images.SetKeyName(3, "Без названия.jpg");
             this.imageList1.Images.SetKeyName(4, "setting_5376.ico");
-            this.imageList1.Images.SetKeyName(5, "orangeball_8491.png");
-            this.imageList1.Images.SetKeyName(6, "greenball_5520.png");
+            this.imageList1.Images.SetKeyName(5, "redball.png");
+            this.imageList1.Images.SetKeyName(6, "greenball.png");
             // 
             // toolStripProgressBar1
             // 
@@ -769,10 +769,10 @@
             // 
             this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "orangeball_8491.png");
-            this.imageList2.Images.SetKeyName(1, "orangeball_8491.png");
-            this.imageList2.Images.SetKeyName(2, "greenball_5520.png");
-            this.imageList2.Images.SetKeyName(3, "greenball_5520.png");
+            this.imageList2.Images.SetKeyName(0, "redball.png");
+            this.imageList2.Images.SetKeyName(1, "redball.png");
+            this.imageList2.Images.SetKeyName(2, "greenball.png");
+            this.imageList2.Images.SetKeyName(3, "greenball.png");
             // 
             // toolStrip1
             // 

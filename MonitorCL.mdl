@@ -7,7 +7,7 @@
 (object Design "Logical View"
     is_unit    	TRUE
     is_loaded  	TRUE
-    quid       	"5981D4DE03DB"
+    quid       	"5982D44800E1"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
 	rightMargin 	0.250000
@@ -34,28 +34,793 @@
 	showClassOfObject 	TRUE
 	notation   	"Unified")
     root_usecase_package 	(object Class_Category "Use Case View"
-	quid       	"5981D4DE03DD"
+	quid       	"5982D44800E3"
 	exportControl 	"Public"
 	global     	TRUE
 	logical_models 	(list unit_reference_list
-	    (object Class "NewClass"
-		quid       	"5981D56B010B"
-		stereotype 	"Actor"))
+	    (object Class "User"
+		quid       	"5982D51B0095"
+		stereotype 	"Actor")
+	    (object Class "Manager"
+		quid       	"5982D52A025D"
+		stereotype 	"Actor")
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "$UNNAMED$0"
+			quid       	"5982D54200DC"
+			class      	"Use Case View::User"
+			quidu      	"5982D51B0095"
+			persistence 	"Transient"
+			creationObj 	FALSE
+			multi      	FALSE)))
+	    (object Mechanism @2
+		logical_models 	(list unit_reference_list
+		    (object Object "$UNNAMED$1"
+			quid       	"5982D533014C"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5982D56D027B"
+				supplier   	"Встановлення автозагрузки"
+				quidu      	"5982D53A018E"
+				messages   	(list Messages
+				    (object Message ""
+					quid       	"5982D56D027C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"1"
+					ordinal    	0
+					quidu      	"000000000000"
+					creation   	FALSE))))
+			class      	"Use Case View::User"
+			quidu      	"5982D51B0095"
+			persistence 	"Transient"
+			creationObj 	FALSE
+			multi      	FALSE)
+		    (object Object "Встановлення автозагрузки"
+			quid       	"5982D53A018E"
+			persistence 	"Transient"
+			creationObj 	FALSE
+			multi      	FALSE)
+		    (object Object "Форма реєстрації"
+			quid       	"5982D59C027E"
+			persistence 	"Transient"
+			creationObj 	FALSE
+			multi      	FALSE))))
+	statemachine 	(object State_Machine "State/Activity Model"
+	    quid       	"5982D5BF0114"
+	    states     	(list States
+		(object State "$UNNAMED$2"
+		    quid       	"5982D5CC0386"
+		    type       	"StartState")
+		(object State "Встановлення автозагрузки"
+		    quid       	"5982D60C01A6"
+		    type       	"Normal")
+		(object ActivityState "NewActivity"
+		    quid       	"5982D685039E")
+		(object ActivityState "Форма реєстрації"
+		    quid       	"5982D7C50056")
+		(object Decision "Перевірка чи є дані для входу"
+		    quid       	"5982D63B00AE")
+		(object ActivityState "Підключення до сервера"
+		    quid       	"5982D85F0296")
+		(object Decision "Підключилось до сервера"
+		    quid       	"5982D879004E")
+		(object Decision "користувач не знайдений"
+		    quid       	"5982D8AF021E")
+		(object State "$UNNAMED$3"
+		    quid       	"5982D81802B6"
+		    type       	"EndState")
+		(object Decision "Відбулося підключення до сервера"
+		    quid       	"5982D7F8005E")
+		(object Decision "$UNNAMED$4"
+		    quid       	"5982D9B7029D"))
+	    partitions 	(list Partitions)
+	    objects    	(list Objects)
+	    transitions 	(list transition_list
+		(object State_Transition
+		    quid       	"5982D621021B"
+		    supplier   	"Use Case View::State/Activity Model::Встановлення автозагрузки"
+		    supplier_quidu 	"5982D60C01A6"
+		    client     	"$UNNAMED$2"
+		    client_quidu 	"5982D5CC0386"
+		    sendEvent  	(object sendEvent
+			quid       	"5982D621021E"))
+		(object State_Transition
+		    quid       	"5982D66D03E4"
+		    supplier   	"Use Case View::State/Activity Model::Перевірка чи є дані для входу"
+		    supplier_quidu 	"5982D63B00AE"
+		    client     	"Use Case View::State/Activity Model::Встановлення автозагрузки"
+		    client_quidu 	"5982D60C01A6"
+		    sendEvent  	(object sendEvent
+			quid       	"5982D66D03E7"))
+		(object State_Transition
+		    quid       	"5982D7DF03B4"
+		    label      	""
+		    supplier   	"Use Case View::State/Activity Model::Форма реєстрації"
+		    supplier_quidu 	"5982D7C50056"
+		    client     	"Use Case View::State/Activity Model::Перевірка чи є дані для входу"
+		    client_quidu 	"5982D63B00AE"
+		    Event      	(object Event "ні"
+			quid       	"5982D7DF03B5")
+		    sendEvent  	(object sendEvent
+			quid       	"5982D7DF03B7"))
+		(object State_Transition
+		    quid       	"5982D86D01B4"
+		    label      	""
+		    supplier   	"Use Case View::State/Activity Model::Підключення до сервера"
+		    supplier_quidu 	"5982D85F0296"
+		    client     	"Use Case View::State/Activity Model::Перевірка чи є дані для входу"
+		    client_quidu 	"5982D63B00AE"
+		    Event      	(object Event "так"
+			quid       	"5982D86D01B5")
+		    sendEvent  	(object sendEvent
+			quid       	"5982D86D01B7"))
+		(object State_Transition
+		    quid       	"5982D8F8027C"
+		    label      	""
+		    supplier   	"Use Case View::State/Activity Model::Форма реєстрації"
+		    supplier_quidu 	"5982D7C50056"
+		    client     	"Use Case View::State/Activity Model::користувач не знайдений"
+		    client_quidu 	"5982D8AF021E"
+		    Event      	(object Event "так"
+			quid       	"5982D8F8027D")
+		    sendEvent  	(object sendEvent
+			quid       	"5982D8F8027F"))
+		(object State_Transition
+		    quid       	"5982D8FB00EC"
+		    supplier   	"Use Case View::State/Activity Model::Підключилось до сервера"
+		    supplier_quidu 	"5982D879004E"
+		    client     	"Use Case View::State/Activity Model::Підключення до сервера"
+		    client_quidu 	"5982D85F0296"
+		    sendEvent  	(object sendEvent
+			quid       	"5982D8FB00EF"))
+		(object State_Transition
+		    quid       	"5982D900020C"
+		    label      	""
+		    supplier   	"Use Case View::State/Activity Model::користувач не знайдений"
+		    supplier_quidu 	"5982D8AF021E"
+		    client     	"Use Case View::State/Activity Model::Підключилось до сервера"
+		    client_quidu 	"5982D879004E"
+		    Event      	(object Event "ні"
+			quid       	"5982D900020D")
+		    sendEvent  	(object sendEvent
+			quid       	"5982D900020F"))
+		(object State_Transition
+		    quid       	"5982D8120154"
+		    supplier   	"Use Case View::State/Activity Model::Відбулося підключення до сервера"
+		    supplier_quidu 	"5982D7F8005E"
+		    client     	"Use Case View::State/Activity Model::Форма реєстрації"
+		    client_quidu 	"5982D7C50056"
+		    sendEvent  	(object sendEvent
+			quid       	"5982D8120157"))
+		(object State_Transition
+		    quid       	"5982D81F0134"
+		    label      	""
+		    supplier   	"$UNNAMED$3"
+		    supplier_quidu 	"5982D81802B6"
+		    client     	"Use Case View::State/Activity Model::Відбулося підключення до сервера"
+		    client_quidu 	"5982D7F8005E"
+		    Event      	(object Event "ні"
+			quid       	"5982D81F0135")
+		    sendEvent  	(object sendEvent
+			quid       	"5982D81F0137"))
+		(object State_Transition
+		    quid       	"5982D95E0354"
+		    label      	""
+		    supplier   	"Use Case View::State/Activity Model::Форма реєстрації"
+		    supplier_quidu 	"5982D7C50056"
+		    client     	"Use Case View::State/Activity Model::користувач не знайдений"
+		    client_quidu 	"5982D8AF021E"
+		    Event      	(object Event "користувач не знайдений"
+			quid       	"5982D95E0355")
+		    sendEvent  	(object sendEvent
+			quid       	"5982D95E0357"))
+		(object State_Transition
+		    quid       	"5982D9BB013A"
+		    label      	""
+		    supplier   	"$UNNAMED$4"
+		    supplier_quidu 	"5982D9B7029D"
+		    client     	"Use Case View::State/Activity Model::користувач не знайдений"
+		    client_quidu 	"5982D8AF021E"
+		    Event      	(object Event "знайдений користувач"
+			quid       	"5982D9BB013B")
+		    sendEvent  	(object sendEvent
+			quid       	"5982D9BB013D")))
+	    objectflows 	(list objectflow_list)
+	    statediagrams 	(list StateDiagrams
+		(object State_Diagram "NewDiagram3"
+		    quid       	"5982D5BF0117"
+		    title      	"NewDiagram3"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object StateView "StartState" "$UNNAMED$2" @3
+			    location   	(588, 144)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5982D5CC0386"
+			    autoResize 	TRUE)))
+		(object ActivityDiagram "NewDiagram4"
+		    quid       	"5982D5D40175"
+		    title      	"NewDiagram4"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	1022
+		    origin_y   	481
+		    items      	(list diagram_item_list
+			(object Swimlane "" @4
+			    line_color 	3342489
+			    width      	450)
+			(object StateView "StartState" "$UNNAMED$2" @5
+			    Parent_View 	@4
+			    location   	(1119, 222)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5982D5CC0386"
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Встановлення автозагрузки" @6
+			    Parent_View 	@4
+			    location   	(1121, 436)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@6
+				location   	(1121, 425)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	288
+				justify    	0
+				label      	"Встановлення автозагрузки")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D60C01A6"
+			    width      	384
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @7
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D621021B"
+			    client     	@5
+			    supplier   	@6
+			    vertices   	(list Points
+				(1119, 252)
+				(1120, 368))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "Форма реєстрації" @8
+			    Parent_View 	@4
+			    location   	(803, 870)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@8
+				location   	(803, 857)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	247
+				justify    	0
+				label      	"Форма реєстрації")
+			    icon_style 	"Label"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D7C50056"
+			    height     	138
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object DecisionView "Перевірка чи є дані для входу" @9
+			    Parent_View 	@4
+			    location   	(1116, 682)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @10
+				Parent_View 	@9
+				location   	(1172, 605)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	TRUE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				nlines     	1
+				max_width  	575
+				justify    	1
+				label      	"Перевірка чи є дані для входу"
+				pctDist    	1.000000
+				height     	0
+				orientation 	0)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D63B00AE"
+			    height     	131
+			    autoResize 	TRUE)
+			(object TransView "" @11
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D66D03E4"
+			    client     	@6
+			    supplier   	@9
+			    vertices   	(list Points
+				(1119, 503)
+				(1116, 617))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @12
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @13
+				Parent_View 	@12
+				location   	(993, 776)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	"ні"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D7DF03B4"
+			    client     	@9
+			    supplier   	@8
+			    vertices   	(list Points
+				(1041, 682)
+				(890, 800))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object ActivityStateView "Підключення до сервера" @14
+			    Parent_View 	@4
+			    location   	(1665, 863)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@14
+				location   	(1665, 866)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	269
+				justify    	0
+				label      	"Підключення до сервера")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D85F0296"
+			    height     	106
+			    annotation 	1
+			    autoResize 	TRUE)
+			(object TransView "" @15
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @16
+				Parent_View 	@15
+				location   	(1375, 705)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	"так"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D86D01B4"
+			    client     	@9
+			    supplier   	@14
+			    vertices   	(list Points
+				(1191, 682)
+				(1526, 810))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "Підключилось до сервера" @17
+			    Parent_View 	@4
+			    location   	(1673, 1057)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @18
+				Parent_View 	@17
+				location   	(1729, 1008)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	TRUE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				nlines     	1
+				max_width  	479
+				justify    	1
+				label      	"Підключилось до сервера"
+				pctDist    	1.000000
+				height     	0
+				orientation 	0)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D879004E"
+			    autoResize 	TRUE)
+			(object TransView "" @19
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D8FB00EC"
+			    client     	@14
+			    supplier   	@17
+			    vertices   	(list Points
+				(1667, 915)
+				(1673, 1020))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "користувач не знайдений" @20
+			    Parent_View 	@4
+			    location   	(1701, 1432)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D8AF021E"
+			    autoResize 	TRUE)
+			(object TransView "" @21
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @22
+				Parent_View 	@21
+				location   	(1732, 1241)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	"ні"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D900020C"
+			    client     	@17
+			    supplier   	@20
+			    vertices   	(list Points
+				(1673, 1094)
+				(1701, 1395))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @23
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @24
+				Parent_View 	@23
+				location   	(1241, 1223)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	524
+				justify    	0
+				label      	"користувач не знайдений"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D95E0354"
+			    client     	@20
+			    supplier   	@8
+			    vertices   	(list Points
+				(1626, 1432)
+				(904, 939))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "Відбулося підключення до сервера" @25
+			    Parent_View 	@4
+			    location   	(247, 1141)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @26
+				Parent_View 	@25
+				location   	(306, 1079)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	TRUE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor     	1
+				nlines     	1
+				max_width  	713
+				justify    	1
+				label      	"Відбулося підключення до сервера"
+				pctDist    	1.000000
+				height     	0
+				orientation 	0)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D7F8005E"
+			    width      	163
+			    height     	100
+			    autoResize 	TRUE)
+			(object TransView "" @27
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D8120154"
+			    client     	@8
+			    supplier   	@25
+			    vertices   	(list Points
+				(662, 938)
+				(328, 1141))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$3" @28
+			    Parent_View 	@4
+			    location   	(255, 1436)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5982D81802B6"
+			    autoResize 	TRUE)
+			(object TransView "" @29
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @30
+				Parent_View 	@29
+				location   	(295, 1292)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	"ні"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D81F0134"
+			    client     	@25
+			    supplier   	@28
+			    vertices   	(list Points
+				(247, 1191)
+				(253, 1393))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object DecisionView "$UNNAMED$4" @31
+			    Parent_View 	@4
+			    location   	(1635, 1721)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5982D9B7029D"
+			    autoResize 	TRUE)
+			(object TransView "" @32
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @33
+				Parent_View 	@32
+				location   	(1711, 1590)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	456
+				justify    	0
+				label      	"знайдений користувач"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5982D9BB013A"
+			    client     	@20
+			    supplier   	@31
+			    vertices   	(list Points
+				(1701, 1469)
+				(1635, 1684))
+			    line_style 	0
+			    x_offset   	FALSE)))))
 	logical_presentations 	(list unit_reference_list
-	    (object UseCaseDiagram "Client"
-		quid       	"5981D4DE03E6"
-		title      	"Client"
+	    (object UseCaseDiagram "Main"
+		quid       	"5982D4480321"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object ObjectDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5982D4D90244"
+		title      	"NewDiagram"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ClassView "Class" "Use Case View::NewClass" @1
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(622, 253)
+		    (object ObjectView "$UNNAMED$0" @34
+			location   	(127, 109)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -67,71 +832,519 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1
-			    location   	(622, 413)
+			    Parent_View 	@34
+			    location   	(127, 269)
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	325
+			    max_width  	331
 			    justify    	0
-			    label      	"NewClass")
+			    label      	"")
 			icon       	"Actor"
 			icon_style 	"Icon"
 			line_color 	3342489
-			quidu      	"5981D56B010B"
-			annotation 	8
-			autoResize 	TRUE)))
-	    (object UseCaseDiagram "Manager"
-		quid       	"5981D52C03C7"
-		title      	"Manager"
+			fill_color 	13434879
+			quidu      	"5982D54200DC"
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)))
+	    (object InteractionDiagram "NewDiagram2"
+		mechanism_ref 	@2
+		quid       	"5982D507024D"
+		title      	"NewDiagram2"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
-		origin_x   	0
+		origin_x   	576
 		origin_y   	0
-		items      	(list diagram_item_list))))
+		items      	(list diagram_item_list
+		    (object InterObjView "$UNNAMED$1" @35
+			location   	(180, 225)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@35
+			    location   	(180, 250)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	324
+			    justify    	0
+			    label      	"")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5982D533014C"
+			width      	300
+			height     	333
+			icon_height 	150
+			icon_width 	108
+			icon_y_offset 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @36
+			    location   	(180, 378)
+			    line_color 	3342489
+			    InterObjView 	@35
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @37
+			    location   	(180, 378)
+			    line_color 	3342489
+			    InterObjView 	@35
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterObjView "Встановлення автозагрузки" @38
+			location   	(561, 225)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@38
+			    location   	(561, 225)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	324
+			    justify    	0
+			    label      	"Встановлення автозагрузки")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5982D53A018E"
+			width      	342
+			height     	333
+			icon_height 	0
+			icon_width 	0
+			icon_y_offset 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @39
+			    location   	(561, 378)
+			    line_color 	3342489
+			    InterObjView 	@38
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @40
+			    location   	(561, 378)
+			    line_color 	3342489
+			    InterObjView 	@38
+			    height     	90
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterObjView "Форма реєстрації" @41
+			location   	(942, 225)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	TRUE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@41
+			    location   	(942, 225)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Форма реєстрації")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5982D59C027E"
+			width      	300
+			height     	333
+			icon_height 	0
+			icon_width 	0
+			icon_y_offset 	0
+			annotation 	1)
+		    (object InterMessView "" @42
+			location   	(0, 378)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @43
+			    Parent_View 	@42
+			    location   	(370, 334)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"5982D56D027C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	""
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@35
+			supplier   	@38
+			Focus_Src  	@36
+			Focus_Entry 	@39
+			origin     	(195, 378)
+			terminus   	(545, 378)
+			ordinal    	0)))))
     root_category 	(object Class_Category "Logical View"
-	quid       	"5981D4DE03DC"
+	quid       	"5982D44800E2"
 	exportControl 	"Public"
 	global     	TRUE
 	subsystem  	"Component View"
-	quidu      	"5981D4DE03DE"
-	logical_models 	(list unit_reference_list)
+	quidu      	"5982D44800E4"
+	logical_models 	(list unit_reference_list
+	    (object Class "ClientWork"
+		quid       	"5982D469028E"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "user"
+			quid       	"5982D4840305"
+			exportControl 	"Public")
+		    (object ClassAttribute "Host"
+			quid       	"5982D48900BC"
+			exportControl 	"Public")
+		    (object ClassAttribute "Port"
+			quid       	"5982D4920074"
+			exportControl 	"Public")
+		    (object ClassAttribute "client"
+			quid       	"5982D494039C")
+		    (object ClassAttribute "stream"
+			quid       	"5982D498017C"))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
-		quid       	"5981D4DE03E2"
+		quid       	"5982D4480325"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
-		items      	(list diagram_item_list))))
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::ClientWork" @44
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(295, 228)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@44
+			    location   	(175, 47)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	240
+			    justify    	0
+			    label      	"ClientWork")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5982D469028E"
+			compartment 	(object Compartment
+			    Parent_View 	@44
+			    location   	(175, 108)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	1
+			    max_width  	175
+			    justify    	1)
+			width      	258
+			height     	386
+			annotation 	8
+			autoResize 	TRUE)))))
     root_subsystem 	(object SubSystem "Component View"
-	quid       	"5981D4DE03DE"
-	physical_models 	(list unit_reference_list)
+	quid       	"5982D44800E4"
+	physical_models 	(list unit_reference_list
+	    (object module "Клієнт" "NotAModuleType" "NotAModulePart"
+		quid       	"5982D9FD02E4"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"5982DA3A02AA"
+			supplier   	"Component View::Сервер"
+			quidu      	"5982DA1B02B4"
+			supplier_is_spec 	TRUE))
+		language   	"")
+	    (object module "Сервер" "NotAModuleType" "NotAModulePart"
+		quid       	"5982DA1B02B4"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"5982DA44023A"
+			supplier   	"Component View::База даних"
+			quidu      	"5982DA2D02FC"
+			supplier_is_spec 	TRUE))
+		language   	"")
+	    (object module "База даних" "NotAModuleType" "NotAModulePart"
+		quid       	"5982DA2D02FC"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"5982DA3E01AA"
+			supplier   	"Component View::Сервер"
+			quidu      	"5982DA1B02B4"
+			supplier_is_spec 	TRUE))
+		language   	""))
 	physical_presentations 	(list unit_reference_list
 	    (object Module_Diagram "Main"
-		quid       	"5981D4DE03E5"
+		quid       	"5982D4480320"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
-		items      	(list diagram_item_list)))
+		items      	(list diagram_item_list))
+	    (object Module_Diagram "NewDiagram5"
+		quid       	"5982D9F303C3"
+		title      	"NewDiagram5"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ModView "Component View::Клієнт" "NotAModuleType" "NotAModulePart" @45
+			location   	(209, 516)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@45
+			    location   	(164, 491)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	166
+			    justify    	1
+			    label      	"Клієнт")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5982D9FD02E4"
+			width      	298
+			autoResize 	TRUE
+			width      	298
+			height     	162)
+		    (object ModView "Component View::Сервер" "NotAModuleType" "NotAModulePart" @46
+			location   	(756, 522)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@46
+			    location   	(711, 497)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	166
+			    justify    	1
+			    label      	"Сервер")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5982DA1B02B4"
+			width      	298
+			autoResize 	TRUE
+			width      	298
+			height     	162)
+		    (object ModView "Component View::База даних" "NotAModuleType" "NotAModulePart" @47
+			location   	(750, 184)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@47
+			    location   	(705, 159)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	166
+			    justify    	1
+			    label      	"База даних")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5982DA2D02FC"
+			width      	298
+			autoResize 	TRUE
+			width      	298
+			height     	162)
+		    (object ModVisView "" @48
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5982DA3A02AA"
+			client     	@45
+			supplier   	@46
+			vertices   	(list Points
+			    (353, 516)
+			    (608, 518))
+			line_style 	0)
+		    (object ModVisView "" @49
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5982DA3E01AA"
+			client     	@47
+			supplier   	@46
+			vertices   	(list Points
+			    (750, 262)
+			    (751, 442))
+			line_style 	0)
+		    (object ModVisView "" @50
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5982DA44023A"
+			client     	@46
+			supplier   	@47
+			vertices   	(list Points
+			    (751, 442)
+			    (750, 262))
+			line_style 	0))))
 	category   	"Logical View"
-	quidu      	"5981D4DE03DC")
+	quidu      	"5982D44800E2")
     process_structure 	(object Processes
-	quid       	"5981D4DE03DF"
+	quid       	"5982D44800E5"
 	ProcsNDevs 	(list
+	    (object Processor "NewProcessor"
+		quid       	"5982DA7B0054"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Device "NewDevice"
+		quid       	"5982DA71021C"
+		characteristics 	"")
 	    (object Process_Diagram "Deployment View"
-		quid       	"5981D4DE03E1"
+		quid       	"5982D44800E7"
 		title      	"Deployment View"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
-		items      	(list diagram_item_list))))
+		items      	(list diagram_item_list
+		    (object DeviceView "NewDevice" @51
+			location   	(240, 447)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@51
+			    location   	(129, 392)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"NewDevice")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5982DA71021C"
+			width      	225
+			height     	180
+			annotation 	0)
+		    (object ProcessorView "NewProcessor" @52
+			location   	(206, 209)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@52
+			    location   	(95, 154)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"NewProcessor")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5982DA7B0054"
+			width      	225
+			height     	180
+			annotation 	0)))))
     properties 	(object Properties
-	quid       	"5981D4DE03E0"))
+	quid       	"5982D44800E6"))

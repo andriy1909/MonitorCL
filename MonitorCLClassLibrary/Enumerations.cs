@@ -15,7 +15,7 @@ namespace MonitorCLClassLibrary
 
     public enum ResultCode
     {
-        Ok,
+        OK,
         NotAuthorizate,
         NotRegister,
         Login,

@@ -9,8 +9,6 @@ namespace JSON
     //[DataContract]
     public class JSDRegister : JsonData
     {
-        public string Login;
-        public string Password;
         public string Name;
         public string Company;
         public DateTime DateReg;

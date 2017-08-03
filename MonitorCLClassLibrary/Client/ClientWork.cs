@@ -14,7 +14,7 @@ namespace MonitorCLClassLibrary
 {
     public class ClientWork : IDisposable
     {
-        public User user = new User();
+        public Computer computer = new Computer();
         public string Host { get; set; } 
         public int Port { get; set; } 
         TcpClient client;
@@ -32,7 +32,7 @@ namespace MonitorCLClassLibrary
 
         private void ConnectThread()
         {
-            status = 
+            //status = 
             client = new TcpClient();
             try
             {

@@ -41,6 +41,7 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -59,17 +60,19 @@
     <Compile Include="JSON\JSDMonitoring.cs" />
     <Compile Include="JSON\JSDRegister.cs" />
     <Compile Include="LogList.cs" />
+    <Compile Include="Model\Computer.cs" />
+    <Compile Include="Monitoring\BaseBoard.cs" />
     <Compile Include="Server\ClientObject.cs" />
     <Compile Include="Enumerations.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="JSON\JsonData.cs" />
     <Compile Include="JSON\JsonHeader.cs" />
     <Compile Include="JSON\JsonPack.cs" />
-    <Compile Include="Monitoring.cs" />
+    <Compile Include="Monitoring\Monitoring.cs" />
     <Compile Include="Model\MonitoringDB.cs" />
-    <Compile Include="NetworkAdapter.cs" />
-    <Compile Include="OperatingSystemScan.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Monitoring\NetworkAdapter.cs" />
+    <Compile Include="Monitoring\OperatingSystemScan.cs" />
+    <Compile Include="Monitoring\Product.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -77,10 +80,9 @@
     </Compile>
     <Compile Include="Reboot.cs" />
     <Compile Include="Server\ServerObject.cs" />
-    <Compile Include="SettingProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TcpListenerEx.cs" />
-    <Compile Include="UserAccount.cs" />
+    <Compile Include="Monitoring\UserAccount.cs" />
     <Compile Include="Hashed.cs" />
     <Compile Include="Model\UsersGroup.cs" />
   </ItemGroup>

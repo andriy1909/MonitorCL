@@ -63,7 +63,9 @@ namespace MonitorCLClient
                 return;
             }
 
-            client.user = new User()
+            Computer computer = new Computer();
+            computer.UnicID = BaseBoard.GetSerialNumber();
+            computer.User = new User()
             {
                 Company = tbCompany.Text,
                 DateReg = DateTime.Now,
@@ -71,6 +73,8 @@ namespace MonitorCLClient
                 Name = tbName.Text,
                 Password = tbPassword.Text
             };
+
+            client.computer = computer;
             client.Host = tbIP.Text;
             client.Port = (int)numPort.Value; 
 

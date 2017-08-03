@@ -58,7 +58,7 @@ namespace MonitorCLClient
             ResultCode result = Connect();
             switch (result)
             {
-                case ResultCode.Ok:// OK
+                case ResultCode.OK:// OK
 
                     break;
                 case ResultCode.NotAuthorizate:// not auth
