@@ -12,24 +12,54 @@ namespace MonitorCLClient
 {
     public partial class ProgressForm : Form
     {
-        ClientWork client;
-        /// <summary>
-        /// 0-OK.
-        /// 1-not connection.
-        /// 2-login exist.
-        /// 3-error.
-        /// </summary>
-        public int errorCode = 1;
+        ClientWork client = new ClientWork();
 
-        public ProgressForm(ClientWork client)
+        string serialKey = "";
+
+        public ProgressForm(string key)
         {
             InitializeComponent();
-            this.client = client;
+            serialKey = key;
         }
 
         private void ProgressForm_Load(object sender, EventArgs e)
         {
-            client.Connect();
+            Show();
+            client.IP = Properties.Settings.Default.ip;
+            client.Port = Properties.Settings.Default.port;
+
+            switch (client.Register(serialKey))
+            {
+                case ResultCode.OK:
+                    DialogResult = DialogResult.OK;
+                    Close();
+                    break;
+                case ResultCode.NotValidKey:
+                    DialogResult = DialogResult.Cancel;
+                    MessageBox.Show("Ключ не действителен!","Ошибка активации!");
+                    Close();
+                    break; 
+                case ResultCode.KeyTimeout:
+                    DialogResult = DialogResult.Cancel;
+                    MessageBox.Show("Ключ больше не действителен!", "Ошибка активации!");
+                    Close();
+                    break;
+                case ResultCode.NoConnection:
+                    DialogResult = DialogResult.Cancel;
+                    MessageBox.Show("Нет соединения с сервером. Проверте соединение с интернетом и попробуйте повторить попитку позже.", "Ошибка соединения!");
+                    Close();
+                    break;
+                default:
+                    DialogResult = DialogResult.Cancel;
+                    MessageBox.Show("Ошибка соединения с сервером.", "Ошибка соединения!");
+                    Close();
+                    break;
+            }
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

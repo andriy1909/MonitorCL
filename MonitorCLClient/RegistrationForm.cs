@@ -75,10 +75,10 @@ namespace MonitorCLClient
             };
 
             client.computer = computer;
-            client.Host = tbIP.Text;
+            client.IP = tbIP.Text;
             client.Port = (int)numPort.Value; 
 
-            ProgressForm form = new ProgressForm(client);
+      /*      ProgressForm form = new ProgressForm(client);
             this.Hide();
             if (form.ShowDialog() == DialogResult.OK)
             {
@@ -99,7 +99,7 @@ namespace MonitorCLClient
                         break;
                 }
                 this.Show();
-            }
+            }*/
         }
 
         private void button2_Click(object sender, EventArgs e)

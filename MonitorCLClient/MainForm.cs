@@ -30,6 +30,16 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            ActivateForm aForm = new ActivateForm();
+            if (aForm.ShowDialog()==DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                Exit();
+            }
+
             #region автозапуск программы при старте Windows
             try
             {

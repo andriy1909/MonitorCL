@@ -70,6 +70,12 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActivateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivateForm.Designer.cs">
+      <DependentUpon>ActivateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,9 +119,18 @@
     <Compile Include="SendMessageForm.Designer.cs">
       <DependentUpon>SendMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SetServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetServerForm.Designer.cs">
+      <DependentUpon>SetServerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivateForm.resx">
+      <DependentUpon>ActivateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -144,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SendMessageForm.resx">
       <DependentUpon>SendMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetServerForm.resx">
+      <DependentUpon>SetServerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

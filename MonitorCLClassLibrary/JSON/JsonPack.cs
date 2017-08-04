@@ -8,7 +8,6 @@ using System.Runtime.Serialization;
 using System.Drawing;
 using System.IO;
 using System.Security.Cryptography;
-using MonitorCLClassLibrary.Properties;
 using System.Diagnostics;
 
 namespace JSON
@@ -17,19 +16,25 @@ namespace JSON
     public class JsonPack
     {
         [DataMember]
-        public JsonHeader header;
+        public string metod = null;
+        [DataMember]
+        public string bearer = null;//token
         [DataMember]
         public JsonData data;
         [DataMember]
-        public string metod = "";
+        public DateTime time;
         [DataMember]
         public string signature = "";
+
+        [IgnoreDataMember]
+        private DateTime currentDataTime = DateTime.UtcNow;
 
 
         public void SetSignature()
         {
-            HMACSHA256 sha = new HMACSHA256(Encoding.ASCII.GetBytes(Settings.Default.privateKey));
-            signature = Encoding.ASCII.GetString(sha.ComputeHash(Encoding.ASCII.GetBytes(GetJsonDataStr())));
+            signature = null;
+            HMACSHA256 sha = new HMACSHA256(Encoding.ASCII.GetBytes(MonitorCLClassLibrary.Properties.Settings.Default.privateKey));
+            signature = Encoding.ASCII.GetString(sha.ComputeHash(Encoding.ASCII.GetBytes(GetJsonDataStr_Delete())));
         }
 
         public bool CheckSignature()
@@ -41,29 +46,19 @@ namespace JSON
 
         public bool CheckTime(double milSec = 10000)
         {
-            return true;// DateTime.UtcNow.Subtract(data.time).TotalMilliseconds < milSec;
+            return true;// currentDataTime.Subtract(data.time).TotalMilliseconds < milSec;
         }
 
-        public string GetJsonStr()
+        public override string ToString()
         {
+            metod = data.GetType().Name;
+            data.EncriptData();
+            time = DateTime.UtcNow;
+
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(JsonPack));
 
             MemoryStream stream = new MemoryStream();
             serializer.WriteObject(stream, this);
-            stream.Position = 0;
-            StreamReader sr = new StreamReader(stream);
-            string json = sr.ReadToEnd();
-
-            return json;
-        }
-
-
-        public string GetJsonDataStr()
-        {
-            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(JsonData));
-
-            MemoryStream stream = new MemoryStream();
-            serializer.WriteObject(stream, data);
             stream.Position = 0;
             StreamReader sr = new StreamReader(stream);
             string json = sr.ReadToEnd();
@@ -88,11 +83,48 @@ namespace JSON
                 Debug.WriteLine(err);
                 return false;
             }
-            this.header = deserializedJsonPack.header;
-            this.data = deserializedJsonPack.data;
-            this.signature = deserializedJsonPack.signature;
+            metod = deserializedJsonPack.metod;
+            bearer = deserializedJsonPack.bearer;
+            data = deserializedJsonPack.data;
+            time = deserializedJsonPack.time;
+            signature = deserializedJsonPack.signature;
+            data.DecriptData();
 
             return CheckTime() && CheckSignature();
         }
+
+
+
+
+
+
+        //delete
+        public string GetJsonStr_Delete()
+        {
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(JsonPack));
+
+            MemoryStream stream = new MemoryStream();
+            serializer.WriteObject(stream, this);
+            stream.Position = 0;
+            StreamReader sr = new StreamReader(stream);
+            string json = sr.ReadToEnd();
+
+            return json;
+        }
+
+        //delete
+        public string GetJsonDataStr_Delete()
+        {
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(JsonData));
+
+            MemoryStream stream = new MemoryStream();
+            serializer.WriteObject(stream, data);
+            stream.Position = 0;
+            StreamReader sr = new StreamReader(stream);
+            string json = sr.ReadToEnd();
+
+            return json;
+        }
+
     }
 }

@@ -9,20 +9,87 @@ using System.Threading.Tasks;
 using System.Drawing;
 using MonitorCLClassLibrary;
 using System.IO;
+using JSON;
 
 namespace MonitorCLClassLibrary
 {
     public class ClientWork : IDisposable
     {
         public Computer computer = new Computer();
-        public string Host { get; set; } 
-        public int Port { get; set; } 
+        public string IP { get; set; }
+        public int Port { get; set; }
         TcpClient client;
         NetworkStream stream;
 
         public int status { get; private set; } = -1;
 
         Thread thread;
+
+        public ResultCode Register(string serialKey)
+        {
+            JsonPack json = new JsonPack();
+            json.data = new JSDRegister()
+            {
+                key = serialKey,
+                Id_1 = BaseBoard.GetSerialNumber(),
+                Id_2 = Bios.GetSerialNumber()
+            };
+            
+            try
+            {
+                client.Connect(IP, Port);
+                stream = client.GetStream();
+            }
+            catch(Exception err)
+            {
+                switch (ResultCode.OK)
+                {
+                    case ResultCode.NoConnection:
+                        break;
+                    case ResultCode.Error:
+                        break;
+                    case ResultCode.KeyTimeout:
+                        break;
+                    case ResultCode.Timeout:
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (!client.Connected)
+            {
+                return ResultCode.NoConnection;
+            }
+            else
+            {
+                SendMessage(json.ToString());
+
+                // запускаем новый поток для получения данных
+                receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+                receiveThread.Start(); //старт потока
+
+                return ResultCode.OK;
+            }
+            
+            return ResultCode.Error;
+        }
+
+        /// <summary>
+        /// отправка сообщений
+        /// </summary>
+        /// <param name="message">сообщене</param>
+        public void SendMessage(string message)
+        {
+            byte[] data = Encoding.Unicode.GetBytes(message);
+            stream.Write(data, 0, data.Length);
+        }
+        
+
+
+
+
+
 
         public void Connect()
         {
@@ -32,11 +99,10 @@ namespace MonitorCLClassLibrary
 
         private void ConnectThread()
         {
-            //status = 
             client = new TcpClient();
             try
             {
-                client.Connect(Host, Port); //подключение клиента
+                client.Connect(IP, Port); //подключение клиента
                 stream = client.GetStream(); // получаем поток
 
                 /*
@@ -103,60 +169,60 @@ namespace MonitorCLClassLibrary
         {
             isConnectedOut = isConnected;
         }
-/*
-        public void Connect(string ip, int port, Guid id, string login, string password)
-        {
-            user.Login = login;
-            user.Password = password;
-            Host = ip;
-            this.Port = port;
-            connectedThread = new Thread(new ThreadStart(Connect));
-            connectedThread.Start();
-        }
+        /*
+                public void Connect(string ip, int port, Guid id, string login, string password)
+                {
+                    user.Login = login;
+                    user.Password = password;
+                    Host = ip;
+                    this.Port = port;
+                    connectedThread = new Thread(new ThreadStart(Connect));
+                    connectedThread.Start();
+                }
 
-        public void Connect()
-        {
-            client = new TcpClient();
-            try
-            {
-                client.Connect(Host, Port); //подключение клиента
-                stream = client.GetStream(); // получаем поток
+                public void Connect()
+                {
+                    client = new TcpClient();
+                    try
+                    {
+                        client.Connect(Host, Port); //подключение клиента
+                        stream = client.GetStream(); // получаем поток
 
 
-                JsonPack jsPack = new JsonPack();
-                JsonHeader jsHeader = new JsonHeader("reg");
-                jsHeader.setLoginPassword("login", "password");
-                jsHeader.setToken("12345");
-                JsonData jsData = new JsonData();
-                jsData.text = "Hello";
-                jsPack.data = jsData;
-                jsPack.header = jsHeader;
-                jsPack.SetSignature(Settings.Default.privateKey);
-                //SendMessage(jsPack.GetJsonStr());
-                byte[] data = Encoding.Unicode.GetBytes(jsPack.GetJsonStr());
-                stream.Write(data, 0, data.Length);
-                
-                if (!client.Connected)
-                    throw new NotImplementedException();
+                        JsonPack jsPack = new JsonPack();
+                        JsonHeader jsHeader = new JsonHeader("reg");
+                        jsHeader.setLoginPassword("login", "password");
+                        jsHeader.setToken("12345");
+                        JsonData jsData = new JsonData();
+                        jsData.text = "Hello";
+                        jsPack.data = jsData;
+                        jsPack.header = jsHeader;
+                        jsPack.SetSignature(Settings.Default.privateKey);
+                        //SendMessage(jsPack.GetJsonStr());
+                        byte[] data = Encoding.Unicode.GetBytes(jsPack.GetJsonStr());
+                        stream.Write(data, 0, data.Length);
 
-                // запускаем новый поток для получения данных
-                receiveThread = new Thread(new ThreadStart(ReceiveMessage));
-                receiveThread.Start(); //старт потока
-                isConnect = true;
-            }
-            catch (Exception ex)
-            {
-                isConnect = false;
-                Debug.WriteLine(ex.Message);
-                Debug.WriteLine("reconnect");
-                Thread.Sleep(1000);
-                Connect();
-            }
-            finally
-            {
-            }
-        }
-*/
+                        if (!client.Connected)
+                            throw new NotImplementedException();
+
+                        // запускаем новый поток для получения данных
+                        receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+                        receiveThread.Start(); //старт потока
+                        isConnect = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        isConnect = false;
+                        Debug.WriteLine(ex.Message);
+                        Debug.WriteLine("reconnect");
+                        Thread.Sleep(1000);
+                        Connect();
+                    }
+                    finally
+                    {
+                    }
+                }
+        */
 
         Image img;
         public void SendSupport(string subject, string body, Image screen)
@@ -185,12 +251,6 @@ namespace MonitorCLClassLibrary
         }
 
 
-        // отправка сообщений
-        public void SendMessage(string message)
-        {
-            byte[] data = Encoding.Unicode.GetBytes(message);
-            stream.Write(data, 0, data.Length);
-        }
 
         /// <summary>
         /// получение сообщений
@@ -215,29 +275,29 @@ namespace MonitorCLClassLibrary
                     {
                         countEmpty++;
                         if (countEmpty >= 50)
-          //                  Connect(host, port, idClient, login, password);
-                        continue;
+                            //                  Connect(host, port, idClient, login, password);
+                            continue;
                     }
                     else
                         countEmpty = 0;
 
 
                     string message = builder.ToString();
-              /*      JsonPack jsPack = new JsonPack();
-                    jsPack.GetJson(message);
-                    if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey))
-                        if (jsPack.header.metod == "cmd")
-                        {
-                            message = jsPack.data.text;
-                        }
-                        */
+                    /*      JsonPack jsPack = new JsonPack();
+                          jsPack.GetJson(message);
+                          if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey))
+                              if (jsPack.header.metod == "cmd")
+                              {
+                                  message = jsPack.data.text;
+                              }
+                              */
                     receiveOut(message);
                 }
                 catch
                 {
                     Debug.WriteLine("Подключение прервано!"); //соединение было прервано
                     Disconnect();
-        //            Connect(host, port, idClient, login, password);
+                    //            Connect(host, port, idClient, login, password);
                 }
             }
         }

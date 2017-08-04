@@ -3,14 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
+using MonitorCLClassLibrary;
 
 namespace JSON
 {
-    //[DataContract]
+    [DataContract]
     public class JSDRegister : JsonData
-    {
-        public string Name;
-        public string Company;
-        public DateTime DateReg;
+    {        
+        [IgnoreDataMember]
+        public override EncriptLevel encriptLevel
+        {
+            get
+            {
+                return EncriptLevel.VeryHigh;
+            }
+        }
+
+        /// <summary>
+        /// Serial key
+        /// </summary>
+        [DataMember]
+        public string key;
+        /// <summary>
+        /// BaseBoad serial
+        /// </summary>
+        [DataMember]
+        public string Id_1;
+        /// <summary>
+        /// BiosSerial
+        /// </summary>
+        [DataMember]
+        public string Id_2;
+        
+        public override void EncriptData()
+        {
+
+        }
+
+        public override void DecriptData()
+        {
+
+        }
     }
 }

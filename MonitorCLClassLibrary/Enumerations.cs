@@ -20,10 +20,21 @@ namespace MonitorCLClassLibrary
         NotRegister,
         Login,
         Blocked,
-        NotValidPassw,
-        NotValidLogin,
+        NotValidKey,
+        NoConnection,
         LoginExist,
-        Error
+        Error,
+        KeyTimeout,
+        Timeout
     }
-    
+
+    public enum EncriptLevel
+    {
+        VeryLow,
+        Low,
+        Normal,
+        High,
+        VeryHigh,
+        None
+    }
 }

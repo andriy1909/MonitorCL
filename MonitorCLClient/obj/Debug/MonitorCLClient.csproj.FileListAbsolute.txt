@@ -106,3 +106,5 @@ E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.LoginForm.resources
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.ProgressForm.resources
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.RegistrationForm.resources
 E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.Form1.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.ActivateForm.resources
+E:\MonitorCL\MonitorCLClient\obj\Debug\MonitorCLClient.SetServerForm.resources

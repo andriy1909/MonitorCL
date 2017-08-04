@@ -7,8 +7,18 @@ using System.Threading.Tasks;
 
 namespace MonitorCLClassLibrary
 {
-    static public class Hashed
+    static public class Encryption
     {
+        public static string Encript(object data, EncriptLevel level=EncriptLevel.Normal, string key="")
+        {
+
+
+            return data.ToString();
+        }
+
+
+
+        //delete
         public static string HashPassword(string password)
         {
             byte[] salt;
@@ -27,7 +37,7 @@ namespace MonitorCLClassLibrary
             Buffer.BlockCopy(buffer2, 0, dst, 0x11, 0x20);
             return Convert.ToBase64String(dst);
         }
-
+        //delete
         public static bool VerifyHashedPassword(string hashedPassword, string password)
         {
             byte[] buffer4;
@@ -54,7 +64,7 @@ namespace MonitorCLClassLibrary
             }
             return ByteArraysEqual(buffer3, buffer4);
         }
-
+        //delete
         public static bool ByteArraysEqual(byte[] b1, byte[] b2)
         {
             if (b1 == b2) return true;

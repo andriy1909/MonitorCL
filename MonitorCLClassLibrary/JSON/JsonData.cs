@@ -12,14 +12,13 @@ namespace JSON
     [KnownType(typeof(JSDRegister))]
     [KnownType(typeof(JSDLogin))]
     [KnownType(typeof(JSDMonitoring))]
-    public class JsonData
+    public abstract class JsonData
     {
-        [DataMember]
-        public DateTime time { get; private set; }
+        [IgnoreDataMember]
+        public abstract EncriptLevel encriptLevel { get; }
+        
+        public abstract void EncriptData();
 
-        public JsonData()
-        {
-            time = DateTime.UtcNow;
-        }
+        public abstract void DecriptData();
     }
 }
