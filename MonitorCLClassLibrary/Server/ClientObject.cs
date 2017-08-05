@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MonitorCLClassLibrary;
 using System.Diagnostics;
-using JSON;
+using MonitorCLClassLibrary.Model;
+using MonitorCLClassLibrary.JSON;
 
 namespace MonitorCLClassLibrary
 {
@@ -67,7 +68,8 @@ namespace MonitorCLClassLibrary
                     return 0;
             }*/
         }
-        // чтение входящего сообщения и преобразование в строку
+
+        // чтение входящего сообщения
         public JsonPack GetMessage()
         {
             byte[] data = new byte[256]; // буфер для получаемых данных
@@ -93,7 +95,6 @@ namespace MonitorCLClassLibrary
             {
                 return null;
             }
-
         }
 
 

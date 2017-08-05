@@ -1,19 +1,10 @@
 ﻿using MonitorCLServer.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Security.Cryptography;
 using MonitorCLClassLibrary;
-using System.Management;
+using MonitorCLClassLibrary.Model;
 
 namespace MonitorCLServer
 {
@@ -39,9 +30,17 @@ namespace MonitorCLServer
             timer1.Stop();
         }
 
-        private void MainForm2_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
+            ServerObject server = new ServerObject();
+            server.StartListener(Settings.Default.ip, Settings.Default.port);
+
             this.Show();
+
+
+
+
+
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             if (isDedug || new LoginForm().ShowDialog() == DialogResult.OK)
 #pragma warning restore CS0436 // Тип конфликтует с импортированным типом
@@ -681,6 +680,12 @@ namespace MonitorCLServer
             dataGridView1.Rows[dataGridView1.RowCount - 1].DefaultCellStyle.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Bold);
             dataGridView1.Rows.Add(new object[] { "", "Проблема", "На диске C: свободно лишь 3 %." });
             dataGridView1.Rows.Add(new object[] { "", "Проблема", "На диске D: свободно лишь 10 %." });
+        }
+
+        private void tsbAddUser_Click(object sender, EventArgs e)
+        {
+            AddUserForm form = new AddUserForm();
+            form.ShowDialog();
         }
     }
     class Win32_BIOS

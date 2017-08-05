@@ -5,7 +5,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using MonitorCLClassLibrary;
 
-namespace JSON
+namespace MonitorCLClassLibrary.JSON
 {
     [DataContract]
     public class JSDRegister : JsonData
@@ -34,6 +34,8 @@ namespace JSON
         /// </summary>
         [DataMember]
         public string Id_2;
+        [DataMember]
+        public string computerName;
         
         public override void EncriptData()
         {

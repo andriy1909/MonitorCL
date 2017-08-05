@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
 using System.Net.NetworkInformation;
 
-namespace JSON
+namespace MonitorCLClassLibrary.JSON
 {
     [DataContract]
     public class JsonHeader

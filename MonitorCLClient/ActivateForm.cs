@@ -23,7 +23,7 @@ namespace MonitorCLClient
 
         private void btActivate_Click(object sender, EventArgs e)
         {
-            if (!mtbLicenceKey.Text.Contains(' '))
+            if (mtbLicenceKey.Text.Contains(' '))
             {
                 MessageBox.Show("Код активации введен не полностю!");
             }

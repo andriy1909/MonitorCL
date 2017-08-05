@@ -1,4 +1,5 @@
-﻿using MonitorCLClassLibrary;
+﻿using Microsoft.Win32;
+using MonitorCLClassLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,13 +33,26 @@ namespace MonitorCLClient
             {
                 case ResultCode.OK:
                     DialogResult = DialogResult.OK;
+
+                    try
+                    {
+                        RegistryKey reg = Registry.LocalMachine.OpenSubKey
+                            ("SOFTWARE\\CompLife\\" + Application.ProductName + "\\", true);
+
+                        reg.SetValue("SerialKey", Convert.ToBase64String(Encoding.UTF8.GetBytes(serialKey)));
+                    }
+                    catch (Exception err)
+                    {
+                        LogList.Add(err.Message);
+                    }
+
                     Close();
                     break;
                 case ResultCode.NotValidKey:
                     DialogResult = DialogResult.Cancel;
-                    MessageBox.Show("Ключ не действителен!","Ошибка активации!");
+                    MessageBox.Show("Ключ не действителен!", "Ошибка активации!");
                     Close();
-                    break; 
+                    break;
                 case ResultCode.KeyTimeout:
                     DialogResult = DialogResult.Cancel;
                     MessageBox.Show("Ключ больше не действителен!", "Ошибка активации!");

@@ -1,4 +1,5 @@
 ﻿using MonitorCLClassLibrary;
+using MonitorCLClassLibrary.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,18 +64,16 @@ namespace MonitorCLClient
                 return;
             }
 
-            Computer computer = new Computer();
-            computer.UnicID = BaseBoard.GetSerialNumber();
-            computer.User = new User()
+            //Computer computer = new Computer();
+            //computer.UnicID = BaseBoard.GetSerialNumber();
+            var user = new User()
             {
                 Company = tbCompany.Text,
                 DateReg = DateTime.Now,
-                Login = tbLogin.Text,
-                Name = tbName.Text,
-                Password = tbPassword.Text
+                Name = tbName.Text
             };
 
-            client.computer = computer;
+            client.user = user;
             client.IP = tbIP.Text;
             client.Port = (int)numPort.Value; 
 

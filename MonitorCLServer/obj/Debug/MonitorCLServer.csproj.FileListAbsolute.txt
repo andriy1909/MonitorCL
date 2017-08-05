@@ -113,4 +113,5 @@ D:\MonitorCL-master\MonitorCLServer\obj\Debug\MonitorCLServer.SettingForm.resour
 D:\MonitorCL-master\MonitorCLServer\obj\Debug\MonitorCLServer.TeamViewerForm.resources
 D:\MonitorCL-master\MonitorCLServer\obj\Debug\MonitorCLServer.csproj.GenerateResource.Cache
 D:\MonitorCL-master\MonitorCLServer\obj\Debug\MonitorCLServer.pdb
+E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.AddUserForm.resources
 E:\MonitorCL\MonitorCLServer\obj\Debug\MonitorCLServer.exe

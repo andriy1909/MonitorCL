@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonitorCLClassLibrary.JSON;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -15,16 +16,23 @@ namespace MonitorCLClassLibrary
     public class ServerObject
     {
         static public TcpListenerEx tcpListener;// сервер для прослушивания
-        public string IP { get; protected set; }
-        public int Port { get; protected set; }
+        private string IP;
+        private int Port;
         public List<ClientObject> clients = new List<ClientObject>();// все подключения
+        private Thread listenerThread;
 
         public ServerObject()
         {
 
         }
 
-
+        public void StartListener(string ip, int port)
+        {
+            IP = ip;
+            Port = port;
+            listenerThread = new Thread(Listen);
+            listenerThread.Start();
+        }
 
         public void Listen()
         {
@@ -39,12 +47,7 @@ namespace MonitorCLClassLibrary
                     TcpClient tcpClient = tcpListener.AcceptTcpClient();
 
                     ClientObject clientObject = new ClientObject(tcpClient, this);
-                    if (clientObject.TryLogin()==ResultCode.Login)
-                    {
-                        Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
-                        clientThread.Start();
-                    }
-
+                    AddConnection(clientObject);
                 }
             }
             catch (Exception ex)
@@ -54,31 +57,47 @@ namespace MonitorCLClassLibrary
             }
         }
 
-
-
         public void AddConnection(ClientObject clientObject)
         {
-       /*     string message = clientObject.GetMessage();
-            JsonPack jsPack = new JsonPack();
-            jsPack.GetJson(message);
-            if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey) && jsPack.header.getLoginPassword() == "login:password")
-                if (jsPack.header.metod == "reg")
-                {
-                    clients.Add(clientObject);
-                    clients.Last().login = jsPack.header.getLoginPassword().Split(':').First();
-                    receiveOut(clients.Last().login);
-                }
-                else
-                    clientObject.Close();*/
+            JsonPack json = clientObject.GetMessage();
+            switch (json.metod)
+            {
+                case "JSDRegister":
+
+                    break;
+                case "JSDLogin":
+
+                    throw new NotImplementedException();
+                    break;
+                default:
+                    break;
+            }
+
+            if (clientObject.TryLogin() == ResultCode.Login)
+            {
+                Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
+                clientThread.Start();
+            }
         }
+
+
+
+
+
+
+
+
+
+
+
 
         public void RemoveConnection(string login)
         {
-            // получаем по id закрытое подключение
-          //  ClientObject client = clients.FirstOrDefault(c => c.login == login);
-            // и удаляем его из списка подключений
-         //   if (client != null)
-         //       clients.Remove(client);
+            // получаем по id закрытое подключение
+            //  ClientObject client = clients.FirstOrDefault(c => c.login == login);
+            // и удаляем его из списка подключений
+            //   if (client != null)
+            //       clients.Remove(client);
         }
 
 
@@ -147,10 +166,10 @@ namespace MonitorCLClassLibrary
         {
             byte[] data = Encoding.Unicode.GetBytes(message);
 
-         //   ClientObject client = clients.Find(x => x.Id == id);
-         //   if (client != null)
+            //   ClientObject client = clients.Find(x => x.Id == id);
+            //   if (client != null)
             {
-          //      client.Stream.Write(data, 0, data.Length); //передача данных
+                //      client.Stream.Write(data, 0, data.Length); //передача данных
             }
         }
 
@@ -303,14 +322,14 @@ namespace MonitorCLClassLibrary
 
         public void SendCommad(string command)
         {
-        /*    JsonPack jsPack = new JsonPack();
-            JsonHeader jsHeader = new JsonHeader("cmd");
-            JsonData jsData = new JsonData();
-            jsData.text = command;
-            jsPack.data = jsData;
-            jsPack.header = jsHeader;
-            jsPack.SetSignature(Settings.Default.privateKey);
-            BroadcastMessage(jsPack.GetJsonStr(), clients[0]);*/
+            /*    JsonPack jsPack = new JsonPack();
+                JsonHeader jsHeader = new JsonHeader("cmd");
+                JsonData jsData = new JsonData();
+                jsData.text = command;
+                jsPack.data = jsData;
+                jsPack.header = jsHeader;
+                jsPack.SetSignature(Settings.Default.privateKey);
+                BroadcastMessage(jsPack.GetJsonStr(), clients[0]);*/
         }
     }
 }

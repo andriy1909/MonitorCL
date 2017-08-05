@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Drawing;
 using MonitorCLClassLibrary;
 using System.IO;
-using JSON;
+using MonitorCLClassLibrary.Model;
+using MonitorCLClassLibrary.JSON;
 
 namespace MonitorCLClassLibrary
 {
     public class ClientWork : IDisposable
     {
-        public Computer computer = new Computer();
+        public User user = new User();
         public string IP { get; set; }
         public int Port { get; set; }
         TcpClient client;
@@ -34,27 +35,16 @@ namespace MonitorCLClassLibrary
                 Id_1 = BaseBoard.GetSerialNumber(),
                 Id_2 = Bios.GetSerialNumber()
             };
-            
+
             try
             {
                 client.Connect(IP, Port);
                 stream = client.GetStream();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
-                switch (ResultCode.OK)
-                {
-                    case ResultCode.NoConnection:
-                        break;
-                    case ResultCode.Error:
-                        break;
-                    case ResultCode.KeyTimeout:
-                        break;
-                    case ResultCode.Timeout:
-                        break;
-                    default:
-                        break;
-                }
+                Debug.WriteLine(err.Message);
+                return ResultCode.Error;
             }
 
             if (!client.Connected)
@@ -65,14 +55,15 @@ namespace MonitorCLClassLibrary
             {
                 SendMessage(json.ToString());
 
+                JsonPack receive = ReceiveOneMessage();
+                //if(receive)
+
                 // запускаем новый поток для получения данных
                 receiveThread = new Thread(new ThreadStart(ReceiveMessage));
                 receiveThread.Start(); //старт потока
 
                 return ResultCode.OK;
-            }
-            
-            return ResultCode.Error;
+            }            
         }
 
         /// <summary>
@@ -84,7 +75,40 @@ namespace MonitorCLClassLibrary
             byte[] data = Encoding.Unicode.GetBytes(message);
             stream.Write(data, 0, data.Length);
         }
-        
+        public JsonPack ReceiveOneMessage()
+        {
+            try
+            {
+                byte[] data = new byte[64]; // буфер для получаемых данных
+                StringBuilder builder = new StringBuilder();
+                int bytes = 0;
+                do
+                {
+                    bytes = stream.Read(data, 0, data.Length);
+                    builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                }
+                while (stream.DataAvailable);
+
+                JsonPack json = new JsonPack();
+                if (json.GetJson(builder.ToString()))
+                {
+                    return json;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                Debug.WriteLine("Подключение прервано!"); //соединение было прервано
+                Disconnect();
+
+                return null;
+            }
+        }
+
+
 
 
 

@@ -1,20 +1,98 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using MonitorCLClassLibrary.JSON;
 
 namespace MonitorCLClassLibrary
 {
     static public class Encryption
     {
-        public static string Encript(object data, EncriptLevel level=EncriptLevel.Normal, string key="")
+        public static byte[] EncryptData(JsonData data, byte[] Key, byte[] IV)
         {
+            /* if (data == null)
+                throw new ArgumentNullException("Data");
+            if (Key == null || Key.Length <= 0)
+                throw new ArgumentNullException("Key");
+            if (IV == null || IV.Length <= 0)
+                throw new ArgumentNullException("IV");
+
+            byte[] encrypted;
+            using (AesManaged aesAlg = new AesManaged())
+            {
+                aesAlg.Key = Key;
+                aesAlg.IV = IV;
+
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
 
 
-            return data.ToString();
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                                swEncrypt.Write(data);
+
+                        }
+                        encrypted = msEncrypt.ToArray();
+                    }
+                }
+
+            }
+            
+            return encrypted;
+            */
+            return null;
         }
+
+        public static JsonData DecryptData(byte[] cipherText, byte[] Key, byte[] IV)
+        {/*
+            // Check arguments.
+            if (cipherText == null || cipherText.Length <= 0)
+                throw new ArgumentNullException("cipherText");
+            if (Key == null || Key.Length <= 0)
+                throw new ArgumentNullException("Key");
+            if (IV == null || IV.Length <= 0)
+                throw new ArgumentNullException("IV");
+
+            JsonData plaintext = null;
+
+
+            using (AesManaged aesAlg = new AesManaged())
+            {
+                aesAlg.Key = Key;
+                aesAlg.IV = IV;
+                
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+                
+                using (MemoryStream msDecrypt = new MemoryStream(cipherText))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+
+                            // Read the decrypted bytes from the decrypting stream
+                            // and place them in a string.
+                            plaintext = (JsonData)srDecrypt.();
+                        }
+                    }
+                }
+
+            }
+
+            return plaintext;
+            */
+            return null;
+        }
+
+
 
 
 
@@ -78,3 +156,4 @@ namespace MonitorCLClassLibrary
         }
     }
 }
+

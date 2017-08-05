@@ -243,6 +243,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsbAddUser = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -781,6 +782,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton3,
             this.toolStripButton1,
+            this.tsbAddUser,
             this.toolStripButton2,
             this.toolStripButton5,
             this.toolStripButton6});
@@ -1142,6 +1144,16 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 420;
             // 
+            // tsbAddUser
+            // 
+            this.tsbAddUser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAddUser.Image = ((System.Drawing.Image)(resources.GetObject("tsbAddUser.Image")));
+            this.tsbAddUser.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAddUser.Name = "tsbAddUser";
+            this.tsbAddUser.Size = new System.Drawing.Size(23, 22);
+            this.tsbAddUser.Text = "toolStripButton11";
+            this.tsbAddUser.Click += new System.EventHandler(this.tsbAddUser_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1158,7 +1170,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm2_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm2_FormClosed);
-            this.Load += new System.EventHandler(this.MainForm2_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -1264,6 +1276,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbText;
+        private System.Windows.Forms.ToolStripButton tsbAddUser;
     }
 }
 

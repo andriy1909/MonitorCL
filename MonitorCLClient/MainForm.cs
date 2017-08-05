@@ -33,7 +33,7 @@ namespace MonitorCLClient
             ActivateForm aForm = new ActivateForm();
             if (aForm.ShowDialog()==DialogResult.OK)
             {
-
+                Exit();
             }
             else
             {

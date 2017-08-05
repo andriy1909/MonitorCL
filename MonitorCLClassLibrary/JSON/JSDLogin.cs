@@ -1,4 +1,4 @@
-﻿namespace JSON
+﻿namespace MonitorCLClassLibrary.JSON
 {
     internal class JSDLogin
     {

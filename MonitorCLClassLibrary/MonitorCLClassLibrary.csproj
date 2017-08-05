@@ -61,7 +61,7 @@
     <Compile Include="JSON\JSDRegister.cs" />
     <Compile Include="JSON\JSDRegisterS.cs" />
     <Compile Include="LogList.cs" />
-    <Compile Include="Model\Computer.cs" />
+    <Compile Include="Model\LicenceKey.cs" />
     <Compile Include="Monitoring\BaseBoard.cs" />
     <Compile Include="Monitoring\Bios.cs" />
     <Compile Include="Server\ClientObject.cs" />
