@@ -47,6 +47,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btGenereteKey = new System.Windows.Forms.Button();
             this.btDeleteKey = new System.Windows.Forms.Button();
+            this.btApply = new System.Windows.Forms.Button();
+            this.lbNoSave = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,7 +195,7 @@
             this.btCancel.FlatAppearance.BorderSize = 2;
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btCancel.Location = new System.Drawing.Point(365, 351);
+            this.btCancel.Location = new System.Drawing.Point(271, 351);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(72, 28);
             this.btCancel.TabIndex = 33;
@@ -207,12 +209,13 @@
             this.btOK.FlatAppearance.BorderSize = 2;
             this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btOK.Location = new System.Drawing.Point(287, 351);
+            this.btOK.Location = new System.Drawing.Point(193, 351);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(72, 28);
             this.btOK.TabIndex = 34;
             this.btOK.Text = "ОК";
             this.btOK.UseVisualStyleBackColor = false;
+            this.btOK.Click += new System.EventHandler(this.btOK_Click);
             // 
             // btCopy
             // 
@@ -229,6 +232,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbNoSave);
             this.groupBox1.Controls.Add(this.btGenereteKey);
             this.groupBox1.Controls.Add(this.btDeleteKey);
             this.groupBox1.Controls.Add(this.mtbLicenceKey);
@@ -251,6 +255,7 @@
             this.btGenereteKey.TabIndex = 37;
             this.btGenereteKey.Text = "Сгенерировать";
             this.btGenereteKey.UseVisualStyleBackColor = false;
+            this.btGenereteKey.Click += new System.EventHandler(this.btGenereteKey_Click);
             // 
             // btDeleteKey
             // 
@@ -264,12 +269,38 @@
             this.btDeleteKey.Text = "Удалить";
             this.btDeleteKey.UseVisualStyleBackColor = false;
             // 
+            // btApply
+            // 
+            this.btApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btApply.BackColor = System.Drawing.SystemColors.Menu;
+            this.btApply.FlatAppearance.BorderSize = 2;
+            this.btApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btApply.Location = new System.Drawing.Point(349, 351);
+            this.btApply.Name = "btApply";
+            this.btApply.Size = new System.Drawing.Size(88, 28);
+            this.btApply.TabIndex = 37;
+            this.btApply.Text = "Применить";
+            this.btApply.UseVisualStyleBackColor = false;
+            this.btApply.Click += new System.EventHandler(this.btApply_Click);
+            // 
+            // lbNoSave
+            // 
+            this.lbNoSave.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbNoSave.Location = new System.Drawing.Point(207, 47);
+            this.lbNoSave.Name = "lbNoSave";
+            this.lbNoSave.Size = new System.Drawing.Size(159, 31);
+            this.lbNoSave.TabIndex = 38;
+            this.lbNoSave.Text = "Сохраните изменения, чтобы активировать ключ";
+            this.lbNoSave.Visible = false;
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(449, 391);
+            this.Controls.Add(this.btApply);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btOK);
             this.Controls.Add(this.btCancel);
@@ -317,5 +348,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btGenereteKey;
         private System.Windows.Forms.Button btDeleteKey;
+        private System.Windows.Forms.Label lbNoSave;
+        private System.Windows.Forms.Button btApply;
     }
 }

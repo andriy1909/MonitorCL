@@ -1,10 +1,9 @@
-﻿using MonitorCLServer.Properties;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using MonitorCLClassLibrary;
 using MonitorCLClassLibrary.Model;
+using System.Linq;
 
 namespace MonitorCLServer
 {
@@ -20,30 +19,16 @@ namespace MonitorCLServer
         {
             InitializeComponent();
 
-            //var db = new MonitoringDB();
-
-            //db.Database.Delete();
-            //db.Database.Create();
+            //MonitoringDB.ReCreareDB();
 
             menuStrip1.Visible = false;
             splitContainer1.Visible = false;
-            timer1.Stop();
+            UpdateUsersList();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ServerObject server = new ServerObject();
-            server.StartListener(Settings.Default.ip, Settings.Default.port);
-
-            this.Show();
-
-
-
-
-
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             if (isDedug || new LoginForm().ShowDialog() == DialogResult.OK)
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             {
                 menuStrip1.Visible = true;
                 splitContainer1.Visible = true;
@@ -53,6 +38,16 @@ namespace MonitorCLServer
             {
                 return;
             }
+
+
+
+            /*
+            ServerObject server = new ServerObject();
+            server.StartListener(Settings.Default.ip, Settings.Default.port);
+
+            this.Show();
+            
+
 
             for (int i = 0; i < 4; i++)
             {
@@ -69,115 +64,117 @@ namespace MonitorCLServer
                 g.DrawImage(bm2, 16, 0, 16, 16);
                 g.Dispose();
                 imageList2.Images[i] = bm;
-            }
+            }*/
         }
 
-        private void startToolStripMenuItem_Click(object sender, EventArgs e)
+        public void UpdateUsersList()
         {
-            /*  if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
-              {
-                  MessageBox.Show("Сервер уже запущен!");
-                  return;
-              }
-              server = new ServerObject();
-              server.setReceiveOut(Receive);
-              server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
-              listenThread = new Thread(new ThreadStart(server.Listen));
-              listenThread.Start();*/
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-        }
-
-        private void MainForm2_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            try
+            TreeNode selectNode = tvClients.SelectedNode;
+            tvClients.Nodes.Clear();
+            var list = MonitoringDB.GetUsersGroups().OrderBy(x => x.Level);
+            foreach (var item in list)
             {
-                // server.Disconnect();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
-            finally
-            {
-                this.notifyIcon1.Visible = false;
-            }
-        }
-
-        private void MainForm2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (canClose)
-            //if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
-            {
-                if (MessageBox.Show("Завершить работу сервера?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                TreeNode node = new TreeNode()
                 {
-                    canClose = false;
+                    Name = "cl" + item.UsersGroupId.ToString(),
+                    Text = item.Name,
+                    ImageIndex = 0,
+                    ToolTipText = item.Information,
+                    Tag = item
+                };
+                if (item.Level > 0)
+                {
+                    TreeNode parentNode = tvClients.Nodes.Find("cl" + item.Parent.UsersGroupId, true).First();
+                    if (parentNode != null)
+                    {
+                        parentNode.Nodes.Add(node);
+                    }
+                    else
+                    {
+                        tvClients.Nodes.Add(node);
+                    }
+                }
+                else
+                {
+                    tvClients.Nodes.Add(node);
                 }
             }
-            e.Cancel = !canClose;
-
-            this.Visible = false;
-            //this.ShowInTaskbar = false;
-            this.notifyIcon1.Visible = true;
-
+            tvClients.SelectedNode = selectNode;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void tsbAddGroup_Click(object sender, EventArgs e)
         {
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //  if (dataGridView1.RowCount > 0)
+            AddGroupForm addForm = new AddGroupForm();
+            if (addForm.ShowDialog() == DialogResult.OK)
             {
-                //   server.BroadcastMessage(textBox1.Text, dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                UpdateUsersList();
+            }
+        }
+        
+        private void tsbAddUser_Click(object sender, EventArgs e)
+        {
+            AddUserForm form = new AddUserForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                UpdateUsersList();
             }
         }
 
-        private void stopToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbRefreshUserList_Click(object sender, EventArgs e)
         {
-            //server.Disconnect();
+            UpdateUsersList();
         }
 
-        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiAddGroup_Click(object sender, EventArgs e)
         {
-            /* if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
-                 server.Disconnect();
-             server = new ServerObject();
-             server.setReceiveOut(Receive);
-             server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
-             listenThread = new Thread(new ThreadStart(server.Listen));
-             listenThread.Start();*/
+            AddGroupForm addForm = new AddGroupForm(tvClients.SelectedNode);
+            if (addForm.ShowDialog() == DialogResult.OK)
+            {
+                UpdateUsersList();
+            }
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            splitContainer1.Panel1Collapsed = true;
-            toolStripButton4.Visible = true;
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            toolStripButton4.Visible = false;
-            splitContainer1.Panel1Collapsed = false;
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tsmiAddUser_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbDeleteUserListItem_Click(object sender, EventArgs e)
         {
-            //UserAccount userAccount = new UserAccount();
-            // List<UserAccount> list = userAccount.GetData();
-        }
+            if (tvClients.SelectedNode == null)
+                return;
 
-        private void treeView1_Click(object sender, EventArgs e)
-        {
 
+
+            switch (tvClients.SelectedNode.Tag.GetType().Name)
+            {
+                case "User":
+                    if (MessageBox.Show("Удалить " + tvClients.SelectedNode.Text + "?", "", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                        return;
+
+                    if (!User.Delete(int.Parse(tvClients.SelectedNode.Name.Remove(0, 2))))
+                        MessageBox.Show("Ошибка удаления!");
+                    break;
+                case "UsersGroup":
+                    if (tvClients.SelectedNode.Nodes.Count == 0)
+                    {
+                        if (MessageBox.Show("Удалить группу " + tvClients.SelectedNode.Text + "?", "", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                            return;
+
+                        if (!UsersGroup.Delete(int.Parse(tvClients.SelectedNode.Name.Remove(0, 2))))
+                            MessageBox.Show("Ошибка удаления!");
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Группа не пустая! Удалить всех клиентов даной группы?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        {
+                            if (!UsersGroup.Delete(int.Parse(tvClients.SelectedNode.Name.Remove(0, 2))))
+                                MessageBox.Show("Ошибка удаления!");
+                        }
+                    }
+                    break;
+            }
+            UpdateUsersList();
         }
 
         private void tvClients_ItemDrag(object sender, ItemDragEventArgs e)
@@ -200,6 +197,7 @@ namespace MonitorCLServer
             tvClients.SelectedNode = tvClients.GetNodeAt(targetPoint);
         }
 
+        //!!
         private void tvClients_DragDrop(object sender, DragEventArgs e)
         {
             Point targetPoint = tvClients.PointToClient(new Point(e.X, e.Y));
@@ -208,18 +206,143 @@ namespace MonitorCLServer
 
             TreeNode draggedNode = (TreeNode)e.Data.GetData(typeof(TreeNode));
 
-            if (!draggedNode.Equals(targetNode) && !ContainsNode(draggedNode, targetNode))
+            if (targetNode.Tag.GetType().Name == "UsersGroup")
             {
-                if (e.Effect == DragDropEffects.Move)
+                if (!draggedNode.Equals(targetNode) && !ContainsNode(draggedNode, targetNode))
                 {
-                    draggedNode.Remove();
-                    targetNode.Nodes.Add(draggedNode);
-                }
+                    if (e.Effect == DragDropEffects.Move)
+                    {
+                        draggedNode.Remove();
+                        switch (draggedNode.Tag.GetType().Name)
+                        {
+                            case "User":
+                                User user = ((User)draggedNode.Tag);
+                                if (user != null)
+                                {
+                                    user.Group = ((UsersGroup)targetNode.Tag);
+                                    user.Edit();
+                                }
+                                break;
+                            case "UsersGroup":
+                              
+                                break;
+                        }
+                        targetNode.Nodes.Add(draggedNode);
+                    }
 
-                targetNode.Expand();
+                    targetNode.Expand();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Добавление возможно только в группу!");
             }
         }
 
+
+        #region NoCheck
+
+
+        //-
+        private void startToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*  if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+              {
+                  MessageBox.Show("Сервер уже запущен!");
+                  return;
+              }
+              server = new ServerObject();
+              server.setReceiveOut(Receive);
+              server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
+              listenThread = new Thread(new ThreadStart(server.Listen));
+              listenThread.Start();*/
+        }
+
+        //-
+        private void MainForm2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                // server.Disconnect();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            finally
+            {
+                this.notifyIcon1.Visible = false;
+            }
+        }
+
+        //-
+        private void MainForm2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (canClose)
+            //if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+            {
+                if (MessageBox.Show("Завершить работу сервера?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                {
+                    canClose = false;
+                }
+            }
+            e.Cancel = !canClose;
+
+            this.Visible = false;
+            //this.ShowInTaskbar = false;
+            this.notifyIcon1.Visible = true;
+
+        }
+
+        //-
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //  if (dataGridView1.RowCount > 0)
+            {
+                //   server.BroadcastMessage(textBox1.Text, dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+            }
+        }
+
+        //-
+        private void stopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //server.Disconnect();
+        }
+
+        //-
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /* if (ServerObject.tcpListener != null && ServerObject.tcpListener.Active)
+                 server.Disconnect();
+             server = new ServerObject();
+             server.setReceiveOut(Receive);
+             server.setConnectIpAndPort(Settings.Default.ip, Settings.Default.port);
+             listenThread = new Thread(new ThreadStart(server.Listen));
+             listenThread.Start();*/
+        }
+
+        //-
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel1Collapsed = true;
+            toolStripButton4.Visible = true;
+        }
+
+        //-
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            toolStripButton4.Visible = false;
+            splitContainer1.Panel1Collapsed = false;
+        }
+
+        //-
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //UserAccount userAccount = new UserAccount();
+            // List<UserAccount> list = userAccount.GetData();
+        }
+
+        //-
         private bool ContainsNode(TreeNode node1, TreeNode node2)
         {
             if (node2.Parent == null) return false;
@@ -228,11 +351,13 @@ namespace MonitorCLServer
             return ContainsNode(node1, node2.Parent);
         }
 
+        //-
         private void tvClients_AfterSelect(object sender, TreeViewEventArgs e)
         {
             panel1.Visible = e.Node != null;
         }
 
+        //-
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
@@ -245,17 +370,14 @@ namespace MonitorCLServer
             }
         }
 
-        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //-
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             canClose = true;
             Application.Exit();
         }
 
+        //-
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.Visible = true;
@@ -263,6 +385,7 @@ namespace MonitorCLServer
             this.notifyIcon1.Visible = false;
         }
 
+        //-
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -388,34 +511,34 @@ namespace MonitorCLServer
                     pnContents.Controls.Add(panel3);
 
                     dataGridView1.Rows.Add(new object[] { "", "Caption", "Base Board" });
-                    dataGridView1.Rows.Add(new object[] { "","ConfigOptions[]",""});
-                    dataGridView1.Rows.Add(new object[] { "","CreationClassName","Win32_BaseBoard"});
-                    dataGridView1.Rows.Add(new object[] { "","Depth",""});
-                    dataGridView1.Rows.Add(new object[] { "","Description","Base Board"});
-                    dataGridView1.Rows.Add(new object[] { "","Height",""});
-                    dataGridView1.Rows.Add(new object[] { "","HostingBoard","True"});
-                    dataGridView1.Rows.Add(new object[] { "","HotSwappable","False"});
-                    dataGridView1.Rows.Add(new object[] { "","InstallDate",""});
-                    dataGridView1.Rows.Add(new object[] { "","Manufacturer","Dell Inc."});
-                    dataGridView1.Rows.Add(new object[] { "","Model",""});
-                    dataGridView1.Rows.Add(new object[] { "","Name","Base Board"});
-                    dataGridView1.Rows.Add(new object[] { "","OtherIdentifyingInfo",""});
-                    dataGridView1.Rows.Add(new object[] { "","PartNumber",""});
-                    dataGridView1.Rows.Add(new object[] { "","PoweredOn","True"});
-                    dataGridView1.Rows.Add(new object[] { "","Product","0DFRFW"});
-                    dataGridView1.Rows.Add(new object[] { "","Removable","True"});
-                    dataGridView1.Rows.Add(new object[] { "","Replaceable","False"});
-                    dataGridView1.Rows.Add(new object[] { "","RequirementsDescription",""});
-                    dataGridView1.Rows.Add(new object[] { "","RequiresDaughterBoard","False"});
-                    dataGridView1.Rows.Add(new object[] { "","SerialNumber","..CN7360404S00SB."});
-                    dataGridView1.Rows.Add(new object[] { "","SKU",""});
-                    dataGridView1.Rows.Add(new object[] { "","SlotLayout",""});
-                    dataGridView1.Rows.Add(new object[] { "","SpecialRequirements",""});
-                    dataGridView1.Rows.Add(new object[] { "","Status","OK"});
-                    dataGridView1.Rows.Add(new object[] { "","Tag","Base Board"});
-                    dataGridView1.Rows.Add(new object[] { "","Version","A01"});
-                    dataGridView1.Rows.Add(new object[] { "","Weight",""});
-                    dataGridView1.Rows.Add(new object[] { "","Width",""});
+                    dataGridView1.Rows.Add(new object[] { "", "ConfigOptions[]", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "CreationClassName", "Win32_BaseBoard" });
+                    dataGridView1.Rows.Add(new object[] { "", "Depth", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Description", "Base Board" });
+                    dataGridView1.Rows.Add(new object[] { "", "Height", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "HostingBoard", "True" });
+                    dataGridView1.Rows.Add(new object[] { "", "HotSwappable", "False" });
+                    dataGridView1.Rows.Add(new object[] { "", "InstallDate", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Manufacturer", "Dell Inc." });
+                    dataGridView1.Rows.Add(new object[] { "", "Model", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Name", "Base Board" });
+                    dataGridView1.Rows.Add(new object[] { "", "OtherIdentifyingInfo", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "PartNumber", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "PoweredOn", "True" });
+                    dataGridView1.Rows.Add(new object[] { "", "Product", "0DFRFW" });
+                    dataGridView1.Rows.Add(new object[] { "", "Removable", "True" });
+                    dataGridView1.Rows.Add(new object[] { "", "Replaceable", "False" });
+                    dataGridView1.Rows.Add(new object[] { "", "RequirementsDescription", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "RequiresDaughterBoard", "False" });
+                    dataGridView1.Rows.Add(new object[] { "", "SerialNumber", "..CN7360404S00SB." });
+                    dataGridView1.Rows.Add(new object[] { "", "SKU", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "SlotLayout", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "SpecialRequirements", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Status", "OK" });
+                    dataGridView1.Rows.Add(new object[] { "", "Tag", "Base Board" });
+                    dataGridView1.Rows.Add(new object[] { "", "Version", "A01" });
+                    dataGridView1.Rows.Add(new object[] { "", "Weight", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Width", "" });
 
                     #endregion
                     break;
@@ -423,34 +546,34 @@ namespace MonitorCLServer
                     #region MyRegion
                     pnContents.Controls.Clear();
                     pnContents.Controls.Add(panel3);
-                                                            
+
                     dataGridView1.Rows.Add(new object[] { "", "BiosCharacteristics[]", "| 7 | 9 | 10 | 11 | 12 | 14 | 15 | 16 | 19 | 21 | 24 | 26 | 27 | 28 | 29 | 32 | 33 | 40 | 41 | 42 | 48 | 49 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79" });
-                    dataGridView1.Rows.Add(new object[] { "", "BIOSVersion[]", "| DELL   - 15 | Phoenix ROM BIOS PLUS Version 1.10 A03"});
-                    dataGridView1.Rows.Add(new object[] { "", "BuildNumber", ""});
-                    dataGridView1.Rows.Add(new object[] { "", "Caption", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
-                    dataGridView1.Rows.Add(new object[] { "", "CodeSet", ""});
-                    dataGridView1.Rows.Add(new object[] { "", "CurrentLanguage", "en|US|iso8859-1"});
-                    dataGridView1.Rows.Add(new object[] { "", "Description", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
-                    dataGridView1.Rows.Add(new object[] { "", "IdentificationCode", ""});
-                    dataGridView1.Rows.Add(new object[] { "", "InstallableLanguages", "1"});
-                    dataGridView1.Rows.Add(new object[] { "", "InstallDate", ""});
-                    dataGridView1.Rows.Add(new object[] { "", "LanguageEdition", ""});
-                    dataGridView1.Rows.Add(new object[] { "", "ListOfLanguages[]", "| en|US|iso8859-1"});
-                    dataGridView1.Rows.Add(new object[] { "", "Manufacturer", "Dell Inc."});
-                    dataGridView1.Rows.Add(new object[] { "", "Name", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
-                    dataGridView1.Rows.Add(new object[] { "", "OtherTargetOS", ""});
-                    dataGridView1.Rows.Add(new object[] { "", "PrimaryBIOS", "True"});
-                    dataGridView1.Rows.Add(new object[] { "", "ReleaseDate", "20100213000000.000000+000"});
-                    dataGridView1.Rows.Add(new object[] { "", "SerialNumber", "8J2PKM1"});
-                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSBIOSVersion", "A03"});
-                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSMajorVersion", "2"});
-                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSMinorVersion", "5"});
-                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSPresent", "True"});
-                    dataGridView1.Rows.Add(new object[] { "", "SoftwareElementID", "Phoenix ROM BIOS PLUS Version 1.10 A03"});
-                    dataGridView1.Rows.Add(new object[] { "", "SoftwareElementState", "3"});
-                    dataGridView1.Rows.Add(new object[] { "", "Status", "OK"});
-                    dataGridView1.Rows.Add(new object[] { "", "TargetOperatingSystem", "0"});
-                    dataGridView1.Rows.Add(new object[] { "", "Version", "DELL   - 15"});
+                    dataGridView1.Rows.Add(new object[] { "", "BIOSVersion[]", "| DELL   - 15 | Phoenix ROM BIOS PLUS Version 1.10 A03" });
+                    dataGridView1.Rows.Add(new object[] { "", "BuildNumber", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "Caption", "Phoenix ROM BIOS PLUS Version 1.10 A03" });
+                    dataGridView1.Rows.Add(new object[] { "", "CodeSet", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "CurrentLanguage", "en|US|iso8859-1" });
+                    dataGridView1.Rows.Add(new object[] { "", "Description", "Phoenix ROM BIOS PLUS Version 1.10 A03" });
+                    dataGridView1.Rows.Add(new object[] { "", "IdentificationCode", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "InstallableLanguages", "1" });
+                    dataGridView1.Rows.Add(new object[] { "", "InstallDate", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "LanguageEdition", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "ListOfLanguages[]", "| en|US|iso8859-1" });
+                    dataGridView1.Rows.Add(new object[] { "", "Manufacturer", "Dell Inc." });
+                    dataGridView1.Rows.Add(new object[] { "", "Name", "Phoenix ROM BIOS PLUS Version 1.10 A03" });
+                    dataGridView1.Rows.Add(new object[] { "", "OtherTargetOS", "" });
+                    dataGridView1.Rows.Add(new object[] { "", "PrimaryBIOS", "True" });
+                    dataGridView1.Rows.Add(new object[] { "", "ReleaseDate", "20100213000000.000000+000" });
+                    dataGridView1.Rows.Add(new object[] { "", "SerialNumber", "8J2PKM1" });
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSBIOSVersion", "A03" });
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSMajorVersion", "2" });
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSMinorVersion", "5" });
+                    dataGridView1.Rows.Add(new object[] { "", "SMBIOSPresent", "True" });
+                    dataGridView1.Rows.Add(new object[] { "", "SoftwareElementID", "Phoenix ROM BIOS PLUS Version 1.10 A03" });
+                    dataGridView1.Rows.Add(new object[] { "", "SoftwareElementState", "3" });
+                    dataGridView1.Rows.Add(new object[] { "", "Status", "OK" });
+                    dataGridView1.Rows.Add(new object[] { "", "TargetOperatingSystem", "0" });
+                    dataGridView1.Rows.Add(new object[] { "", "Version", "DELL   - 15" });
 
                     #endregion
                     break;
@@ -459,13 +582,7 @@ namespace MonitorCLServer
             }
         }
 
-        
-
-        private void treeView2_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
+        //-
         private void выключитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(this, "Выключить компьютер клиента?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -474,6 +591,7 @@ namespace MonitorCLServer
             }
         }
 
+        //-
         private void перезапуститьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(this, "Перезапустить компьютер клиента?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -482,6 +600,7 @@ namespace MonitorCLServer
             }
         }
 
+        //-
         private void выйтиИзСистемыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(this, "Выйти из системы на клиенте?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -490,6 +609,7 @@ namespace MonitorCLServer
             }
         }
 
+        //-
         private void подключитсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //server.SendCommad("teamviewer");
@@ -499,6 +619,7 @@ namespace MonitorCLServer
             form.Show();
         }
 
+        //-
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
@@ -507,6 +628,7 @@ namespace MonitorCLServer
             form.Show();
         }
 
+        //-
         private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
         {
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
@@ -515,66 +637,7 @@ namespace MonitorCLServer
             form.Show();
         }
 
-        private void productsForm1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void settingServerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            switch (treeView1.SelectedNode.Name)
-            {
-                case "tnOS":
-                    pnContents.Controls.Clear();
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
-                    pnContents.Controls.Add(new OperationSystemControl());
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
-                    break;
-                case "tnPrograms":
-                    pnContents.Controls.Clear();
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
-                    pnContents.Controls.Add(new ProductsControl());
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
-                    break;
-                case "tnau":
-                    pnContents.Controls.Clear();
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
-                    pnContents.Controls.Add(new ProductsControl("au"));
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void operationSystemControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void видалитиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void налаштуванняToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
+        //-
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
 #pragma warning disable CS0436 // Тип конфликтует с импортированным типом
@@ -583,32 +646,26 @@ namespace MonitorCLServer
             form.Show();
         }
 
+        //-
         private void tvClients_AfterExpand(object sender, TreeViewEventArgs e)
         {
             e.Node.ExpandAll();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void treeView2_AfterSelect_1(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
+        //-
         private void treeView2_Layout(object sender, LayoutEventArgs e)
         {
             treeView2.ExpandAll();
         }
 
+        //-
         private void переназватиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (tvClients.SelectedNode != null)
                 tvClients.SelectedNode.BeginEdit();
         }
 
+        //-
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
             pnContents.Controls.Clear();
@@ -682,12 +739,15 @@ namespace MonitorCLServer
             dataGridView1.Rows.Add(new object[] { "", "Проблема", "На диске D: свободно лишь 10 %." });
         }
 
-        private void tsbAddUser_Click(object sender, EventArgs e)
-        {
-            AddUserForm form = new AddUserForm();
-            form.ShowDialog();
-        }
+
+        #endregion
+
     }
+
+    #region Classes
+
+
+    //-
     class Win32_BIOS
     {
         /// <summary>
@@ -742,6 +802,7 @@ Lost Comm ("Lost Comm")*/
         string Version;
     }
 
+    //-
     class Win32_BootConfiguration
     {
         /// <summary>
@@ -780,6 +841,7 @@ Lost Comm ("Lost Comm")*/
         string TempDirectory;
     }
 
+    //-
     /// <summary>
     ///  класс WMI представляет собой общие устройства адаптера , встроенные в материнскую плату (системной плате).
     /// </summary>
@@ -811,6 +873,7 @@ Lost Comm ("Lost Comm")*/
         string Tag;
     }
 
+    //-
     class OS
     {
         /// <summary>
@@ -948,6 +1011,7 @@ Lost Comm ("Lost Comm")*/
         public string Version;
     }
 
+    //-
     class Win32_Process
     {
         /// <summary>
@@ -996,6 +1060,7 @@ Lost Comm ("Lost Comm")*/
         uint ThreadCount;
     }
 
+    //-
     class Win32_DiskDrive
     {
         /// <summary>
@@ -1132,5 +1197,6 @@ Lost Comm ("Lost Comm")*/
         string Status;
     }
 
+    #endregion
 }
 
