@@ -13,11 +13,13 @@ namespace MonitorCLServer
 {
     public partial class AddUserForm : Form
     {
+        UsersGroup parentGroup = null;
         MonitoringDB db = new MonitoringDB();
 
-        public AddUserForm()
+        public AddUserForm(UsersGroup parentGroup = null)
         {
             InitializeComponent();
+            this.parentGroup = parentGroup;
         }
 
         private void AddUserForm_Load(object sender, EventArgs e)
@@ -39,20 +41,47 @@ namespace MonitorCLServer
         {
             string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             string resultKey = "";
-            RNGCryptoServiceProvider rand = new RNGCryptoServiceProvider();
-            byte[] key = new byte[25];
-            rand.GetNonZeroBytes(key);
-            foreach (var item in key)
+            do
             {
-                resultKey += chars[item % chars.Length];
-            }
+                resultKey = "";
+                RNGCryptoServiceProvider rand = new RNGCryptoServiceProvider();
+                byte[] key = new byte[25];
+                rand.GetNonZeroBytes(key);
+                foreach (var item in key)
+                {
+                    resultKey += chars[item % chars.Length];
+                }
+
+            } while (db.LicenceKeys.SingleOrDefault(x=>x.Key==resultKey)!=null);
             mtbLicenceKey.Text = resultKey;
             lbNoSave.Visible = true;
         }
 
         private void btApply_Click(object sender, EventArgs e)
         {
-            
+            User user = new User()
+            {
+                UserName = tbUserName.Text,
+                DateReg = DateTime.Now,
+                Group = parentGroup,
+                Information = tbInformation.Text,
+                TypePC = cbTypeDevice.Text,
+                Phone = mtbPhone.Text,
+                Company = tbCompany.Text
+            };
+            db.Users.Add(user);
+            db.SaveChanges();
+            LicenceKey licenseKey = new LicenceKey()
+            {
+                Active = true,
+                DateExp = dtpDateTo.Value,
+                Key = mtbLicenceKey.Text,
+                User = user,
+                DateCreate = DateTime.Now,
+                UnicId = null
+            };
+            db.LicenceKeys.Add(licenseKey);
+            db.SaveChanges();                
 
             lbNoSave.Visible = false;
         }
