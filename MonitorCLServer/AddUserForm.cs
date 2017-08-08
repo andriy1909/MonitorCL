@@ -34,7 +34,8 @@ namespace MonitorCLServer
 
         private void btOK_Click(object sender, EventArgs e)
         {
-
+            btApply_Click(sender, e);
+            Close();
         }
 
         private void btGenereteKey_Click(object sender, EventArgs e)
@@ -52,38 +53,86 @@ namespace MonitorCLServer
                     resultKey += chars[item % chars.Length];
                 }
 
-            } while (db.LicenceKeys.SingleOrDefault(x=>x.Key==resultKey)!=null);
+            } while (db.LicenceKeys.SingleOrDefault(x => x.Key == resultKey) != null);
             mtbLicenceKey.Text = resultKey;
             lbNoSave.Visible = true;
         }
 
         private void btApply_Click(object sender, EventArgs e)
         {
+            if (tbDeviceName.TextLength == 0)
+            {
+                MessageBox.Show("Введите название устройства (для оботражения)");
+                return;
+            }
+            if (cbTypeDevice.SelectedIndex == 0)
+            {
+                MessageBox.Show("Виберете тип устройства!");
+                return;
+            }
+            if (mtbLicenceKey.Text.Contains(' ') && MessageBox.Show("Для пользователя не сгенерирован ключ активации, сохранить без ключа?", "", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                return;
+            }
+
             User user = new User()
             {
                 UserName = tbUserName.Text,
                 DateReg = DateTime.Now,
                 Group = parentGroup,
                 Information = tbInformation.Text,
-                TypePC = cbTypeDevice.Text,
+                TypePC = cbTypeDevice.SelectedIndex,
                 Phone = mtbPhone.Text,
                 Company = tbCompany.Text
             };
             db.Users.Add(user);
             db.SaveChanges();
-            LicenceKey licenseKey = new LicenceKey()
+
+            if (!mtbLicenceKey.Text.Contains(' '))
             {
-                Active = true,
-                DateExp = dtpDateTo.Value,
-                Key = mtbLicenceKey.Text,
-                User = user,
-                DateCreate = DateTime.Now,
-                UnicId = null
-            };
-            db.LicenceKeys.Add(licenseKey);
-            db.SaveChanges();                
+                LicenceKey licenseKey = new LicenceKey()
+                {
+                    Active = true,
+                    DateExp = dtpDateTo.Value,
+                    Key = mtbLicenceKey.Text,
+                    User = user,
+                    DateCreate = DateTime.Now,
+                    UnicId = null
+                };
+                db.LicenceKeys.Add(licenseKey);
+                db.SaveChanges();
+            }
 
             lbNoSave.Visible = false;
+            btApply.Enabled = false;
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+            btApply.Enabled = true;
+        }
+
+        private void AddUserForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!lbNoSave.Visible || MessageBox.Show("Закрить без сохранения?", "Внимание!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                DialogResult = DialogResult.Cancel;
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btDeleteKey_Click(object sender, EventArgs e)
+        {
+            mtbLicenceKey.Text = "";
         }
     }
 }

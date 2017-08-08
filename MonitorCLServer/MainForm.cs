@@ -71,8 +71,8 @@ namespace MonitorCLServer
         {
             TreeNode selectNode = tvClients.SelectedNode;
             tvClients.Nodes.Clear();
-            var list = MonitoringDB.GetUsersGroups().OrderBy(x => x.Level);
-            foreach (var item in list)
+            var groupList = MonitoringDB.GetUsersGroups().OrderBy(x => x.Level);
+            foreach (var item in groupList)
             {
                 TreeNode node = new TreeNode()
                 {
@@ -99,6 +99,37 @@ namespace MonitorCLServer
                     tvClients.Nodes.Add(node);
                 }
             }
+
+            var userList = MonitoringDB.GetUsers();
+            foreach (var item in userList)
+            {
+                TreeNode node = new TreeNode()
+                {
+                    Name = "clu" + item.UserId.ToString(),
+                    Text = item.Name,
+                    ImageIndex = 0,
+                    ToolTipText = item.UserName + " " + item.Phone,
+                    Tag = item
+                };
+
+                if (item.Group == null)
+                {
+                    tvClients.Nodes.Add(node);
+                }
+                else
+                {
+                    TreeNode parentNode = tvClients.Nodes.Find("cl" + item.Group.UsersGroupId, true).First();
+                    if (parentNode != null)
+                    {
+                        parentNode.Nodes.Add(node);
+                    }
+                    else
+                    {
+                        tvClients.Nodes.Add(node);
+                    }
+                }
+            }
+
             tvClients.SelectedNode = selectNode;
         }
 
@@ -110,7 +141,7 @@ namespace MonitorCLServer
                 UpdateUsersList();
             }
         }
-        
+
         private void tsbAddUser_Click(object sender, EventArgs e)
         {
             AddUserForm form = new AddUserForm();
@@ -224,7 +255,7 @@ namespace MonitorCLServer
                                 }
                                 break;
                             case "UsersGroup":
-                              
+
                                 break;
                         }
                         targetNode.Nodes.Add(draggedNode);

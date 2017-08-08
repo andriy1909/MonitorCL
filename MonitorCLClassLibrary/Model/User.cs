@@ -13,7 +13,7 @@ namespace MonitorCLClassLibrary.Model
         public string Company { get; set; }
         public string Phone { get; set; }
         public string Information { get; set; }
-        public string TypePC { get; set; }
+        public int TypePC { get; set; }
         public UsersGroup Group { get; set; }
         public DateTime DateReg { get; set; }
 

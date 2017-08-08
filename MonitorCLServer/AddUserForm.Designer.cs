@@ -46,14 +46,14 @@
             this.btOK = new System.Windows.Forms.Button();
             this.btCopy = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.dtpDateTo = new System.Windows.Forms.DateTimePicker();
             this.btGenereteKey = new System.Windows.Forms.Button();
             this.btDeleteKey = new System.Windows.Forms.Button();
             this.btApply = new System.Windows.Forms.Button();
             this.lbNoSave = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbCompany = new System.Windows.Forms.TextBox();
-            this.dtpDateTo = new System.Windows.Forms.DateTimePicker();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,7 @@
             this.tbDeviceName.Name = "tbDeviceName";
             this.tbDeviceName.Size = new System.Drawing.Size(257, 21);
             this.tbDeviceName.TabIndex = 27;
+            this.tbDeviceName.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label3
             // 
@@ -81,11 +82,11 @@
             // cbTypeDevice
             // 
             this.cbTypeDevice.DisplayMember = "0";
+            this.cbTypeDevice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTypeDevice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTypeDevice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbTypeDevice.FormattingEnabled = true;
             this.cbTypeDevice.Items.AddRange(new object[] {
-            "<Не извесно>",
             "Компютер",
             "Ноутбук",
             "Сервер"});
@@ -93,7 +94,7 @@
             this.cbTypeDevice.Name = "cbTypeDevice";
             this.cbTypeDevice.Size = new System.Drawing.Size(255, 23);
             this.cbTypeDevice.TabIndex = 25;
-            this.cbTypeDevice.Text = "<Не извесно>";
+            this.cbTypeDevice.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label6
             // 
@@ -120,12 +121,12 @@
             // tbUserName
             // 
             this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbUserName.Enabled = false;
             this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbUserName.Location = new System.Drawing.Point(157, 18);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(257, 21);
             this.tbUserName.TabIndex = 22;
+            this.tbUserName.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label2
             // 
@@ -158,6 +159,7 @@
             this.tbInformation.Name = "tbInformation";
             this.tbInformation.Size = new System.Drawing.Size(257, 95);
             this.tbInformation.TabIndex = 20;
+            this.tbInformation.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // textBox5
             // 
@@ -175,10 +177,12 @@
             this.mtbPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mtbPhone.Location = new System.Drawing.Point(157, 72);
-            this.mtbPhone.Mask = "+38 (999) 000-0000";
+            this.mtbPhone.Mask = "+38 (000) 000-0000";
             this.mtbPhone.Name = "mtbPhone";
+            this.mtbPhone.ResetOnSpace = false;
             this.mtbPhone.Size = new System.Drawing.Size(257, 21);
             this.mtbPhone.TabIndex = 29;
+            this.mtbPhone.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // mtbLicenceKey
             // 
@@ -193,6 +197,7 @@
             this.mtbLicenceKey.Size = new System.Drawing.Size(325, 22);
             this.mtbLicenceKey.TabIndex = 30;
             this.mtbLicenceKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbLicenceKey.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // btCancel
             // 
@@ -201,12 +206,13 @@
             this.btCancel.FlatAppearance.BorderSize = 2;
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btCancel.Location = new System.Drawing.Point(271, 400);
+            this.btCancel.Location = new System.Drawing.Point(268, 400);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(72, 28);
             this.btCancel.TabIndex = 33;
             this.btCancel.Text = "Отмена";
             this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btOK
             // 
@@ -215,7 +221,7 @@
             this.btOK.FlatAppearance.BorderSize = 2;
             this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btOK.Location = new System.Drawing.Point(193, 400);
+            this.btOK.Location = new System.Drawing.Point(190, 400);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(72, 28);
             this.btOK.TabIndex = 34;
@@ -251,6 +257,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Лицензионый ключ";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(103, 50);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(95, 13);
+            this.linkLabel1.TabIndex = 39;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Действителен до";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // dtpDateTo
+            // 
+            this.dtpDateTo.CustomFormat = "dd.mm.yyyy HH:MM";
+            this.dtpDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateTo.Location = new System.Drawing.Point(204, 47);
+            this.dtpDateTo.Name = "dtpDateTo";
+            this.dtpDateTo.Size = new System.Drawing.Size(129, 20);
+            this.dtpDateTo.TabIndex = 38;
+            // 
             // btGenereteKey
             // 
             this.btGenereteKey.BackColor = System.Drawing.SystemColors.Menu;
@@ -275,15 +304,17 @@
             this.btDeleteKey.TabIndex = 36;
             this.btDeleteKey.Text = "Удалить";
             this.btDeleteKey.UseVisualStyleBackColor = false;
+            this.btDeleteKey.Click += new System.EventHandler(this.btDeleteKey_Click);
             // 
             // btApply
             // 
             this.btApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btApply.BackColor = System.Drawing.SystemColors.Menu;
+            this.btApply.Enabled = false;
             this.btApply.FlatAppearance.BorderSize = 2;
             this.btApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btApply.Location = new System.Drawing.Point(349, 400);
+            this.btApply.Location = new System.Drawing.Point(346, 400);
             this.btApply.Name = "btApply";
             this.btApply.Size = new System.Drawing.Size(88, 28);
             this.btApply.TabIndex = 37;
@@ -315,35 +346,12 @@
             // tbCompany
             // 
             this.tbCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCompany.Enabled = false;
             this.tbCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbCompany.Location = new System.Drawing.Point(157, 45);
             this.tbCompany.Name = "tbCompany";
             this.tbCompany.Size = new System.Drawing.Size(257, 21);
             this.tbCompany.TabIndex = 38;
-            // 
-            // dtpDateTo
-            // 
-            this.dtpDateTo.CustomFormat = "dd.mm.yyyy HH:MM";
-            this.dtpDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateTo.Location = new System.Drawing.Point(204, 47);
-            this.dtpDateTo.Name = "dtpDateTo";
-            this.dtpDateTo.Size = new System.Drawing.Size(129, 20);
-            this.dtpDateTo.TabIndex = 38;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(103, 50);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(95, 13);
-            this.linkLabel1.TabIndex = 39;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Действителен до";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            this.tbCompany.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // toolTip1
             // 
@@ -354,7 +362,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(449, 440);
+            this.ClientSize = new System.Drawing.Size(446, 440);
             this.Controls.Add(this.lbNoSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbCompany);
@@ -378,6 +386,7 @@
             this.MinimizeBox = false;
             this.Name = "AddUserForm";
             this.Text = "Добавление пользователя";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddUserForm_FormClosing);
             this.Load += new System.EventHandler(this.AddUserForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -63,7 +63,7 @@ namespace MonitorCLClassLibrary
                 receiveThread.Start(); //старт потока
 
                 return ResultCode.OK;
-            }            
+            }
         }
 
         /// <summary>

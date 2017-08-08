@@ -28,5 +28,11 @@ namespace MonitorCLClassLibrary.Model
             var db = new MonitoringDB();
             return db.UserGroups.ToList();
         }
+
+        public static List<User> GetUsers()
+        {
+            var db = new MonitoringDB();
+            return db.Users.ToList();
+        }
     }
 }
