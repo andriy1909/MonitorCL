@@ -27,13 +27,22 @@ namespace MonitorCLClient
         public MainForm()
         {
             InitializeComponent();
+            lbVersion.Text += Application.ProductVersion + "b";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (client.OpenActiveKey() != null)
+            if (client.GetLicenseKey() != null)
             {
+                client.SetAutoRun(Application.ExecutablePath, true);
+                if (client.Login())
+                {
 
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -49,58 +58,10 @@ namespace MonitorCLClient
             }
 
 
-            client.SetAutoRun(Application.ExecutablePath, true); //автозапуск программы при старте Windows
+            // client.SetAutoRun(Application.ExecutablePath, true); //автозапуск программы при старте Windows
 
 
-            if (Settings.Default.login == "")
-            {
-                RegistrationForm rForm = new RegistrationForm(client);
-                if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
-                {
-                    Exit();
-                }
-            }
 
-            //TryConnect
-            ResultCode result = Connect();
-            switch (result)
-            {
-                case ResultCode.OK:// OK
-
-                    break;
-                case ResultCode.NotAuthorizate:// not auth
-
-                    LoginForm form = new LoginForm(client);
-                    form.ShowDialog();
-
-                    break;
-                case ResultCode.NotRegister:// not found user
-                    RegistrationForm rForm = new RegistrationForm(client);
-                    if (rForm.ShowDialog() != DialogResult.OK || !rForm.isConnect)
-                    {
-                        Exit();
-                    }
-                    break;
-                case ResultCode.Blocked:// block
-                    Exit();
-                    break;
-                case ResultCode.Error:// error
-                    //tryConnect
-                    result = Connect(true);
-                    if (result != 0)
-                        Exit();
-                    break;
-                default:
-                    //tryConnect
-                    result = Connect(true);
-                    if (result != 0)
-                        Exit();
-                    break;
-            }
-
-
-            tbIP.Text = Settings.Default.ip;
-            tbPort.Text = Settings.Default.port.ToString();
         }
 
         /// <summary>
@@ -109,7 +70,7 @@ namespace MonitorCLClient
         /// <returns>Статус</returns>
         private ResultCode Connect(bool tryConnect = false)
         {
-            client.Connect();
+            client.Connect_Delete();
             Thread.Sleep(5000);
 
             //try
@@ -151,8 +112,6 @@ namespace MonitorCLClient
             {
                 this.ShowInTaskbar = false;
 
-                tbIP.Text = Settings.Default.ip;
-                tbPort.Text = Settings.Default.port.ToString();
             }
         }
 
@@ -195,37 +154,13 @@ namespace MonitorCLClient
             }
         }
 
-        private void btCancel_Click(object sender, EventArgs e)
-        {
-            tbIP.Text = Settings.Default.ip;
-            tbPort.Text = Settings.Default.port.ToString();
-            Close();
-        }
-
-        private void btOk_Click(object sender, EventArgs e)
-        {
-            IPAddress ip = null;
-            if (!IPAddress.TryParse(tbIP.Text, out ip))
-            {
-                MessageBox.Show("IP адресс имеет недопустимый формат!");
-            }
-            else
-            if (Convert.ToInt32(tbPort.Text) <= 0)
-            {
-                MessageBox.Show("Введите номер порта!");
-            }
-            else
-            {
-                Settings.Default.ip = tbIP.Text;
-                Settings.Default.port = int.Parse(tbPort.Text);
-                Close();
-            }
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutBox1 form = new AboutBox1();
-            form.Show();
+        }
+
+        private void linkCompLife_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://www.complife.ua");
         }
     }
 }

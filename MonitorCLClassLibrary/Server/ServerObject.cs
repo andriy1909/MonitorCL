@@ -67,7 +67,7 @@ namespace MonitorCLClassLibrary.Server
                     break;
                 case "JSDLogin":
 
-                    throw new NotImplementedException();
+                    //throw new NotImplementedException();
                     break;
                 default:
                     break;

@@ -30,148 +30,55 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Компютер 1", 1, 1);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Узел24", 1, 1);
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Узел25", 1, 1);
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Узел26", 2, 2);
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Узел27", 2, 2);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Узел28", 3, 3);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Група компютерів 1", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Основное");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Установленые программы");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Автозагрузка");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Процессы");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Пользователи");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Операционная система");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Процессы");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Системные драйвера");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Время работы");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Автозагрузка");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Установленные программы");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Програмное обеспичение", new System.Windows.Forms.TreeNode[] {
             treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Узел29", 1, 1);
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Узел30");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Узел31");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Узел32");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Узел33");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Узел8", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7,
             treeNode8,
             treeNode9,
             treeNode10,
-            treeNode11,
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Узел34");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Узел35");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Узел36");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Узел37");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Узел9", new System.Windows.Forms.TreeNode[] {
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Процессор");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Системная плата");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Память");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("BIOS");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Логические диски");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Физические диски");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("SMART");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18,
+            treeNode19});
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Графический процессор");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Сеть Windows");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Устройства Windows");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Принтеры");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Батерея");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Системные устройства", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
             treeNode14,
             treeNode15,
             treeNode16,
-            treeNode17});
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Узел38");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Узел39");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Узел40");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Узел41");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Узел10", new System.Windows.Forms.TreeNode[] {
-            treeNode19,
             treeNode20,
             treeNode21,
-            treeNode22});
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Узел11");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Узел12");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Узел13");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Пользователи");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Операционная система");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Процессы");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Системные драйвера");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Время работы");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Автозагрузка");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Установленные программы");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Програмное обеспичение", new System.Windows.Forms.TreeNode[] {
-            treeNode27,
-            treeNode28,
-            treeNode29,
-            treeNode30,
-            treeNode31,
-            treeNode32,
-            treeNode33});
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Процессор");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Системная плата");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Память");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("BIOS");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Логические диски");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Физические диски");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("SMART");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40,
-            treeNode41});
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Графический процессор");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Сеть Windows");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Устройства Windows");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Принтеры");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Батерея");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Системные устройства", new System.Windows.Forms.TreeNode[] {
-            treeNode35,
-            treeNode36,
-            treeNode37,
-            treeNode38,
-            treeNode42,
-            treeNode43,
-            treeNode44,
-            treeNode45,
-            treeNode46,
-            treeNode47});
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Общая информация");
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Пользователи");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Компьютер", new System.Windows.Forms.TreeNode[] {
-            treeNode49,
-            treeNode50});
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Процессор");
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Системная плата");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("Память");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("BIOS");
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Системная плата", new System.Windows.Forms.TreeNode[] {
-            treeNode52,
-            treeNode53,
-            treeNode54,
-            treeNode55});
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Операционная система");
-            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("Процессы");
-            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("Системные драйвера");
-            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("Время работы");
-            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("Операционная система", new System.Windows.Forms.TreeNode[] {
-            treeNode57,
-            treeNode58,
-            treeNode59,
-            treeNode60});
-            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("Монитор");
-            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("Графический процессор");
-            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("Отображение", new System.Windows.Forms.TreeNode[] {
-            treeNode62,
-            treeNode63});
-            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Логические диски");
-            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("Физические диски");
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("SMART");
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
-            treeNode65,
-            treeNode66,
-            treeNode67});
-            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Сеть Windows");
-            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Интернет");
-            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Сеть", new System.Windows.Forms.TreeNode[] {
-            treeNode69,
-            treeNode70});
-            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Устройства Windows");
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Ввод");
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Принтеры");
-            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Устройства", new System.Windows.Forms.TreeNode[] {
-            treeNode72,
-            treeNode73,
-            treeNode74});
-            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Автозагрузка");
-            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Запланированые");
-            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Установленные программы");
-            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Программы", new System.Windows.Forms.TreeNode[] {
-            treeNode76,
-            treeNode77,
-            treeNode78});
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25});
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.serverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -217,7 +124,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeView3 = new System.Windows.Forms.TreeView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -233,23 +139,44 @@
             this.tsbDeleteUserListItem = new System.Windows.Forms.ToolStripButton();
             this.tsbRefreshUserList = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnContents = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbText = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.treeView4 = new System.Windows.Forms.TreeView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvShortInformation = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.treeView2 = new System.Windows.Forms.TreeView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.treeView2 = new System.Windows.Forms.TreeView();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.cmsClientList.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -264,15 +191,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShortInformation)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.toolStrip4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
+            this.toolStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.serverToolStripMenuItem,
             this.settingToolStripMenuItem,
@@ -612,7 +555,6 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.treeView3);
             this.splitContainer1.Panel1.Controls.Add(this.panel4);
             this.splitContainer1.Panel1.Controls.Add(this.tvClients);
             this.splitContainer1.Panel1.Controls.Add(this.toolStrip1);
@@ -620,110 +562,10 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Size = new System.Drawing.Size(1029, 611);
             this.splitContainer1.SplitterDistance = 161;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 6;
-            // 
-            // treeView3
-            // 
-            this.treeView3.AllowDrop = true;
-            this.treeView3.ContextMenuStrip = this.cmsClientList;
-            this.treeView3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.treeView3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.treeView3.ImageIndex = 0;
-            this.treeView3.ImageList = this.imageList1;
-            this.treeView3.ItemHeight = 16;
-            this.treeView3.LabelEdit = true;
-            this.treeView3.Location = new System.Drawing.Point(0, 366);
-            this.treeView3.Name = "treeView3";
-            treeNode1.ImageIndex = 1;
-            treeNode1.Name = "Узел18";
-            treeNode1.SelectedImageIndex = 1;
-            treeNode1.Text = "Компютер 1";
-            treeNode1.ToolTipText = "Лена тел. (097)88-66-111";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "Узел24";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "Узел24";
-            treeNode2.ToolTipText = "Лена";
-            treeNode3.ImageIndex = 1;
-            treeNode3.Name = "Узел25";
-            treeNode3.SelectedImageIndex = 1;
-            treeNode3.Text = "Узел25";
-            treeNode3.ToolTipText = "Лена (Описание описание описание описание описание описание описание )";
-            treeNode4.ImageIndex = 2;
-            treeNode4.Name = "Узел26";
-            treeNode4.SelectedImageIndex = 2;
-            treeNode4.Text = "Узел26";
-            treeNode5.ImageIndex = 2;
-            treeNode5.Name = "Узел27";
-            treeNode5.SelectedImageIndex = 2;
-            treeNode5.Text = "Узел27";
-            treeNode6.ImageIndex = 3;
-            treeNode6.Name = "Узел28";
-            treeNode6.SelectedImageIndex = 3;
-            treeNode6.Text = "Узел28";
-            treeNode7.Name = "Узел7";
-            treeNode7.Text = "Група компютерів 1";
-            treeNode8.ImageIndex = 1;
-            treeNode8.Name = "Узел29";
-            treeNode8.SelectedImageIndex = 1;
-            treeNode8.Text = "Узел29";
-            treeNode9.ImageKey = "Notebook.png";
-            treeNode9.Name = "Узел30";
-            treeNode9.SelectedImageIndex = 1;
-            treeNode9.Text = "Узел30";
-            treeNode10.ImageKey = "computer-tower-and-monitor_icon-icons.com_56305.png";
-            treeNode10.Name = "Узел31";
-            treeNode10.SelectedImageIndex = 1;
-            treeNode10.Text = "Узел31";
-            treeNode11.Name = "Узел32";
-            treeNode11.Text = "Узел32";
-            treeNode12.Name = "Узел33";
-            treeNode12.Text = "Узел33";
-            treeNode13.Name = "Узел8";
-            treeNode13.Text = "Узел8";
-            treeNode14.Name = "Узел34";
-            treeNode14.Text = "Узел34";
-            treeNode15.Name = "Узел35";
-            treeNode15.Text = "Узел35";
-            treeNode16.Name = "Узел36";
-            treeNode16.Text = "Узел36";
-            treeNode17.Name = "Узел37";
-            treeNode17.Text = "Узел37";
-            treeNode18.Name = "Узел9";
-            treeNode18.Text = "Узел9";
-            treeNode19.Name = "Узел38";
-            treeNode19.Text = "Узел38";
-            treeNode20.Name = "Узел39";
-            treeNode20.Text = "Узел39";
-            treeNode21.Name = "Узел40";
-            treeNode21.Text = "Узел40";
-            treeNode22.Name = "Узел41";
-            treeNode22.Text = "Узел41";
-            treeNode23.Name = "Узел10";
-            treeNode23.Text = "Узел10";
-            treeNode24.Name = "Узел11";
-            treeNode24.Text = "Узел11";
-            treeNode25.Name = "Узел12";
-            treeNode25.Text = "Узел12";
-            treeNode26.Name = "Узел13";
-            treeNode26.Text = "Узел13";
-            this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode13,
-            treeNode18,
-            treeNode23,
-            treeNode24,
-            treeNode25,
-            treeNode26});
-            this.treeView3.SelectedImageIndex = 0;
-            this.treeView3.ShowNodeToolTips = true;
-            this.treeView3.Size = new System.Drawing.Size(161, 245);
-            this.treeView3.TabIndex = 9;
-            this.treeView3.Visible = false;
             // 
             // panel4
             // 
@@ -772,6 +614,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(160, 160);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.Visible = false;
             // 
             // Column3
             // 
@@ -815,14 +658,13 @@
             this.tvClients.TabIndex = 8;
             this.tvClients.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.tvClients_AfterExpand);
             this.tvClients.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.tvClients_ItemDrag);
-            this.tvClients.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvClients_AfterSelect);
             this.tvClients.DragDrop += new System.Windows.Forms.DragEventHandler(this.tvClients_DragDrop);
             this.tvClients.DragEnter += new System.Windows.Forms.DragEventHandler(this.tvClients_DragEnter);
             this.tvClients.DragOver += new System.Windows.Forms.DragEventHandler(this.tvClients_DragOver);
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton3,
@@ -901,45 +743,371 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.pnContents);
-            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Controls.Add(this.toolStrip4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(213, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 611);
+            this.panel2.Size = new System.Drawing.Size(865, 611);
             this.panel2.TabIndex = 1;
             // 
-            // pnContents
+            // tabControl1
             // 
-            this.pnContents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContents.Location = new System.Drawing.Point(0, 55);
-            this.pnContents.Name = "pnContents";
-            this.pnContents.Size = new System.Drawing.Size(652, 556);
-            this.pnContents.TabIndex = 3;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 25);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(865, 586);
+            this.tabControl1.TabIndex = 0;
             // 
-            // panel5
+            // tabPage1
             // 
-            this.panel5.Controls.Add(this.lbText);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 25);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(652, 30);
-            this.panel5.TabIndex = 4;
+            this.tabPage1.Controls.Add(this.splitContainer3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(857, 560);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Краткая информация";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lbText
+            // splitContainer3
             // 
-            this.lbText.AutoSize = true;
-            this.lbText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbText.Location = new System.Drawing.Point(15, 7);
-            this.lbText.Name = "lbText";
-            this.lbText.Size = new System.Drawing.Size(0, 16);
-            this.lbText.TabIndex = 0;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.treeView4);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.label4);
+            this.splitContainer3.Panel2.Controls.Add(this.dgvShortInformation);
+            this.splitContainer3.Size = new System.Drawing.Size(851, 554);
+            this.splitContainer3.SplitterDistance = 205;
+            this.splitContainer3.TabIndex = 6;
+            // 
+            // treeView4
+            // 
+            this.treeView4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.treeView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeView4.FullRowSelect = true;
+            this.treeView4.ImageIndex = 4;
+            this.treeView4.ImageList = this.imageList1;
+            this.treeView4.Indent = 18;
+            this.treeView4.ItemHeight = 20;
+            this.treeView4.Location = new System.Drawing.Point(0, 0);
+            this.treeView4.Name = "treeView4";
+            treeNode1.Name = "Узел0";
+            treeNode1.Text = "Основное";
+            treeNode2.Name = "Узел5";
+            treeNode2.Text = "Установленые программы";
+            treeNode3.Name = "Узел6";
+            treeNode3.Text = "Автозагрузка";
+            treeNode4.Name = "Узел7";
+            treeNode4.Text = "Процессы";
+            this.treeView4.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
+            this.treeView4.SelectedImageIndex = 4;
+            this.treeView4.ShowLines = false;
+            this.treeView4.ShowPlusMinus = false;
+            this.treeView4.ShowRootLines = false;
+            this.treeView4.Size = new System.Drawing.Size(205, 554);
+            this.treeView4.TabIndex = 2;
+            this.treeView4.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView4_AfterSelect);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(257, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 22);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Коротка інформація";
+            // 
+            // dgvShortInformation
+            // 
+            this.dgvShortInformation.AllowUserToAddRows = false;
+            this.dgvShortInformation.AllowUserToDeleteRows = false;
+            this.dgvShortInformation.AllowUserToOrderColumns = true;
+            this.dgvShortInformation.AllowUserToResizeRows = false;
+            this.dgvShortInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvShortInformation.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvShortInformation.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvShortInformation.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvShortInformation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvShortInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShortInformation.ColumnHeadersVisible = false;
+            this.dgvShortInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dgvShortInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvShortInformation.Location = new System.Drawing.Point(0, 0);
+            this.dgvShortInformation.MultiSelect = false;
+            this.dgvShortInformation.Name = "dgvShortInformation";
+            this.dgvShortInformation.ReadOnly = true;
+            this.dgvShortInformation.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
+            this.dgvShortInformation.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvShortInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvShortInformation.Size = new System.Drawing.Size(642, 554);
+            this.dgvShortInformation.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn4.HeaderText = "";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 20;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.FillWeight = 50F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Поле";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Значененя";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.splitContainer2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(857, 560);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Детальная информация";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.treeView2);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.label3);
+            this.splitContainer2.Size = new System.Drawing.Size(851, 554);
+            this.splitContainer2.SplitterDistance = 205;
+            this.splitContainer2.TabIndex = 5;
+            // 
+            // treeView2
+            // 
+            this.treeView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeView2.FullRowSelect = true;
+            this.treeView2.ImageIndex = 4;
+            this.treeView2.ImageList = this.imageList1;
+            this.treeView2.Indent = 18;
+            this.treeView2.ItemHeight = 20;
+            this.treeView2.Location = new System.Drawing.Point(0, 0);
+            this.treeView2.Name = "treeView2";
+            treeNode5.Name = "tnUsers";
+            treeNode5.Text = "Пользователи";
+            treeNode6.Name = "tnOS";
+            treeNode6.Text = "Операционная система";
+            treeNode7.Name = "Узел19";
+            treeNode7.Text = "Процессы";
+            treeNode8.Name = "Узел20";
+            treeNode8.Text = "Системные драйвера";
+            treeNode9.Name = "Узел21";
+            treeNode9.Text = "Время работы";
+            treeNode10.Name = "tnau";
+            treeNode10.Text = "Автозагрузка";
+            treeNode11.Name = "tnPrograms";
+            treeNode11.Text = "Установленные программы";
+            treeNode12.Name = "Узел0";
+            treeNode12.Text = "Програмное обеспичение";
+            treeNode13.Name = "tnCPU";
+            treeNode13.Text = "Процессор";
+            treeNode14.Name = "tnMotheboad";
+            treeNode14.Text = "Системная плата";
+            treeNode15.Name = "Узел15";
+            treeNode15.Text = "Память";
+            treeNode16.Name = "tnBios";
+            treeNode16.Text = "BIOS";
+            treeNode17.Name = "Узел26";
+            treeNode17.Text = "Логические диски";
+            treeNode18.Name = "Узел27";
+            treeNode18.Text = "Физические диски";
+            treeNode19.Name = "Узел30";
+            treeNode19.Text = "SMART";
+            treeNode20.Name = "Узел5";
+            treeNode20.Text = "Хранение данных";
+            treeNode21.Name = "Узел24";
+            treeNode21.Text = "Графический процессор";
+            treeNode22.Name = "Узел32";
+            treeNode22.Text = "Сеть Windows";
+            treeNode23.Name = "Узел37";
+            treeNode23.Text = "Устройства Windows";
+            treeNode24.Name = "Узел39";
+            treeNode24.Text = "Принтеры";
+            treeNode25.Name = "tnBattery";
+            treeNode25.Text = "Батерея";
+            treeNode26.Name = "Узел1";
+            treeNode26.Text = "Системные устройства";
+            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode26});
+            this.treeView2.SelectedImageIndex = 4;
+            this.treeView2.ShowLines = false;
+            this.treeView2.ShowPlusMinus = false;
+            this.treeView2.ShowRootLines = false;
+            this.treeView2.Size = new System.Drawing.Size(205, 554);
+            this.treeView2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(257, 266);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(196, 22);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Детальна інформація";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.splitContainer4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(857, 560);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Журнал заданий";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.toolStrip3);
+            this.splitContainer4.Panel1.Controls.Add(this.label1);
+            this.splitContainer4.Panel1.Controls.Add(this.dataGridView2);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.label2);
+            this.splitContainer4.Size = new System.Drawing.Size(851, 554);
+            this.splitContainer4.SplitterDistance = 205;
+            this.splitContainer4.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(34, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 22);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "По дням";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.ColumnHeadersVisible = false;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(205, 554);
+            this.dataGridView2.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn7.HeaderText = "";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 20;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn7.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.FillWeight = 50F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Поле";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Значененя";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(92, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "по завданням";
             // 
             // toolStrip4
             // 
-            this.toolStrip4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
+            this.toolStrip4.BackColor = System.Drawing.SystemColors.Window;
             this.toolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton7,
@@ -949,7 +1117,7 @@
             this.toolStrip4.Location = new System.Drawing.Point(0, 0);
             this.toolStrip4.Name = "toolStrip4";
             this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip4.Size = new System.Drawing.Size(652, 25);
+            this.toolStrip4.Size = new System.Drawing.Size(865, 25);
             this.toolStrip4.TabIndex = 2;
             this.toolStrip4.Text = "toolStrip4";
             // 
@@ -991,191 +1159,6 @@
             this.toolStripButton10.Text = "toolStripButton10";
             this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.treeView2);
-            this.panel1.Controls.Add(this.treeView1);
-            this.panel1.Controls.Add(this.toolStrip2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 611);
-            this.panel1.TabIndex = 0;
-            // 
-            // treeView2
-            // 
-            this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.treeView2.FullRowSelect = true;
-            this.treeView2.ImageIndex = 4;
-            this.treeView2.ImageList = this.imageList1;
-            this.treeView2.Indent = 18;
-            this.treeView2.ItemHeight = 20;
-            this.treeView2.Location = new System.Drawing.Point(0, 25);
-            this.treeView2.Name = "treeView2";
-            treeNode27.Name = "tnUsers";
-            treeNode27.Text = "Пользователи";
-            treeNode28.Name = "tnOS";
-            treeNode28.Text = "Операционная система";
-            treeNode29.Name = "Узел19";
-            treeNode29.Text = "Процессы";
-            treeNode30.Name = "Узел20";
-            treeNode30.Text = "Системные драйвера";
-            treeNode31.Name = "Узел21";
-            treeNode31.Text = "Время работы";
-            treeNode32.Name = "tnau";
-            treeNode32.Text = "Автозагрузка";
-            treeNode33.Name = "tnPrograms";
-            treeNode33.Text = "Установленные программы";
-            treeNode34.Name = "Узел0";
-            treeNode34.Text = "Програмное обеспичение";
-            treeNode35.Name = "tnCPU";
-            treeNode35.Text = "Процессор";
-            treeNode36.Name = "tnMotheboad";
-            treeNode36.Text = "Системная плата";
-            treeNode37.Name = "Узел15";
-            treeNode37.Text = "Память";
-            treeNode38.Name = "tnBios";
-            treeNode38.Text = "BIOS";
-            treeNode39.Name = "Узел26";
-            treeNode39.Text = "Логические диски";
-            treeNode40.Name = "Узел27";
-            treeNode40.Text = "Физические диски";
-            treeNode41.Name = "Узел30";
-            treeNode41.Text = "SMART";
-            treeNode42.Name = "Узел5";
-            treeNode42.Text = "Хранение данных";
-            treeNode43.Name = "Узел24";
-            treeNode43.Text = "Графический процессор";
-            treeNode44.Name = "Узел32";
-            treeNode44.Text = "Сеть Windows";
-            treeNode45.Name = "Узел37";
-            treeNode45.Text = "Устройства Windows";
-            treeNode46.Name = "Узел39";
-            treeNode46.Text = "Принтеры";
-            treeNode47.Name = "tnBattery";
-            treeNode47.Text = "Батерея";
-            treeNode48.Name = "Узел1";
-            treeNode48.Text = "Системные устройства";
-            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode34,
-            treeNode48});
-            this.treeView2.SelectedImageIndex = 4;
-            this.treeView2.ShowLines = false;
-            this.treeView2.ShowPlusMinus = false;
-            this.treeView2.ShowRootLines = false;
-            this.treeView2.Size = new System.Drawing.Size(213, 586);
-            this.treeView2.TabIndex = 2;
-            this.treeView2.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView2_AfterSelect);
-            this.treeView2.Layout += new System.Windows.Forms.LayoutEventHandler(this.treeView2_Layout);
-            // 
-            // treeView1
-            // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Indent = 18;
-            this.treeView1.ItemHeight = 20;
-            this.treeView1.Location = new System.Drawing.Point(0, 25);
-            this.treeView1.Name = "treeView1";
-            treeNode49.Name = "Узел9";
-            treeNode49.Text = "Общая информация";
-            treeNode50.Name = "tnUsers";
-            treeNode50.Text = "Пользователи";
-            treeNode51.Name = "Узел0";
-            treeNode51.Text = "Компьютер";
-            treeNode52.Name = "Узел13";
-            treeNode52.Text = "Процессор";
-            treeNode53.Name = "Узел14";
-            treeNode53.Text = "Системная плата";
-            treeNode54.Name = "Узел15";
-            treeNode54.Text = "Память";
-            treeNode55.Name = "Узел16";
-            treeNode55.Text = "BIOS";
-            treeNode56.Name = "Узел1";
-            treeNode56.Text = "Системная плата";
-            treeNode57.Name = "tnOS";
-            treeNode57.Text = "Операционная система";
-            treeNode58.Name = "Узел19";
-            treeNode58.Text = "Процессы";
-            treeNode59.Name = "Узел20";
-            treeNode59.Text = "Системные драйвера";
-            treeNode60.Name = "Узел21";
-            treeNode60.Text = "Время работы";
-            treeNode61.Name = "Узел2";
-            treeNode61.Text = "Операционная система";
-            treeNode62.Name = "Узел22";
-            treeNode62.Text = "Монитор";
-            treeNode63.Name = "Узел24";
-            treeNode63.Text = "Графический процессор";
-            treeNode64.Name = "Узел3";
-            treeNode64.Text = "Отображение";
-            treeNode65.Name = "Узел26";
-            treeNode65.Text = "Логические диски";
-            treeNode66.Name = "Узел27";
-            treeNode66.Text = "Физические диски";
-            treeNode67.Name = "Узел30";
-            treeNode67.Text = "SMART";
-            treeNode68.Name = "Узел5";
-            treeNode68.Text = "Хранение данных";
-            treeNode69.Name = "Узел32";
-            treeNode69.Text = "Сеть Windows";
-            treeNode70.Name = "Узел33";
-            treeNode70.Text = "Интернет";
-            treeNode71.Name = "Узел6";
-            treeNode71.Text = "Сеть";
-            treeNode72.Name = "Узел37";
-            treeNode72.Text = "Устройства Windows";
-            treeNode73.Name = "Узел38";
-            treeNode73.Text = "Ввод";
-            treeNode74.Name = "Узел39";
-            treeNode74.Text = "Принтеры";
-            treeNode75.Name = "Узел7";
-            treeNode75.Text = "Устройства";
-            treeNode76.Name = "tnau";
-            treeNode76.Text = "Автозагрузка";
-            treeNode77.Name = "Узел42";
-            treeNode77.Text = "Запланированые";
-            treeNode78.Name = "tnPrograms";
-            treeNode78.Text = "Установленные программы";
-            treeNode79.Name = "Узел8";
-            treeNode79.Text = "Программы";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode51,
-            treeNode56,
-            treeNode61,
-            treeNode64,
-            treeNode68,
-            treeNode71,
-            treeNode75,
-            treeNode79});
-            this.treeView1.ShowLines = false;
-            this.treeView1.Size = new System.Drawing.Size(213, 586);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.Visible = false;
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(252)))));
-            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(213, 25);
-            this.toolStrip2.TabIndex = 0;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "toolStripButton4";
-            this.toolStripButton4.Visible = false;
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
             // imageList2
             // 
             this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
@@ -1208,10 +1191,93 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 420;
             // 
+            // toolStrip3
+            // 
+            this.toolStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorDeleteItem,
+            this.toolStripButton6,
+            this.toolStripSeparator1,
+            this.toolStripComboBox1,
+            this.toolStripLabel1});
+            this.toolStrip3.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.Size = new System.Drawing.Size(205, 27);
+            this.toolStrip3.TabIndex = 18;
+            this.toolStrip3.Text = "toolStrip3";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 24);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton6.BackColor = System.Drawing.SystemColors.Window;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(111, 24);
+            this.toolStripButton6.Text = "Фильтр по дате";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripComboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Все",
+            "Установленые программы",
+            "Запуск ОС"});
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "Все",
+            "Установленые программы",
+            "Запуск ОС"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.Text = "Все";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(71, 15);
+            this.toolStripLabel1.Text = "Тип данных";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1029, 657);
             this.ContextMenuStrip = this.cmsMain;
             this.Controls.Add(this.splitContainer1);
@@ -1244,14 +1310,32 @@
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            this.splitContainer3.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShortInformation)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            this.splitContainer4.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.toolStrip4.ResumeLayout(false);
             this.toolStrip4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
+            this.toolStrip3.ResumeLayout(false);
+            this.toolStrip3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1273,10 +1357,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ContextMenuStrip cmsMain;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
@@ -1310,8 +1390,6 @@
         private System.Windows.Forms.ToolStripMenuItem налаштуванняToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.Panel pnContents;
-        private System.Windows.Forms.TreeView treeView2;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ToolStripButton toolStripButton10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -1323,10 +1401,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lbText;
         private System.Windows.Forms.ToolStripButton tsbAddUser;
-        private System.Windows.Forms.TreeView treeView3;
         private System.Windows.Forms.ToolStripMenuItem утилита1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem утилита2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
@@ -1337,6 +1412,35 @@
         private System.Windows.Forms.ToolStripMenuItem дабавитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiAddGroup;
         private System.Windows.Forms.ToolStripMenuItem tsmiAddUser;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TreeView treeView4;
+        private System.Windows.Forms.DataGridView dgvShortInformation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.TreeView treeView2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStrip toolStrip3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }
 

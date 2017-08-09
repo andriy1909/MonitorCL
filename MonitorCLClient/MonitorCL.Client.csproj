@@ -70,12 +70,6 @@
     <Compile Include="IsWork\ActivateForm.Designer.cs">
       <DependentUpon>ActivateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,10 +77,10 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="ProgressForm.cs">
+    <Compile Include="IsWork\ProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgressForm.Designer.cs">
+    <Compile Include="IsWork\ProgressForm.Designer.cs">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,35 +89,26 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="RegistrationForm.cs">
+    <Compile Include="IsWork\SendMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrationForm.Designer.cs">
-      <DependentUpon>RegistrationForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SendMessageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SendMessageForm.Designer.cs">
+    <Compile Include="IsWork\SendMessageForm.Designer.cs">
       <DependentUpon>SendMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SetServerForm.cs">
+    <Compile Include="IsWork\SetServerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SetServerForm.Designer.cs">
+    <Compile Include="IsWork\SetServerForm.Designer.cs">
       <DependentUpon>SetServerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="IsWork\ActivateForm.resx">
       <DependentUpon>ActivateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgressForm.resx">
+    <EmbeddedResource Include="IsWork\ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -136,13 +121,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegistrationForm.resx">
-      <DependentUpon>RegistrationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SendMessageForm.resx">
+    <EmbeddedResource Include="IsWork\SendMessageForm.resx">
       <DependentUpon>SendMessageForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SetServerForm.resx">
+    <EmbeddedResource Include="IsWork\SetServerForm.resx">
       <DependentUpon>SetServerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

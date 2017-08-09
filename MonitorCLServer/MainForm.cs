@@ -108,8 +108,8 @@ namespace MonitorCLServer
                 TreeNode node = new TreeNode()
                 {
                     Name = "clu" + item.UserId.ToString(),
-                    Text = item.Name,
-                    ImageIndex = 0,
+                    Text = item.UserName,
+                    ImageIndex = item.TypePC,
                     ToolTipText = item.UserName + " " + item.Phone,
                     Tag = item
                 };
@@ -199,10 +199,11 @@ namespace MonitorCLServer
                     }
                     else
                     {
-                        if (MessageBox.Show("Группа не пустая! Удалить всех клиентов даной группы?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        if (MessageBox.Show("Группа не пустая, удаление невозможно!", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                         {
-                            if (!UsersGroup.Delete(int.Parse(tvClients.SelectedNode.Name.Remove(0, 2))))
-                                MessageBox.Show("Ошибка удаления!");
+                            //if (!UsersGroup.Delete(int.Parse(tvClients.SelectedNode.Name.Remove(0, 2))))
+                            //    MessageBox.Show("Ошибка удаления!");
+                            return;
                         }
                     }
                     break;
@@ -253,7 +254,7 @@ namespace MonitorCLServer
                                 if (user != null)
                                 {
                                     user.Group = ((UsersGroup)targetNode.Tag);
-                                    user.Edit();
+                                    //user.Edit();
                                 }
                                 break;
                             case "UsersGroup":
@@ -358,13 +359,13 @@ namespace MonitorCLServer
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             splitContainer1.Panel1Collapsed = true;
-            toolStripButton4.Visible = true;
+           // toolStripButton4.Visible = true;
         }
 
         //-
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            toolStripButton4.Visible = false;
+       //     toolStripButton4.Visible = false;
             splitContainer1.Panel1Collapsed = false;
         }
 
@@ -383,19 +384,11 @@ namespace MonitorCLServer
 
             return ContainsNode(node1, node2.Parent);
         }
-
-        //-
-        private void tvClients_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            panel1.Visible = e.Node != null;
-        }
-
+        
         //-
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             if (new LoginForm().ShowDialog() == DialogResult.OK)
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             {
                 menuStrip1.Visible = true;
                 splitContainer1.Visible = true;
@@ -420,28 +413,22 @@ namespace MonitorCLServer
 
         //-
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
-        {
+        {/*
             dataGridView1.Rows.Clear();
             lbText.Text = e.Node.Text;
             switch (e.Node.Name)
             {
                 case "tnOS":
                     pnContents.Controls.Clear();
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
                     pnContents.Controls.Add(new OperationSystemControl());
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
                     break;
                 case "tnPrograms":
                     pnContents.Controls.Clear();
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
                     pnContents.Controls.Add(new ProductsControl());
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
                     break;
                 case "tnau":
                     pnContents.Controls.Clear();
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
                     pnContents.Controls.Add(new ProductsControl("au"));
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
                     break;
                 case "tnCPU":
                     #region MyRegion
@@ -612,7 +599,7 @@ namespace MonitorCLServer
                     break;
                 default:
                     break;
-            }
+            }*/
         }
 
         //-
@@ -646,36 +633,28 @@ namespace MonitorCLServer
         private void подключитсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //server.SendCommad("teamviewer");
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             TeamViewerForm form = new TeamViewerForm();
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
         }
 
         //-
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             SettingForm form = new SettingForm();
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
         }
 
         //-
         private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             ClientInfoForm form = new ClientInfoForm();
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
         }
 
         //-
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
             OpenViewForm form = new OpenViewForm();
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
             form.Show();
         }
 
@@ -701,8 +680,8 @@ namespace MonitorCLServer
         //-
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
-            pnContents.Controls.Clear();
-            pnContents.Controls.Add(panel3);
+            //pnContents.Controls.Clear();
+            //pnContents.Controls.Add(panel3);
 
             dataGridView1.Rows.Add(new object[] { "", "Компьютер", "" });
             dataGridView1.Rows[dataGridView1.RowCount - 1].DefaultCellStyle.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Bold);
@@ -775,11 +754,21 @@ namespace MonitorCLServer
 
         #endregion
 
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView4_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 
     #region Classes
 
-
+#pragma warning disable CS0169
+#pragma warning disable CS0649
     //-
     class Win32_BIOS
     {
@@ -1229,7 +1218,8 @@ Lost Comm ("Lost Comm")*/
         /// </summary>
         string Status;
     }
-
+#pragma warning restore CS0649
+#pragma warning restore CS0169
     #endregion
 }
 

@@ -29,7 +29,6 @@ namespace MonitorCLClient
             Graphics GH = Graphics.FromImage(BM as Image);
             GH.CopyFromScreen(0, 0, 0, 0, BM.Size);
             pictureBox1.Image = BM;
-            //label3.Visible = true;
             Show();
             this.Height = maxHeight;
         }
@@ -42,15 +41,21 @@ namespace MonitorCLClient
         private void btSend_Click(object sender, EventArgs e)
         {
             if (tbSubject.Text == "")
-                MessageBox.Show("Введите тему!");
+                MessageBox.Show("Введите тему сообщения!");
             else
                 if (rbBody.Text == "")
                 MessageBox.Show("Введите сообщение!");
             else
             {
-                client.SendSupport(tbSubject.Text, rbBody.Text, BM);
-                MessageBox.Show("Письмо отправленое!" + Environment.NewLine + "Ожидайте специалист с вами свяжется.");
-                Close();
+                if (client.SendToSupport(tbSubject.Text, rbBody.Text, BM))
+                {
+                    MessageBox.Show("Письмо отправленое!" + Environment.NewLine + "Ожидайте специалист с вами свяжется.");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка при отправлении, проверте соединение с интернетом и попробуйте повторить попытку позже.");
+                }
             }
         }
     }

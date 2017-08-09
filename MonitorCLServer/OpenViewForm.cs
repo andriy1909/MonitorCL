@@ -18,9 +18,7 @@ namespace MonitorCLServer
         {
             InitializeComponent();
         }
-#pragma warning disable CS0436 // Тип конфликтует с импортированным типом
         ProductsControl productsControl1 = new ProductsControl();
-#pragma warning restore CS0436 // Тип конфликтует с импортированным типом
 
 
         private void OpenViewForm_Load(object sender, EventArgs e)

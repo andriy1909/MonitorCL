@@ -25,7 +25,8 @@ namespace MonitorCLClassLibrary
         LoginExist,
         Error,
         KeyTimeout,
-        Timeout
+        Timeout,
+        UserExist
     }
 
     public enum EncriptLevel

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,7 @@ namespace MonitorCLClassLibrary
             }
             catch (Exception err)
             {
+                Debug.WriteLine(err.ToString());
           //      Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message;
             }
         }
@@ -33,7 +35,8 @@ namespace MonitorCLClassLibrary
             }
             catch (Exception err)
             {
-     //           Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message + " (error : "+message+")";
+                Debug.WriteLine(err.ToString());
+                //           Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message + " (error : "+message+")";
             }
         }
 
@@ -47,7 +50,8 @@ namespace MonitorCLClassLibrary
             }
             catch (Exception err)
             {
-      //          Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message;
+                Debug.WriteLine(err.ToString());
+                //          Properties.Settings.Default.ErrorList += Environment.NewLine + DateTime.Now.ToString() + " : " + err.Message;
             }
         }
     }

@@ -13,6 +13,7 @@ namespace MonitorCLServer
 {
     public partial class AddUserForm : Form
     {
+        User user = new User();
         UsersGroup parentGroup = null;
         MonitoringDB db = new MonitoringDB();
 
@@ -76,16 +77,15 @@ namespace MonitorCLServer
                 return;
             }
 
-            User user = new User()
-            {
-                UserName = tbUserName.Text,
-                DateReg = DateTime.Now,
-                Group = parentGroup,
-                Information = tbInformation.Text,
-                TypePC = cbTypeDevice.SelectedIndex,
-                Phone = mtbPhone.Text,
-                Company = tbCompany.Text
-            };
+
+            user.UserName = tbUserName.Text;
+                user.DateReg = DateTime.Now;
+                user.Group = parentGroup;
+                user.Information = tbInformation.Text;
+            user.TypePC = cbTypeDevice.SelectedIndex;
+                user.Phone = mtbPhone.Text;
+                user.Company = tbCompany.Text;
+
             db.Users.Add(user);
             db.SaveChanges();
 

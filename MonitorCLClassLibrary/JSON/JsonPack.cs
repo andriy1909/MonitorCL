@@ -99,7 +99,10 @@ namespace MonitorCLClassLibrary.JSON
             return CheckTime() && CheckSignature();
         }
 
-
+        public string GetUniqPC()
+        {
+            return BaseBoard.GetSerialNumber() + ";" + Bios.GetSerialNumber();
+        }
 
 
 

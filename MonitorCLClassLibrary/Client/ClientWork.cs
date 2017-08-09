@@ -25,7 +25,7 @@ namespace MonitorCLClassLibrary
         private NetworkStream stream;
         private int countEmpty = 0;
 
-        public int status { get; private set; } = -1;
+        public int status_Delete { get; private set; } = -1;
 
         Thread thread;
 
@@ -75,11 +75,60 @@ namespace MonitorCLClassLibrary
                 else
                 {
                     // запускаем новый поток для получения данных
-                    receiveThread = new Thread(new ThreadStart(ReceiveMessage));
-                    receiveThread.Start(); //старт потока
+                    receiveThread_Delete = new Thread(new ThreadStart(ReceiveMessage));
+                    receiveThread_Delete.Start(); //старт потока
                     return ResultCode.OK;
                 }
             }
+        }
+
+        public bool Login()
+        {
+            string LicenceKey = GetLicenseKey();
+            JsonPack pack = new JsonPack();
+            JSDLogin data = new JSDLogin()
+            {
+                LicenseKey = LicenceKey,
+                UniqPC = pack.GetUniqPC()
+            };
+            pack.data = data;
+            pack.metod = data.GetType().Name;
+
+            try
+            {
+                client.Connect(IP, Port);
+                stream = client.GetStream();
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err.Message);
+                    return false;
+            }
+
+            if (!client.Connected)
+            {
+                return false;
+            }
+            else
+            {
+                SendMessage(pack.ToString());
+
+                JsonPack receive = ReceiveOneMessage();
+
+                if (!receive.Accept)
+                {
+                        return false;
+                }
+                else
+                {
+                    // запускаем новый поток для получения данных
+                    receiveThread_Delete = new Thread(new ThreadStart(ReceiveMessage));
+                    receiveThread_Delete.Start(); //старт потока
+                    return true;
+                }
+            }
+
+            //return false;
         }
 
         private int GetErrorCode(Exception e)
@@ -116,7 +165,7 @@ namespace MonitorCLClassLibrary
             }
         }
 
-        public string OpenActiveKey()//-
+        public string GetLicenseKey()
         {
             try
             {
@@ -258,19 +307,52 @@ namespace MonitorCLClassLibrary
             }
         }
 
-
-
-
-
-
-
-        public void Connect()
+        public bool SendToSupport(string subject, string body, Image screen)
         {
-            thread = new Thread(new ThreadStart(ConnectThread));
+              JsonPack jp = new JsonPack();
+
+              ImageConverter converter = new ImageConverter();
+              var bytes = (byte[])converter.ConvertTo(screen, typeof(byte[]));
+              List<byte[]> list = new List<byte[]>();
+              list.Add(bytes);
+
+              string str = jp.ToString();
+
+            //var ms = new MemoryStream(jp.GetJson(str).images[0]);
+            var ms = new MemoryStream();
+            Image image = Image.FromStream(ms);
+
+              img_Delete = image;
+            //throw new NotImplementedException();
+            return false;
+        }
+
+        public void Disconnect()
+        {
+            if (stream != null)
+                stream.Close();//отключение потока
+            if (client != null)
+                client.Close();//отключение клиента
+            Environment.Exit(0); //завершение процесса
+        }
+
+        public void Dispose()
+        {
+            //
+        }
+
+
+
+        #region _Delete
+
+
+        public void Connect_Delete()
+        {
+            thread = new Thread(new ThreadStart(ConnectThread_Delete));
             thread.Start();
         }
 
-        private void ConnectThread()
+        private void ConnectThread_Delete()
         {
             client = new TcpClient();
             try
@@ -296,17 +378,17 @@ namespace MonitorCLClassLibrary
                     throw new NotImplementedException();
 
                 // запускаем новый поток для получения данных
-                receiveThread = new Thread(new ThreadStart(ReceiveMessage));
-                receiveThread.Start(); //старт потока
-                isConnect = true;
+                receiveThread_Delete = new Thread(new ThreadStart(ReceiveMessage));
+                receiveThread_Delete.Start(); //старт потока
+                isConnect_Delete = true;
             }
             catch (Exception ex)
             {
-                isConnect = false;
+                isConnect_Delete = false;
                 Debug.WriteLine(ex.Message);
                 Debug.WriteLine("reconnect");
                 Thread.Sleep(1000);
-                ConnectThread();
+                ConnectThread_Delete();
             }
             finally
             {
@@ -318,28 +400,27 @@ namespace MonitorCLClassLibrary
 
 
 
-        public delegate void ReceiveDelegate(string message);
-        public delegate void IsConnected(bool check);
-        ReceiveDelegate receiveOut;
-        IsConnected isConnectedOut;
-        private Thread receiveThread;
-        private Thread connectedThread;
-        private bool isConnect = false;
+        public delegate void ReceiveDelegate_Delete(string message);
+        public delegate void IsConnected_Delete(bool check);
+        ReceiveDelegate_Delete receiveOut_Delete;
+        IsConnected_Delete isConnectedOut_Delete;
+        private Thread receiveThread_Delete;
+        private bool isConnect_Delete = false;
 
 
-        public bool IsConnect
+        public bool IsConnect_Delete
         {
-            get { return isConnect; }
+            get { return isConnect_Delete; }
         }
 
-        public void setReceiveOut(ReceiveDelegate receive)
+        public void setReceiveOut_Delete(ReceiveDelegate_Delete receive)
         {
-            receiveOut = receive;
+            receiveOut_Delete = receive;
         }
 
-        public void setIsConnectOut(IsConnected isConnected)
+        public void setIsConnectOut_Delete(IsConnected_Delete isConnected)
         {
-            isConnectedOut = isConnected;
+            isConnectedOut_Delete = isConnected;
         }
         /*
                 public void Connect(string ip, int port, Guid id, string login, string password)
@@ -396,47 +477,14 @@ namespace MonitorCLClassLibrary
                 }
         */
 
-        Image img;
-        public void SendSupport(string subject, string body, Image screen)
+        Image img_Delete = new Bitmap("");
+        public Image getImg_Delete()
         {
-            /*  JsonPack jp = new JsonPack();
-              jp.login = "1";
-              jp.password = "2";
-
-              ImageConverter converter = new ImageConverter();
-              var bytes = (byte[])converter.ConvertTo(screen, typeof(byte[]));
-              List<byte[]> list = new List<byte[]>();
-              list.Add(bytes);
-              jp.images = list;
-
-              string str = jp.getJsonStr();
-
-              var ms = new MemoryStream(jp.getJson(str).images[0]);
-              Image image = Image.FromStream(ms);
-
-              img = image;*/
-            //throw new NotImplementedException();
-        }
-        public Image getImg()
-        {
-            return img;
+            return img_Delete;
         }
 
 
 
-
-        public void Disconnect()
-        {
-            if (stream != null)
-                stream.Close();//отключение потока
-            if (client != null)
-                client.Close();//отключение клиента
-            Environment.Exit(0); //завершение процесса
-        }
-
-        public void Dispose()
-        {
-            //
-        }
+        #endregion
     }
 }
