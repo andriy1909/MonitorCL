@@ -40,6 +40,7 @@ namespace MonitorCLServer
 
         private void btGenereteKey_Click(object sender, EventArgs e)
         {
+            //string newGuid = Guid.NewGuid().ToString().Replace("-", "").Remove(25, 7).ToUpper();
             string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             string resultKey = "";
             do

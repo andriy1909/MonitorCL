@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using MonitorCLClassLibrary.Model;
 using System.Linq;
+using MonitorCLClassLibrary.Server;
+using MonitorCLServer.Properties;
 
 namespace MonitorCLServer
 {
@@ -41,12 +43,12 @@ namespace MonitorCLServer
 
 
 
-            /*
+            
             ServerObject server = new ServerObject();
             server.StartListener(Settings.Default.ip, Settings.Default.port);
 
             this.Show();
-            
+            /*
 
 
             for (int i = 0; i < 4; i++)

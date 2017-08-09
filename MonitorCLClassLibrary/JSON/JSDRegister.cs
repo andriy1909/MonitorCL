@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using MonitorCLClassLibrary;
+using System.Runtime.Serialization.Json;
+using System.IO;
 
 namespace MonitorCLClassLibrary.JSON
 {
@@ -45,6 +47,18 @@ namespace MonitorCLClassLibrary.JSON
         public override void DecriptData()
         {
 
+        }
+
+        public override string ToString()
+        {
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(JSDRegister));
+
+            MemoryStream stream = new MemoryStream();
+            serializer.WriteObject(stream, this);
+            stream.Position = 0;
+            StreamReader sr = new StreamReader(stream);
+            string json = sr.ReadToEnd();
+            return json;
         }
     }
 }

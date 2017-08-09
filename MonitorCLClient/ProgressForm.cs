@@ -23,6 +23,11 @@ namespace MonitorCLClient
             serialKey = key;
         }
 
+        public ClientWork GetClient()
+        {
+            return client;
+        }
+
         private void ProgressForm_Load(object sender, EventArgs e)
         {
             Show();
@@ -34,18 +39,8 @@ namespace MonitorCLClient
                 case ResultCode.OK:
                     DialogResult = DialogResult.OK;
 
-                    try
-                    {
-                        RegistryKey reg = Registry.LocalMachine.OpenSubKey
-                            ("SOFTWARE\\CompLife\\" + Application.ProductName + "\\", true);
-
-                        reg.SetValue("SerialKey", Convert.ToBase64String(Encoding.UTF8.GetBytes(serialKey)));
-                    }
-                    catch (Exception err)
-                    {
-                        LogList.Add(err.Message);
-                    }
-
+                    client.SetActiveKey(serialKey);
+                    
                     Close();
                     break;
                 case ResultCode.NotValidKey:
@@ -73,7 +68,7 @@ namespace MonitorCLClient
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Соединение прервано!", "Ошибка соединения!");
         }
     }
 }

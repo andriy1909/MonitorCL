@@ -174,6 +174,17 @@ namespace MonitorCLClassLibrary
             }
         }
 
+        public static string GetNamePC()
+        {
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT " + "CSName" + " FROM Win32_OperatingSystem");
+
+            foreach (ManagementObject item in searcher.Get())
+            {
+                return item["CSName"].ToString();
+            }
+            return null;
+        }
+
         public object this[string name]
         {
             get

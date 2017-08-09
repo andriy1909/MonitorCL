@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 
-namespace MonitorCLClassLibrary
+namespace MonitorCLClassLibrary.Server
 {
     public class ServerObject
     {

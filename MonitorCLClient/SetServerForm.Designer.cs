@@ -109,6 +109,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "SetServerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Параметры сервера";
             this.Load += new System.EventHandler(this.SetServerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPort)).EndInit();

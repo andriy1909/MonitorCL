@@ -9,7 +9,7 @@ using System.Diagnostics;
 using MonitorCLClassLibrary.Model;
 using MonitorCLClassLibrary.JSON;
 
-namespace MonitorCLClassLibrary
+namespace MonitorCLClassLibrary.Server
 {
     public class ClientObject
     {

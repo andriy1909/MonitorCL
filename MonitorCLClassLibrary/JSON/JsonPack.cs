@@ -25,6 +25,10 @@ namespace MonitorCLClassLibrary.JSON
         public DateTime time;
         [DataMember]
         public string signature = "";
+        [DataMember]
+        public bool Accept;
+        [DataMember]
+        public string Errors;
 
         [IgnoreDataMember]
         private DateTime currentDataTime = DateTime.UtcNow;
@@ -33,8 +37,9 @@ namespace MonitorCLClassLibrary.JSON
         public void SetSignature()
         {
             signature = null;
-            HMACSHA256 sha = new HMACSHA256(Encoding.ASCII.GetBytes(MonitorCLClassLibrary.Properties.Settings.Default.privateKey));
-            signature = Encoding.ASCII.GetString(sha.ComputeHash(Encoding.ASCII.GetBytes(GetJsonDataStr_Delete())));
+
+            HMACSHA256 sha = new HMACSHA256(Encoding.ASCII.GetBytes(Properties.Settings.Default.privateKey));
+            signature = Encoding.ASCII.GetString(sha.ComputeHash(Encoding.ASCII.GetBytes(data.ToString())));
         }
 
         public bool CheckSignature()
@@ -52,6 +57,7 @@ namespace MonitorCLClassLibrary.JSON
         public override string ToString()
         {
             metod = data.GetType().Name;
+            SetSignature();
             data.EncriptData();
             time = DateTime.UtcNow;
 

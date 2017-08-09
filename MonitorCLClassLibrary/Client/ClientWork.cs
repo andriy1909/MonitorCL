@@ -11,6 +11,8 @@ using MonitorCLClassLibrary;
 using System.IO;
 using MonitorCLClassLibrary.Model;
 using MonitorCLClassLibrary.JSON;
+using Microsoft.Win32;
+using System.ComponentModel;
 
 namespace MonitorCLClassLibrary
 {
@@ -19,8 +21,9 @@ namespace MonitorCLClassLibrary
         public User user = new User();
         public string IP { get; set; }
         public int Port { get; set; }
-        TcpClient client;
-        NetworkStream stream;
+        private TcpClient client;
+        private NetworkStream stream;
+        private int countEmpty = 0;
 
         public int status { get; private set; } = -1;
 
@@ -28,12 +31,14 @@ namespace MonitorCLClassLibrary
 
         public ResultCode Register(string serialKey)
         {
+            client = new TcpClient();
             JsonPack json = new JsonPack();
             json.data = new JSDRegister()
             {
                 key = serialKey,
                 Id_1 = BaseBoard.GetSerialNumber(),
-                Id_2 = Bios.GetSerialNumber()
+                Id_2 = Bios.GetSerialNumber(),
+                computerName = OperatingSystemScan.GetNamePC()
             };
 
             try
@@ -44,7 +49,10 @@ namespace MonitorCLClassLibrary
             catch (Exception err)
             {
                 Debug.WriteLine(err.Message);
-                return ResultCode.Error;
+                if (GetErrorCode(err) == 10061)
+                    return ResultCode.NoConnection;
+                else
+                    return ResultCode.Error;
             }
 
             if (!client.Connected)
@@ -56,13 +64,91 @@ namespace MonitorCLClassLibrary
                 SendMessage(json.ToString());
 
                 JsonPack receive = ReceiveOneMessage();
-                //if(receive)
 
-                // запускаем новый поток для получения данных
-                receiveThread = new Thread(new ThreadStart(ReceiveMessage));
-                receiveThread.Start(); //старт потока
+                if (!receive.Accept)
+                {
+                    if (receive.Errors == "NotValidKey")
+                        return ResultCode.NotValidKey;
+                    else
+                        return ResultCode.Error;
+                }
+                else
+                {
+                    // запускаем новый поток для получения данных
+                    receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+                    receiveThread.Start(); //старт потока
+                    return ResultCode.OK;
+                }
+            }
+        }
 
-                return ResultCode.OK;
+        private int GetErrorCode(Exception e)
+        {
+            Win32Exception winEx = e as Win32Exception;
+            if (winEx != null)
+                return winEx.ErrorCode;
+
+            if (e.InnerException != null)
+                return GetErrorCode(e.InnerException);
+
+            return -1;
+        }
+
+        public void SetAutoRun(string path, bool value)
+        {
+            try
+            {
+                RegistryKey reg = Registry.LocalMachine.OpenSubKey
+                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                if (value)
+                {
+                    if (reg.GetValue(new FileInfo(path).Name).ToString() != path)
+                        reg.SetValue(new FileInfo(path).Name, path);
+                }
+                else
+                {
+                    reg.DeleteValue(new FileInfo(path).Name);
+                }
+            }
+            catch (Exception err)
+            {
+                LogList.Add(err.Message);
+            }
+        }
+
+        public string OpenActiveKey()//-
+        {
+            try
+            {
+                RegistryKey reg = Registry.LocalMachine.OpenSubKey
+                    ("SOFTWARE\\CompLife\\MonitorCLClient", true);
+
+                if (reg.GetValue("MonitorCLClient") != null)
+                    return reg.GetValue("LicenseKey").ToString();
+                else
+                    return null;
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err.Message);
+                LogList.Add(err.Message);
+                return null;
+            }
+        }
+
+        public void SetActiveKey(string key)
+        {
+            try
+            {
+                RegistryKey reg = Registry.LocalMachine.OpenSubKey
+                    ("SOFTWARE\\CompLife\\MonitorCLClient", true);
+
+                reg.SetValue("LicenseKey", key);
+            }
+            catch (Exception err)
+            {
+                Debug.WriteLine(err.Message);
+                LogList.Add(err.Message);
             }
         }
 
@@ -75,6 +161,7 @@ namespace MonitorCLClassLibrary
             byte[] data = Encoding.Unicode.GetBytes(message);
             stream.Write(data, 0, data.Length);
         }
+
         public JsonPack ReceiveOneMessage()
         {
             try
@@ -108,6 +195,68 @@ namespace MonitorCLClassLibrary
             }
         }
 
+        /// <summary>
+        /// получение сообщений
+        /// </summary>        
+        void ReceiveMessage()
+        {
+            while (true)
+            {
+                try
+                {
+                    byte[] data = new byte[64]; // буфер для получаемых данных
+                    StringBuilder builder = new StringBuilder();
+                    int bytes = 0;
+                    do
+                    {
+                        bytes = stream.Read(data, 0, data.Length);
+                        builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                    }
+                    while (stream.DataAvailable);
+
+                    if (builder.ToString() == "")
+                    {
+                        countEmpty++;
+                        if (countEmpty >= 50)
+                            continue;
+                    }
+                    else
+                        countEmpty = 0;
+
+                    JsonPack pack = new JsonPack();
+                    if (pack.GetJson(builder.ToString()))
+                        ProcessQuery(pack);
+                    else
+                        ProcessQuery(null);
+                }
+                catch
+                {
+                    Debug.WriteLine("Подключение прервано!"); //соединение было прервано
+                    Disconnect();
+                    //            Connect(host, port, idClient, login, password);
+                }
+            }
+        }
+
+        private void ProcessQuery(JsonPack query)
+        {
+            if (query == null)
+                return;
+            switch (query.metod)
+            {
+                case "m1":
+
+                    break;
+                case "m2":
+
+                    break;
+                case "m3":
+
+                    break;
+                default:
+                    break;
+            }
+        }
 
 
 
@@ -175,7 +324,6 @@ namespace MonitorCLClassLibrary
         IsConnected isConnectedOut;
         private Thread receiveThread;
         private Thread connectedThread;
-        private int countEmpty = 0;
         private bool isConnect = false;
 
 
@@ -276,55 +424,6 @@ namespace MonitorCLClassLibrary
 
 
 
-        /// <summary>
-        /// получение сообщений
-        /// </summary>        
-        void ReceiveMessage()
-        {
-            while (true)
-            {
-                try
-                {
-                    byte[] data = new byte[64]; // буфер для получаемых данных
-                    StringBuilder builder = new StringBuilder();
-                    int bytes = 0;
-                    do
-                    {
-                        bytes = stream.Read(data, 0, data.Length);
-                        builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
-                    }
-                    while (stream.DataAvailable);
-
-                    if (builder.ToString() == "")
-                    {
-                        countEmpty++;
-                        if (countEmpty >= 50)
-                            //                  Connect(host, port, idClient, login, password);
-                            continue;
-                    }
-                    else
-                        countEmpty = 0;
-
-
-                    string message = builder.ToString();
-                    /*      JsonPack jsPack = new JsonPack();
-                          jsPack.GetJson(message);
-                          if (jsPack.CheckTime(1000000) && jsPack.CheckSignature(Settings.Default.privateKey))
-                              if (jsPack.header.metod == "cmd")
-                              {
-                                  message = jsPack.data.text;
-                              }
-                              */
-                    receiveOut(message);
-                }
-                catch
-                {
-                    Debug.WriteLine("Подключение прервано!"); //соединение было прервано
-                    Disconnect();
-                    //            Connect(host, port, idClient, login, password);
-                }
-            }
-        }
 
         public void Disconnect()
         {

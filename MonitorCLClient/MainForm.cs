@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using MonitorCLClassLibrary;
+using MonitorCLClassLibrary.JSON;
 
 namespace MonitorCLClient
 {
@@ -30,30 +31,26 @@ namespace MonitorCLClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ActivateForm aForm = new ActivateForm();
-            if (aForm.ShowDialog()==DialogResult.OK)
+            if (client.OpenActiveKey() != null)
             {
-                Exit();
+
             }
             else
             {
-                Exit();
+                ActivateForm aForm = new ActivateForm();
+                if (aForm.ShowDialog() == DialogResult.OK)
+                {
+                    Exit();
+                }
+                else
+                {
+                    Exit();
+                }
             }
 
-            #region автозапуск программы при старте Windows
-            try
-            {
-                RegistryKey reg = Registry.LocalMachine.OpenSubKey
-                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 
-                if (reg.GetValue(Application.ProductName).ToString() != Application.ExecutablePath.ToString())
-                    reg.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
-            }
-            catch (Exception err)
-            {
-                LogList.Add(err.Message);
-            }
-            #endregion
+            client.SetAutoRun(Application.ExecutablePath, true); //автозапуск программы при старте Windows
+
 
             if (Settings.Default.login == "")
             {
@@ -114,7 +111,7 @@ namespace MonitorCLClient
         {
             client.Connect();
             Thread.Sleep(5000);
-            
+
             //try
 
             // client.Connect(Settings.Default.ip, Settings.Default.port, Settings.Default.login,Settings.Default.password);
