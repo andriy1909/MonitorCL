@@ -24,6 +24,7 @@ namespace MonitorCLClassLibrary
         private TcpClient client;
         private NetworkStream stream;
         private int countEmpty = 0;
+        private Thread receiveThread;
 
         public int status_Delete { get; private set; } = -1;
 
@@ -53,7 +54,7 @@ namespace MonitorCLClassLibrary
                     return ResultCode.NoConnection;
                 else
                     return ResultCode.Error;
-            }
+            } 
 
             if (!client.Connected)
             {
@@ -75,8 +76,8 @@ namespace MonitorCLClassLibrary
                 else
                 {
                     // запускаем новый поток для получения данных
-                    receiveThread_Delete = new Thread(new ThreadStart(ReceiveMessage));
-                    receiveThread_Delete.Start(); //старт потока
+                    receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+                    receiveThread.Start(); //старт потока
                     return ResultCode.OK;
                 }
             }
@@ -120,10 +121,10 @@ namespace MonitorCLClassLibrary
                         return false;
                 }
                 else
-                {
+                { 
                     // запускаем новый поток для получения данных
-                    receiveThread_Delete = new Thread(new ThreadStart(ReceiveMessage));
-                    receiveThread_Delete.Start(); //старт потока
+                    receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+                    receiveThread.Start(); //старт потока
                     return true;
                 }
             }
@@ -339,7 +340,7 @@ namespace MonitorCLClassLibrary
         public void Dispose()
         {
             //
-        }
+        }  
 
 
 
@@ -378,8 +379,8 @@ namespace MonitorCLClassLibrary
                     throw new NotImplementedException();
 
                 // запускаем новый поток для получения данных
-                receiveThread_Delete = new Thread(new ThreadStart(ReceiveMessage));
-                receiveThread_Delete.Start(); //старт потока
+                receiveThread = new Thread(new ThreadStart(ReceiveMessage));
+                receiveThread.Start(); //старт потока
                 isConnect_Delete = true;
             }
             catch (Exception ex)
@@ -404,7 +405,6 @@ namespace MonitorCLClassLibrary
         public delegate void IsConnected_Delete(bool check);
         ReceiveDelegate_Delete receiveOut_Delete;
         IsConnected_Delete isConnectedOut_Delete;
-        private Thread receiveThread_Delete;
         private bool isConnect_Delete = false;
 
 

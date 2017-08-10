@@ -263,7 +263,7 @@ namespace MonitorCLServer
                         }
                         targetNode.Nodes.Add(draggedNode);
                     }
-
+                     
                     targetNode.Expand();
                 }
             }
