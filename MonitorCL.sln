@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorCL.Server", "MonitorCLServer\MonitorCL.Server.csproj", "{05F77F01-C2AC-4D1C-8810-7D9EBC22A984}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorCL.Client", "MonitorCLClient\MonitorCL.Client.csproj", "{14EF502F-B6F8-4CE8-B521-91628E7B10E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorCL.ClassLibrary", "MonitorCLClassLibrary\MonitorCL.ClassLibrary.csproj", "{750214A1-73CF-4F51-A7FA-FFCC700DF801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAdapter", "ServerAdapter\ServerAdapter.csproj", "{ADC5E2DE-7986-43A6-B66B-B7B7E5AA03BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{750214A1-73CF-4F51-A7FA-FFCC700DF801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750214A1-73CF-4F51-A7FA-FFCC700DF801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{750214A1-73CF-4F51-A7FA-FFCC700DF801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC5E2DE-7986-43A6-B66B-B7B7E5AA03BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC5E2DE-7986-43A6-B66B-B7B7E5AA03BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC5E2DE-7986-43A6-B66B-B7B7E5AA03BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC5E2DE-7986-43A6-B66B-B7B7E5AA03BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

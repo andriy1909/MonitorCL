@@ -31,7 +31,7 @@ namespace MonitorCLClient
         }
 
         private void MainForm_Load(object sender, EventArgs e)
-        {
+        {            
             if (client.GetLicenseKey() != null)
             {
                 client.SetAutoRun(Application.ExecutablePath, true);
@@ -56,7 +56,7 @@ namespace MonitorCLClient
                     Exit();
                 }
             }
-
+            
 
             // client.SetAutoRun(Application.ExecutablePath, true); //автозапуск программы при старте Windows
 

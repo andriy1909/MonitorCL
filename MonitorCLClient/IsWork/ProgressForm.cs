@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace MonitorCLClient
@@ -14,6 +15,7 @@ namespace MonitorCLClient
     public partial class ProgressForm : Form
     {
         ClientWork client = new ClientWork();
+        Thread thread;
 
         string serialKey = "";
 
@@ -31,6 +33,12 @@ namespace MonitorCLClient
         private void ProgressForm_Load(object sender, EventArgs e)
         {
             Show();
+            thread = new Thread(Connect);
+            thread.Start();
+        }
+
+        void Connect()
+        {
             client.IP = Properties.Settings.Default.ip;
             client.Port = Properties.Settings.Default.port;
 
@@ -40,7 +48,7 @@ namespace MonitorCLClient
                     DialogResult = DialogResult.OK;
 
                     client.SetActiveKey(serialKey);
-                    
+
                     Close();
                     break;
                 case ResultCode.NotValidKey:

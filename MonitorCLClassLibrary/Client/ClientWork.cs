@@ -477,7 +477,7 @@ namespace MonitorCLClassLibrary
                 }
         */
 
-        Image img_Delete = new Bitmap("");
+        Image img_Delete;// = new Bitmap("");
         public Image getImg_Delete()
         {
             return img_Delete;
