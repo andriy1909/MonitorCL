@@ -8,16 +8,18 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using MonitorCLClassLibrary.Model;
+using System.Data.Entity;
 
 namespace MonitorCLServer
 {
     public partial class AddUserForm : Form
     {
+        bool isAdd = false;
         User user = new User();
-        UsersGroup parentGroup = null;
+        TreeNode parentGroup = null;
         MonitoringDB db = new MonitoringDB();
 
-        public AddUserForm(UsersGroup parentGroup = null)
+        public AddUserForm(TreeNode parentGroup = null)
         {
             InitializeComponent();
             this.parentGroup = parentGroup;
@@ -67,7 +69,7 @@ namespace MonitorCLServer
                 MessageBox.Show("Введите название устройства (для оботражения)");
                 return;
             }
-            if (cbTypeDevice.SelectedIndex == 0)
+            if (cbTypeDevice.Text == "")
             {
                 MessageBox.Show("Виберете тип устройства!");
                 return;
@@ -79,15 +81,34 @@ namespace MonitorCLServer
 
 
             user.UserName = tbUserName.Text;
-                user.DateReg = DateTime.Now;
-                user.Group = parentGroup;
-                user.Information = tbInformation.Text;
+            user.DateReg = DateTime.Now;
+            if (parentGroup != null)
+            {
+                if (parentGroup.Tag != null)
+                    user.Group = db.UserGroups.Where(x => x.UsersGroupId == ((UsersGroup)parentGroup.Tag).UsersGroupId).First();
+            }
+            user.Information = tbInformation.Text;
             user.TypePC = cbTypeDevice.SelectedIndex;
-                user.Phone = mtbPhone.Text;
-                user.Company = tbCompany.Text;
+            user.Phone = mtbPhone.Text;
+            user.Company = tbCompany.Text;
 
-            db.Users.Add(user);
-            db.SaveChanges();
+            if (isAdd)
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+            }
+            else
+            {
+                if (user != null)
+                {
+                    db.Users.Attach(user);
+                    db.Entry(this).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                else
+                    MessageBox.Show("Ошибка редактирования пользователя!");
+                return;
+            }
 
             if (!mtbLicenceKey.Text.Contains(' '))
             {
@@ -102,10 +123,12 @@ namespace MonitorCLServer
                 };
                 db.LicenceKeys.Add(licenseKey);
                 db.SaveChanges();
+                lbNoSave.Visible = false;
+                btApply.Enabled = false;
             }
+            else
+                MessageBox.Show("Ошибка редактирования ключа!");
 
-            lbNoSave.Visible = false;
-            btApply.Enabled = false;
         }
 
         private void btCancel_Click(object sender, EventArgs e)

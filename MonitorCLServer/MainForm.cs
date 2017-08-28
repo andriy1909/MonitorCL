@@ -25,7 +25,6 @@ namespace MonitorCLServer
 
             menuStrip1.Visible = false;
             splitContainer1.Visible = false;
-            UpdateUsersList();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -41,9 +40,9 @@ namespace MonitorCLServer
                 return;
             }
 
-
-
-            
+            //зазрузка списку клієнтів
+            UpdateUsersList();
+                                    
             ServerObject server = new ServerObject();
             server.StartListener(Settings.Default.ip, Settings.Default.port);
 
@@ -78,7 +77,7 @@ namespace MonitorCLServer
             {
                 TreeNode node = new TreeNode()
                 {
-                    Name = "cl" + item.UsersGroupId.ToString(),
+                    Name = "gr" + item.UsersGroupId.ToString(),
                     Text = item.Name,
                     ImageIndex = 0,
                     ToolTipText = item.Information,
@@ -86,7 +85,7 @@ namespace MonitorCLServer
                 };
                 if (item.Level > 0)
                 {
-                    TreeNode parentNode = tvClients.Nodes.Find("cl" + item.Parent.UsersGroupId, true).First();
+                    TreeNode parentNode = tvClients.Nodes.Find("gr" + item.Parent.UsersGroupId, true).First();
                     if (parentNode != null)
                     {
                         parentNode.Nodes.Add(node);
@@ -107,9 +106,10 @@ namespace MonitorCLServer
             {
                 TreeNode node = new TreeNode()
                 {
-                    Name = "clu" + item.UserId.ToString(),
-                    Text = item.UserName,
+                    Name = "u" + item.UserId.ToString(),
+                    Text = item.Name,
                     ImageIndex = item.TypePC,
+                    SelectedImageIndex = item.TypePC,
                     ToolTipText = item.UserName + " " + item.Phone,
                     Tag = item
                 };
@@ -120,7 +120,7 @@ namespace MonitorCLServer
                 }
                 else
                 {
-                    TreeNode parentNode = tvClients.Nodes.Find("cl" + item.Group.UsersGroupId, true).First();
+                    TreeNode parentNode = tvClients.Nodes.Find("gr" + item.Group.UsersGroupId, true).First();
                     if (parentNode != null)
                     {
                         parentNode.Nodes.Add(node);
@@ -147,10 +147,8 @@ namespace MonitorCLServer
         private void tsbAddUser_Click(object sender, EventArgs e)
         {
             AddUserForm form = new AddUserForm();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                UpdateUsersList();
-            }
+            form.ShowDialog();
+            UpdateUsersList();
         }
 
         private void tsbRefreshUserList_Click(object sender, EventArgs e)
@@ -169,7 +167,12 @@ namespace MonitorCLServer
 
         private void tsmiAddUser_Click(object sender, EventArgs e)
         {
-
+            var node = tvClients.SelectedNode;
+            if (node != null && node.Name.Contains("u"))
+                node = node.Parent;
+            AddUserForm addForm = new AddUserForm(node);
+            addForm.ShowDialog();
+            UpdateUsersList();
         }
 
         private void tsbDeleteUserListItem_Click(object sender, EventArgs e)

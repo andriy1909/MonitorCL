@@ -7,14 +7,36 @@ namespace MonitorCLClassLibrary.Model
 {
     public class UsersGroup
     {
+        /// <summary>
+        /// Идентефикатор записи в БД
+        /// </summary>
         public int UsersGroupId { get; set; }
+        /// <summary>
+        /// Имя для отображения
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Информация
+        /// </summary>
         public string Information { get; set; }
+        /// <summary>
+        /// Уровень
+        /// </summary>
         public int Level { get; set; }
+        /// <summary>
+        /// Родительськая группа
+        /// </summary>
         public UsersGroup Parent { get; set; }
 
+        /// <summary>
+        /// NotImplementedException
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static bool Delete(int id)
         {
+            throw new NotImplementedException();
+
             var db = new MonitoringDB();
             UsersGroup currentGroup = db.UserGroups.Where(x => x.UsersGroupId == id).First();
             if (currentGroup == null)
