@@ -39,6 +39,7 @@ namespace MonitorCLServer
 
         private void ProductsControl_Load(object sender, EventArgs e)
         {
+            return;
             switch (type)
             {
                 case "os":

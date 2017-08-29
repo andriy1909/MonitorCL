@@ -39,6 +39,7 @@ namespace MonitorCLClassLibrary.Model
         /// Группа
         /// </summary>
         public UsersGroup Group { get; set; }
+        public int GroupId { get; set; }
         /// <summary>
         /// Дата регистрации
         /// </summary>

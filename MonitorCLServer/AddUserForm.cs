@@ -22,12 +22,31 @@ namespace MonitorCLServer
         public AddUserForm(TreeNode parentGroup = null)
         {
             InitializeComponent();
+            isAdd = true;
             this.parentGroup = parentGroup;
+        }
+
+        public AddUserForm(User user)
+        {
+            InitializeComponent();
+            isAdd = false;
+            this.user = user ?? throw new ArgumentNullException("user");
         }
 
         private void AddUserForm_Load(object sender, EventArgs e)
         {
+            if (!isAdd)
+            {
+                tbCompany.Text = user.Company;
+                tbDeviceName.Text = user.Name;
+                tbInformation.Text = user.Information;
+                tbUserName.Text = user.UserName;
+                cbTypeDevice.SelectedIndex = user.TypePC;
+                mtbPhone.Text = user.Phone;
 
+                LicenceKey key = db.LicenceKeys.Where(x => x.Active == true && x.UserId == user.UserId).FirstOrDefault();
+                mtbLicenceKey.Text = key.Key;
+            }
         }
 
         private void btCopy_Click(object sender, EventArgs e)
@@ -37,8 +56,8 @@ namespace MonitorCLServer
 
         private void btOK_Click(object sender, EventArgs e)
         {
-            btApply_Click(sender, e);
-            Close();
+            if (SaveChange())
+                Close();
         }
 
         private void btGenereteKey_Click(object sender, EventArgs e)
@@ -64,22 +83,27 @@ namespace MonitorCLServer
 
         private void btApply_Click(object sender, EventArgs e)
         {
+            SaveChange();
+        }
+
+        private bool SaveChange()
+        {
             if (tbDeviceName.TextLength == 0)
             {
                 MessageBox.Show("Введите название устройства (для оботражения)");
-                return;
+                return false;
             }
             if (cbTypeDevice.Text == "")
             {
                 MessageBox.Show("Виберете тип устройства!");
-                return;
+                return false;
             }
             if (mtbLicenceKey.Text.Contains(' ') && MessageBox.Show("Для пользователя не сгенерирован ключ активации, сохранить без ключа?", "", MessageBoxButtons.YesNo) != DialogResult.Yes)
             {
-                return;
+                return false;
             }
 
-
+            user.Name = tbDeviceName.Text;
             user.UserName = tbUserName.Text;
             user.DateReg = DateTime.Now;
             if (parentGroup != null)
@@ -96,18 +120,21 @@ namespace MonitorCLServer
             {
                 db.Users.Add(user);
                 db.SaveChanges();
+                isAdd = false;
             }
             else
             {
                 if (user != null)
                 {
                     db.Users.Attach(user);
-                    db.Entry(this).State = EntityState.Modified;
+                    db.Entry(db.Users.Find(user.UserId)).State = EntityState.Modified;
                     db.SaveChanges();
                 }
                 else
+                {
                     MessageBox.Show("Ошибка редактирования пользователя!");
-                return;
+                    return false;
+                }
             }
 
             if (!mtbLicenceKey.Text.Contains(' '))
@@ -126,9 +153,9 @@ namespace MonitorCLServer
                 lbNoSave.Visible = false;
                 btApply.Enabled = false;
             }
-            else
-                MessageBox.Show("Ошибка редактирования ключа!");
-
+            //else
+            //    MessageBox.Show("Ошибка редактирования ключа!");
+            return true;
         }
 
         private void btCancel_Click(object sender, EventArgs e)

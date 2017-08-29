@@ -6,6 +6,7 @@ namespace MonitorCLClassLibrary.Model
     {
         public int LicenceKeyId { get; set; }
         public User User { get; set; }
+        public int UserId { get; set; }
         public string Key { get; set; }
         public string UnicId { get; set; }
         public DateTime DateCreate { get; set; }

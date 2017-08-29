@@ -21,7 +21,7 @@ namespace MonitorCLServer
         {
             InitializeComponent();
 
-            //MonitoringDB.ReCreareDB();
+           // MonitoringDB.ReCreareDB();
 
             menuStrip1.Visible = false;
             splitContainer1.Visible = false;
@@ -275,7 +275,18 @@ namespace MonitorCLServer
                 MessageBox.Show("Добавление возможно только в группу!");
             }
         }
-
+        
+        private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var node = tvClients.SelectedNode;
+            if (node == null)
+                return;
+            if (node.Tag.GetType() == typeof(User))
+            {
+                AddUserForm form = new AddUserForm((User)node.Tag);
+                form.Show();
+            }
+        }
 
         #region NoCheck
 
@@ -646,14 +657,7 @@ namespace MonitorCLServer
             SettingForm form = new SettingForm();
             form.Show();
         }
-
-        //-
-        private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ClientInfoForm form = new ClientInfoForm();
-            form.Show();
-        }
-
+        
         //-
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
