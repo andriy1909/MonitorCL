@@ -278,7 +278,7 @@ namespace MonitorCLServer
         
         private void показатьПодробнуюИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var node = tvClients.SelectedNode;
+            var node = tvClients.SelectedNode; 
             if (node == null)
                 return;
             if (node.Tag.GetType() == typeof(User))
@@ -286,6 +286,12 @@ namespace MonitorCLServer
                 AddUserForm form = new AddUserForm((User)node.Tag);
                 form.Show();
             }
+            else
+            {
+                AddGroupForm form = new AddGroupForm((UsersGroup)node.Tag);
+                form.Show();
+            }
+            UpdateUsersList();
         }
 
         #region NoCheck
