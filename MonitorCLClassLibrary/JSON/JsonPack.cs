@@ -26,7 +26,7 @@ namespace MonitorCLClassLibrary.JSON
         [DataMember]
         public string signature = "";
         [DataMember]
-        public bool Accept;
+        public bool Accept = true;
         [DataMember]
         public string Errors;
 

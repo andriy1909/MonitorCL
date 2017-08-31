@@ -64,10 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IsWork\ActivateForm.cs">
+    <Compile Include="ActivateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IsWork\ActivateForm.Designer.cs">
+    <Compile Include="ActivateForm.Designer.cs">
       <DependentUpon>ActivateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -77,10 +77,10 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="IsWork\ProgressForm.cs">
+    <Compile Include="ProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IsWork\ProgressForm.Designer.cs">
+    <Compile Include="ProgressForm.Designer.cs">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,26 +89,26 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="IsWork\SendMessageForm.cs">
+    <Compile Include="SendMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IsWork\SendMessageForm.Designer.cs">
+    <Compile Include="SendMessageForm.Designer.cs">
       <DependentUpon>SendMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IsWork\SetServerForm.cs">
+    <Compile Include="SetServerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IsWork\SetServerForm.Designer.cs">
+    <Compile Include="SetServerForm.Designer.cs">
       <DependentUpon>SetServerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="IsWork\ActivateForm.resx">
+    <EmbeddedResource Include="ActivateForm.resx">
       <DependentUpon>ActivateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IsWork\ProgressForm.resx">
+    <EmbeddedResource Include="ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -121,10 +121,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="IsWork\SendMessageForm.resx">
+    <EmbeddedResource Include="SendMessageForm.resx">
       <DependentUpon>SendMessageForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IsWork\SetServerForm.resx">
+    <EmbeddedResource Include="SetServerForm.resx">
       <DependentUpon>SetServerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

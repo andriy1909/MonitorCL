@@ -108,8 +108,8 @@ namespace MonitorCLServer
                 {
                     Name = "u" + item.UserId.ToString(),
                     Text = item.Name,
-                    ImageIndex = item.TypePC,
-                    SelectedImageIndex = item.TypePC,
+                    ImageIndex = item.TypePC+1,
+                    SelectedImageIndex = item.TypePC+1,
                     ToolTipText = item.UserName + " " + item.Phone,
                     Tag = item
                 };

@@ -33,7 +33,7 @@ namespace MonitorCLServer
 
         private void AddGroupForm_Load(object sender, EventArgs e)
         {
-            if(isAdd)
+            if(!isAdd)
             {
                 tbGroupName.Text = group.Name;
                 tbInformation.Text = group.Information;
