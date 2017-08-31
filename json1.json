@@ -1,0 +1,15 @@
+  {
+    "Accept": true,
+    "Errors": null,
+    "bearer": null,
+    "data": {
+      "__type": "JSDRegister:#MonitorCLClassLibrary.JSON",
+      "Id_1": "NBM6B110014087F6553400",
+      "Id_2": "NXV8AEU022409023F23400",
+      "computerName": "DESKTOP-VL4BGHC",
+      "key": "11111-11111-11111-11111-11111"
+    },
+    "metod": "JSDRegister",
+    "signature": "??|???6?]?M?2???U????oR{????",
+    "time": "/Date(1504213171939)/"
+  }
