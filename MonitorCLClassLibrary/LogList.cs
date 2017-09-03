@@ -15,8 +15,9 @@ namespace MonitorCLClassLibrary
         {
             try
             {
-          //      file = Application.CommonAppDataPath;
-                file = file.Remove(file.LastIndexOf('\\')) + "\\Log.txt";
+                //      file = Application.CommonAppDataPath;
+                //file = file.Remove(file.LastIndexOf('\\')) + "\\Log.txt";
+                file = "C:\\LogCL.txt";
                 if (!File.Exists(file))
                     File.Create(file);
             }

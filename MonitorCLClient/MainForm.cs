@@ -31,7 +31,7 @@ namespace MonitorCLClient
         }
 
         private void MainForm_Load(object sender, EventArgs e)
-        {            
+        {
             if (client.GetLicenseKey() != null)
             {
                 client.SetAutoRun(Application.ExecutablePath, true);

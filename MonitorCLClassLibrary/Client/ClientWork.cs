@@ -154,7 +154,7 @@ namespace MonitorCLClassLibrary
             try
             {
                 RegistryKey reg = Registry.LocalMachine.OpenSubKey
-                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", value);
                 if (value)
                 {
                     if (reg.GetValue(new FileInfo(path).Name).ToString() != path)
@@ -176,9 +176,9 @@ namespace MonitorCLClassLibrary
             try
             {
                 RegistryKey reg = Registry.LocalMachine.OpenSubKey
-                    ("SOFTWARE\\CompLife\\MonitorCLClient", true);
+                    ("SOFTWARE\\CompLife\\MonitorCLClient", false);
 
-                if (reg.GetValue("MonitorCLClient") != null)
+                if (reg.GetValue("LicenseKey") != null)
                     return reg.GetValue("LicenseKey").ToString();
                 else
                     return null;
