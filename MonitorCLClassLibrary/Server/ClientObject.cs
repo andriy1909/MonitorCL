@@ -97,32 +97,39 @@ namespace MonitorCLClassLibrary.Server
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-     /*   ReceiveDelegate receiveOut;
-        public string login = "";
-
-        public string Id { get; protected set; }
-
-        public void setId(string id)
+        public void SendMessage(JsonPack jsOut)
         {
-            Id = id;
+            byte[] data = Encoding.Unicode.GetBytes(jsOut.ToString());
+            
+            Stream.Write(data, 0, data.Length); 
         }
 
-        public void setReceiveOut(ReceiveDelegate receive)
-        {
-            receiveOut = receive;
-        }
-        */
+
+
+
+
+
+
+
+
+
+
+
+        /*   ReceiveDelegate receiveOut;
+           public string login = "";
+
+           public string Id { get; protected set; }
+
+           public void setId(string id)
+           {
+               Id = id;
+           }
+
+           public void setReceiveOut(ReceiveDelegate receive)
+           {
+               receiveOut = receive;
+           }
+           */
 
         // чтение входящего сообщения и преобразование в строку
         public string GetMessage0()

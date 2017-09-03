@@ -12,6 +12,8 @@ namespace MonitorCLClassLibrary.JSON
     public class JSDRegisterS : JsonData
     {
         [DataMember]
+        public bool result { get; set; }
+        [DataMember]
         public string token { get; set; }
 
 

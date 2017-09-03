@@ -45,6 +45,8 @@ namespace MonitorCLClient
             switch (client.Register(serialKey))
             {
                 case ResultCode.OK:
+
+                    MessageBox.Show("Регистрация выполнена!","",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
 
                     client.SetActiveKey(serialKey);

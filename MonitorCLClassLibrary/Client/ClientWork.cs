@@ -66,12 +66,17 @@ namespace MonitorCLClassLibrary
 
                 JsonPack receive = ReceiveOneMessage();
 
-                if (!receive.Accept)
+                if (!receive.Accept || receive.data.GetType().Name != "JSDRegisterS")
                 {
-                    if (receive.Errors == "NotValidKey")
-                        return ResultCode.NotValidKey;
-                    else
+                   // if (receive.Errors == "NotValidKey")
+                   //     return ResultCode.NotValidKey;
+                   // else
                         return ResultCode.Error;
+                }
+                else
+                if(!((JSDRegisterS)receive.data).result)
+                {
+                    return ResultCode.Error;
                 }
                 else
                 {

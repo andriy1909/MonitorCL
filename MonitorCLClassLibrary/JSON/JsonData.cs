@@ -10,6 +10,7 @@ namespace MonitorCLClassLibrary.JSON
 {
     [DataContract]
     [KnownType(typeof(JSDRegister))]
+    [KnownType(typeof(JSDRegisterS))]
     [KnownType(typeof(JSDLogin))]
     [KnownType(typeof(JSDMonitoring))]
     public abstract class JsonData

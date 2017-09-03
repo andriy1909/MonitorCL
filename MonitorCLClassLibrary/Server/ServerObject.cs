@@ -1,6 +1,8 @@
 ﻿using MonitorCLClassLibrary.JSON;
+using MonitorCLClassLibrary.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -15,11 +17,13 @@ namespace MonitorCLClassLibrary.Server
 {
     public class ServerObject
     {
-        static public TcpListenerEx tcpListener;// сервер для прослушивания
+        public static TcpListenerEx tcpListener;// сервер для прослушивания
         private string IP;
         private int Port;
-        public List<ClientObject> clients = new List<ClientObject>();// все подключения
+        public static List<ClientObject> clients = new List<ClientObject>();// все подключения
         private Thread listenerThread;
+
+        MonitoringDB db = new MonitoringDB();
 
         public ServerObject()
         {
@@ -59,11 +63,27 @@ namespace MonitorCLClassLibrary.Server
 
         public void AddConnection(ClientObject clientObject)
         {
-            JsonPack json = clientObject.GetMessage();
-            switch (json.metod)
+            JsonPack jsIn = clientObject.GetMessage();
+            switch (jsIn.metod)
             {
                 case "JSDRegister":
-
+                    JSDRegister reg = (JSDRegister)jsIn.data;
+                    LicenceKey key = db.LicenceKeys.Where(x => x.Key == reg.key).FirstOrDefault();
+                    if (key != null&&(key.UnicId == null ||key.UnicId==""))
+                    {
+                        key.UnicId = reg.Id_1 + reg.Id_2;
+                    }
+                    db.LicenceKeys.Attach(key);
+                    db.Entry(db.LicenceKeys.Find(key.LicenceKeyId)).State = EntityState.Modified;                    
+                    db.SaveChanges();
+                    clientObject.user = db.Users.Where(x => x.UserId == key.UserId).FirstOrDefault();
+                    JsonPack jsOut = new JsonPack();
+                    jsOut.data = new JSDRegisterS()
+                    {
+                        result = true
+                    };
+                    clients.Add(clientObject);
+                    clientObject.SendMessage(jsOut);
                     break;
                 case "JSDLogin":
 

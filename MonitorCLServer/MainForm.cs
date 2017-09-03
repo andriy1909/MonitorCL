@@ -131,8 +131,37 @@ namespace MonitorCLServer
                     }
                 }
             }
-
+            foreach (TreeNode item in tvClients.Nodes)
+            {
+                item.ForeColor = Color.Black;
+            }
             tvClients.SelectedNode = selectNode;
+
+            foreach (ClientObject item in ServerObject.clients)
+            {
+                TreeNode node = tvClients.Nodes.Find("u" + item.user.UserId.ToString(), true).First();
+                if (node != null)
+                {
+                    node.ForeColor = Color.Green;
+                }
+            }
+        }
+
+        public void UpdateActiveUsersList()
+        {            
+            foreach (TreeNode item in tvClients.Nodes)
+            {
+                item.ForeColor = Color.Black;
+            }
+
+            foreach (ClientObject item in ServerObject.clients)
+            {
+                TreeNode node = tvClients.Nodes.Find("u" + item.user.UserId.ToString(), true).First();
+                if (node != null)
+                {
+                    node.ForeColor = Color.Green;
+                }
+            }
         }
 
         private void tsbAddGroup_Click(object sender, EventArgs e)
@@ -775,6 +804,11 @@ namespace MonitorCLServer
         private void treeView4_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
+        }
+
+        private void tmrUpdate_Tick(object sender, EventArgs e)
+        {
+            UpdateActiveUsersList();
         }
     }
 
