@@ -58,7 +58,7 @@ namespace MonitorCLClassLibrary.JSON
         {
             metod = data.GetType().Name;
             SetSignature();
-            data.EncriptData();
+            //data.EncriptData();
             time = DateTime.UtcNow;
 
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(JsonPack));
@@ -94,14 +94,14 @@ namespace MonitorCLClassLibrary.JSON
             data = deserializedJsonPack.data;
             time = deserializedJsonPack.time;
             signature = deserializedJsonPack.signature;
-            data.DecriptData();
+           // data.DecriptData();
 
             return CheckTime() && CheckSignature();
         }
 
         public string GetUniqPC()
         {
-            return BaseBoard.GetSerialNumber() + ";" + Bios.GetSerialNumber();
+            return BaseBoard.GetSerialNumber() + Bios.GetSerialNumber();
         }
 
 

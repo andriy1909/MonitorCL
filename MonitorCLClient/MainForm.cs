@@ -35,6 +35,8 @@ namespace MonitorCLClient
             if (client.GetLicenseKey() != null)
             {
                 client.SetAutoRun(Application.ExecutablePath, true);
+                client.IP = (Settings.Default.ip=="")?"127.0.0.1": Settings.Default.ip;
+                client.Port = (Settings.Default.port == 0) ? 11000 : Settings.Default.port;
                 if (client.Login())
                 {
 

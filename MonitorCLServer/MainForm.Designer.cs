@@ -30,55 +30,55 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Основное");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Установленые программы");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Автозагрузка");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Процессы");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Пользователи");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Операционная система");
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Процессы");
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Системные драйвера");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Время работы");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Автозагрузка");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Установленные программы");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Програмное обеспичение", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Время работы");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Автозагрузка");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Установленные программы");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Програмное обеспичение", new System.Windows.Forms.TreeNode[] {
             treeNode5,
             treeNode6,
             treeNode7,
             treeNode8,
-            treeNode31,
-            treeNode32,
-            treeNode33});
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Процессор");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Системная плата");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Память");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("BIOS");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Логические диски");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Физические диски");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("SMART");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40,
-            treeNode41});
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Графический процессор");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Сеть Windows");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Устройства Windows");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Принтеры");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Батерея");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Системные устройства", new System.Windows.Forms.TreeNode[] {
-            treeNode35,
-            treeNode36,
-            treeNode37,
-            treeNode38,
-            treeNode42,
-            treeNode43,
-            treeNode44,
-            treeNode45,
-            treeNode46,
-            treeNode47});
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            treeNode9,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Процессор");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Системная плата");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Память");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("BIOS");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Логические диски");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Физические диски");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("SMART");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Хранение данных", new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18,
+            treeNode19});
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Графический процессор");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Сеть Windows");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Устройства Windows");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Принтеры");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Батерея");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Системные устройства", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode20,
+            treeNode21,
+            treeNode22,
+            treeNode23,
+            treeNode24,
+            treeNode25});
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.serverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -609,9 +609,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(160, 160);
             this.dataGridView1.TabIndex = 5;
@@ -861,9 +861,9 @@
             this.dgvShortInformation.Name = "dgvShortInformation";
             this.dgvShortInformation.ReadOnly = true;
             this.dgvShortInformation.RowHeadersVisible = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
-            this.dgvShortInformation.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
+            this.dgvShortInformation.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvShortInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvShortInformation.Size = new System.Drawing.Size(642, 554);
             this.dgvShortInformation.TabIndex = 6;
@@ -941,45 +941,45 @@
             treeNode7.Text = "Процессы";
             treeNode8.Name = "Узел20";
             treeNode8.Text = "Системные драйвера";
-            treeNode31.Name = "Узел21";
-            treeNode31.Text = "Время работы";
-            treeNode32.Name = "tnau";
-            treeNode32.Text = "Автозагрузка";
-            treeNode33.Name = "tnPrograms";
-            treeNode33.Text = "Установленные программы";
-            treeNode34.Name = "Узел0";
-            treeNode34.Text = "Програмное обеспичение";
-            treeNode35.Name = "tnCPU";
-            treeNode35.Text = "Процессор";
-            treeNode36.Name = "tnMotheboad";
-            treeNode36.Text = "Системная плата";
-            treeNode37.Name = "Узел15";
-            treeNode37.Text = "Память";
-            treeNode38.Name = "tnBios";
-            treeNode38.Text = "BIOS";
-            treeNode39.Name = "Узел26";
-            treeNode39.Text = "Логические диски";
-            treeNode40.Name = "Узел27";
-            treeNode40.Text = "Физические диски";
-            treeNode41.Name = "Узел30";
-            treeNode41.Text = "SMART";
-            treeNode42.Name = "Узел5";
-            treeNode42.Text = "Хранение данных";
-            treeNode43.Name = "Узел24";
-            treeNode43.Text = "Графический процессор";
-            treeNode44.Name = "Узел32";
-            treeNode44.Text = "Сеть Windows";
-            treeNode45.Name = "Узел37";
-            treeNode45.Text = "Устройства Windows";
-            treeNode46.Name = "Узел39";
-            treeNode46.Text = "Принтеры";
-            treeNode47.Name = "tnBattery";
-            treeNode47.Text = "Батерея";
-            treeNode48.Name = "Узел1";
-            treeNode48.Text = "Системные устройства";
+            treeNode9.Name = "Узел21";
+            treeNode9.Text = "Время работы";
+            treeNode10.Name = "tnau";
+            treeNode10.Text = "Автозагрузка";
+            treeNode11.Name = "tnPrograms";
+            treeNode11.Text = "Установленные программы";
+            treeNode12.Name = "Узел0";
+            treeNode12.Text = "Програмное обеспичение";
+            treeNode13.Name = "tnCPU";
+            treeNode13.Text = "Процессор";
+            treeNode14.Name = "tnMotheboad";
+            treeNode14.Text = "Системная плата";
+            treeNode15.Name = "Узел15";
+            treeNode15.Text = "Память";
+            treeNode16.Name = "tnBios";
+            treeNode16.Text = "BIOS";
+            treeNode17.Name = "Узел26";
+            treeNode17.Text = "Логические диски";
+            treeNode18.Name = "Узел27";
+            treeNode18.Text = "Физические диски";
+            treeNode19.Name = "Узел30";
+            treeNode19.Text = "SMART";
+            treeNode20.Name = "Узел5";
+            treeNode20.Text = "Хранение данных";
+            treeNode21.Name = "Узел24";
+            treeNode21.Text = "Графический процессор";
+            treeNode22.Name = "Узел32";
+            treeNode22.Text = "Сеть Windows";
+            treeNode23.Name = "Узел37";
+            treeNode23.Text = "Устройства Windows";
+            treeNode24.Name = "Узел39";
+            treeNode24.Text = "Принтеры";
+            treeNode25.Name = "tnBattery";
+            treeNode25.Text = "Батерея";
+            treeNode26.Name = "Узел1";
+            treeNode26.Text = "Системные устройства";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode34,
-            treeNode48});
+            treeNode12,
+            treeNode26});
             this.treeView2.SelectedImageIndex = 4;
             this.treeView2.ShowLines = false;
             this.treeView2.ShowPlusMinus = false;
@@ -1146,9 +1146,9 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 2, 0, 3);
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(205, 554);
             this.dataGridView2.TabIndex = 7;
@@ -1276,6 +1276,7 @@
             // 
             // tmrUpdate
             // 
+            this.tmrUpdate.Enabled = true;
             this.tmrUpdate.Interval = 1000;
             this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
             // 

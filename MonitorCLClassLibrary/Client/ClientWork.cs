@@ -54,7 +54,7 @@ namespace MonitorCLClassLibrary
                     return ResultCode.NoConnection;
                 else
                     return ResultCode.Error;
-            } 
+            }
 
             if (!client.Connected)
             {
@@ -68,13 +68,13 @@ namespace MonitorCLClassLibrary
 
                 if (!receive.Accept || receive.data.GetType().Name != "JSDRegisterS")
                 {
-                   // if (receive.Errors == "NotValidKey")
-                   //     return ResultCode.NotValidKey;
-                   // else
-                        return ResultCode.Error;
+                    // if (receive.Errors == "NotValidKey")
+                    //     return ResultCode.NotValidKey;
+                    // else
+                    return ResultCode.Error;
                 }
                 else
-                if(!((JSDRegisterS)receive.data).result)
+                if (!((JSDRegisterS)receive.data).result)
                 {
                     return ResultCode.Error;
                 }
@@ -90,6 +90,8 @@ namespace MonitorCLClassLibrary
 
         public bool Login()
         {
+            client = new TcpClient();
+
             string LicenceKey = GetLicenseKey();
             JsonPack pack = new JsonPack();
             JSDLogin data = new JSDLogin()
@@ -108,7 +110,7 @@ namespace MonitorCLClassLibrary
             catch (Exception err)
             {
                 Debug.WriteLine(err.Message);
-                    return false;
+                return false;
             }
 
             if (!client.Connected)
@@ -123,10 +125,10 @@ namespace MonitorCLClassLibrary
 
                 if (!receive.Accept)
                 {
-                        return false;
+                    return false;
                 }
                 else
-                { 
+                {
                     // запускаем новый поток для получения данных
                     receiveThread = new Thread(new ThreadStart(ReceiveMessage));
                     receiveThread.Start(); //старт потока
@@ -315,20 +317,20 @@ namespace MonitorCLClassLibrary
 
         public bool SendToSupport(string subject, string body, Image screen)
         {
-              JsonPack jp = new JsonPack();
+            JsonPack jp = new JsonPack();
 
-              ImageConverter converter = new ImageConverter();
-              var bytes = (byte[])converter.ConvertTo(screen, typeof(byte[]));
-              List<byte[]> list = new List<byte[]>();
-              list.Add(bytes);
+            ImageConverter converter = new ImageConverter();
+            var bytes = (byte[])converter.ConvertTo(screen, typeof(byte[]));
+            List<byte[]> list = new List<byte[]>();
+            list.Add(bytes);
 
-              string str = jp.ToString();
+            string str = jp.ToString();
 
             //var ms = new MemoryStream(jp.GetJson(str).images[0]);
             var ms = new MemoryStream();
             Image image = Image.FromStream(ms);
 
-              img_Delete = image;
+            img_Delete = image;
             //throw new NotImplementedException();
             return false;
         }
@@ -345,7 +347,7 @@ namespace MonitorCLClassLibrary
         public void Dispose()
         {
             //
-        }  
+        }
 
 
 

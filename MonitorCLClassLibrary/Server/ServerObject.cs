@@ -63,21 +63,23 @@ namespace MonitorCLClassLibrary.Server
 
         public void AddConnection(ClientObject clientObject)
         {
+            LicenceKey key;
+            JsonPack jsOut;
             JsonPack jsIn = clientObject.GetMessage();
             switch (jsIn.metod)
             {
                 case "JSDRegister":
                     JSDRegister reg = (JSDRegister)jsIn.data;
-                    LicenceKey key = db.LicenceKeys.Where(x => x.Key == reg.key).FirstOrDefault();
-                    if (key != null&&(key.UnicId == null ||key.UnicId==""))
+                    key = db.LicenceKeys.Where(x => x.Key == reg.key).FirstOrDefault();
+                    if (key != null && (key.UnicId == null || key.UnicId == ""))
                     {
                         key.UnicId = reg.Id_1 + reg.Id_2;
                     }
                     db.LicenceKeys.Attach(key);
-                    db.Entry(db.LicenceKeys.Find(key.LicenceKeyId)).State = EntityState.Modified;                    
+                    db.Entry(db.LicenceKeys.Find(key.LicenceKeyId)).State = EntityState.Modified;
                     db.SaveChanges();
                     clientObject.user = db.Users.Where(x => x.UserId == key.UserId).FirstOrDefault();
-                    JsonPack jsOut = new JsonPack();
+                    jsOut = new JsonPack();
                     jsOut.data = new JSDRegisterS()
                     {
                         result = true
@@ -86,18 +88,32 @@ namespace MonitorCLClassLibrary.Server
                     clientObject.SendMessage(jsOut);
                     break;
                 case "JSDLogin":
-
-                    //throw new NotImplementedException();
+                    JSDLogin login = (JSDLogin)jsIn.data;
+                    key = db.LicenceKeys.Where(x => x.Key == login.LicenseKey && x.UnicId == login.UniqPC).FirstOrDefault();
+                    jsOut = new JsonPack()
+                    {
+                        data = new JSDLoginS()
+                        {
+                            result = false
+                        }
+                    };
+                    if (key != null)
+                    {
+                        clientObject.user = db.Users.Where(x => x.UserId == key.UserId).FirstOrDefault();
+                        ((JSDLoginS)(jsOut.data)).result = true;                            
+                    };
+                    clients.Add(clientObject);
+                    clientObject.SendMessage(jsOut);
                     break;
                 default:
                     break;
             }
-
+            /*
             if (clientObject.TryLogin() == ResultCode.Login)
             {
                 Thread clientThread = new Thread(new ThreadStart(clientObject.Process));
                 clientThread.Start();
-            }
+            }*/
         }
 
 

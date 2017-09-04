@@ -9,9 +9,10 @@ using MonitorCLClassLibrary;
 namespace MonitorCLClassLibrary.JSON
 {
     [DataContract]
-    [KnownType(typeof(JSDRegister))]
+    [KnownType(typeof(JSDRegister))]    
     [KnownType(typeof(JSDRegisterS))]
     [KnownType(typeof(JSDLogin))]
+    [KnownType(typeof(JSDLoginS))]
     [KnownType(typeof(JSDMonitoring))]
     public abstract class JsonData
     {
