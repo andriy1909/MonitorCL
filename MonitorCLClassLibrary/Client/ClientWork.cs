@@ -176,14 +176,19 @@ namespace MonitorCLClassLibrary
         public string GetLicenseKey()
         {
             try
-            {
-                RegistryKey reg = Registry.LocalMachine.OpenSubKey
-                    ("SOFTWARE\\CompLife\\MonitorCLClient", false);
+            {                                               
+                RegistryKey reg = Registry.LocalMachine.OpenSubKey("SOFTWARE\\CompLife\\MonitorCLClient", false);
 
-                if (reg.GetValue("LicenseKey") != null)
-                    return reg.GetValue("LicenseKey").ToString();
-                else
+                if (reg != null)
+                {
+                    if (reg.GetValue("LicenseKey") != null)
+                        return reg.GetValue("LicenseKey").ToString();
+                    else
+                        return null;
+                }
+                {
                     return null;
+                }
             }
             catch (Exception err)
             {

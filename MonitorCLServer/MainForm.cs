@@ -114,13 +114,13 @@ namespace MonitorCLServer
                     Tag = item
                 };
 
-                if (item.Group == null)
+                if (item.GroupId == 0)
                 {
                     tvClients.Nodes.Add(node);
                 }
                 else
                 {
-                    TreeNode parentNode = tvClients.Nodes.Find("gr" + item.Group.UsersGroupId, true).First();
+                    TreeNode parentNode = tvClients.Nodes.Find("gr" + item.GroupId, true).First();
                     if (parentNode != null)
                     {
                         parentNode.Nodes.Add(node);
@@ -286,7 +286,8 @@ namespace MonitorCLServer
                                 if (user != null)
                                 {
                                     user.Group = ((UsersGroup)targetNode.Tag);
-                                    //user.Edit();
+                                    user.GroupId = user.Group.UsersGroupId;
+                                    user.Edit();
                                 }
                                 break;
                             case "UsersGroup":
@@ -809,6 +810,11 @@ namespace MonitorCLServer
         private void tmrUpdate_Tick(object sender, EventArgs e)
         {
             UpdateActiveUsersList();
+        }
+
+        private void toolStrip4_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 

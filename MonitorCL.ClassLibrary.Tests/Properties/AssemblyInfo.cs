@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется посредством следующего 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("MonitorCL.ClassLibraryTests")]
+[assembly: AssemblyTitle("MonitorCL.ClassLibrary.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MonitorCL.ClassLibraryTests")]
+[assembly: AssemblyProduct("MonitorCL.ClassLibrary.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Если данный проект доступен для модели COM, следующий GUID используется в качестве идентификатора библиотеки типов
-[assembly: Guid("d7b4d4cb-4eaf-4cfc-b79e-a6b600bdbfac")]
+[assembly: Guid("8ef57820-a569-4d8d-9668-94904387977f")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

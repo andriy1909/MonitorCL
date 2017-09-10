@@ -1203,6 +1203,7 @@
             this.toolStrip4.Size = new System.Drawing.Size(865, 25);
             this.toolStrip4.TabIndex = 2;
             this.toolStrip4.Text = "toolStrip4";
+            this.toolStrip4.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip4_ItemClicked);
             // 
             // toolStripButton7
             // 
@@ -1276,7 +1277,6 @@
             // 
             // tmrUpdate
             // 
-            this.tmrUpdate.Enabled = true;
             this.tmrUpdate.Interval = 1000;
             this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
             // 

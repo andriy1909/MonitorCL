@@ -57,8 +57,8 @@ namespace MonitorCLClassLibrary.Model
             var db = new MonitoringDB();
             //try
             //{
-                db.Users.Remove(db.Users.Where(x => x.UserId == id).First());
-                return true;
+            db.Users.Remove(db.Users.Where(x => x.UserId == id).First());
+            return true;
             /*}
             catch (Exception err)
             {
@@ -68,20 +68,14 @@ namespace MonitorCLClassLibrary.Model
         }
 
         /// <summary>
-        ///  NotImplementedException();
+        ///  
         /// </summary>
         public void Edit()
         {
-            throw new NotImplementedException();
-
             var db = new MonitoringDB();
-            var user = db.Users.SingleOrDefault(x => x.UserId == UserId);
-            if(user != null)
-            {
-                db.Users.Attach(this);
-                db.Entry(this).State = EntityState.Modified;
-                db.SaveChanges();
-            }            
+            db.Users.Attach(this);
+            db.Entry(this).State = EntityState.Modified;
+            db.SaveChanges();
         }
     }
 }
