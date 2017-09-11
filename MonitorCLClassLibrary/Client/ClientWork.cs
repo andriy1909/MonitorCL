@@ -177,7 +177,7 @@ namespace MonitorCLClassLibrary
         {
             try
             {                                               
-                RegistryKey reg = Registry.LocalMachine.OpenSubKey("SOFTWARE\\CompLife\\MonitorCLClient", false);
+                RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\CompLife\\MonitorCLClient", false);
 
                 if (reg != null)
                 {

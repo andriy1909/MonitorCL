@@ -27,7 +27,7 @@ namespace MonitorCLClient
         public MainForm()
         {
             InitializeComponent();
-            lbVersion.Text += Application.ProductVersion + "b";
+            lbVersion.Text += Application.ProductVersion + "a";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
