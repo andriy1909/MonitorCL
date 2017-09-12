@@ -37,12 +37,24 @@ namespace MonitorCLClient
                 client.SetAutoRun(Application.ExecutablePath, true);
                 client.IP = (Settings.Default.ip=="")?"127.0.0.1": Settings.Default.ip;
                 client.Port = (Settings.Default.port == 0) ? 11000 : Settings.Default.port;
-                if (client.Login())
-                {
 
+                if (client.Connect())
+                {
+                    if (client.Login())
+                    {
+
+                    }
+                    else
+                    {
+                        
+                    }
                 }
                 else
                 {
+                    while(client.Connect())
+                    {
+                        Thread.Sleep(1000);
+                    }
 
                 }
             }

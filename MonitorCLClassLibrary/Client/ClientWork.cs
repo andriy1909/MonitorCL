@@ -30,38 +30,40 @@ namespace MonitorCLClassLibrary
 
         Thread thread;
 
-        public ResultCode Register(string serialKey)
+        public bool Connect(bool reconnec=true)
         {
-            client = new TcpClient();
-            JsonPack json = new JsonPack();
-            json.data = new JSDRegister()
-            {
-                key = serialKey,
-                Id_1 = BaseBoard.GetSerialNumber(),
-                Id_2 = Bios.GetSerialNumber(),
-                computerName = OperatingSystemScan.GetNamePC()
-            };
+            if(client == null)
+              client = new TcpClient();
 
             try
             {
                 client.Connect(IP, Port);
                 stream = client.GetStream();
+                return client.Connected;
             }
             catch (Exception err)
             {
                 Debug.WriteLine(err.Message);
-                if (GetErrorCode(err) == 10061)
-                    return ResultCode.NoConnection;
-                else
-                    return ResultCode.Error;
+                return false;
             }
+        }
 
+        public ResultCode Register(string serialKey)
+        {
             if (!client.Connected)
             {
                 return ResultCode.NoConnection;
             }
             else
             {
+                JsonPack json = new JsonPack();
+                json.data = new JSDRegister()
+                {
+                    key = serialKey,
+                    Id_1 = BaseBoard.GetSerialNumber(),
+                    Id_2 = Bios.GetSerialNumber(),
+                    computerName = OperatingSystemScan.GetNamePC()
+                };
                 SendMessage(json.ToString());
 
                 JsonPack receive = ReceiveOneMessage();
@@ -90,35 +92,22 @@ namespace MonitorCLClassLibrary
 
         public bool Login()
         {
-            client = new TcpClient();
-
-            string LicenceKey = GetLicenseKey();
-            JsonPack pack = new JsonPack();
-            JSDLogin data = new JSDLogin()
-            {
-                LicenseKey = LicenceKey,
-                UniqPC = pack.GetUniqPC()
-            };
-            pack.data = data;
-            pack.metod = data.GetType().Name;
-
-            try
-            {
-                client.Connect(IP, Port);
-                stream = client.GetStream();
-            }
-            catch (Exception err)
-            {
-                Debug.WriteLine(err.Message);
-                return false;
-            }
-
             if (!client.Connected)
             {
                 return false;
             }
             else
             {
+                string LicenceKey = GetLicenseKey();
+                JsonPack pack = new JsonPack();
+                JSDLogin data = new JSDLogin()
+                {
+                    LicenseKey = LicenceKey,
+                    UniqPC = pack.GetUniqPC()
+                };
+                pack.data = data;
+                pack.metod = data.GetType().Name;
+
                 SendMessage(pack.ToString());
 
                 JsonPack receive = ReceiveOneMessage();
@@ -176,7 +165,7 @@ namespace MonitorCLClassLibrary
         public string GetLicenseKey()
         {
             try
-            {                                               
+            {
                 RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\CompLife\\MonitorCLClient", false);
 
                 if (reg != null)

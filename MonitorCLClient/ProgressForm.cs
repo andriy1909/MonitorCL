@@ -42,40 +42,45 @@ namespace MonitorCLClient
             client.IP = Properties.Settings.Default.ip;
             client.Port = Properties.Settings.Default.port;
 
-            switch (client.Register(serialKey))
+            if (client.Connect())
             {
-                case ResultCode.OK:
 
-                    MessageBox.Show("Регистрация выполнена!","",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    DialogResult = DialogResult.OK;
+                switch (client.Register(serialKey))
+                {
+                    case ResultCode.OK:
 
-                    client.SetActiveKey(serialKey);
+                        MessageBox.Show("Регистрация выполнена!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DialogResult = DialogResult.OK;
 
-                    Close();
-                    break;
-                case ResultCode.NotValidKey:
-                    DialogResult = DialogResult.Cancel;
-                    MessageBox.Show("Ключ не действителен!", "Ошибка активации!");
-                    Close();
-                    break;
-                case ResultCode.KeyTimeout:
-                    DialogResult = DialogResult.Cancel;
-                    MessageBox.Show("Ключ больше не действителен!", "Ошибка активации!");
-                    Close();
-                    break;
-                case ResultCode.NoConnection:
-                    DialogResult = DialogResult.Cancel;
-                    MessageBox.Show("Нет соединения с сервером. Проверте соединение с интернетом и попробуйте повторить попитку позже.", "Ошибка соединения!");
-                    Close();
-                    break;
-                default:
-                    DialogResult = DialogResult.Cancel;
-                    MessageBox.Show("Ошибка соединения с сервером.", "Ошибка соединения!");
-                    Close();
-                    break;
+                        client.SetActiveKey(serialKey);
+
+                        Close();
+                        break;
+                    case ResultCode.NotValidKey:
+                        DialogResult = DialogResult.Cancel;
+                        MessageBox.Show("Ключ не действителен!", "Ошибка активации!");
+                        Close();
+                        break;
+                    case ResultCode.KeyTimeout:
+                        DialogResult = DialogResult.Cancel;
+                        MessageBox.Show("Ключ больше не действителен!", "Ошибка активации!");
+                        Close();
+                        break;
+                    default:
+                        DialogResult = DialogResult.Cancel;
+                        MessageBox.Show("Нет соединения с сервером. Проверте соединение с интернетом и попробуйте повторить попитку позже.", "Ошибка соединения!");
+                        Close();
+                        break;
+                }
+            }
+            else
+            {
+                DialogResult = DialogResult.Cancel;
+                MessageBox.Show("Ошибка соединения с сервером.", "Ошибка соединения!");
+                Close();
             }
         }
-
+        
         private void btCancel_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Соединение прервано!", "Ошибка соединения!");
